@@ -68,8 +68,11 @@ ul {
     position: sticky;
     top: 0;
     z-index: 20;
-    border-bottom: 1px solid var(--border-color);
-    background-color: rgba(4, 4, 4, 0.88);
+    border-bottom: 1px solid rgba(125, 211, 252, 0.15);
+    background:
+        radial-gradient(circle at left center, rgba(56, 189, 248, 0.12), transparent 28%),
+        radial-gradient(circle at right center, rgba(139, 92, 246, 0.1), transparent 26%),
+        linear-gradient(120deg, rgba(4, 4, 4, 0.95), rgba(10, 18, 35, 0.95));
     backdrop-filter: blur(18px);
 }
 
@@ -100,7 +103,10 @@ ul {
     overflow: hidden;
     background: linear-gradient(135deg, rgba(125, 211, 252, 0.18), rgba(56, 189, 248, 0.34));
     color: var(--accent-color);
-    box-shadow: 0 10px 24px rgba(56, 189, 248, 0.14);
+    box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.35),
+        0 0 25px rgba(139, 92, 246, 0.25);
+    animation: brandGlow 3.6s ease-in-out infinite;
 }
 
 .brand-mark-image {
@@ -136,20 +142,38 @@ ul {
 }
 
 .site-nav a {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0.75rem 1rem;
     border-radius: var(--radius-pill);
-    color: var(--muted-text-color);
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    color: rgba(203, 213, 245, 0.88);
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
     background-color: var(--surface-soft);
-    color: var(--text-color);
+    color: #7dd3fc;
     transform: translateY(-1px);
+}
+
+.site-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+    transform: translateX(-50%);
+    transition: width 0.25s ease;
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+    width: 70%;
 }
 
 .hero-section {
@@ -271,14 +295,15 @@ ul {
 }
 
 .button-primary {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
+    background: linear-gradient(135deg, #38bdf8, #8b5cf6);
     color: var(--accent-contrast);
-    box-shadow: 0 18px 40px rgba(56, 189, 248, 0.2);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.25);
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-    box-shadow: 0 24px 48px rgba(56, 189, 248, 0.28);
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(139, 92, 246, 0.35);
 }
 
 .button-secondary,
@@ -468,6 +493,16 @@ ul {
     flex-direction: column;
     border-radius: var(--radius-medium);
     background: linear-gradient(180deg, rgba(14, 19, 30, 0.95), rgba(8, 11, 18, 0.98));
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(125, 211, 252, 0.24);
+    box-shadow:
+        0 18px 40px rgba(56, 189, 248, 0.14),
+        0 24px 60px rgba(139, 92, 246, 0.16);
 }
 
 .project-card-header {
@@ -611,6 +646,21 @@ ul {
     color: var(--muted-text-color);
 }
 
+@keyframes brandGlow {
+    0%,
+    100% {
+        box-shadow:
+            0 0 12px rgba(56, 189, 248, 0.28),
+            0 0 24px rgba(139, 92, 246, 0.18);
+    }
+
+    50% {
+        box-shadow:
+            0 0 16px rgba(56, 189, 248, 0.42),
+            0 0 30px rgba(139, 92, 246, 0.28);
+    }
+}
+
 @media (max-width: 1080px) {
     .tech-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -686,6 +736,10 @@ ul {
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
+    }
+
+    .brand-mark {
+        animation: none !important;
     }
 
     *,
