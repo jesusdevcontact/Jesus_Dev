@@ -22,6 +22,13 @@ export const routes: Routes = [
     title: 'Cookies Policy | Jesus Dev',
   },
   {
+    path: 'legal',
+    loadComponent: () =>
+      import('./features/legal/legal-page.component').then((component) => component.LegalPageComponent),
+    data: { page: 'legal' },
+    title: 'Legal Notice | Jesus Dev',
+  },
+  {
     path: '**',
     redirectTo: '',
   },

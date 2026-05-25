@@ -192,18 +192,21 @@
   "footer": {
     "tagline": "Fullstack developer building polished Angular, Laravel, and API-driven products.",
     "privacy": "Privacy",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "legal": "Legal"
   },
   "cookies": {
     "eyebrow": "Privacy",
-    "title": "Cookie preferences",
-    "description": "This site may use essential localStorage preferences and optional analytics cookies to understand basic usage. You can accept or reject non-essential cookies.",
+    "title": "Privacy and cookies",
+    "description": "Essential storage remembers language and consent. Optional analytics, if enabled, only helps understand general portfolio usage.",
     "accept": "Accept",
     "reject": "Reject non-essential",
-    "openSettings": "Open cookie settings"
+    "contact": "Contact",
+    "openSettings": "Open privacy preferences"
   },
   "legal": {
     "backHome": "Back to portfolio",
+    "contactAction": "Contact",
     "updated": "Last updated: May 26, 2026",
     "privacy": {
       "eyebrow": "Legal",
@@ -232,7 +235,7 @@
         },
         "contact": {
           "title": "Contact",
-          "items": ["For privacy questions, contact jesusdevcontact@gmail.com."]
+          "items": ["For privacy questions, use the contact action on this page."]
         }
       }
     },
@@ -263,7 +266,38 @@
         },
         "contact": {
           "title": "Contact",
-          "items": ["For cookie questions, contact jesusdevcontact@gmail.com."]
+          "items": ["For cookie questions, use the contact action on this page."]
+        }
+      }
+    },
+    "legal": {
+      "eyebrow": "Legal",
+      "title": "Legal Notice",
+      "intro": "This legal notice describes the informational purpose and ownership terms for jesusdev.dev.",
+      "sections": {
+        "purpose": {
+          "title": "Purpose",
+          "items": ["jesusdev.dev is a personal developer portfolio for presenting projects, experience, technical writing, and contact paths.", "The site is informational and does not provide ecommerce, subscriptions, or commercial checkout flows."]
+        },
+        "ownership": {
+          "title": "Ownership of content and projects",
+          "items": ["Portfolio copy, visual presentation, and project descriptions belong to Jesus Martinez Escobar unless otherwise stated.", "Referenced tools, frameworks, icons, and platform names remain property of their respective owners."]
+        },
+        "activity": {
+          "title": "No ecommerce activity",
+          "items": ["The site does not sell products or services directly.", "External links may point to deployed demos, repositories, professional profiles, or platform-hosted content."]
+        },
+        "hosting": {
+          "title": "Hosting and platforms",
+          "items": ["The portfolio is deployed through GitHub Pages with the custom domain jesusdev.dev.", "Project demos may use platforms such as Vercel, Railway, GitHub, or other development services."]
+        },
+        "intellectualProperty": {
+          "title": "Intellectual property",
+          "items": ["Code samples and showcased work are presented for professional evaluation and learning context.", "Do not copy the site content or visual presentation as your own without permission."]
+        },
+        "contact": {
+          "title": "Contact",
+          "items": ["For legal or ownership questions, use the contact action on this page."]
         }
       }
     }

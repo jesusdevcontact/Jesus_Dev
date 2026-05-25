@@ -192,18 +192,21 @@
   "footer": {
     "tagline": "Développeur fullstack créant des produits Angular, Laravel et APIs soignées.",
     "privacy": "Confidentialité",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "legal": "Mentions légales"
   },
   "cookies": {
     "eyebrow": "Confidentialité",
-    "title": "Préférences de cookies",
-    "description": "Ce site peut utiliser des préférences essentielles dans localStorage et des cookies analytiques optionnels pour comprendre l'usage général. Vous pouvez accepter ou refuser les cookies non essentiels.",
+    "title": "Confidentialité et cookies",
+    "description": "Le stockage essentiel mémorise la langue et le consentement. L'analytique optionnelle, si activée, sert seulement à comprendre l'usage général du portfolio.",
     "accept": "Accepter",
     "reject": "Refuser le non essentiel",
-    "openSettings": "Ouvrir les préférences de cookies"
+    "contact": "Contacter",
+    "openSettings": "Ouvrir les préférences de confidentialité"
   },
   "legal": {
     "backHome": "Retour au portfolio",
+    "contactAction": "Contacter",
     "updated": "Dernière mise à jour : 26 mai 2026",
     "privacy": {
       "eyebrow": "Légal",
@@ -232,7 +235,7 @@
         },
         "contact": {
           "title": "Contact",
-          "items": ["Pour toute question de confidentialité, contactez jesusdevcontact@gmail.com."]
+          "items": ["Pour toute question de confidentialité, utilisez l'action de contact de cette page."]
         }
       }
     },
@@ -263,7 +266,38 @@
         },
         "contact": {
           "title": "Contact",
-          "items": ["Pour toute question sur les cookies, contactez jesusdevcontact@gmail.com."]
+          "items": ["Pour toute question sur les cookies, utilisez l'action de contact de cette page."]
+        }
+      }
+    },
+    "legal": {
+      "eyebrow": "Légal",
+      "title": "Mentions légales",
+      "intro": "Ces mentions légales décrivent la finalité informative et les conditions de propriété de jesusdev.dev.",
+      "sections": {
+        "purpose": {
+          "title": "Finalité",
+          "items": ["jesusdev.dev est un portfolio personnel de développeur destiné à présenter des projets, une expérience, une approche technique et des moyens de contact.", "Le site est informatif et ne propose pas d'ecommerce, d'abonnements ni de parcours d'achat."]
+        },
+        "ownership": {
+          "title": "Propriété du contenu et des projets",
+          "items": ["Les textes du portfolio, la présentation visuelle et les descriptions de projets appartiennent à Jesus Martinez Escobar sauf mention contraire.", "Les outils, frameworks, icônes et noms de plateformes cités restent la propriété de leurs titulaires respectifs."]
+        },
+        "activity": {
+          "title": "Aucune activité ecommerce",
+          "items": ["Le site ne vend pas directement de produits ou de services.", "Les liens externes peuvent pointer vers des démos déployées, des dépôts, des profils professionnels ou du contenu hébergé sur des plateformes."]
+        },
+        "hosting": {
+          "title": "Hébergement et plateformes",
+          "items": ["Le portfolio est déployé via GitHub Pages avec le domaine personnalisé jesusdev.dev.", "Les démos de projets peuvent utiliser des plateformes comme Vercel, Railway, GitHub ou d'autres services de développement."]
+        },
+        "intellectualProperty": {
+          "title": "Propriété intellectuelle",
+          "items": ["Les exemples de code et travaux présentés le sont pour évaluation professionnelle et contexte d'apprentissage.", "Ne copiez pas le contenu ni la présentation visuelle du site comme les vôtres sans autorisation."]
+        },
+        "contact": {
+          "title": "Contact",
+          "items": ["Pour toute question légale ou de propriété, utilisez l'action de contact de cette page."]
         }
       }
     }

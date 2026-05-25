@@ -126,8 +126,6 @@ export class TechStackCardComponent {
       'github-actions': 'githubactions/2088FF',
       cypress: 'cypress/69D3A7',
       vitest: 'vitest/6E9F18',
-      karma: 'karma/429C46',
-      phpunit: 'phpunit/8892BF',
       npm: 'npm/CB3837',
       pnpm: 'pnpm/F69220',
       linux: 'linux/FCC624',
@@ -135,7 +133,6 @@ export class TechStackCardComponent {
       github: 'github/FFFFFF',
       postman: 'postman/FF6C37',
       codex: 'openai/FFFFFF',
-      'claude-code': 'claude/D97757',
     };
 
     const icon = icons[this.techSlug(item)];

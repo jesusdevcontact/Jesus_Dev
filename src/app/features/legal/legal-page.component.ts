@@ -4,7 +4,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 
 import { TranslateArrayPipe } from '../../shared/pipes/translate-array.pipe';
 
-type LegalPageKey = 'privacy' | 'cookies';
+type LegalPageKey = 'privacy' | 'cookies' | 'legal';
 
 @Component({
   selector: 'jd-legal-page',
@@ -18,9 +18,13 @@ export class LegalPageComponent {
   private readonly route = inject(ActivatedRoute);
 
   readonly page = computed<LegalPageKey>(() => this.route.snapshot.data['page'] ?? 'privacy');
-  readonly sections = computed(() =>
-    this.page() === 'privacy'
-      ? ['overview', 'data', 'storage', 'hosting', 'cookies', 'contact']
-      : ['overview', 'essential', 'analytics', 'localStorage', 'manage', 'contact'],
-  );
+  readonly sections = computed(() => {
+    const sections: Record<LegalPageKey, string[]> = {
+      privacy: ['overview', 'data', 'storage', 'hosting', 'cookies', 'contact'],
+      cookies: ['overview', 'essential', 'analytics', 'localStorage', 'manage', 'contact'],
+      legal: ['purpose', 'ownership', 'activity', 'hosting', 'intellectualProperty', 'contact'],
+    };
+
+    return sections[this.page()];
+  });
 }
