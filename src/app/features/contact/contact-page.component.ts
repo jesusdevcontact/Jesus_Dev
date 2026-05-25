@@ -25,7 +25,7 @@ export class ContactPageComponent {
   message = '';
 
   mailtoHref(): string {
-    const subject = this.subject.trim() || 'Consulta profesional - Jesus Martinez Escobar';
+    const subject = this.subject.trim() || 'Consulta profesional · Jesus Martinez Escobar';
     const body = [
       'Buenas,',
       '',

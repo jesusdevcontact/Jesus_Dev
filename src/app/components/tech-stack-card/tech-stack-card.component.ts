@@ -70,6 +70,8 @@ export class TechStackCardComponent {
       github: 'GH',
       postman: 'Pm',
       'vs-code': 'VS',
+      codex: 'Cx',
+      'claude-code': 'Cl',
       'rest-apis': 'API',
       'apis-rest': 'API',
       'spa-architecture': 'SPA',
@@ -109,6 +111,13 @@ export class TechStackCardComponent {
   }
 
   techIconUrl(item: string): string | null {
+    const customIcons: Record<string, string> = {
+      sanctum: this.svgDataIcon('Sa', '#ff2d20', '#ffffff'),
+      karma: this.svgDataIcon('K', '#429c46', '#ffffff'),
+      phpunit: this.svgDataIcon('PU', '#8892bf', '#ffffff'),
+      codex: this.svgDataIcon('Cx', '#f7f8fb', '#05060a'),
+      'claude-code': this.svgDataIcon('Cl', '#d97757', '#05060a'),
+    };
     const icons: Record<string, string> = {
       angular: 'angular/DD0031',
       typescript: 'typescript/3178C6',
@@ -133,13 +142,25 @@ export class TechStackCardComponent {
       postman: 'postman/FF6C37',
     };
 
-    const icon = icons[this.techSlug(item)];
+    const slug = this.techSlug(item);
+    const customIcon = customIcons[slug];
+    const icon = icons[slug];
 
+    if (customIcon) {
+      return customIcon;
+    }
     return icon ? `https://cdn.simpleicons.org/${icon}` : null;
   }
 
   useIconFallback(event: Event): void {
     const image = event.target as HTMLImageElement;
     image.parentElement?.classList.add('tech-mark--fallback');
+  }
+
+  private svgDataIcon(label: string, background: string, foreground: string): string {
+    const fontSize = label.length > 1 ? 8.8 : 11;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="${background}"/><text x="12" y="15.5" text-anchor="middle" fill="${foreground}" font-family="Inter,Arial,sans-serif" font-size="${fontSize}" font-weight="900">${label}</text></svg>`;
+
+    return `data:image/svg+xml,${encodeURIComponent(svg)}`;
   }
 }

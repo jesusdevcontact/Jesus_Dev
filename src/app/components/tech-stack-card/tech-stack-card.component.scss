@@ -186,6 +186,28 @@ li:hover {
   background: linear-gradient(135deg, #f59e0b, #d946ef);
 }
 
+.tech-sanctum .tech-mark {
+  background: linear-gradient(135deg, #ff2d20, #fb7185);
+}
+
+.tech-karma .tech-mark {
+  background: linear-gradient(135deg, #429c46, #89f4b2);
+}
+
+.tech-phpunit .tech-mark {
+  background: linear-gradient(135deg, #8892bf, #777bb4);
+}
+
+.tech-codex .tech-mark {
+  background: linear-gradient(135deg, #f7f8fb, #bfc7d5);
+  color: #05060a;
+}
+
+.tech-claude-code .tech-mark {
+  background: linear-gradient(135deg, #d97757, #f0b28f);
+  color: #05060a;
+}
+
 .tech-angular-testing .tech-mark,
 .tech-pruebas-angular .tech-mark,
 .tech-tests-angular .tech-mark,
