@@ -32,6 +32,8 @@ export class TechStackCardComponent {
   techSlug(item: string): string {
     return item
       .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
       .replace(/\+/g, 'plus')
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-|-$/g, '');
@@ -42,20 +44,32 @@ export class TechStackCardComponent {
       angular: 'A',
       typescript: 'TS',
       rxjs: 'Rx',
-      signals: 'Sg',
       scss: 'Sc',
       laravel: 'Lv',
       php: 'PHP',
       mysql: 'SQL',
+      neon: 'Ne',
       docker: 'D',
-      vercel: '▲',
+      vercel: 'Vc',
       railway: 'Rw',
       'github-actions': 'GH',
       cypress: 'Cy',
       vitest: 'Vi',
       npm: 'npm',
       pnpm: 'pn',
+      linux: 'Lx',
       vite: 'V',
+      'rest-apis': 'API',
+      'apis-rest': 'API',
+      'angular-testing': 'Ng',
+      'pruebas-angular': 'Ng',
+      'tests-angular': 'Ng',
+      'a11y-checks': 'A11y',
+      'revision-a11y': 'A11y',
+      'controles-a11y': 'A11y',
+      filament: 'Fi',
+      'angular-cli': 'CLI',
+      'chrome-devtools': 'Dev',
     };
 
     return marks[this.techSlug(item)] ?? item.slice(0, 2);

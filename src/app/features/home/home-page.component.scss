@@ -429,11 +429,11 @@ code strong {
 .projects-grid > *,
 .principle-grid > *,
 .journey > * {
-  transform: translateY(14px);
+  transform: translateY(22px) scale(0.992);
   opacity: 0;
   transition:
-    opacity 620ms ease,
-    transform 720ms var(--ease-premium);
+    opacity 780ms ease,
+    transform 880ms var(--ease-premium);
 }
 
 .stack-grid.is-visible > *,
@@ -459,12 +459,19 @@ code strong {
 }
 
 .stack-grid.is-visible > *:nth-child(4),
-.principle-grid.is-visible > *:nth-child(4) {
+.projects-grid.is-visible > *:nth-child(4),
+.principle-grid.is-visible > *:nth-child(4),
+.journey.is-visible > *:nth-child(4) {
   transition-delay: 210ms;
 }
 
 .stack-grid.is-visible > *:nth-child(5) {
   transition-delay: 280ms;
+}
+
+.stack-grid.is-visible > *:nth-child(6),
+.projects-grid.is-visible > *:nth-child(6) {
+  transition-delay: 350ms;
 }
 
 .journey {

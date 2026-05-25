@@ -28,7 +28,7 @@ export class RevealOnScrollDirective implements OnInit, OnDestroy {
             }
           }
         },
-        { rootMargin: '0px 0px -12% 0px', threshold: 0.16 },
+        { rootMargin: '0px 0px -16% 0px', threshold: 0.18 },
       );
 
       this.observer.observe(nativeElement);

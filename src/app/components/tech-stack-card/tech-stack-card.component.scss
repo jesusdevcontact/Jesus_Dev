@@ -11,10 +11,10 @@
     rgba(255, 255, 255, 0.035);
   box-shadow: var(--shadow-sm);
   transition:
-    transform 240ms var(--ease-premium),
-    border-color 240ms ease,
-    background 240ms ease,
-    box-shadow 240ms ease;
+    transform 320ms var(--ease-premium),
+    border-color 320ms ease,
+    background 320ms ease,
+    box-shadow 320ms ease;
 }
 
 .tech-card::before {
@@ -101,15 +101,15 @@ ul {
 li {
   display: inline-flex;
   align-items: center;
-  gap: 0.42rem;
+  gap: 0.45rem;
   border: 1px solid rgba(255, 255, 255, 0.088);
   border-radius: 999px;
-  padding: 0.28rem 0.54rem 0.28rem 0.32rem;
+  padding: 0.3rem 0.58rem 0.3rem 0.32rem;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.068), rgba(255, 255, 255, 0.025)),
     rgba(255, 255, 255, 0.028);
   color: var(--text-soft);
-  font-size: 0.79rem;
+  font-size: 0.8rem;
   font-weight: 700;
   line-height: 1;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.045) inset;
@@ -129,8 +129,8 @@ li:hover {
 
 .tech-mark {
   display: inline-grid;
-  min-width: 1.38rem;
-  height: 1.38rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 999px;
@@ -154,11 +154,6 @@ li:hover {
   background: linear-gradient(135deg, #e01d84, #8b2bbf);
 }
 
-.tech-signals .tech-mark {
-  background: linear-gradient(135deg, #89f4b2, #36c989);
-  color: #041014;
-}
-
 .tech-scss .tech-mark {
   background: linear-gradient(135deg, #cf649a, #8f3d6f);
 }
@@ -173,6 +168,11 @@ li:hover {
 
 .tech-mysql .tech-mark {
   background: linear-gradient(135deg, #00758f, #f29111);
+}
+
+.tech-neon .tech-mark {
+  background: linear-gradient(135deg, #00e5bf, #0b7f71);
+  color: #041014;
 }
 
 .tech-docker .tech-mark {
@@ -209,4 +209,35 @@ li:hover {
 .tech-pnpm .tech-mark {
   background: linear-gradient(135deg, #f9ad00, #d68000);
   color: #05060a;
+}
+
+.tech-linux .tech-mark {
+  background: linear-gradient(135deg, #f4c430, #2f2f2f);
+  color: #05060a;
+}
+
+.tech-rest-apis .tech-mark,
+.tech-apis-rest .tech-mark {
+  background: linear-gradient(135deg, #53d8ff, #3b82f6);
+  color: #041014;
+}
+
+.tech-filament .tech-mark {
+  background: linear-gradient(135deg, #f59e0b, #d946ef);
+}
+
+.tech-angular-testing .tech-mark,
+.tech-pruebas-angular .tech-mark,
+.tech-tests-angular .tech-mark,
+.tech-a11y-checks .tech-mark,
+.tech-revision-a11y .tech-mark,
+.tech-controles-a11y .tech-mark {
+  background: linear-gradient(135deg, #89f4b2, #53d8ff);
+  color: #041014;
+}
+
+.tech-angular-cli .tech-mark,
+.tech-chrome-devtools .tech-mark {
+  background: linear-gradient(135deg, #85a9ff, #53d8ff);
+  color: #041014;
 }

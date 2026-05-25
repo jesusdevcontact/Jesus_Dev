@@ -9,29 +9,30 @@
     "stack": "Stack",
     "projects": "Projets",
     "journey": "Parcours",
-    "contact": "Contact"
+    "contact": "Contact",
+    "brandSubtitle": "Angular / Laravel"
   },
   "hero": {
-    "eyebrow": "Développeur fullstack / spécialiste Angular",
-    "title": "Je crée des expériences Angular et Laravel modernes avec une finition produit.",
-    "lead": "Développeur fullstack orienté interfaces Angular, backends Laravel, données relationnelles, habitudes de test et soin d'interface pour rendre les applications plus utilisables et maintenables.",
+    "eyebrow": "Développeur fullstack / Angular + Laravel",
+    "title": "Je construis des produits Angular et Laravel avec APIs claires et UX soignée.",
+    "lead": "Développeur fullstack orienté frontends Angular, APIs Laravel, données relationnelles, habitudes de test et décisions produit qui rendent les applications plus utilisables, livrables et maintenables.",
     "proof": [
       "Disponible pour des rôles frontend/fullstack",
-      "Architecture de composants et état UI",
-      "APIs Laravel et modélisation MySQL"
+      "Architecture frontend et contrats API",
+      "APIs Laravel, MySQL et flux de déploiement"
     ],
     "stats": {
       "angular": {
         "title": "Angular",
-        "description": "Composants standalone, état UI typé"
+        "description": "Composants, routing, état UI"
       },
       "laravel": {
         "title": "Laravel",
-        "description": "Validation, APIs, flux MySQL"
+        "description": "APIs REST, validation, MySQL"
       },
       "mindset": {
         "title": "Approche",
-        "description": "Tests, accessibilité, maintenabilité"
+        "description": "Produit, tests, livraison"
       }
     },
     "profile": {
@@ -49,12 +50,12 @@
   },
   "about": {
     "eyebrow": "Profil",
-    "title": "Un profil fullstack construit autour d'une architecture lisible, d'une livraison pratique et d'une progression technique honnête.",
-    "intro": "Ce portfolio rend visibles mes décisions d'ingénierie : le problème résolu par chaque projet, la séparation des responsabilités, la place des tests et ma façon de penser la maintenabilité.",
-    "cardTitle": "Soin frontend avec contexte backend.",
+    "title": "Un profil fullstack construit autour d'une architecture lisible, de frontières API et d'une livraison pratique.",
+    "intro": "Ce portfolio rend visibles mes décisions d'ingénierie : le problème résolu par chaque projet, la communication frontend/backend, la place des données et de la validation, et ma façon de penser la maintenabilité.",
+    "cardTitle": "Soin Angular avec contexte Laravel et données.",
     "paragraphs": [
-      "Je suis Jesus Martinez Escobar, développeur fullstack concentré sur les applications Angular et les produits soutenus par Laravel. J'essaie d'écrire du code qu'un autre développeur peut comprendre, tester et étendre sans devoir reconstruire l'intention.",
-      "Les projets sont présentés comme des cas d'ingénierie : problème, décisions techniques, architecture, approche de test et compromis que je pourrais expliquer en entretien."
+      "Je suis Jesus Martinez Escobar, développeur fullstack concentré sur les applications Angular, les APIs Laravel et les workflows produit basés sur des données. J'essaie d'écrire du code qu'un autre développeur peut comprendre, tester et étendre sans reconstruire l'intention.",
+      "Les projets sont présentés comme des cas d'ingénierie : problème produit, décisions API/UI, architecture, approche de test et compromis que je pourrais expliquer en entretien."
     ],
     "principles": {
       "decisions": "Expliquer clairement les décisions",
@@ -65,38 +66,38 @@
   },
   "stack": {
     "eyebrow": "Stack technique",
-    "title": "Un stack pratique choisi pour clarifier les responsabilités entre UI, APIs, données, tests et livraison.",
+    "title": "Un toolkit fullstack pratique pour UI Angular, APIs Laravel, données, tests et déploiement.",
     "categories": {
       "frontend": {
         "title": "Frontend",
         "summary": "Interfaces Angular avec frontières de composants, flux de données typé, SCSS responsive et états d'interaction accessibles.",
-        "items": ["Angular", "TypeScript", "RxJS", "Signals", "SCSS"]
+        "items": ["Angular", "TypeScript", "RxJS", "SCSS", "Vite"]
       },
       "backend": {
         "title": "Backend",
         "summary": "Bases Laravel et PHP pour APIs REST, données relationnelles, validation, authentification et flux d'administration.",
-        "items": ["Laravel", "PHP", "MySQL", "APIs REST", "Filament"]
+        "items": ["Laravel", "PHP", "MySQL", "Neon", "APIs REST"]
       },
       "testing": {
         "title": "Tests",
         "summary": "Habitudes de test basées sur le risque : transitions d'état, parcours utilisateur, validations et régressions visibles.",
-        "items": ["Cypress", "Vitest", "Tests Angular", "Checks A11y"]
+        "items": ["Cypress", "Vitest", "Tests Angular", "Contrôles A11y"]
       },
       "devops": {
         "title": "DevOps",
-        "summary": "Flux orientés production avec builds répétables, séparation d'environnements, versioning et préparation CI.",
-        "items": ["Docker", "Vercel", "Railway", "GitHub Actions"]
+        "summary": "Flux orientés production avec builds répétables, démos déployées, séparation d'environnements, versioning et préparation CI.",
+        "items": ["Docker", "Vercel", "Railway", "GitHub Actions", "Linux"]
       },
       "tooling": {
         "title": "Outillage",
         "summary": "Outils pensés pour un feedback rapide, un debug clair, des dossiers maintenables et un handoff lisible.",
-        "items": ["Vite", "npm", "pnpm", "Angular CLI", "Chrome DevTools"]
+        "items": ["npm", "pnpm", "Angular CLI", "Chrome DevTools"]
       }
     }
   },
   "projects": {
     "eyebrow": "Projets sélectionnés",
-    "title": "Des projets orientés produit, avec architecture claire et compromis prêts pour entretien.",
+    "title": "Des projets fullstack avec frontières API claires, UX légère et compromis prêts pour entretien.",
     "labels": {
       "problem": "Problème",
       "decisions": "Décisions",
@@ -107,40 +108,40 @@
     "items": {
       "focusFlow": {
         "type": "Workspace de productivité Angular",
-        "summary": "UI de planification pour sessions, priorités et revue de progression.",
+        "summary": "Produit de planification pour sessions, priorités et revue de progression.",
         "problem": "Réduit les tâches dispersées en un flux clair.",
         "decisions": [
-          "Composants Angular standalone par feature",
+          "Composants Angular organisés par feature",
           "Transitions session et tâche typées",
           "Tokens SCSS pour surfaces réutilisables"
         ],
-        "architecture": ["Dossiers feature-first", "Modèle d'état session", "Grid dashboard responsive"],
+        "architecture": ["Dossiers feature-first", "État de session typé", "Grid dashboard responsive"],
         "quality": ["Utilitaires prêts pour Vitest", "Focus clavier visible", "Support reduced motion"],
-        "impact": ["Architecture Angular", "Pensée produit", "État UI testable"]
+        "impact": ["Architecture Angular", "Pensée produit", "Flux d'état testable"]
       },
       "gibora": {
         "type": "Plateforme opérationnelle Laravel",
-        "summary": "Plateforme opérationnelle pour inventaire, permissions et workflows admin.",
+        "summary": "Plateforme opérationnelle Laravel pour inventaire, permissions et workflows admin.",
         "problem": "Garde stock, accès et données de gestion cohérents.",
         "decisions": [
           "Règles domaine proches du modèle Laravel",
           "Patterns admin de type Filament",
           "Tables relationnelles plutôt que données plates"
         ],
-        "architecture": ["Modèles Laravel", "Schéma MySQL", "Workflows admin"],
+        "architecture": ["Modèles Laravel", "Schéma MySQL", "Workflows API/admin"],
         "quality": ["Validation backend", "Écrans avec permissions", "Setup local répétable"],
         "impact": ["Bases Laravel", "Modélisation données", "Culture production"]
       },
       "devConnect": {
         "type": "Réseau fullstack pour développeurs",
-        "summary": "App communautaire fullstack pour profils, auth et collaboration API.",
+        "summary": "Produit communautaire fullstack pour profils, auth et collaboration API.",
         "problem": "Garde identité, profils et interactions lisibles entre les couches.",
         "decisions": [
           "UI Angular séparée de l'API Laravel",
           "États explicites auth et onboarding",
           "Réponses API adaptées au frontend"
         ],
-        "architecture": ["Shell Angular", "API REST Laravel", "Frontières par route"],
+        "architecture": ["Shell Angular", "API REST Laravel", "Frontières route et API"],
         "quality": ["Parcours cibles Cypress", "Feedback accessible", "États d'erreur API"],
         "impact": ["Progression fullstack", "Pensée API", "Design système"]
       }
@@ -154,7 +155,7 @@
         "year": "DAW",
         "title": "DAW : fondations fullstack pratiques",
         "summary": "J'ai construit une base de travail en structure frontend, logique backend, bases relationnelles, versioning et explication claire des choix techniques.",
-        "details": ["Fondamentaux Angular et TypeScript", "Pratique backend PHP et Laravel", "Modélisation MySQL et raisonnement SQL"]
+        "details": ["Fondamentaux Angular et TypeScript", "Pratique d'APIs avec PHP et Laravel", "Modélisation MySQL et raisonnement SQL"]
       },
       "pegasus": {
         "year": "Stage",
@@ -165,15 +166,15 @@
       "progression": {
         "year": "Maintenant",
         "title": "Progression fullstack",
-        "summary": "Je passe de la construction de features à une pensée de développeur d'équipe : définir les frontières, tester les risques, documenter les compromis et rendre les interfaces utilisables.",
-        "details": ["Architecture Angular réutilisable", "Tests basés sur le risque", "Performance, accessibilité et préparation au déploiement"]
+        "summary": "Je passe de la construction d'écrans à la définition de features fullstack : frontières API/UI, risques, compromis et utilisabilité en conditions réelles.",
+        "details": ["Architecture Angular réutilisable", "Pensée Laravel/API", "Performance, accessibilité et préparation au déploiement"]
       }
     }
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Parlons de rôles frontend, stages et opportunités fullstack.",
-    "text": "Je suis prêt à discuter de mon code, de mes décisions et de ma façon d'aborder Angular, Laravel, les tests, l'accessibilité et l'apprentissage orienté production dans une vraie équipe."
+    "title": "Parlons de rôles fullstack, Angular, Laravel et produit.",
+    "text": "Je suis prêt à discuter de mon code, de mes décisions API/UI et de ma façon d'aborder Angular, Laravel, données, tests, accessibilité et apprentissage orienté production dans une vraie équipe."
   },
   "buttons": {
     "viewProjects": "Voir les projets",
@@ -184,7 +185,7 @@
     "liveDemo": "Démo"
   },
   "footer": {
-    "tagline": "Développeur fullstack créant des produits Angular et Laravel soignés."
+    "tagline": "Développeur fullstack créant des produits Angular, Laravel et APIs soignées."
   },
   "accessibility": {
     "skipToContent": "Aller au contenu",
@@ -209,7 +210,7 @@
   },
   "seo": {
     "title": "Jesus Dev | Développeur Fullstack Angular et Laravel",
-    "description": "Portfolio technique de Jesus Martinez Escobar, développeur fullstack orienté Angular, Laravel, MySQL, tests, accessibilité et applications web prêtes pour production.",
+    "description": "Portfolio technique de Jesus Martinez Escobar, développeur fullstack orienté Angular, APIs Laravel, MySQL, tests, accessibilité et applications web prêtes pour production.",
     "imageAlt": "Aperçu du portfolio Jesus Dev"
   }
 }

@@ -143,17 +143,19 @@ button {
 }
 
 .reveal {
-  transform: translateY(22px) scale(0.992);
+  transform: translateY(30px) scale(0.988);
   opacity: 0;
   transition:
-    opacity 780ms ease,
-    transform 820ms var(--ease-premium);
+    opacity 900ms ease,
+    transform 980ms var(--ease-premium);
   transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
 }
 
 .reveal.is-visible {
   transform: translateY(0) scale(1);
   opacity: 1;
+  will-change: auto;
 }
 
 @keyframes pageEnter {
