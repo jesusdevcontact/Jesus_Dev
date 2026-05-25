@@ -14,9 +14,9 @@
   "hero": {
     "eyebrow": "Développeur fullstack / spécialiste Angular",
     "title": "Je crée des expériences Angular et Laravel modernes avec une finition produit.",
-    "lead": "Développeur fullstack junior orienté interfaces Angular, backends Laravel, données relationnelles, habitudes de test et soin d'interface pour rendre les applications plus utilisables et maintenables.",
+    "lead": "Développeur fullstack orienté interfaces Angular, backends Laravel, données relationnelles, habitudes de test et soin d'interface pour rendre les applications plus utilisables et maintenables.",
     "proof": [
-      "Disponible pour des rôles junior frontend/fullstack",
+      "Disponible pour des rôles frontend/fullstack",
       "Architecture de composants et état UI",
       "APIs Laravel et modélisation MySQL"
     ],
@@ -49,11 +49,11 @@
   },
   "about": {
     "eyebrow": "Profil",
-    "title": "Un profil fullstack junior construit autour d'une architecture lisible, d'une livraison pratique et d'une progression technique honnête.",
+    "title": "Un profil fullstack construit autour d'une architecture lisible, d'une livraison pratique et d'une progression technique honnête.",
     "intro": "Ce portfolio rend visibles mes décisions d'ingénierie : le problème résolu par chaque projet, la séparation des responsabilités, la place des tests et ma façon de penser la maintenabilité.",
     "cardTitle": "Soin frontend avec contexte backend.",
     "paragraphs": [
-      "Je suis Jesus Martinez Escobar, développeur fullstack junior concentré sur les applications Angular et les produits soutenus par Laravel. J'essaie d'écrire du code qu'un autre développeur peut comprendre, tester et étendre sans devoir reconstruire l'intention.",
+      "Je suis Jesus Martinez Escobar, développeur fullstack concentré sur les applications Angular et les produits soutenus par Laravel. J'essaie d'écrire du code qu'un autre développeur peut comprendre, tester et étendre sans devoir reconstruire l'intention.",
       "Les projets sont présentés comme des cas d'ingénierie : problème, décisions techniques, architecture, approche de test et compromis que je pourrais expliquer en entretien."
     ],
     "principles": {
@@ -172,7 +172,7 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Parlons de rôles frontend, stages et opportunités junior fullstack.",
+    "title": "Parlons de rôles frontend, stages et opportunités fullstack.",
     "text": "Je suis prêt à discuter de mon code, de mes décisions et de ma façon d'aborder Angular, Laravel, les tests, l'accessibilité et l'apprentissage orienté production dans une vraie équipe."
   },
   "buttons": {
@@ -195,6 +195,8 @@
     "languageSwitcher": "Sélecteur de langue",
     "languageOption": "Changer la langue en {{ language }}",
     "projectActions": "Actions du projet {{ project }}",
+    "githubProfile": "Ouvrir le profil GitHub",
+    "linkedinProfile": "Ouvrir le profil LinkedIn",
     "professionalStrengths": "Forces professionnelles",
     "profileSummary": "Résumé du profil développeur",
     "profileImageAlt": "Identité visuelle Jesus Dev",
@@ -208,7 +210,7 @@
   },
   "seo": {
     "title": "Jesus Dev | Développeur Fullstack Angular et Laravel",
-    "description": "Portfolio technique de Jesus Martinez Escobar, développeur fullstack junior orienté Angular, Laravel, MySQL, tests, accessibilité et applications web prêtes pour production.",
+    "description": "Portfolio technique de Jesus Martinez Escobar, développeur fullstack orienté Angular, Laravel, MySQL, tests, accessibilité et applications web prêtes pour production.",
     "imageAlt": "Aperçu du portfolio Jesus Dev"
   }
 }

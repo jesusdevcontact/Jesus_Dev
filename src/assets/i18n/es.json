@@ -14,9 +14,9 @@
   "hero": {
     "eyebrow": "Desarrollador fullstack / especialista Angular",
     "title": "Construyo experiencias Angular y Laravel modernas con pulido de producto.",
-    "lead": "Desarrollador fullstack junior enfocado en interfaces Angular, backends Laravel, datos relacionales, hábitos de testing y el tipo de detalle visual que hace que una aplicación sea más usable y mantenible.",
+    "lead": "Desarrollador fullstack enfocado en interfaces Angular, backends Laravel, datos relacionales, hábitos de testing y el tipo de detalle visual que hace que una aplicación sea más usable y mantenible.",
     "proof": [
-      "Disponible para roles junior frontend/fullstack",
+      "Disponible para roles frontend/fullstack",
       "Arquitectura de componentes y estado de UI",
       "APIs Laravel y modelado MySQL"
     ],
@@ -49,11 +49,11 @@
   },
   "about": {
     "eyebrow": "Sobre mí",
-    "title": "Un perfil fullstack junior construido sobre arquitectura legible, entrega práctica y crecimiento técnico honesto.",
+    "title": "Un perfil fullstack construido sobre arquitectura legible, entrega práctica y crecimiento técnico honesto.",
     "intro": "Este portfolio está estructurado para hacer visibles mis decisiones de ingeniería: qué problema resuelve cada proyecto, cómo separo responsabilidades, dónde encaja el testing y cómo pienso la mantenibilidad.",
     "cardTitle": "Cuidado frontend con contexto backend.",
     "paragraphs": [
-      "Soy Jesús Martínez Escobar, desarrollador fullstack junior enfocado en aplicaciones Angular y productos respaldados por Laravel. Intento escribir código que otro desarrollador pueda entender, probar y extender sin tener que reconstruir la intención desde cero.",
+      "Soy Jesús Martínez Escobar, desarrollador fullstack enfocado en aplicaciones Angular y productos respaldados por Laravel. Intento escribir código que otro desarrollador pueda entender, probar y extender sin tener que reconstruir la intención desde cero.",
       "Los proyectos se presentan como casos técnicos: el problema, las decisiones, la arquitectura, el enfoque de testing y los tradeoffs que comentaría en una entrevista."
     ],
     "principles": {
@@ -172,7 +172,7 @@
   },
   "contact": {
     "eyebrow": "Contacto",
-    "title": "Hablemos de roles frontend, prácticas y oportunidades junior fullstack.",
+    "title": "Hablemos de roles frontend, prácticas y oportunidades fullstack.",
     "text": "Estoy preparado para hablar de mi código, mis decisiones y cómo abordo Angular, Laravel, testing, accesibilidad y aprendizaje orientado a producción dentro de un equipo real."
   },
   "buttons": {
@@ -195,6 +195,8 @@
     "languageSwitcher": "Selector de idioma",
     "languageOption": "Cambiar idioma a {{ language }}",
     "projectActions": "Acciones del proyecto {{ project }}",
+    "githubProfile": "Abrir perfil de GitHub",
+    "linkedinProfile": "Abrir perfil de LinkedIn",
     "professionalStrengths": "Fortalezas profesionales",
     "profileSummary": "Resumen del perfil de desarrollador",
     "profileImageAlt": "Identidad visual de Jesus Dev",
@@ -208,7 +210,7 @@
   },
   "seo": {
     "title": "Jesus Dev | Desarrollador Fullstack Angular y Laravel",
-    "description": "Portfolio técnico de Jesús Martínez Escobar, desarrollador fullstack junior enfocado en Angular, Laravel, MySQL, testing, accesibilidad y aplicaciones web orientadas a producción.",
+    "description": "Portfolio técnico de Jesús Martínez Escobar, desarrollador fullstack enfocado en Angular, Laravel, MySQL, testing, accesibilidad y aplicaciones web orientadas a producción.",
     "imageAlt": "Vista previa del portfolio Jesus Dev"
   }
 }

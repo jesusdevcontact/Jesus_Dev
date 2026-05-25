@@ -29,18 +29,22 @@ p {
 
 .footer-links a {
   display: grid;
-  width: 2.55rem;
-  height: 2.55rem;
+  width: 2.45rem;
+  height: 2.45rem;
   place-items: center;
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.035);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.026);
   color: var(--text-muted);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.045) inset;
   transition:
-    transform 180ms ease,
-    color 180ms ease,
-    border-color 180ms ease,
-    background 180ms ease;
+    transform 220ms var(--ease-premium),
+    color 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .footer-links a:hover {
@@ -48,6 +52,14 @@ p {
   border-color: var(--border-strong);
   background: rgba(255, 255, 255, 0.065);
   color: var(--text-strong);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 12px 26px rgba(83, 216, 255, 0.08);
+}
+
+.brand-icon {
+  width: 1.05rem;
+  height: 1.05rem;
 }
 
 .copyright {
