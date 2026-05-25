@@ -113,6 +113,8 @@ export class TechStackCardComponent {
   techIconUrl(item: string): string | null {
     const customIcons: Record<string, string> = {
       sanctum: this.sanctumIcon(),
+      codex: this.codexIcon(),
+      'claude-code': this.claudeIcon(),
     };
     const icons: Record<string, string> = {
       angular: 'angular/DD0031',
@@ -136,11 +138,9 @@ export class TechStackCardComponent {
       npm: 'npm/CB3837',
       pnpm: 'pnpm/F69220',
       linux: 'linux/FCC624',
-      'vs-code': 'visualstudiocode/007ACC',
+      'vs-code': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg',
       github: 'github/FFFFFF',
       postman: 'postman/FF6C37',
-      codex: 'openai/FFFFFF',
-      'claude-code': 'anthropic/D97757',
     };
 
     const slug = this.techSlug(item);
@@ -164,6 +164,18 @@ export class TechStackCardComponent {
 
   private sanctumIcon(): string {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#ff2d20"/><path fill="#fff" d="M12 3.4 18.7 6v5.25c0 4.15-2.66 7.88-6.7 9.35-4.04-1.47-6.7-5.2-6.7-9.35V6L12 3.4Z"/><path fill="#ff2d20" d="M12 6.05 15.95 7.6v3.55c0 2.35-1.48 4.56-3.95 5.78-2.47-1.22-3.95-3.43-3.95-5.78V7.6L12 6.05Z"/><path fill="#fff" d="M10.24 12.98c.48.55 1.05.83 1.72.83.55 0 .98-.17 1.3-.5.3-.32.46-.72.46-1.2 0-.47-.16-.86-.49-1.17-.32-.31-.78-.47-1.38-.47-.62 0-1.2.18-1.74.55l-.83-.74.4-3.1h5.1v1.55h-3.76l-.13.92c.4-.2.84-.3 1.32-.3.95 0 1.7.25 2.27.76.58.5.86 1.15.86 1.96 0 .88-.31 1.62-.94 2.2-.62.59-1.43.88-2.42.88-1.16 0-2.1-.42-2.82-1.25l1.12-.92Z"/></svg>`;
+
+    return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+  }
+
+  private codexIcon(): string {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#101218"/><path fill="none" stroke="#f7f8fb" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M12 4.45c1.25 0 2.23.62 2.82 1.6 1.12-.14 2.19.23 2.98 1.08.9.96 1.14 2.25.72 3.4.77.84.98 2.05.6 3.17-.42 1.25-1.4 2.05-2.57 2.27-.36 1.07-1.23 1.93-2.38 2.24-1.27.34-2.51-.03-3.34-.85-1.1.23-2.24-.07-3.1-.9-.95-.9-1.26-2.18-.94-3.36-.86-.77-1.22-1.96-.92-3.12.32-1.29 1.26-2.2 2.4-2.55.43-1.1 1.42-1.95 2.66-2.16.37-.06.73-.06 1.07-.02Z"/><path fill="none" stroke="#f7f8fb" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" d="M8.26 7.43 12 9.57l3.73-2.14M8.26 16.47v-4.28L12 10m3.73 6.47v-4.28L12 10m0 8.55v-4.28l3.73-2.08M12 18.55l-3.74-2.08"/></svg>`;
+
+    return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+  }
+
+  private claudeIcon(): string {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#19110d"/><path fill="#d97757" d="m12 3.2 1.45 5.35 4.7-2.93-2.93 4.7L20.8 12l-5.58 1.68 2.93 4.7-4.7-2.93L12 20.8l-1.45-5.35-4.7 2.93 2.93-4.7L3.2 12l5.58-1.68-2.93-4.7 4.7 2.93L12 3.2Z"/><path fill="#f2c0a4" d="M12 7.25 13.05 11H17l-3.2 2.28 1.22 3.67L12 14.7l-3.02 2.25 1.22-3.67L7 11h3.95L12 7.25Z"/></svg>`;
 
     return `data:image/svg+xml,${encodeURIComponent(svg)}`;
   }
