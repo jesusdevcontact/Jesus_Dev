@@ -70,27 +70,27 @@
       "frontend": {
         "title": "Frontend",
         "summary": "Interfaces Angular avec frontières de composants, flux de données typé, SCSS responsive et états d'interaction accessibles.",
-        "items": ["Angular", "TypeScript", "RxJS", "Signals", "SCSS", "HTML5", "UI responsive", "A11y"]
+        "items": ["Angular", "TypeScript", "RxJS", "Signals", "SCSS"]
       },
       "backend": {
         "title": "Backend",
         "summary": "Bases Laravel et PHP pour APIs REST, données relationnelles, validation, authentification et flux d'administration.",
-        "items": ["Laravel", "PHP", "MySQL", "APIs REST", "Eloquent", "Filament", "Validation", "Auth"]
+        "items": ["Laravel", "PHP", "MySQL", "APIs REST", "Filament"]
       },
       "testing": {
         "title": "Tests",
         "summary": "Habitudes de test basées sur le risque : transitions d'état, parcours utilisateur, validations et régressions visibles.",
-        "items": ["Cypress", "Vitest", "Tests Angular", "Specs fonctionnelles", "Mocking", "Checks A11y"]
+        "items": ["Cypress", "Vitest", "Tests Angular", "Checks A11y"]
       },
       "devops": {
         "title": "DevOps",
         "summary": "Flux orientés production avec builds répétables, séparation d'environnements, versioning et préparation CI.",
-        "items": ["Docker", "GitHub Actions", "Git", "Checks CI", "Config d'environnement", "Build budgets"]
+        "items": ["Docker", "Vercel", "Railway", "GitHub Actions"]
       },
       "tooling": {
         "title": "Outillage",
         "summary": "Outils pensés pour un feedback rapide, un debug clair, des dossiers maintenables et un handoff lisible.",
-        "items": ["Vite", "Angular CLI", "VS Code", "npm", "Handoff Figma", "Chrome DevTools"]
+        "items": ["Vite", "npm", "pnpm", "Angular CLI", "Chrome DevTools"]
       }
     }
   },
@@ -181,7 +181,6 @@
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "emailMe": "M'écrire",
-    "hireMe": "Me recruter",
     "liveDemo": "Démo"
   },
   "footer": {

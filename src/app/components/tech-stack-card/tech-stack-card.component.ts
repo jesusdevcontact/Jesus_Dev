@@ -28,4 +28,36 @@ export class TechStackCardComponent {
 
     return icons[key] ?? 'code-2';
   }
+
+  techSlug(item: string): string {
+    return item
+      .toLowerCase()
+      .replace(/\+/g, 'plus')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+  }
+
+  techMark(item: string): string {
+    const marks: Record<string, string> = {
+      angular: 'A',
+      typescript: 'TS',
+      rxjs: 'Rx',
+      signals: 'Sg',
+      scss: 'Sc',
+      laravel: 'Lv',
+      php: 'PHP',
+      mysql: 'SQL',
+      docker: 'D',
+      vercel: '▲',
+      railway: 'Rw',
+      'github-actions': 'GH',
+      cypress: 'Cy',
+      vitest: 'Vi',
+      npm: 'npm',
+      pnpm: 'pn',
+      vite: 'V',
+    };
+
+    return marks[this.techSlug(item)] ?? item.slice(0, 2);
+  }
 }

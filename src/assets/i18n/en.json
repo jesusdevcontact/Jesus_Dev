@@ -70,27 +70,27 @@
       "frontend": {
         "title": "Frontend",
         "summary": "Angular interfaces with component boundaries, typed data flow, responsive SCSS, and accessible interaction states.",
-        "items": ["Angular", "TypeScript", "RxJS", "Signals", "SCSS", "HTML5", "Responsive UI", "A11y"]
+        "items": ["Angular", "TypeScript", "RxJS", "Signals", "SCSS"]
       },
       "backend": {
         "title": "Backend",
         "summary": "Laravel and PHP foundations for REST APIs, relational data, validation rules, authentication, and admin workflows.",
-        "items": ["Laravel", "PHP", "MySQL", "REST APIs", "Eloquent", "Filament", "Validation", "Auth"]
+        "items": ["Laravel", "PHP", "MySQL", "REST APIs", "Filament"]
       },
       "testing": {
         "title": "Testing",
         "summary": "Risk-based testing habits: cover state transitions, user flows, validation paths, and regressions that affect users.",
-        "items": ["Cypress", "Vitest", "Angular Testing", "Feature Specs", "Mocking", "A11y Checks"]
+        "items": ["Cypress", "Vitest", "Angular Testing", "A11y Checks"]
       },
       "devops": {
         "title": "DevOps",
         "summary": "Production-minded workflows with repeatable builds, environment separation, version control, and CI preparation.",
-        "items": ["Docker", "GitHub Actions", "Git", "CI Checks", "Environment Config", "Build Budgets"]
+        "items": ["Docker", "Vercel", "Railway", "GitHub Actions"]
       },
       "tooling": {
         "title": "Tooling",
         "summary": "Tooling choices aimed at fast feedback, clean debugging, maintainable folders, and readable handoff for teams.",
-        "items": ["Vite", "Angular CLI", "VS Code", "npm", "Figma Handoff", "Chrome DevTools"]
+        "items": ["Vite", "npm", "pnpm", "Angular CLI", "Chrome DevTools"]
       }
     }
   },
@@ -181,7 +181,6 @@
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "emailMe": "Email me",
-    "hireMe": "Hire me",
     "liveDemo": "Live demo"
   },
   "footer": {

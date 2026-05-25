@@ -87,10 +87,12 @@
       <a
         class="project-action"
         [href]="project().demoUrl"
+        target="_blank"
+        rel="noopener noreferrer"
         [attr.title]="'buttons.liveDemo' | translate"
         [attr.aria-label]="'accessibility.projectDemo' | translate: { project: project().name }"
       >
-        <svg lucideIcon="external-link" size="17" aria-hidden="true"></svg>
+        <svg lucideIcon="globe" size="17" aria-hidden="true"></svg>
         <span class="sr-only">{{ 'buttons.liveDemo' | translate }}</span>
       </a>
     </div>

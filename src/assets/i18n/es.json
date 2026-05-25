@@ -70,27 +70,27 @@
       "frontend": {
         "title": "Frontend",
         "summary": "Interfaces Angular con límites de componentes, flujo de datos tipado, SCSS responsive y estados de interacción accesibles.",
-        "items": ["Angular", "TypeScript", "RxJS", "Signals", "SCSS", "HTML5", "UI responsive", "A11y"]
+        "items": ["Angular", "TypeScript", "RxJS", "Signals", "SCSS"]
       },
       "backend": {
         "title": "Backend",
         "summary": "Bases con Laravel y PHP para APIs REST, datos relacionales, reglas de validación, autenticación y flujos de administración.",
-        "items": ["Laravel", "PHP", "MySQL", "APIs REST", "Eloquent", "Filament", "Validación", "Auth"]
+        "items": ["Laravel", "PHP", "MySQL", "APIs REST", "Filament"]
       },
       "testing": {
         "title": "Testing",
         "summary": "Hábitos de testing basados en riesgo: transiciones de estado, flujos de usuario, validaciones y regresiones que afectan al usuario.",
-        "items": ["Cypress", "Vitest", "Angular Testing", "Specs funcionales", "Mocking", "Checks A11y"]
+        "items": ["Cypress", "Vitest", "Angular Testing", "Checks A11y"]
       },
       "devops": {
         "title": "DevOps",
         "summary": "Flujos orientados a producción con builds repetibles, separación de entornos, control de versiones y preparación para CI.",
-        "items": ["Docker", "GitHub Actions", "Git", "Checks CI", "Config de entorno", "Build budgets"]
+        "items": ["Docker", "Vercel", "Railway", "GitHub Actions"]
       },
       "tooling": {
         "title": "Tooling",
         "summary": "Herramientas pensadas para feedback rápido, depuración clara, carpetas mantenibles y handoff legible para equipos.",
-        "items": ["Vite", "Angular CLI", "VS Code", "npm", "Handoff Figma", "Chrome DevTools"]
+        "items": ["Vite", "npm", "pnpm", "Angular CLI", "Chrome DevTools"]
       }
     }
   },
@@ -181,7 +181,6 @@
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "emailMe": "Escríbeme",
-    "hireMe": "Contrátame",
     "liveDemo": "Demo"
   },
   "footer": {

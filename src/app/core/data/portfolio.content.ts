@@ -38,7 +38,7 @@ export const projects: Project[] = [
     stack: ['Angular', 'TypeScript', 'RxJS', 'SCSS', 'Vitest'],
     accent: 'cyan',
     githubUrl: 'https://github.com/jesusdev98/focusflow',
-    demoUrl: '#',
+    demoUrl: 'https://focusflowpwa.vercel.app/',
   },
   {
     key: 'gibora',
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     stack: ['Angular', 'Laravel', 'PHP', 'MySQL', 'Cypress'],
     accent: 'amber',
     githubUrl: 'https://github.com/jesusdev98/devconnect',
-    demoUrl: '#',
+    demoUrl: 'https://devconnect-free.vercel.app/login',
   },
 ];
 

@@ -25,10 +25,6 @@
       @for (item of navItems; track item.target) {
         <a [href]="'#' + item.target" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
       }
-      <a class="nav-contact" href="mailto:jesusdevcontact@gmail.com" (click)="closeMenu()">
-        <svg lucideIcon="mail" size="15" aria-hidden="true"></svg>
-        {{ 'buttons.hireMe' | translate }}
-      </a>
     </nav>
 
     <div class="language-switcher" role="group" [attr.aria-label]="'accessibility.languageSwitcher' | translate">
