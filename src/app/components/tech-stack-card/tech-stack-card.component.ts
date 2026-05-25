@@ -112,17 +112,14 @@ export class TechStackCardComponent {
 
   techIconUrl(item: string): string | null {
     const customIcons: Record<string, string> = {
-      sanctum: this.svgDataIcon('Sa', '#ff2d20', '#ffffff'),
-      karma: this.svgDataIcon('K', '#429c46', '#ffffff'),
-      phpunit: this.svgDataIcon('PU', '#8892bf', '#ffffff'),
-      codex: this.svgDataIcon('Cx', '#f7f8fb', '#05060a'),
-      'claude-code': this.svgDataIcon('Cl', '#d97757', '#05060a'),
+      sanctum: this.sanctumIcon(),
     };
     const icons: Record<string, string> = {
       angular: 'angular/DD0031',
       typescript: 'typescript/3178C6',
       rxjs: 'reactivex/B7178C',
       scss: 'sass/CC6699',
+      vite: 'vite/646CFF',
       laravel: 'laravel/FF2D20',
       php: 'php/777BB4',
       mysql: 'mysql/4479A1',
@@ -134,12 +131,16 @@ export class TechStackCardComponent {
       'github-actions': 'githubactions/2088FF',
       cypress: 'cypress/69D3A7',
       vitest: 'vitest/6E9F18',
+      karma: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/karma/karma-original.svg',
+      phpunit: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/phpunit/phpunit-original.svg',
       npm: 'npm/CB3837',
       pnpm: 'pnpm/F69220',
       linux: 'linux/FCC624',
       'vs-code': 'visualstudiocode/007ACC',
       github: 'github/FFFFFF',
       postman: 'postman/FF6C37',
+      codex: 'openai/FFFFFF',
+      'claude-code': 'anthropic/D97757',
     };
 
     const slug = this.techSlug(item);
@@ -149,7 +150,11 @@ export class TechStackCardComponent {
     if (customIcon) {
       return customIcon;
     }
-    return icon ? `https://cdn.simpleicons.org/${icon}` : null;
+    if (!icon) {
+      return null;
+    }
+
+    return icon.startsWith('http') ? icon : `https://cdn.simpleicons.org/${icon}`;
   }
 
   useIconFallback(event: Event): void {
@@ -157,9 +162,8 @@ export class TechStackCardComponent {
     image.parentElement?.classList.add('tech-mark--fallback');
   }
 
-  private svgDataIcon(label: string, background: string, foreground: string): string {
-    const fontSize = label.length > 1 ? 8.8 : 11;
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="${background}"/><text x="12" y="15.5" text-anchor="middle" fill="${foreground}" font-family="Inter,Arial,sans-serif" font-size="${fontSize}" font-weight="900">${label}</text></svg>`;
+  private sanctumIcon(): string {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#ff2d20"/><path fill="#fff" d="M12 3.4 18.7 6v5.25c0 4.15-2.66 7.88-6.7 9.35-4.04-1.47-6.7-5.2-6.7-9.35V6L12 3.4Z"/><path fill="#ff2d20" d="M12 6.05 15.95 7.6v3.55c0 2.35-1.48 4.56-3.95 5.78-2.47-1.22-3.95-3.43-3.95-5.78V7.6L12 6.05Z"/><path fill="#fff" d="M10.24 12.98c.48.55 1.05.83 1.72.83.55 0 .98-.17 1.3-.5.3-.32.46-.72.46-1.2 0-.47-.16-.86-.49-1.17-.32-.31-.78-.47-1.38-.47-.62 0-1.2.18-1.74.55l-.83-.74.4-3.1h5.1v1.55h-3.76l-.13.92c.4-.2.84-.3 1.32-.3.95 0 1.7.25 2.27.76.58.5.86 1.15.86 1.96 0 .88-.31 1.62-.94 2.2-.62.59-1.43.88-2.42.88-1.16 0-2.1-.42-2.82-1.25l1.12-.92Z"/></svg>`;
 
     return `data:image/svg+xml,${encodeURIComponent(svg)}`;
   }
