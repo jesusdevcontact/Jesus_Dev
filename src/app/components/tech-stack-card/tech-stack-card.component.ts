@@ -108,4 +108,38 @@ export class TechStackCardComponent {
 
     return marks[this.techSlug(item)] ?? item.slice(0, 2);
   }
+
+  techIconUrl(item: string): string | null {
+    const icons: Record<string, string> = {
+      angular: 'angular/DD0031',
+      typescript: 'typescript/3178C6',
+      rxjs: 'reactivex/B7178C',
+      scss: 'sass/CC6699',
+      laravel: 'laravel/FF2D20',
+      php: 'php/777BB4',
+      mysql: 'mysql/4479A1',
+      postgresql: 'postgresql/4169E1',
+      neon: 'neon/00E599',
+      docker: 'docker/2496ED',
+      railway: 'railway/FFFFFF',
+      vercel: 'vercel/FFFFFF',
+      'github-actions': 'githubactions/2088FF',
+      cypress: 'cypress/69D3A7',
+      vitest: 'vitest/6E9F18',
+      karma: 'karma/429C46',
+      phpunit: 'phpunit/8892BF',
+      npm: 'npm/CB3837',
+      pnpm: 'pnpm/F69220',
+      linux: 'linux/FCC624',
+      'vs-code': 'visualstudiocode/007ACC',
+      github: 'github/FFFFFF',
+      postman: 'postman/FF6C37',
+      codex: 'openai/FFFFFF',
+      'claude-code': 'claude/D97757',
+    };
+
+    const icon = icons[this.techSlug(item)];
+
+    return icon ? `https://cdn.simpleicons.org/${icon}` : null;
+  }
 }

@@ -129,11 +129,11 @@ li:hover {
 
 .tech-mark {
   display: inline-grid;
-  min-width: 1.5rem;
-  height: 1.5rem;
+  min-width: 1.6rem;
+  height: 1.6rem;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 0.42rem;
+  border-radius: 0.46rem;
   background: rgba(255, 255, 255, 0.06);
   color: var(--text-strong);
   font-size: 0.62rem;
@@ -144,152 +144,18 @@ li:hover {
     0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
-.tech-angular .tech-mark,
-.tech-laravel .tech-mark,
-.tech-cypress .tech-mark,
-.tech-github .tech-mark {
-  position: relative;
+.tech-mark--logo {
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.028)),
+    rgba(5, 6, 10, 0.45);
 }
 
-.tech-angular .tech-mark::before,
-.tech-laravel .tech-mark::before,
-.tech-cypress .tech-mark::before,
-.tech-github .tech-mark::before {
-  position: absolute;
-  inset: 0.22rem;
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  border-radius: 0.28rem;
-  content: "";
-  opacity: 0.5;
-}
-
-.tech-angular .tech-mark {
-  background: linear-gradient(135deg, #dd0031, #c3002f 56%, #b52e31);
-}
-
-.tech-typescript .tech-mark {
-  background: linear-gradient(135deg, #3178c6, #235a97);
-}
-
-.tech-rxjs .tech-mark {
-  background: linear-gradient(135deg, #e01d84, #8b2bbf);
-}
-
-.tech-scss .tech-mark {
-  background: linear-gradient(135deg, #cf649a, #8f3d6f);
-}
-
-.tech-laravel .tech-mark {
-  background: linear-gradient(135deg, #ff2d20, #b91f18);
-}
-
-.tech-php .tech-mark {
-  background: linear-gradient(135deg, #777bb4, #4f5b93);
-}
-
-.tech-mysql .tech-mark {
-  background: linear-gradient(135deg, #00758f, #f29111);
-}
-
-.tech-postgresql .tech-mark {
-  background: linear-gradient(135deg, #336791, #1f4562);
-}
-
-.tech-neon .tech-mark {
-  background: linear-gradient(135deg, #00e5bf, #0b7f71);
-  color: #041014;
-}
-
-.tech-sanctum .tech-mark {
-  background: linear-gradient(135deg, #f9322c, #711a75);
-}
-
-.tech-docker .tech-mark {
-  background: linear-gradient(135deg, #2496ed, #1266b0);
-}
-
-.tech-vercel .tech-mark {
-  background: linear-gradient(135deg, #ffffff, #b9c2d0);
-  color: #05060a;
-}
-
-.tech-railway .tech-mark {
-  background: linear-gradient(135deg, #7b61ff, #ff7aa6);
-}
-
-.tech-github-actions .tech-mark {
-  background: linear-gradient(135deg, #2f81f7, #1f6feb);
-}
-
-.tech-cypress .tech-mark {
-  background: linear-gradient(135deg, #17202c, #69d3a7);
-}
-
-.tech-karma .tech-mark {
-  background: linear-gradient(135deg, #56c5a8, #2f9f8f);
-  color: #041014;
-}
-
-.tech-phpunit .tech-mark {
-  background: linear-gradient(135deg, #8892bf, #4f5b93);
-}
-
-.tech-vitest .tech-mark,
-.tech-vite .tech-mark {
-  background: linear-gradient(135deg, #bd34fe, #41d1ff);
-}
-
-.tech-accessibility .tech-mark,
-.tech-accesibilidad .tech-mark,
-.tech-accessibilite .tech-mark {
-  background: linear-gradient(135deg, #85a9ff, #53d8ff);
-  color: #041014;
-}
-
-.tech-e2e-testing .tech-mark,
-.tech-testing-e2e .tech-mark,
-.tech-tests-e2e .tech-mark,
-.tech-unit-testing .tech-mark,
-.tech-testing-unitario .tech-mark,
-.tech-tests-unitaires .tech-mark {
-  background: linear-gradient(135deg, #89f4b2, #53d8ff);
-  color: #041014;
-}
-
-.tech-npm .tech-mark {
-  background: linear-gradient(135deg, #cb3837, #8f2424);
-}
-
-.tech-pnpm .tech-mark {
-  background: linear-gradient(135deg, #f9ad00, #d68000);
-  color: #05060a;
-}
-
-.tech-linux .tech-mark {
-  background: linear-gradient(135deg, #f4c430, #2f2f2f);
-  color: #05060a;
-}
-
-.tech-vs-code .tech-mark {
-  background: linear-gradient(135deg, #007acc, #005a9e);
-}
-
-.tech-github .tech-mark {
-  background: linear-gradient(135deg, #f0f6fc, #8b949e);
-  color: #0d1117;
-}
-
-.tech-postman .tech-mark {
-  background: linear-gradient(135deg, #ff6c37, #c94a1f);
-}
-
-.tech-codex .tech-mark {
-  background: linear-gradient(135deg, #f7f8fb, #53d8ff);
-  color: #041014;
-}
-
-.tech-claude-code .tech-mark {
-  background: linear-gradient(135deg, #d97757, #8a4b35);
+.tech-mark img {
+  width: 1.05rem;
+  height: 1.05rem;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
 }
 
 .tech-rest-apis .tech-mark,

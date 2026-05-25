@@ -8,7 +8,13 @@
   <ul [attr.aria-label]="'accessibility.technologies' | translate">
     @for (item of ('stack.categories.' + category().key + '.items' | translate | translateArray); track item) {
       <li [ngClass]="'tech-' + techSlug(item)">
-        <span class="tech-mark" aria-hidden="true">{{ techMark(item) }}</span>
+        <span class="tech-mark" [class.tech-mark--logo]="techIconUrl(item)" aria-hidden="true">
+          @if (techIconUrl(item); as iconUrl) {
+            <img [src]="iconUrl" alt="" width="18" height="18" loading="lazy">
+          } @else {
+            {{ techMark(item) }}
+          }
+        </span>
         <span>{{ item }}</span>
       </li>
     }
