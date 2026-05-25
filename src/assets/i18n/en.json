@@ -190,7 +190,83 @@
     "liveDemo": "Live demo"
   },
   "footer": {
-    "tagline": "Fullstack developer building polished Angular, Laravel, and API-driven products."
+    "tagline": "Fullstack developer building polished Angular, Laravel, and API-driven products.",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
+  },
+  "cookies": {
+    "eyebrow": "Privacy",
+    "title": "Cookie preferences",
+    "description": "This site may use essential localStorage preferences and optional analytics cookies to understand basic usage. You can accept or reject non-essential cookies.",
+    "accept": "Accept",
+    "reject": "Reject non-essential",
+    "openSettings": "Open cookie settings"
+  },
+  "legal": {
+    "backHome": "Back to portfolio",
+    "updated": "Last updated: May 26, 2026",
+    "privacy": {
+      "eyebrow": "Legal",
+      "title": "Privacy Policy",
+      "intro": "This privacy policy explains how jesusdev.dev handles data in a minimal developer portfolio context.",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "items": ["This site is a personal developer portfolio hosted on GitHub Pages.", "It does not collect sensitive personal data or provide account registration."]
+        },
+        "data": {
+          "title": "Data collected",
+          "items": ["The site may receive standard technical request data from hosting infrastructure, such as browser, device, and IP-related logs.", "If you contact me by email, I will receive the information you choose to send."]
+        },
+        "storage": {
+          "title": "LocalStorage",
+          "items": ["The selected language is stored in localStorage so the site can restore it on refresh.", "Cookie consent is stored in localStorage so the banner does not reappear after a choice."]
+        },
+        "hosting": {
+          "title": "Hosting",
+          "items": ["The site is deployed through GitHub Pages.", "GitHub may process basic technical data needed to serve the website."]
+        },
+        "cookies": {
+          "title": "Cookies and analytics",
+          "items": ["Essential preferences may be stored locally for language and consent.", "Non-essential analytics cookies are only intended for basic usage understanding and can be rejected."]
+        },
+        "contact": {
+          "title": "Contact",
+          "items": ["For privacy questions, contact jesusdevcontact@gmail.com."]
+        }
+      }
+    },
+    "cookies": {
+      "eyebrow": "Legal",
+      "title": "Cookies Policy",
+      "intro": "This cookies policy explains the small amount of browser storage used by jesusdev.dev.",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "items": ["Cookies and localStorage are used only to support preferences and, if accepted, basic analytics.", "The site remains usable if non-essential cookies are rejected."]
+        },
+        "essential": {
+          "title": "Essential storage",
+          "items": ["Language preference is saved locally.", "Cookie consent choice is saved locally."]
+        },
+        "analytics": {
+          "title": "Analytics",
+          "items": ["Optional analytics may help understand general site usage.", "No analytics are required to browse the portfolio."]
+        },
+        "localStorage": {
+          "title": "LocalStorage",
+          "items": ["localStorage keys are used for language and cookie consent.", "These values stay in your browser until cleared."]
+        },
+        "manage": {
+          "title": "Managing preferences",
+          "items": ["Use the floating cookie button to reopen preferences.", "You can also clear site data from your browser settings."]
+        },
+        "contact": {
+          "title": "Contact",
+          "items": ["For cookie questions, contact jesusdevcontact@gmail.com."]
+        }
+      }
+    }
   },
   "accessibility": {
     "skipToContent": "Skip to content",
@@ -211,6 +287,7 @@
     "projectGithub": "Open {{ project }} GitHub repository",
     "projectDemo": "Open {{ project }} live demo",
     "socialLinks": "Social links",
+    "legalLinks": "Legal links",
     "emailJesus": "Email Jesus"
   },
   "seo": {

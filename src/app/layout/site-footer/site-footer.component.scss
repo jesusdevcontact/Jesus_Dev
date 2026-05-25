@@ -7,7 +7,7 @@
 
 .footer-shell {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem 0;
@@ -25,6 +25,26 @@ p {
 .footer-links {
   display: flex;
   gap: 0.5rem;
+}
+
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  color: var(--text-faint);
+  font-size: 0.84rem;
+  font-weight: 760;
+}
+
+.legal-links a {
+  transition:
+    color 180ms ease,
+    transform 180ms var(--ease-premium);
+}
+
+.legal-links a:hover {
+  transform: translateY(-1px);
+  color: var(--text-soft);
 }
 
 .footer-links a {

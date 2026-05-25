@@ -22,5 +22,9 @@
     </div>
 
     <p class="copyright">© {{ year }} Jesus Martinez Escobar</p>
+    <nav class="legal-links" [attr.aria-label]="'accessibility.legalLinks' | translate">
+      <a routerLink="/privacy">{{ 'footer.privacy' | translate }}</a>
+      <a routerLink="/cookies">{{ 'footer.cookies' | translate }}</a>
+    </nav>
   </div>
 </footer>

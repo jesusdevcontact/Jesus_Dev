@@ -158,6 +158,18 @@ li:hover {
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
 }
 
+.tech-fallback {
+  display: none;
+}
+
+.tech-mark--fallback img {
+  display: none;
+}
+
+.tech-mark--fallback .tech-fallback {
+  display: inline;
+}
+
 .tech-rest-apis .tech-mark,
 .tech-apis-rest .tech-mark {
   background: linear-gradient(135deg, #53d8ff, #3b82f6);

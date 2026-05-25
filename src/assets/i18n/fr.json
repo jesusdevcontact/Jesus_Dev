@@ -190,7 +190,83 @@
     "liveDemo": "Démo"
   },
   "footer": {
-    "tagline": "Développeur fullstack créant des produits Angular, Laravel et APIs soignées."
+    "tagline": "Développeur fullstack créant des produits Angular, Laravel et APIs soignées.",
+    "privacy": "Confidentialité",
+    "cookies": "Cookies"
+  },
+  "cookies": {
+    "eyebrow": "Confidentialité",
+    "title": "Préférences de cookies",
+    "description": "Ce site peut utiliser des préférences essentielles dans localStorage et des cookies analytiques optionnels pour comprendre l'usage général. Vous pouvez accepter ou refuser les cookies non essentiels.",
+    "accept": "Accepter",
+    "reject": "Refuser le non essentiel",
+    "openSettings": "Ouvrir les préférences de cookies"
+  },
+  "legal": {
+    "backHome": "Retour au portfolio",
+    "updated": "Dernière mise à jour : 26 mai 2026",
+    "privacy": {
+      "eyebrow": "Légal",
+      "title": "Politique de confidentialité",
+      "intro": "Cette politique explique comment jesusdev.dev gère les données dans le contexte d'un portfolio personnel de développeur.",
+      "sections": {
+        "overview": {
+          "title": "Résumé",
+          "items": ["Ce site est un portfolio personnel hébergé sur GitHub Pages.", "Il ne collecte pas de données personnelles sensibles et ne propose pas de création de compte."]
+        },
+        "data": {
+          "title": "Données collectées",
+          "items": ["L'hébergement peut recevoir des données techniques standard comme le navigateur, l'appareil et des journaux liés à l'IP.", "Si vous me contactez par email, je recevrai les informations que vous choisissez d'envoyer."]
+        },
+        "storage": {
+          "title": "LocalStorage",
+          "items": ["La langue sélectionnée est stockée dans localStorage afin d'être restaurée au rechargement.", "Le choix de cookies est stocké dans localStorage pour ne pas réafficher la bannière après décision."]
+        },
+        "hosting": {
+          "title": "Hébergement",
+          "items": ["Le site est déployé avec GitHub Pages.", "GitHub peut traiter des données techniques de base nécessaires pour servir le site."]
+        },
+        "cookies": {
+          "title": "Cookies et analytique",
+          "items": ["Les préférences essentielles peuvent être stockées localement pour la langue et le consentement.", "Les cookies analytiques non essentiels servent seulement à comprendre l'usage général et peuvent être refusés."]
+        },
+        "contact": {
+          "title": "Contact",
+          "items": ["Pour toute question de confidentialité, contactez jesusdevcontact@gmail.com."]
+        }
+      }
+    },
+    "cookies": {
+      "eyebrow": "Légal",
+      "title": "Politique de cookies",
+      "intro": "Cette politique explique le faible usage du stockage navigateur par jesusdev.dev.",
+      "sections": {
+        "overview": {
+          "title": "Résumé",
+          "items": ["Les cookies et localStorage sont utilisés uniquement pour les préférences et, si accepté, une analytique basique.", "Le site reste utilisable si les cookies non essentiels sont refusés."]
+        },
+        "essential": {
+          "title": "Stockage essentiel",
+          "items": ["La préférence de langue est stockée localement.", "Le choix de consentement est stocké localement."]
+        },
+        "analytics": {
+          "title": "Analytique",
+          "items": ["L'analytique optionnelle peut aider à comprendre l'usage général du site.", "Aucune analytique n'est nécessaire pour consulter le portfolio."]
+        },
+        "localStorage": {
+          "title": "LocalStorage",
+          "items": ["Les clés localStorage sont utilisées pour la langue et le consentement aux cookies.", "Ces valeurs restent dans votre navigateur jusqu'à suppression."]
+        },
+        "manage": {
+          "title": "Gérer les préférences",
+          "items": ["Utilisez le bouton flottant de cookies pour rouvrir les préférences.", "Vous pouvez aussi effacer les données du site depuis les réglages du navigateur."]
+        },
+        "contact": {
+          "title": "Contact",
+          "items": ["Pour toute question sur les cookies, contactez jesusdevcontact@gmail.com."]
+        }
+      }
+    }
   },
   "accessibility": {
     "skipToContent": "Aller au contenu",
@@ -211,6 +287,7 @@
     "projectGithub": "Ouvrir le dépôt GitHub de {{ project }}",
     "projectDemo": "Ouvrir la démo de {{ project }}",
     "socialLinks": "Liens sociaux",
+    "legalLinks": "Liens légaux",
     "emailJesus": "Envoyer un email à Jesus"
   },
   "seo": {

@@ -1,0 +1,25 @@
+<main id="main-content" class="legal-page">
+  <div class="container legal-shell">
+    <a class="back-link" routerLink="/">{{ 'legal.backHome' | translate }}</a>
+
+    <header>
+      <p class="eyebrow">{{ 'legal.' + page() + '.eyebrow' | translate }}</p>
+      <h1>{{ 'legal.' + page() + '.title' | translate }}</h1>
+      <p class="updated">{{ 'legal.updated' | translate }}</p>
+      <p class="intro">{{ 'legal.' + page() + '.intro' | translate }}</p>
+    </header>
+
+    <div class="legal-sections">
+      @for (section of sections(); track section) {
+        <section>
+          <h2>{{ 'legal.' + page() + '.sections.' + section + '.title' | translate }}</h2>
+          <ul>
+            @for (item of ('legal.' + page() + '.sections.' + section + '.items' | translate | translateArray); track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </section>
+      }
+    </div>
+  </div>
+</main>

@@ -10,7 +10,8 @@
       <li [ngClass]="'tech-' + techSlug(item)">
         <span class="tech-mark" [class.tech-mark--logo]="techIconUrl(item)" aria-hidden="true">
           @if (techIconUrl(item); as iconUrl) {
-            <img [src]="iconUrl" alt="" width="18" height="18" loading="lazy">
+            <img [src]="iconUrl" alt="" width="18" height="18" loading="lazy" (error)="useIconFallback($event)">
+            <span class="tech-fallback">{{ techMark(item) }}</span>
           } @else {
             {{ techMark(item) }}
           }

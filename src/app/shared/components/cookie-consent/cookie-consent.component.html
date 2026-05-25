@@ -1,0 +1,36 @@
+<div class="cookie-consent">
+  <button
+    class="cookie-fab"
+    type="button"
+    [attr.aria-label]="'cookies.openSettings' | translate"
+    [attr.aria-expanded]="panelOpen()"
+    (click)="openSettings()"
+  >
+    <svg lucideIcon="cookie" size="18" aria-hidden="true"></svg>
+  </button>
+
+  @if (panelOpen()) {
+    <section
+      class="cookie-panel"
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby="cookie-title"
+      aria-describedby="cookie-description"
+    >
+      <div class="cookie-copy">
+        <p class="eyebrow">{{ 'cookies.eyebrow' | translate }}</p>
+        <h2 id="cookie-title">{{ 'cookies.title' | translate }}</h2>
+        <p id="cookie-description">{{ 'cookies.description' | translate }}</p>
+      </div>
+
+      <div class="cookie-actions">
+        <button type="button" class="cookie-button cookie-button--primary" (click)="accept()">
+          {{ 'cookies.accept' | translate }}
+        </button>
+        <button type="button" class="cookie-button" (click)="reject()">
+          {{ 'cookies.reject' | translate }}
+        </button>
+      </div>
+    </section>
+  }
+</div>

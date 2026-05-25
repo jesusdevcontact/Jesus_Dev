@@ -142,4 +142,9 @@ export class TechStackCardComponent {
 
     return icon ? `https://cdn.simpleicons.org/${icon}` : null;
   }
+
+  useIconFallback(event: Event): void {
+    const image = event.target as HTMLImageElement;
+    image.parentElement?.classList.add('tech-mark--fallback');
+  }
 }
