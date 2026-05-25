@@ -1,0 +1,178 @@
+<main id="main-content">
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy" jdReveal>
+        <p class="eyebrow">
+          <svg lucideIcon="Sparkles" size="16" aria-hidden="true"></svg>
+          Fullstack developer / Angular specialist
+        </p>
+        <h1 id="hero-title">Crafting modern Angular & Laravel experiences with product-level polish.</h1>
+        <p class="hero-lead">
+          Junior fullstack developer focused on Angular interfaces, Laravel backends, relational data,
+          testing habits, and the kind of product polish that makes applications easier to use and maintain.
+        </p>
+
+        <div class="hero-proof" aria-label="Current focus">
+          <span>Available for junior frontend/fullstack roles</span>
+          <span>Component architecture and UI state</span>
+          <span>Laravel APIs and MySQL modeling</span>
+        </div>
+
+        <div class="hero-actions" aria-label="Primary actions">
+          <jd-ui-button href="#projects" label="View projects" icon="ArrowRight" />
+          <jd-ui-button href="mailto:jesusdevcontact@gmail.com" label="Contact" icon="Mail" variant="secondary" />
+          <jd-ui-button href="https://github.com/jesusdev98" label="GitHub" icon="Github" variant="ghost" [external]="true" />
+        </div>
+
+        <dl class="hero-stats" aria-label="Professional strengths">
+          <div>
+            <dt>Angular</dt>
+            <dd>Standalone components, typed UI state</dd>
+          </div>
+          <div>
+            <dt>Laravel</dt>
+            <dd>Validation, APIs, MySQL workflows</dd>
+          </div>
+          <div>
+            <dt>Mindset</dt>
+            <dd>Testing, accessibility, maintainability</dd>
+          </div>
+        </dl>
+      </div>
+
+      <aside class="hero-panel" aria-label="Developer profile summary" jdReveal>
+        <div class="profile-card">
+          <div class="profile-status">
+            <span></span>
+            Interview-ready work
+          </div>
+          <div class="profile-media">
+            <img src="assets/img/jesus_dev_corporativo.png" alt="Jesus Dev visual identity" width="520" height="378">
+          </div>
+          <div class="skill-orbit skill-orbit--top">
+            <strong>Angular</strong>
+            <span>Components / RxJS</span>
+          </div>
+          <div class="skill-orbit skill-orbit--mid">
+            <strong>Laravel</strong>
+            <span>APIs / validation</span>
+          </div>
+          <div class="terminal-card">
+            <div class="terminal-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <code>npm run build<br><strong>technical story: clear</strong></code>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <jd-section-shell
+    sectionId="about"
+    eyebrow="About"
+    title="A junior fullstack profile built around readable architecture, practical delivery, and honest technical growth."
+    intro="This portfolio is structured to make my engineering decisions visible: what problem each project solves, how I split responsibilities, where testing fits, and how I think about maintainability."
+  >
+    <div class="about-layout" jdReveal>
+      <article class="about-copy">
+        <h3>Frontend craft with backend context.</h3>
+        <p>
+          I am Jesus Martinez Escobar, a junior fullstack developer focused on Angular applications and Laravel-backed products.
+          I try to write code that another developer can understand, test, and extend without needing to reverse-engineer the intent.
+        </p>
+        <p>
+          The projects here are presented as engineering cases: the problem, the technical decisions, the architecture,
+          the testing approach, and the tradeoffs I would discuss in an interview.
+        </p>
+      </article>
+
+      <div class="principle-grid">
+        @for (principle of principles; track principle) {
+          <article>
+            <svg lucideIcon="CheckCircle2" size="18" aria-hidden="true"></svg>
+            <span>{{ principle }}</span>
+          </article>
+        }
+      </div>
+    </div>
+  </jd-section-shell>
+
+  <jd-section-shell
+    sectionId="stack"
+    eyebrow="Tech Stack"
+    title="A practical stack chosen for clear responsibilities across UI, APIs, data, tests, and delivery."
+  >
+    <div class="stack-grid" jdReveal>
+      @for (category of techCategories; track category.title) {
+        <jd-tech-stack-card [category]="category" />
+      }
+    </div>
+  </jd-section-shell>
+
+  <jd-section-shell
+    sectionId="projects"
+    eyebrow="Featured Projects"
+    title="Project case studies that show how I reason through product problems, architecture, testing, and handoff."
+  >
+    <div class="projects-grid" jdReveal>
+      @for (project of projects; track project.name) {
+        <jd-project-card [project]="project" />
+      }
+    </div>
+  </jd-section-shell>
+
+  <jd-section-shell
+    sectionId="journey"
+    eyebrow="Experience"
+    title="A focused path from DAW studies to real operational context and fullstack interview readiness."
+  >
+    <div class="journey" jdReveal>
+      @for (item of journeyItems; track item.title) {
+        <article>
+          <span class="journey-year">{{ item.year }}</span>
+          <div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.summary }}</p>
+            <ul>
+              @for (detail of item.details; track detail) {
+                <li>{{ detail }}</li>
+              }
+            </ul>
+          </div>
+        </article>
+      }
+    </div>
+  </jd-section-shell>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-card" jdReveal>
+      <div>
+        <p class="eyebrow">
+          <svg lucideIcon="Rocket" size="16" aria-hidden="true"></svg>
+          Contact
+        </p>
+        <h2 id="contact-title">Let's talk about frontend roles, internships, and junior fullstack opportunities.</h2>
+        <p>
+          I am ready to discuss my code, my decisions, and how I approach Angular, Laravel, testing, accessibility,
+          and production-minded learning inside a real team.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <jd-ui-button href="mailto:jesusdevcontact@gmail.com" label="Email me" icon="Mail" />
+        <a href="https://github.com/jesusdev98" target="_blank" rel="noopener noreferrer">
+          <svg lucideIcon="ExternalLink" size="18" aria-hidden="true"></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/jesus-martinez-escobar-223722374" target="_blank" rel="noopener noreferrer">
+          <svg lucideIcon="ExternalLink" size="18" aria-hidden="true"></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

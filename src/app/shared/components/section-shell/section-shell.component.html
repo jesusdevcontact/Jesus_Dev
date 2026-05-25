@@ -1,0 +1,12 @@
+<section class="section-shell" [id]="sectionId()">
+  <div class="container">
+    <div class="section-heading">
+      <p>{{ eyebrow() }}</p>
+      <h2>{{ title() }}</h2>
+      @if (intro()) {
+        <span>{{ intro() }}</span>
+      }
+    </div>
+    <ng-content />
+  </div>
+</section>

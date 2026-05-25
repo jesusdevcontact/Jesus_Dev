@@ -1,0 +1,81 @@
+<article class="project-card" [ngClass]="'project-card--' + project().accent">
+  <div class="mockup" aria-hidden="true">
+    <div class="mockup-bar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="mockup-grid">
+      <div class="mockup-sidebar"></div>
+      <div class="mockup-main">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="mockup-panel"></div>
+    </div>
+  </div>
+
+  <div class="project-content">
+    <div class="project-meta">
+      <span>{{ project().type }}</span>
+    </div>
+    <h3>{{ project().name }}</h3>
+    <p>{{ project().summary }}</p>
+
+    <div class="problem-block">
+      <h4>Problem Solved</h4>
+      <p>{{ project().problem }}</p>
+    </div>
+
+    <ul class="stack" aria-label="Stack used">
+      @for (item of project().stack; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+
+    <div class="project-columns">
+      <div>
+        <h4>Technical Decisions</h4>
+        <ul>
+          @for (item of project().decisions; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div>
+        <h4>Architecture</h4>
+        <ul>
+          @for (item of project().architecture; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div>
+        <h4>Testing / A11y / Performance</h4>
+        <ul>
+          @for (item of project().quality; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="metric-row">
+      @for (item of project().impact; track item) {
+        <span>{{ item }}</span>
+      }
+    </div>
+
+    <div class="project-actions">
+      <a [href]="project().githubUrl" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository placeholder">
+        <svg lucideIcon="ExternalLink" size="17" aria-hidden="true"></svg>
+        GitHub
+      </a>
+      <a [href]="project().demoUrl" aria-label="Open live demo placeholder">
+        <svg lucideIcon="ExternalLink" size="17" aria-hidden="true"></svg>
+        Live demo
+      </a>
+    </div>
+  </div>
+</article>

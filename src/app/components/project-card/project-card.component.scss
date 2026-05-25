@@ -1,0 +1,254 @@
+.project-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.026)),
+    rgba(255, 255, 255, 0.035);
+  box-shadow: var(--shadow-md);
+  transition:
+    transform 260ms var(--ease-premium),
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    background 260ms ease;
+}
+
+.project-card::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1), transparent 32rem);
+  content: "";
+  transition: opacity 260ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px) scale(1.005);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.mockup {
+  position: relative;
+  min-height: 16rem;
+  overflow: hidden;
+  padding: 1.1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 36%),
+    rgba(255, 255, 255, 0.035);
+}
+
+.mockup::before {
+  position: absolute;
+  inset: 12% -24% auto;
+  height: 8rem;
+  transform: rotate(-8deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  content: "";
+}
+
+.project-card--cyan .mockup {
+  background:
+    linear-gradient(135deg, rgba(83, 216, 255, 0.22), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+}
+
+.project-card--green .mockup {
+  background:
+    linear-gradient(135deg, rgba(137, 244, 178, 0.2), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+}
+
+.project-card--amber .mockup {
+  background:
+    linear-gradient(135deg, rgba(255, 204, 102, 0.2), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+}
+
+.mockup-bar {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.mockup-bar span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.mockup-grid {
+  display: grid;
+  position: relative;
+  height: 12rem;
+  grid-template-columns: 0.55fr 1.2fr 0.75fr;
+  gap: 0.75rem;
+}
+
+.mockup-sidebar,
+.mockup-main,
+.mockup-panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.015)),
+    rgba(5, 6, 10, 0.42);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.2);
+}
+
+.mockup-main {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.8rem;
+}
+
+.mockup-main span {
+  border-radius: var(--radius-xs);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.07));
+}
+
+.project-content {
+  display: grid;
+  gap: 1.05rem;
+  padding: 1.35rem;
+}
+
+.project-meta span {
+  color: var(--accent-cyan);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1.62rem;
+  letter-spacing: -0.035em;
+}
+
+p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.74;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack,
+.metric-row,
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stack li,
+.metric-row span {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.42rem 0.55rem;
+  background: rgba(255, 255, 255, 0.048);
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.metric-row span {
+  color: var(--text-muted);
+}
+
+.project-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.05rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.05rem;
+}
+
+h4 {
+  margin: 0 0 0.55rem;
+  color: var(--text-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-columns li {
+  position: relative;
+  margin-top: 0.4rem;
+  padding-left: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.project-columns li::before {
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  content: "";
+}
+
+.project-actions {
+  padding-top: 0.25rem;
+}
+
+.project-actions a {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.75rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035)),
+    rgba(255, 255, 255, 0.045);
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition:
+    transform 220ms var(--ease-premium),
+    border-color 220ms ease,
+    background 220ms ease;
+}
+
+.project-actions a:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.085);
+}
+
+@media (max-width: 680px) {
+  .project-columns,
+  .mockup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mockup-sidebar,
+  .mockup-panel {
+    display: none;
+  }
+}

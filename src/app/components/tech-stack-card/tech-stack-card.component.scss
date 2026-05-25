@@ -1,0 +1,107 @@
+.tech-card {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.3rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.078), rgba(255, 255, 255, 0.024)),
+    rgba(255, 255, 255, 0.035);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 240ms var(--ease-premium),
+    border-color 240ms ease,
+    background 240ms ease,
+    box-shadow 240ms ease;
+}
+
+.tech-card::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.35;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-strong);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.035)),
+    rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow-md);
+}
+
+.tech-card--cyan::before {
+  background: linear-gradient(135deg, rgba(83, 216, 255, 0.22), transparent 42%);
+}
+
+.tech-card--green::before {
+  background: linear-gradient(135deg, rgba(137, 244, 178, 0.22), transparent 42%);
+}
+
+.tech-card--amber::before {
+  background: linear-gradient(135deg, rgba(255, 204, 102, 0.2), transparent 42%);
+}
+
+.tech-card--rose::before {
+  background: linear-gradient(135deg, rgba(255, 122, 166, 0.18), transparent 42%);
+}
+
+.tech-card--blue::before {
+  background: linear-gradient(135deg, rgba(133, 169, 255, 0.2), transparent 42%);
+}
+
+.card-icon {
+  position: relative;
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  place-items: center;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.045)),
+    rgba(255, 255, 255, 0.065);
+  color: var(--text-strong);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+h3,
+p,
+ul {
+  position: relative;
+}
+
+h3 {
+  margin: 1rem 0 0;
+  color: var(--text-strong);
+  font-size: 1.08rem;
+  letter-spacing: -0.015em;
+}
+
+p {
+  margin: 0.65rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.68;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.42rem 0.55rem;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  font-weight: 700;
+}

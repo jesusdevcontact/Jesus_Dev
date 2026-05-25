@@ -1,0 +1,13 @@
+<article class="tech-card" [ngClass]="'tech-card--' + category().accent">
+  <div class="card-icon">
+    <svg [lucideIcon]="iconFor(category().title)" size="20" aria-hidden="true"></svg>
+  </div>
+  <h3>{{ category().title }}</h3>
+  <p>{{ category().summary }}</p>
+
+  <ul aria-label="Technologies">
+    @for (item of category().items; track item) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+</article>

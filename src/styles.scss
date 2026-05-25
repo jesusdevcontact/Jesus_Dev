@@ -1,0 +1,193 @@
+:root {
+  color-scheme: dark;
+  --bg: #05060a;
+  --bg-elevated: #080a10;
+  --surface: rgba(255, 255, 255, 0.042);
+  --surface-strong: rgba(255, 255, 255, 0.078);
+  --text-strong: #f7f8fb;
+  --text-soft: #d9dee9;
+  --text-muted: #a7b0c2;
+  --text-faint: #737d90;
+  --accent-cyan: #53d8ff;
+  --accent-green: #89f4b2;
+  --accent-amber: #ffcc66;
+  --accent-rose: #ff7aa6;
+  --accent-blue: #85a9ff;
+  --border-subtle: rgba(255, 255, 255, 0.095);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --border-glow: rgba(83, 216, 255, 0.24);
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 8px;
+  --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 22px 64px rgba(0, 0, 0, 0.28);
+  --shadow-lg: 0 34px 110px rgba(0, 0, 0, 0.42);
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --container: 1200px;
+  --section-y: clamp(5rem, 9vw, 8rem);
+  --step-3: clamp(2.05rem, 4.6vw, 3.55rem);
+  --step-5: clamp(3.55rem, 8.8vw, 7rem);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--bg);
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 50% -18rem, rgba(83, 216, 255, 0.1), transparent 38rem),
+    linear-gradient(180deg, rgba(133, 169, 255, 0.055), transparent 24rem),
+    #05060a;
+  color: var(--text-soft);
+  text-rendering: geometricPrecision;
+  animation: pageEnter 720ms var(--ease-premium) both;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(83, 216, 255, 0.075), transparent 28rem),
+    radial-gradient(circle at 84% 8%, rgba(137, 244, 178, 0.06), transparent 24rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.024), transparent);
+  content: "";
+}
+
+body::after {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-position: center top;
+  background-size: 84px 84px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 46rem);
+  content: "";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:where(a, button):focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(83, 216, 255, 0.32);
+  color: var(--text-strong);
+}
+
+.container {
+  width: min(calc(100% - 2rem), var(--container));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  background: var(--text-strong);
+  color: #05060a;
+  font-weight: 800;
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.reveal {
+  transform: translateY(22px) scale(0.992);
+  opacity: 0;
+  transition:
+    opacity 780ms ease,
+    transform 820ms var(--ease-premium);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+
+  .reveal {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(calc(100% - 1.25rem), var(--container));
+  }
+}
