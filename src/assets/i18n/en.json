@@ -96,53 +96,53 @@
   },
   "projects": {
     "eyebrow": "Featured Projects",
-    "title": "Project case studies that show how I reason through product problems, architecture, testing, and handoff.",
+    "title": "Product-minded builds with clear architecture, lean UX, and interview-ready tradeoffs.",
     "labels": {
-      "problem": "Problem Solved",
-      "decisions": "Technical Decisions",
+      "problem": "Problem",
+      "decisions": "Decisions",
       "architecture": "Architecture",
-      "quality": "Testing / A11y / Performance",
+      "quality": "Quality",
       "stack": "Stack used"
     },
     "items": {
       "focusFlow": {
         "type": "Angular productivity workspace",
-        "summary": "A focused planning interface for turning daily work into structured sessions, visible priorities, and predictable progress.",
-        "problem": "The project solves the common friction of scattered tasks and unfocused work sessions by grouping planning, focus state, and progress review in one clean interface.",
+        "summary": "A focused planning UI for sessions, priorities, and progress review.",
+        "problem": "Reduces scattered task planning into one calm workflow.",
         "decisions": [
-          "Modeled the UI around small standalone components so session controls, task lists, and progress panels can evolve independently.",
-          "Kept state transitions explicit with typed models instead of hiding behavior in template-only logic.",
-          "Used SCSS tokens and reusable surface patterns to keep the dashboard consistent across desktop and mobile."
+          "Standalone Angular components by feature",
+          "Typed session and task transitions",
+          "Reusable SCSS tokens for surfaces"
         ],
-        "architecture": ["Feature-first Angular structure", "Typed session and task state", "Reusable dashboard cards", "Responsive grid layout"],
-        "quality": ["Vitest-ready state utilities", "Keyboard-visible focus states", "Reduced-motion friendly reveals", "Performance-conscious lazy route"],
-        "impact": ["Shows Angular UI architecture", "Explains product thinking", "Demonstrates testable state"]
+        "architecture": ["Feature-first folders", "Session state model", "Responsive dashboard grid"],
+        "quality": ["Vitest-ready utilities", "Keyboard focus states", "Reduced-motion support"],
+        "impact": ["Angular architecture", "Product thinking", "Testable UI state"]
       },
       "gibora": {
         "type": "Laravel operations platform",
-        "summary": "An operations-style management platform for inventory visibility, access-controlled workflows, and reliable admin data entry.",
-        "problem": "GIBORA is designed around the kind of operational data teams need to keep consistent: stock records, user permissions, and repeatable management workflows.",
+        "summary": "An operations platform for inventory, permissions, and admin workflows.",
+        "problem": "Keeps stock, access, and management data consistent.",
         "decisions": [
-          "Used Laravel to keep validation, database access, and business rules close to the backend domain model.",
-          "Chose Filament-style admin patterns for fast, consistent CRUD screens without sacrificing backend structure.",
-          "Designed relational tables around clear ownership and future auditability rather than flat, hard-to-query records."
+          "Laravel domain logic near data rules",
+          "Filament-style admin patterns",
+          "Relational tables over flat records"
         ],
-        "architecture": ["Laravel domain models", "MySQL relational schema", "Admin panel workflows", "Docker-ready environment"],
-        "quality": ["Backend validation paths", "Permission-aware screens", "Repeatable local setup", "Clear error handling targets"],
-        "impact": ["Shows Laravel fundamentals", "Connects UI to data modeling", "Production workflow awareness"]
+        "architecture": ["Laravel models", "MySQL schema", "Admin workflows"],
+        "quality": ["Backend validation", "Permission-aware screens", "Repeatable local setup"],
+        "impact": ["Laravel fundamentals", "Data modeling", "Production awareness"]
       },
       "devConnect": {
         "type": "Fullstack developer network",
-        "summary": "A fullstack community application for developer profiles, knowledge sharing, authentication, and API-driven collaboration.",
-        "problem": "The project explores how to build a social product without losing technical clarity: user identity, profile data, interactions, and API boundaries all need to stay understandable.",
+        "summary": "A fullstack community app for profiles, auth, and API collaboration.",
+        "problem": "Keeps identity, profiles, and interactions understandable across layers.",
         "decisions": [
-          "Separated Angular UI concerns from Laravel API responsibilities so each layer can be tested and changed independently.",
-          "Planned authentication and profile flows around explicit states: logged out, onboarding, authenticated, and error recovery.",
-          "Kept API responses shaped for frontend consumption while still respecting relational backend structure."
+          "Angular UI separated from Laravel API",
+          "Explicit auth and onboarding states",
+          "Frontend-friendly API response shapes"
         ],
-        "architecture": ["Angular frontend shell", "Laravel REST API", "MySQL user/profile data", "Route-level feature boundaries"],
-        "quality": ["Cypress flow coverage target", "Accessible form feedback", "Loading and empty states", "API error-state planning"],
-        "impact": ["Shows fullstack progression", "Demonstrates API thinking", "Interview-ready system design"]
+        "architecture": ["Angular app shell", "Laravel REST API", "Route-level boundaries"],
+        "quality": ["Cypress flow targets", "Accessible form feedback", "API error states"],
+        "impact": ["Fullstack progression", "API thinking", "System design"]
       }
     }
   },
@@ -194,6 +194,7 @@
     "primaryNavigation": "Primary navigation",
     "languageSwitcher": "Language switcher",
     "languageOption": "Change language to {{ language }}",
+    "projectActions": "{{ project }} project actions",
     "professionalStrengths": "Professional strengths",
     "profileSummary": "Developer profile summary",
     "profileImageAlt": "Jesus Dev visual identity",

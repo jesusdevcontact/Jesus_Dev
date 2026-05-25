@@ -96,53 +96,53 @@
   },
   "projects": {
     "eyebrow": "Projets sélectionnés",
-    "title": "Des études de cas qui montrent mon raisonnement produit, architecture, tests et handoff.",
+    "title": "Des projets orientés produit, avec architecture claire et compromis prêts pour entretien.",
     "labels": {
-      "problem": "Problème résolu",
-      "decisions": "Décisions techniques",
+      "problem": "Problème",
+      "decisions": "Décisions",
       "architecture": "Architecture",
-      "quality": "Tests / A11y / Performance",
+      "quality": "Qualité",
       "stack": "Stack utilisé"
     },
     "items": {
       "focusFlow": {
         "type": "Workspace de productivité Angular",
-        "summary": "Interface de planification pour transformer le travail quotidien en sessions structurées, priorités visibles et progression lisible.",
-        "problem": "Le projet réduit la friction des tâches dispersées et des sessions peu focalisées en regroupant planification, état de focus et revue de progression.",
+        "summary": "UI de planification pour sessions, priorités et revue de progression.",
+        "problem": "Réduit les tâches dispersées en un flux clair.",
         "decisions": [
-          "J'ai modélisé l'UI avec de petits composants standalone afin que les contrôles de session, listes de tâches et panneaux de progression évoluent séparément.",
-          "J'ai gardé les transitions d'état explicites avec des modèles typés plutôt que de cacher la logique dans les templates.",
-          "J'ai utilisé des tokens SCSS et des surfaces réutilisables pour garder le dashboard cohérent sur desktop et mobile."
+          "Composants Angular standalone par feature",
+          "Transitions session et tâche typées",
+          "Tokens SCSS pour surfaces réutilisables"
         ],
-        "architecture": ["Structure Angular feature-first", "État de session et tâche typé", "Cards dashboard réutilisables", "Grid responsive"],
-        "quality": ["Utilitaires d'état prêts pour Vitest", "États de focus visibles au clavier", "Animations compatibles reduced motion", "Route lazy consciente de la performance"],
-        "impact": ["Montre l'architecture UI Angular", "Explique la pensée produit", "Démontre un état testable"]
+        "architecture": ["Dossiers feature-first", "Modèle d'état session", "Grid dashboard responsive"],
+        "quality": ["Utilitaires prêts pour Vitest", "Focus clavier visible", "Support reduced motion"],
+        "impact": ["Architecture Angular", "Pensée produit", "État UI testable"]
       },
       "gibora": {
         "type": "Plateforme opérationnelle Laravel",
-        "summary": "Plateforme de gestion pour visibilité d'inventaire, workflows avec contrôle d'accès et saisie administrative fiable.",
-        "problem": "GIBORA est conçue autour de données opérationnelles qu'une équipe doit garder cohérentes : stock, permissions et workflows répétables.",
+        "summary": "Plateforme opérationnelle pour inventaire, permissions et workflows admin.",
+        "problem": "Garde stock, accès et données de gestion cohérents.",
         "decisions": [
-          "J'ai utilisé Laravel pour garder validation, accès aux données et règles métier proches du modèle de domaine backend.",
-          "J'ai choisi des patterns de type Filament pour des écrans CRUD rapides et cohérents sans sacrifier la structure backend.",
-          "J'ai pensé les tables relationnelles avec ownership clair et auditabilité future plutôt que des enregistrements plats difficiles à interroger."
+          "Règles domaine proches du modèle Laravel",
+          "Patterns admin de type Filament",
+          "Tables relationnelles plutôt que données plates"
         ],
-        "architecture": ["Modèles de domaine Laravel", "Schéma relationnel MySQL", "Flux de panel admin", "Environnement prêt pour Docker"],
-        "quality": ["Chemins de validation backend", "Écrans sensibles aux permissions", "Setup local répétable", "Objectifs clairs de gestion d'erreurs"],
-        "impact": ["Montre les bases Laravel", "Relie UI et modélisation de données", "Sensibilité aux flux de production"]
+        "architecture": ["Modèles Laravel", "Schéma MySQL", "Workflows admin"],
+        "quality": ["Validation backend", "Écrans avec permissions", "Setup local répétable"],
+        "impact": ["Bases Laravel", "Modélisation données", "Culture production"]
       },
       "devConnect": {
         "type": "Réseau fullstack pour développeurs",
-        "summary": "Application communautaire fullstack pour profils développeur, partage de connaissances, authentification et collaboration via API.",
-        "problem": "Le projet explore comment créer un produit social sans perdre la clarté technique : identité, profils, interactions et frontières API doivent rester compréhensibles.",
+        "summary": "App communautaire fullstack pour profils, auth et collaboration API.",
+        "problem": "Garde identité, profils et interactions lisibles entre les couches.",
         "decisions": [
-          "J'ai séparé les responsabilités de l'UI Angular et de l'API Laravel afin que chaque couche puisse être testée et modifiée indépendamment.",
-          "J'ai prévu l'authentification et les profils autour d'états explicites : déconnecté, onboarding, authentifié et récupération d'erreur.",
-          "J'ai gardé les réponses API adaptées au frontend tout en respectant la structure relationnelle du backend."
+          "UI Angular séparée de l'API Laravel",
+          "États explicites auth et onboarding",
+          "Réponses API adaptées au frontend"
         ],
-        "architecture": ["Shell frontend Angular", "API REST Laravel", "Données utilisateur/profil MySQL", "Frontières par feature et route"],
-        "quality": ["Objectif de couverture Cypress", "Feedback de formulaire accessible", "États de chargement et vide", "Planification des erreurs API"],
-        "impact": ["Montre la progression fullstack", "Démontre la pensée API", "Design système prêt pour entretien"]
+        "architecture": ["Shell Angular", "API REST Laravel", "Frontières par route"],
+        "quality": ["Parcours cibles Cypress", "Feedback accessible", "États d'erreur API"],
+        "impact": ["Progression fullstack", "Pensée API", "Design système"]
       }
     }
   },
@@ -194,6 +194,7 @@
     "primaryNavigation": "Navigation principale",
     "languageSwitcher": "Sélecteur de langue",
     "languageOption": "Changer la langue en {{ language }}",
+    "projectActions": "Actions du projet {{ project }}",
     "professionalStrengths": "Forces professionnelles",
     "profileSummary": "Résumé du profil développeur",
     "profileImageAlt": "Identité visuelle Jesus Dev",
