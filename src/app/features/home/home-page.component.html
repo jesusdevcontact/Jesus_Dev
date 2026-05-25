@@ -5,58 +5,57 @@
       <div class="hero-copy" jdReveal>
         <p class="eyebrow">
           <svg lucideIcon="sparkles" size="16" aria-hidden="true"></svg>
-          Fullstack developer / Angular specialist
+          {{ 'hero.eyebrow' | translate }}
         </p>
-        <h1 id="hero-title">Crafting modern Angular & Laravel experiences with product-level polish.</h1>
+        <h1 id="hero-title">{{ 'hero.title' | translate }}</h1>
         <p class="hero-lead">
-          Junior fullstack developer focused on Angular interfaces, Laravel backends, relational data,
-          testing habits, and the kind of product polish that makes applications easier to use and maintain.
+          {{ 'hero.lead' | translate }}
         </p>
 
-        <div class="hero-proof" aria-label="Current focus">
-          <span>Available for junior frontend/fullstack roles</span>
-          <span>Component architecture and UI state</span>
-          <span>Laravel APIs and MySQL modeling</span>
+        <div class="hero-proof" [attr.aria-label]="'accessibility.currentFocus' | translate">
+          @for (item of ('hero.proof' | translate | translateArray); track item) {
+            <span>{{ item }}</span>
+          }
         </div>
 
-        <div class="hero-actions" aria-label="Primary actions">
-          <jd-ui-button href="#projects" label="View projects" icon="arrow-right" />
-          <jd-ui-button href="mailto:jesusdevcontact@gmail.com" label="Contact" icon="mail" variant="secondary" />
-          <jd-ui-button href="https://github.com/jesusdev98" label="GitHub" icon="external-link" variant="ghost" [external]="true" />
+        <div class="hero-actions" [attr.aria-label]="'accessibility.primaryActions' | translate">
+          <jd-ui-button href="#projects" [label]="'buttons.viewProjects' | translate" icon="arrow-right" />
+          <jd-ui-button href="mailto:jesusdevcontact@gmail.com" [label]="'buttons.contact' | translate" icon="mail" variant="secondary" />
+          <jd-ui-button href="https://github.com/jesusdev98" [label]="'buttons.github' | translate" icon="external-link" variant="ghost" [external]="true" />
         </div>
 
-        <dl class="hero-stats" aria-label="Professional strengths">
+        <dl class="hero-stats" [attr.aria-label]="'accessibility.professionalStrengths' | translate">
           <div>
-            <dt>Angular</dt>
-            <dd>Standalone components, typed UI state</dd>
+            <dt>{{ 'hero.stats.angular.title' | translate }}</dt>
+            <dd>{{ 'hero.stats.angular.description' | translate }}</dd>
           </div>
           <div>
-            <dt>Laravel</dt>
-            <dd>Validation, APIs, MySQL workflows</dd>
+            <dt>{{ 'hero.stats.laravel.title' | translate }}</dt>
+            <dd>{{ 'hero.stats.laravel.description' | translate }}</dd>
           </div>
           <div>
-            <dt>Mindset</dt>
-            <dd>Testing, accessibility, maintainability</dd>
+            <dt>{{ 'hero.stats.mindset.title' | translate }}</dt>
+            <dd>{{ 'hero.stats.mindset.description' | translate }}</dd>
           </div>
         </dl>
       </div>
 
-      <aside class="hero-panel" aria-label="Developer profile summary" jdReveal>
+      <aside class="hero-panel" [attr.aria-label]="'accessibility.profileSummary' | translate" jdReveal>
         <div class="profile-card">
           <div class="profile-status">
             <span></span>
-            Interview-ready work
+            {{ 'hero.profile.status' | translate }}
           </div>
           <div class="profile-media">
-            <img src="assets/img/jesus_dev_corporativo.png" alt="Jesus Dev visual identity" width="520" height="378">
+            <img src="assets/img/jesus_dev_corporativo.png" [alt]="'accessibility.profileImageAlt' | translate" width="520" height="378">
           </div>
           <div class="skill-orbit skill-orbit--top">
-            <strong>Angular</strong>
-            <span>Components / RxJS</span>
+            <strong>{{ 'hero.profile.angular.title' | translate }}</strong>
+            <span>{{ 'hero.profile.angular.description' | translate }}</span>
           </div>
           <div class="skill-orbit skill-orbit--mid">
-            <strong>Laravel</strong>
-            <span>APIs / validation</span>
+            <strong>{{ 'hero.profile.laravel.title' | translate }}</strong>
+            <span>{{ 'hero.profile.laravel.description' | translate }}</span>
           </div>
           <div class="terminal-card">
             <div class="terminal-top">
@@ -64,7 +63,7 @@
               <span></span>
               <span></span>
             </div>
-            <code>npm run build<br><strong>technical story: clear</strong></code>
+            <code>npm run build<br><strong>{{ 'hero.profile.terminal' | translate }}</strong></code>
           </div>
         </div>
       </aside>
@@ -73,28 +72,22 @@
 
   <jd-section-shell
     sectionId="about"
-    eyebrow="About"
-    title="A junior fullstack profile built around readable architecture, practical delivery, and honest technical growth."
-    intro="This portfolio is structured to make my engineering decisions visible: what problem each project solves, how I split responsibilities, where testing fits, and how I think about maintainability."
+    [eyebrow]="'about.eyebrow' | translate"
+    [title]="'about.title' | translate"
+    [intro]="'about.intro' | translate"
   >
     <div class="about-layout" jdReveal>
       <article class="about-copy">
-        <h3>Frontend craft with backend context.</h3>
-        <p>
-          I am Jesus Martinez Escobar, a junior fullstack developer focused on Angular applications and Laravel-backed products.
-          I try to write code that another developer can understand, test, and extend without needing to reverse-engineer the intent.
-        </p>
-        <p>
-          The projects here are presented as engineering cases: the problem, the technical decisions, the architecture,
-          the testing approach, and the tradeoffs I would discuss in an interview.
-        </p>
+        <h3>{{ 'about.cardTitle' | translate }}</h3>
+        <p>{{ 'about.paragraphs.0' | translate }}</p>
+        <p>{{ 'about.paragraphs.1' | translate }}</p>
       </article>
 
       <div class="principle-grid">
         @for (principle of principles; track principle) {
           <article>
             <svg lucideIcon="check-circle-2" size="18" aria-hidden="true"></svg>
-            <span>{{ principle }}</span>
+            <span>{{ 'about.principles.' + principle | translate }}</span>
           </article>
         }
       </div>
@@ -103,11 +96,11 @@
 
   <jd-section-shell
     sectionId="stack"
-    eyebrow="Tech Stack"
-    title="A practical stack chosen for clear responsibilities across UI, APIs, data, tests, and delivery."
+    [eyebrow]="'stack.eyebrow' | translate"
+    [title]="'stack.title' | translate"
   >
     <div class="stack-grid" jdReveal>
-      @for (category of techCategories; track category.title) {
+      @for (category of techCategories; track category.key) {
         <jd-tech-stack-card [category]="category" />
       }
     </div>
@@ -115,8 +108,8 @@
 
   <jd-section-shell
     sectionId="projects"
-    eyebrow="Featured Projects"
-    title="Project case studies that show how I reason through product problems, architecture, testing, and handoff."
+    [eyebrow]="'projects.eyebrow' | translate"
+    [title]="'projects.title' | translate"
   >
     <div class="projects-grid" jdReveal>
       @for (project of projects; track project.name) {
@@ -127,18 +120,18 @@
 
   <jd-section-shell
     sectionId="journey"
-    eyebrow="Experience"
-    title="A focused path from DAW studies to real operational context and fullstack interview readiness."
+    [eyebrow]="'experience.eyebrow' | translate"
+    [title]="'experience.title' | translate"
   >
     <div class="journey" jdReveal>
-      @for (item of journeyItems; track item.title) {
+      @for (item of journeyItems; track item.key) {
         <article>
-          <span class="journey-year">{{ item.year }}</span>
+          <span class="journey-year">{{ 'experience.items.' + item.key + '.year' | translate }}</span>
           <div>
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.summary }}</p>
+            <h3>{{ 'experience.items.' + item.key + '.title' | translate }}</h3>
+            <p>{{ 'experience.items.' + item.key + '.summary' | translate }}</p>
             <ul>
-              @for (detail of item.details; track detail) {
+              @for (detail of ('experience.items.' + item.key + '.details' | translate | translateArray); track detail) {
                 <li>{{ detail }}</li>
               }
             </ul>
@@ -153,24 +146,21 @@
       <div>
         <p class="eyebrow">
           <svg lucideIcon="rocket" size="16" aria-hidden="true"></svg>
-          Contact
+          {{ 'contact.eyebrow' | translate }}
         </p>
-        <h2 id="contact-title">Let's talk about frontend roles, internships, and junior fullstack opportunities.</h2>
-        <p>
-          I am ready to discuss my code, my decisions, and how I approach Angular, Laravel, testing, accessibility,
-          and production-minded learning inside a real team.
-        </p>
+        <h2 id="contact-title">{{ 'contact.title' | translate }}</h2>
+        <p>{{ 'contact.text' | translate }}</p>
       </div>
 
       <div class="contact-actions">
-        <jd-ui-button href="mailto:jesusdevcontact@gmail.com" label="Email me" icon="mail" />
+        <jd-ui-button href="mailto:jesusdevcontact@gmail.com" [label]="'buttons.emailMe' | translate" icon="mail" />
         <a href="https://github.com/jesusdev98" target="_blank" rel="noopener noreferrer">
           <svg lucideIcon="external-link" size="18" aria-hidden="true"></svg>
-          GitHub
+          {{ 'buttons.github' | translate }}
         </a>
         <a href="https://linkedin.com/in/jesus-martinez-escobar-223722374" target="_blank" rel="noopener noreferrer">
           <svg lucideIcon="external-link" size="18" aria-hidden="true"></svg>
-          LinkedIn
+          {{ 'buttons.linkedin' | translate }}
         </a>
       </div>
     </div>

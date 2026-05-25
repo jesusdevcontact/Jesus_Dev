@@ -18,17 +18,17 @@
 
   <div class="project-content">
     <div class="project-meta">
-      <span>{{ project().type }}</span>
+      <span>{{ 'projects.items.' + project().key + '.type' | translate }}</span>
     </div>
     <h3>{{ project().name }}</h3>
-    <p>{{ project().summary }}</p>
+    <p>{{ 'projects.items.' + project().key + '.summary' | translate }}</p>
 
     <div class="problem-block">
-      <h4>Problem Solved</h4>
-      <p>{{ project().problem }}</p>
+      <h4>{{ 'projects.labels.problem' | translate }}</h4>
+      <p>{{ 'projects.items.' + project().key + '.problem' | translate }}</p>
     </div>
 
-    <ul class="stack" aria-label="Stack used">
+    <ul class="stack" [attr.aria-label]="'projects.labels.stack' | translate">
       @for (item of project().stack; track item) {
         <li>{{ item }}</li>
       }
@@ -36,25 +36,25 @@
 
     <div class="project-columns">
       <div>
-        <h4>Technical Decisions</h4>
+        <h4>{{ 'projects.labels.decisions' | translate }}</h4>
         <ul>
-          @for (item of project().decisions; track item) {
+          @for (item of ('projects.items.' + project().key + '.decisions' | translate | translateArray); track item) {
             <li>{{ item }}</li>
           }
         </ul>
       </div>
       <div>
-        <h4>Architecture</h4>
+        <h4>{{ 'projects.labels.architecture' | translate }}</h4>
         <ul>
-          @for (item of project().architecture; track item) {
+          @for (item of ('projects.items.' + project().key + '.architecture' | translate | translateArray); track item) {
             <li>{{ item }}</li>
           }
         </ul>
       </div>
       <div>
-        <h4>Testing / A11y / Performance</h4>
+        <h4>{{ 'projects.labels.quality' | translate }}</h4>
         <ul>
-          @for (item of project().quality; track item) {
+          @for (item of ('projects.items.' + project().key + '.quality' | translate | translateArray); track item) {
             <li>{{ item }}</li>
           }
         </ul>
@@ -62,19 +62,19 @@
     </div>
 
     <div class="metric-row">
-      @for (item of project().impact; track item) {
+      @for (item of ('projects.items.' + project().key + '.impact' | translate | translateArray); track item) {
         <span>{{ item }}</span>
       }
     </div>
 
     <div class="project-actions">
-      <a [href]="project().githubUrl" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository placeholder">
+      <a [href]="project().githubUrl" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'accessibility.projectGithub' | translate: { project: project().name }">
         <svg lucideIcon="external-link" size="17" aria-hidden="true"></svg>
-        GitHub
+        {{ 'buttons.github' | translate }}
       </a>
-      <a [href]="project().demoUrl" aria-label="Open live demo placeholder">
+      <a [href]="project().demoUrl" [attr.aria-label]="'accessibility.projectDemo' | translate: { project: project().name }">
         <svg lucideIcon="external-link" size="17" aria-hidden="true"></svg>
-        Live demo
+        {{ 'buttons.liveDemo' | translate }}
       </a>
     </div>
   </div>

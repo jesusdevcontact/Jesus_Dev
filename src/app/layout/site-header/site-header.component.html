@@ -1,6 +1,6 @@
 <header class="site-header" [class.site-header--scrolled]="scrolled()">
   <div class="container nav-shell">
-    <a class="brand" href="#hero" aria-label="Jesus Dev home" (click)="closeMenu()">
+    <a class="brand" href="#hero" [attr.aria-label]="'accessibility.home' | translate" (click)="closeMenu()">
       <span class="brand-mark">
         <img src="assets/img/jesus_dev_logo.png" alt="" width="36" height="36">
       </span>
@@ -15,17 +15,31 @@
       type="button"
       [attr.aria-expanded]="menuOpen()"
       aria-controls="primary-navigation"
-      aria-label="Toggle navigation"
+      [attr.aria-label]="'accessibility.toggleNavigation' | translate"
       (click)="toggleMenu()"
     >
       <svg [lucideIcon]="menuIcon()" size="20" aria-hidden="true"></svg>
     </button>
 
-    <nav id="primary-navigation" class="site-nav" [class.site-nav--open]="menuOpen()" aria-label="Primary">
+    <nav id="primary-navigation" class="site-nav" [class.site-nav--open]="menuOpen()" [attr.aria-label]="'accessibility.primaryNavigation' | translate">
       @for (item of navItems; track item.target) {
-        <a [href]="'#' + item.target" (click)="closeMenu()">{{ item.label }}</a>
+        <a [href]="'#' + item.target" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
       }
-      <a class="nav-contact" href="mailto:jesusdevcontact@gmail.com" (click)="closeMenu()">Hire me</a>
+      <a class="nav-contact" href="mailto:jesusdevcontact@gmail.com" (click)="closeMenu()">{{ 'buttons.hireMe' | translate }}</a>
     </nav>
+
+    <div class="language-switcher" role="group" [attr.aria-label]="'accessibility.languageSwitcher' | translate">
+      @for (language of i18n.languages; track language) {
+        <button
+          type="button"
+          [class.is-active]="i18n.currentLanguage() === language"
+          [attr.aria-pressed]="i18n.currentLanguage() === language"
+          [attr.aria-label]="('accessibility.languageOption' | translate: { language: ('languages.' + language | translate) })"
+          (click)="changeLanguage(language)"
+        >
+          {{ language.toUpperCase() }}
+        </button>
+      }
+    </div>
   </div>
 </header>

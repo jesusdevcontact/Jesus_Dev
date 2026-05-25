@@ -1,6 +1,9 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideHttpClient } from '@angular/common/http';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { provideTranslateService } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import {
   LucideArrowRight,
   LucideCheckCircle2,
@@ -23,7 +26,16 @@ import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
+    provideHttpClient(),
     provideAnimations(),
+    provideTranslateService({
+      fallbackLang: 'es',
+      lang: 'es',
+      loader: provideTranslateHttpLoader({
+        prefix: 'assets/i18n/',
+        suffix: '.json',
+      }),
+    }),
     provideLucideIcons(
       LucideArrowRight,
       LucideCheckCircle2,

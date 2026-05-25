@@ -126,6 +126,45 @@
   color: var(--text-strong);
 }
 
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.language-switcher button {
+  min-width: 2.35rem;
+  min-height: 2.15rem;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--text-faint);
+  font-size: 0.78rem;
+  font-weight: 850;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms var(--ease-premium);
+}
+
+.language-switcher button:hover,
+.language-switcher button:focus-visible {
+  color: var(--text-strong);
+  transform: translateY(-1px);
+}
+
+.language-switcher button.is-active {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.07)),
+    rgba(255, 255, 255, 0.08);
+  color: var(--text-strong);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+}
+
 @media (max-width: 820px) {
   .nav-toggle {
     display: grid;
@@ -146,6 +185,11 @@
       linear-gradient(180deg, rgba(16, 18, 27, 0.98), rgba(8, 10, 16, 0.96));
     backdrop-filter: blur(24px);
     box-shadow: var(--shadow-lg);
+  }
+
+  .language-switcher {
+    position: absolute;
+    right: 4.15rem;
   }
 
   .site-nav--open {

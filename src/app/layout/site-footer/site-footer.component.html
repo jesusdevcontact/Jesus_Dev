@@ -2,17 +2,17 @@
   <div class="container footer-shell">
     <div>
       <strong>Jesus Dev</strong>
-      <p>Fullstack developer building polished Angular and Laravel products.</p>
+      <p>{{ 'footer.tagline' | translate }}</p>
     </div>
 
-    <div class="footer-links" aria-label="Social links">
+    <div class="footer-links" [attr.aria-label]="'accessibility.socialLinks' | translate">
       <a href="https://github.com/jesusdev98" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <svg lucideIcon="external-link" size="18" aria-hidden="true"></svg>
       </a>
       <a href="https://linkedin.com/in/jesus-martinez-escobar-223722374" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <svg lucideIcon="external-link" size="18" aria-hidden="true"></svg>
       </a>
-      <a href="mailto:jesusdevcontact@gmail.com" aria-label="Email Jesus">
+      <a href="mailto:jesusdevcontact@gmail.com" [attr.aria-label]="'accessibility.emailJesus' | translate">
         <svg lucideIcon="mail" size="18" aria-hidden="true"></svg>
       </a>
     </div>

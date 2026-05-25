@@ -1,12 +1,12 @@
 <article class="tech-card" [ngClass]="'tech-card--' + category().accent">
   <div class="card-icon">
-    <svg [lucideIcon]="iconFor(category().title)" size="20" aria-hidden="true"></svg>
+    <svg [lucideIcon]="iconFor(category().key)" size="20" aria-hidden="true"></svg>
   </div>
-  <h3>{{ category().title }}</h3>
-  <p>{{ category().summary }}</p>
+  <h3>{{ 'stack.categories.' + category().key + '.title' | translate }}</h3>
+  <p>{{ 'stack.categories.' + category().key + '.summary' | translate }}</p>
 
-  <ul aria-label="Technologies">
-    @for (item of category().items; track item) {
+  <ul [attr.aria-label]="'accessibility.technologies' | translate">
+    @for (item of ('stack.categories.' + category().key + '.items' | translate | translateArray); track item) {
       <li>{{ item }}</li>
     }
   </ul>

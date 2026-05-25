@@ -1,33 +1,22 @@
 export interface NavItem {
-  label: string;
+  labelKey: string;
   target: string;
 }
 
 export interface TechCategory {
-  title: string;
-  summary: string;
-  items: string[];
+  key: 'frontend' | 'backend' | 'testing' | 'devops' | 'tooling';
   accent: 'cyan' | 'green' | 'amber' | 'rose' | 'blue';
 }
 
 export interface Project {
+  key: 'focusFlow' | 'gibora' | 'devConnect';
   name: string;
-  type: string;
-  summary: string;
-  problem: string;
   stack: string[];
-  decisions: string[];
-  architecture: string[];
-  quality: string[];
-  impact: string[];
   accent: 'cyan' | 'green' | 'amber';
   githubUrl: string;
   demoUrl: string;
 }
 
 export interface JourneyItem {
-  year: string;
-  title: string;
-  summary: string;
-  details: string[];
+  key: 'daw' | 'pegasus' | 'progression';
 }
