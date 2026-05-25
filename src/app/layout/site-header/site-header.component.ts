@@ -42,4 +42,8 @@ export class SiteHeaderComponent {
     this.i18n.useLanguage(language);
     this.closeMenu();
   }
+
+  navHref(target: string): string {
+    return target.startsWith('/') ? target : `/#${target}`;
+  }
 }

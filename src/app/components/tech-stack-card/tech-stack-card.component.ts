@@ -70,8 +70,6 @@ export class TechStackCardComponent {
       github: 'GH',
       postman: 'Pm',
       'vs-code': 'VS',
-      codex: 'Cx',
-      'claude-code': 'Cl',
       'rest-apis': 'API',
       'apis-rest': 'API',
       'spa-architecture': 'SPA',
@@ -92,6 +90,7 @@ export class TechStackCardComponent {
       'ci-cd-mindset': 'CI',
       'mentalidad-ci-cd': 'CI',
       'culture-ci-cd': 'CI',
+      'feature-architecture': 'Feat',
       'feature-driven-architecture': 'Feat',
       'arquitectura-por-features': 'Feat',
       'architecture-par-feature': 'Feat',
@@ -132,7 +131,6 @@ export class TechStackCardComponent {
       'vs-code': 'visualstudiocode/007ACC',
       github: 'github/FFFFFF',
       postman: 'postman/FF6C37',
-      codex: 'openai/FFFFFF',
     };
 
     const icon = icons[this.techSlug(item)];

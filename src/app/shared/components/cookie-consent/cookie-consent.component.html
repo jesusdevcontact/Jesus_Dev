@@ -30,7 +30,7 @@
         <button type="button" class="cookie-button" (click)="reject()">
           {{ 'cookies.reject' | translate }}
         </button>
-        <a class="cookie-link" href="mailto:jesusdevcontact@gmail.com">
+        <a class="cookie-link" [href]="mailtoHref">
           {{ 'cookies.contact' | translate }}
         </a>
       </div>

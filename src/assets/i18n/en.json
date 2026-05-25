@@ -75,18 +75,18 @@
       },
       "backend": {
         "title": "Backend",
-        "summary": "Laravel and PHP foundations for REST APIs, relational data, validation rules, authentication, and admin workflows.",
-        "items": ["Laravel", "PHP", "REST APIs", "Sanctum", "MySQL", "PostgreSQL", "Neon"]
+        "summary": "Laravel and PHP foundations for relational data, validation rules, authentication, and admin workflows.",
+        "items": ["Laravel", "PHP", "Sanctum", "MySQL", "PostgreSQL", "Neon"]
       },
       "testing": {
         "title": "Testing",
-        "summary": "Risk-based testing habits: cover state transitions, user flows, validation paths, and regressions that affect users.",
-        "items": ["Cypress", "Vitest", "Karma", "PHPUnit", "Accessibility", "E2E Testing", "Unit Testing"]
+        "summary": "Practical test coverage with the tools used across UI, Angular, Laravel, and accessibility checks.",
+        "items": ["Cypress", "Vitest", "Karma", "PHPUnit", "Accessibility"]
       },
       "architecture": {
         "title": "Architecture",
-        "summary": "How I connect product screens, API contracts, auth flows, relational data, tests, and deployment workflows.",
-        "items": ["REST APIs", "SPA Architecture", "API/UI Boundaries", "Auth Flows", "Sanctum", "Relational Modeling", "Testing Workflows", "CI/CD Mindset", "Feature-driven Architecture"]
+        "summary": "How I connect product screens, API contracts, auth flows, relational data, and feature boundaries.",
+        "items": ["REST APIs", "SPA Architecture", "API/UI Boundaries", "Feature Architecture", "Relational Modeling", "Auth Flows"]
       },
       "devops": {
         "title": "DevOps",
@@ -96,7 +96,7 @@
       "tooling": {
         "title": "Tooling",
         "summary": "Tooling choices aimed at fast feedback, clean debugging, maintainable folders, and readable handoff for teams.",
-        "items": ["npm", "pnpm", "VS Code", "GitHub", "Postman", "Codex", "Claude Code"]
+        "items": ["VS Code", "GitHub", "Postman", "npm", "pnpm"]
       }
     }
   },
@@ -180,6 +180,28 @@
     "eyebrow": "Contact",
     "title": "Let's talk about fullstack, Angular, Laravel, and product-focused roles.",
     "text": "I am ready to discuss my code, API/UI decisions, and how I approach Angular, Laravel, data, testing, accessibility, and production-minded learning inside a real team."
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "A simple way to start a technical conversation.",
+    "intro": "Use the form to prepare a clean email with context, or jump directly to LinkedIn and GitHub.",
+    "form": {
+      "title": "Message details",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "company": "Company",
+      "companyPlaceholder": "Company or team, optional",
+      "subject": "Subject",
+      "subjectPlaceholder": "Professional inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Role, project, collaboration, or context you want to discuss.",
+      "guidance": "Keep it concise. The button opens your email client with this content.",
+      "send": "Prepare email"
+    },
+    "direct": {
+      "title": "Direct channels",
+      "text": "Prefer a faster path? These actions keep the same professional context without adding a backend form."
+    }
   },
   "buttons": {
     "viewProjects": "View projects",

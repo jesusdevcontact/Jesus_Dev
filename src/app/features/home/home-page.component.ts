@@ -9,6 +9,7 @@ import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scrol
 import { SectionShellComponent } from '../../shared/components/section-shell/section-shell.component';
 import { TranslateArrayPipe } from '../../shared/pipes/translate-array.pipe';
 import { UiButtonComponent } from '../../shared/components/ui-button/ui-button.component';
+import { buildContactMailto } from '../../core/utils/contact-mailto';
 
 @Component({
   selector: 'jd-home-page',
@@ -31,6 +32,7 @@ export class HomePageComponent {
   readonly techCategories = techCategories;
   readonly projects = projects;
   readonly journeyItems = journeyItems;
+  readonly mailtoHref = buildContactMailto();
 
   readonly principles = ['decisions', 'accessibility', 'testing', 'maintenance'];
 }

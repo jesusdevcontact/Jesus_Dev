@@ -5,7 +5,7 @@ export const navItems: NavItem[] = [
   { labelKey: 'nav.stack', target: 'stack' },
   { labelKey: 'nav.projects', target: 'projects' },
   { labelKey: 'nav.journey', target: 'journey' },
-  { labelKey: 'nav.contact', target: 'contact' },
+  { labelKey: 'nav.contact', target: '/contact' },
 ];
 
 export const techCategories: TechCategory[] = [

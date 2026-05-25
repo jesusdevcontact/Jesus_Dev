@@ -1,6 +1,6 @@
 <header class="site-header" [class.site-header--scrolled]="scrolled()">
   <div class="container nav-shell">
-    <a class="brand" href="#hero" [attr.aria-label]="'accessibility.home' | translate" (click)="closeMenu()">
+    <a class="brand" href="/#hero" [attr.aria-label]="'accessibility.home' | translate" (click)="closeMenu()">
       <span class="brand-mark">
         <img src="assets/img/jesus_dev_logo.png" alt="" width="36" height="36">
       </span>
@@ -23,7 +23,7 @@
 
     <nav id="primary-navigation" class="site-nav" [class.site-nav--open]="menuOpen()" [attr.aria-label]="'accessibility.primaryNavigation' | translate">
       @for (item of navItems; track item.target) {
-        <a [href]="'#' + item.target" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
+        <a [href]="navHref(item.target)" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
       }
     </nav>
 

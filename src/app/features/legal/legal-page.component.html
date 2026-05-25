@@ -7,7 +7,7 @@
       <h1>{{ 'legal.' + page() + '.title' | translate }}</h1>
       <p class="updated">{{ 'legal.updated' | translate }}</p>
       <p class="intro">{{ 'legal.' + page() + '.intro' | translate }}</p>
-      <a class="legal-contact" href="mailto:jesusdevcontact@gmail.com">{{ 'legal.contactAction' | translate }}</a>
+      <a class="legal-contact" [href]="mailtoHref">{{ 'legal.contactAction' | translate }}</a>
     </header>
 
     <div class="legal-sections">

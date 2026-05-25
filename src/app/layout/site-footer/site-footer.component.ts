@@ -3,6 +3,8 @@ import { RouterLink } from '@angular/router';
 import { LucideDynamicIcon } from '@lucide/angular';
 import { TranslatePipe } from '@ngx-translate/core';
 
+import { buildContactMailto } from '../../core/utils/contact-mailto';
+
 @Component({
   selector: 'jd-site-footer',
   standalone: true,
@@ -13,4 +15,5 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class SiteFooterComponent {
   readonly year = new Date().getFullYear();
+  readonly mailtoHref = buildContactMailto();
 }

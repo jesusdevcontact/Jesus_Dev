@@ -29,6 +29,12 @@ export const routes: Routes = [
     title: 'Legal Notice | Jesus Dev',
   },
   {
+    path: 'contact',
+    loadComponent: () =>
+      import('./features/contact/contact-page.component').then((component) => component.ContactPageComponent),
+    title: 'Contact | Jesus Dev',
+  },
+  {
     path: '**',
     redirectTo: '',
   },

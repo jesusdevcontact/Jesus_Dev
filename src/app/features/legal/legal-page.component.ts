@@ -3,6 +3,7 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
 import { TranslateArrayPipe } from '../../shared/pipes/translate-array.pipe';
+import { buildContactMailto } from '../../core/utils/contact-mailto';
 
 type LegalPageKey = 'privacy' | 'cookies' | 'legal';
 
@@ -16,6 +17,7 @@ type LegalPageKey = 'privacy' | 'cookies' | 'legal';
 })
 export class LegalPageComponent {
   private readonly route = inject(ActivatedRoute);
+  readonly mailtoHref = buildContactMailto();
 
   readonly page = computed<LegalPageKey>(() => this.route.snapshot.data['page'] ?? 'privacy');
   readonly sections = computed(() => {

@@ -75,18 +75,18 @@
       },
       "backend": {
         "title": "Backend",
-        "summary": "Bases con Laravel y PHP para APIs REST, datos relacionales, reglas de validación, autenticación y flujos de administración.",
-        "items": ["Laravel", "PHP", "APIs REST", "Sanctum", "MySQL", "PostgreSQL", "Neon"]
+        "summary": "Bases con Laravel y PHP para datos relacionales, reglas de validación, autenticación y flujos de administración.",
+        "items": ["Laravel", "PHP", "Sanctum", "MySQL", "PostgreSQL", "Neon"]
       },
       "testing": {
         "title": "Testing",
-        "summary": "Hábitos de testing basados en riesgo: transiciones de estado, flujos de usuario, validaciones y regresiones que afectan al usuario.",
-        "items": ["Cypress", "Vitest", "Karma", "PHPUnit", "Accesibilidad", "Testing E2E", "Testing unitario"]
+        "summary": "Cobertura práctica con herramientas usadas en UI, Angular, Laravel y revisiones de accesibilidad.",
+        "items": ["Cypress", "Vitest", "Karma", "PHPUnit", "Accesibilidad"]
       },
       "architecture": {
         "title": "Arquitectura",
-        "summary": "Cómo conecto pantallas de producto, contratos API, flujos de auth, datos relacionales, pruebas y despliegue.",
-        "items": ["APIs REST", "Arquitectura SPA", "Límites API/UI", "Flujos auth", "Sanctum", "Modelado relacional", "Flujos de testing", "Mentalidad CI/CD", "Arquitectura por features"]
+        "summary": "Cómo conecto pantallas de producto, contratos API, flujos de auth, datos relacionales y límites por feature.",
+        "items": ["APIs REST", "Arquitectura SPA", "Límites API/UI", "Arquitectura por features", "Modelado relacional", "Flujos auth"]
       },
       "devops": {
         "title": "DevOps",
@@ -96,7 +96,7 @@
       "tooling": {
         "title": "Tooling",
         "summary": "Herramientas pensadas para feedback rápido, depuración clara, carpetas mantenibles y handoff legible para equipos.",
-        "items": ["npm", "pnpm", "VS Code", "GitHub", "Postman", "Codex", "Claude Code"]
+        "items": ["VS Code", "GitHub", "Postman", "npm", "pnpm"]
       }
     }
   },
@@ -180,6 +180,28 @@
     "eyebrow": "Contacto",
     "title": "Hablemos de roles fullstack, Angular, Laravel y producto.",
     "text": "Estoy preparado para hablar de mi código, decisiones API/UI y cómo abordo Angular, Laravel, datos, testing, accesibilidad y aprendizaje orientado a producción dentro de un equipo real."
+  },
+  "contactPage": {
+    "eyebrow": "Contacto",
+    "title": "Una forma sencilla de iniciar una conversación técnica.",
+    "intro": "Usa el formulario para preparar un email con contexto claro, o ve directamente a LinkedIn y GitHub.",
+    "form": {
+      "title": "Detalles del mensaje",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "company": "Empresa",
+      "companyPlaceholder": "Empresa o equipo, opcional",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Consulta profesional",
+      "message": "Mensaje",
+      "messagePlaceholder": "Rol, proyecto, colaboración o contexto que quieras comentar.",
+      "guidance": "Mantenlo conciso. El botón abre tu cliente de email con este contenido.",
+      "send": "Preparar email"
+    },
+    "direct": {
+      "title": "Canales directos",
+      "text": "Si prefieres una vía más rápida, estas acciones mantienen el contexto profesional sin añadir backend."
+    }
   },
   "buttons": {
     "viewProjects": "Ver proyectos",

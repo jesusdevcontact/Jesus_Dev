@@ -2,6 +2,8 @@ import { ChangeDetectionStrategy, Component, HostListener, signal } from '@angul
 import { LucideDynamicIcon } from '@lucide/angular';
 import { TranslatePipe } from '@ngx-translate/core';
 
+import { buildContactMailto } from '../../../core/utils/contact-mailto';
+
 const COOKIE_CONSENT_KEY = 'jesusdev-cookie-consent';
 type CookieConsentChoice = 'accepted' | 'rejected';
 
@@ -16,6 +18,7 @@ type CookieConsentChoice = 'accepted' | 'rejected';
 export class CookieConsentComponent {
   readonly consent = signal<CookieConsentChoice | null>(this.readConsent());
   readonly panelOpen = signal(!this.consent());
+  readonly mailtoHref = buildContactMailto();
 
   @HostListener('document:keydown.escape')
   closeWithEscape(): void {

@@ -102,6 +102,7 @@ li {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  min-height: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.088);
   border-radius: 999px;
   padding: 0.3rem 0.58rem 0.3rem 0.32rem;
@@ -112,6 +113,7 @@ li {
   font-size: 0.8rem;
   font-weight: 700;
   line-height: 1;
+  white-space: nowrap;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.045) inset;
   transition:
     transform 200ms var(--ease-premium),
@@ -129,6 +131,8 @@ li:hover {
 
 .tech-mark {
   display: inline-grid;
+  flex: 0 0 1.6rem;
+  width: 1.6rem;
   min-width: 1.6rem;
   height: 1.6rem;
   place-items: center;
@@ -152,6 +156,7 @@ li:hover {
 }
 
 .tech-mark img {
+  display: block;
   width: 1.05rem;
   height: 1.05rem;
   object-fit: contain;
@@ -168,6 +173,7 @@ li:hover {
 
 .tech-mark--fallback .tech-fallback {
   display: inline;
+  line-height: 1;
 }
 
 .tech-rest-apis .tech-mark,
@@ -215,6 +221,7 @@ li:hover {
 .tech-mentalidad-ci-cd .tech-mark,
 .tech-culture-ci-cd .tech-mark,
 .tech-feature-driven-architecture .tech-mark,
+.tech-feature-architecture .tech-mark,
 .tech-arquitectura-por-features .tech-mark,
 .tech-architecture-par-feature .tech-mark {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(83, 216, 255, 0.74));
