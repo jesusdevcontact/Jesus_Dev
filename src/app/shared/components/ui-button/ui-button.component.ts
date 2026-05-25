@@ -13,8 +13,20 @@ import { LucideDynamicIcon } from '@lucide/angular';
 export class UiButtonComponent {
   readonly href = input.required<string>();
   readonly label = input.required<string>();
-  readonly icon = input<string>('ArrowRight');
+  readonly icon = input<string>('arrow-right');
   readonly variant = input<'primary' | 'secondary' | 'ghost'>('primary');
   readonly external = input(false);
   readonly ariaLabel = input<string>();
+
+  iconName(): string {
+    const aliases: Record<string, string> = {
+      ArrowRight: 'arrow-right',
+      ExternalLink: 'external-link',
+      Github: 'external-link',
+      Linkedin: 'external-link',
+      Mail: 'mail',
+    };
+
+    return aliases[this.icon()] ?? this.icon();
+  }
 }

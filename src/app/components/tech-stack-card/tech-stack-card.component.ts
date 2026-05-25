@@ -17,13 +17,13 @@ export class TechStackCardComponent {
 
   iconFor(title: string): string {
     const icons: Record<string, string> = {
-      Frontend: 'Code2',
-      Backend: 'Database',
-      Testing: 'ShieldCheck',
-      DevOps: 'Workflow',
-      Tooling: 'Terminal',
+      Frontend: 'code-2',
+      Backend: 'database',
+      Testing: 'shield-check',
+      DevOps: 'workflow',
+      Tooling: 'terminal',
     };
 
-    return icons[title] ?? 'Code2';
+    return icons[title] ?? 'code-2';
   }
 }

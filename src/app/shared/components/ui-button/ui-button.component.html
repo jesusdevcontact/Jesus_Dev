@@ -7,5 +7,5 @@
   [attr.rel]="external() ? 'noopener noreferrer' : null"
 >
   <span>{{ label() }}</span>
-  <svg [lucideIcon]="icon() === 'Github' || icon() === 'Linkedin' ? 'ExternalLink' : icon()" size="18" aria-hidden="true"></svg>
+  <svg [lucideIcon]="iconName()" size="18" aria-hidden="true"></svg>
 </a>

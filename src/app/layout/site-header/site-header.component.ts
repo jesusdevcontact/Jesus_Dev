@@ -25,7 +25,7 @@ export class SiteHeaderComponent {
     ),
     { initialValue: false },
   );
-  readonly menuIcon = computed(() => (this.menuOpen() ? 'X' : 'Menu'));
+  readonly menuIcon = computed(() => (this.menuOpen() ? 'x' : 'menu'));
 
   toggleMenu(): void {
     this.menuOpen.update((isOpen) => !isOpen);
