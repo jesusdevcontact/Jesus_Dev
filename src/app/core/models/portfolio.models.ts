@@ -4,7 +4,7 @@ export interface NavItem {
 }
 
 export interface TechCategory {
-  key: 'frontend' | 'backend' | 'testing' | 'devops' | 'tooling';
+  key: 'frontend' | 'backend' | 'testing' | 'architecture' | 'devops' | 'tooling';
   accent: 'cyan' | 'green' | 'amber' | 'rose' | 'blue';
 }
 

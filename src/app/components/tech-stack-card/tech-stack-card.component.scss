@@ -133,17 +133,38 @@ li:hover {
   height: 1.5rem;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 999px;
+  border-radius: 0.42rem;
   background: rgba(255, 255, 255, 0.06);
   color: var(--text-strong);
   font-size: 0.62rem;
   font-weight: 900;
   letter-spacing: 0;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.tech-angular .tech-mark,
+.tech-laravel .tech-mark,
+.tech-cypress .tech-mark,
+.tech-github .tech-mark {
+  position: relative;
+}
+
+.tech-angular .tech-mark::before,
+.tech-laravel .tech-mark::before,
+.tech-cypress .tech-mark::before,
+.tech-github .tech-mark::before {
+  position: absolute;
+  inset: 0.22rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 0.28rem;
+  content: "";
+  opacity: 0.5;
 }
 
 .tech-angular .tech-mark {
-  background: linear-gradient(135deg, #dd0031, #c3002f);
+  background: linear-gradient(135deg, #dd0031, #c3002f 56%, #b52e31);
 }
 
 .tech-typescript .tech-mark {
@@ -170,9 +191,17 @@ li:hover {
   background: linear-gradient(135deg, #00758f, #f29111);
 }
 
+.tech-postgresql .tech-mark {
+  background: linear-gradient(135deg, #336791, #1f4562);
+}
+
 .tech-neon .tech-mark {
   background: linear-gradient(135deg, #00e5bf, #0b7f71);
   color: #041014;
+}
+
+.tech-sanctum .tech-mark {
+  background: linear-gradient(135deg, #f9322c, #711a75);
 }
 
 .tech-docker .tech-mark {
@@ -193,13 +222,38 @@ li:hover {
 }
 
 .tech-cypress .tech-mark {
-  background: linear-gradient(135deg, #69d3a7, #1b7456);
+  background: linear-gradient(135deg, #17202c, #69d3a7);
+}
+
+.tech-karma .tech-mark {
+  background: linear-gradient(135deg, #56c5a8, #2f9f8f);
   color: #041014;
+}
+
+.tech-phpunit .tech-mark {
+  background: linear-gradient(135deg, #8892bf, #4f5b93);
 }
 
 .tech-vitest .tech-mark,
 .tech-vite .tech-mark {
   background: linear-gradient(135deg, #bd34fe, #41d1ff);
+}
+
+.tech-accessibility .tech-mark,
+.tech-accesibilidad .tech-mark,
+.tech-accessibilite .tech-mark {
+  background: linear-gradient(135deg, #85a9ff, #53d8ff);
+  color: #041014;
+}
+
+.tech-e2e-testing .tech-mark,
+.tech-testing-e2e .tech-mark,
+.tech-tests-e2e .tech-mark,
+.tech-unit-testing .tech-mark,
+.tech-testing-unitario .tech-mark,
+.tech-tests-unitaires .tech-mark {
+  background: linear-gradient(135deg, #89f4b2, #53d8ff);
+  color: #041014;
 }
 
 .tech-npm .tech-mark {
@@ -214,6 +268,28 @@ li:hover {
 .tech-linux .tech-mark {
   background: linear-gradient(135deg, #f4c430, #2f2f2f);
   color: #05060a;
+}
+
+.tech-vs-code .tech-mark {
+  background: linear-gradient(135deg, #007acc, #005a9e);
+}
+
+.tech-github .tech-mark {
+  background: linear-gradient(135deg, #f0f6fc, #8b949e);
+  color: #0d1117;
+}
+
+.tech-postman .tech-mark {
+  background: linear-gradient(135deg, #ff6c37, #c94a1f);
+}
+
+.tech-codex .tech-mark {
+  background: linear-gradient(135deg, #f7f8fb, #53d8ff);
+  color: #041014;
+}
+
+.tech-claude-code .tech-mark {
+  background: linear-gradient(135deg, #d97757, #8a4b35);
 }
 
 .tech-rest-apis .tech-mark,
@@ -239,5 +315,30 @@ li:hover {
 .tech-angular-cli .tech-mark,
 .tech-chrome-devtools .tech-mark {
   background: linear-gradient(135deg, #85a9ff, #53d8ff);
+  color: #041014;
+}
+
+.tech-spa-architecture .tech-mark,
+.tech-arquitectura-spa .tech-mark,
+.tech-architecture-spa .tech-mark,
+.tech-api-ui-boundaries .tech-mark,
+.tech-limites-api-ui .tech-mark,
+.tech-frontieres-api-ui .tech-mark,
+.tech-auth-flows .tech-mark,
+.tech-flujos-auth .tech-mark,
+.tech-flux-auth .tech-mark,
+.tech-relational-modeling .tech-mark,
+.tech-modelado-relacional .tech-mark,
+.tech-modelisation-relationnelle .tech-mark,
+.tech-testing-workflows .tech-mark,
+.tech-flujos-de-testing .tech-mark,
+.tech-workflows-de-test .tech-mark,
+.tech-ci-cd-mindset .tech-mark,
+.tech-mentalidad-ci-cd .tech-mark,
+.tech-culture-ci-cd .tech-mark,
+.tech-feature-driven-architecture .tech-mark,
+.tech-arquitectura-por-features .tech-mark,
+.tech-architecture-par-feature .tech-mark {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(83, 216, 255, 0.74));
   color: #041014;
 }

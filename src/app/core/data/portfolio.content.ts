@@ -22,6 +22,10 @@ export const techCategories: TechCategory[] = [
     accent: 'amber',
   },
   {
+    key: 'architecture',
+    accent: 'cyan',
+  },
+  {
     key: 'devops',
     accent: 'rose',
   },

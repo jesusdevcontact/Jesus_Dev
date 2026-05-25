@@ -76,12 +76,17 @@
       "backend": {
         "title": "Backend",
         "summary": "Bases con Laravel y PHP para APIs REST, datos relacionales, reglas de validación, autenticación y flujos de administración.",
-        "items": ["Laravel", "PHP", "MySQL", "Neon", "APIs REST"]
+        "items": ["Laravel", "PHP", "APIs REST", "Sanctum", "MySQL", "PostgreSQL", "Neon"]
       },
       "testing": {
         "title": "Testing",
         "summary": "Hábitos de testing basados en riesgo: transiciones de estado, flujos de usuario, validaciones y regresiones que afectan al usuario.",
-        "items": ["Cypress", "Vitest", "Pruebas Angular", "Revisión A11y"]
+        "items": ["Cypress", "Vitest", "Karma", "PHPUnit", "Accesibilidad", "Testing E2E", "Testing unitario"]
+      },
+      "architecture": {
+        "title": "Arquitectura",
+        "summary": "Cómo conecto pantallas de producto, contratos API, flujos de auth, datos relacionales, pruebas y despliegue.",
+        "items": ["APIs REST", "Arquitectura SPA", "Límites API/UI", "Flujos auth", "Sanctum", "Modelado relacional", "Flujos de testing", "Mentalidad CI/CD", "Arquitectura por features"]
       },
       "devops": {
         "title": "DevOps",
@@ -91,7 +96,7 @@
       "tooling": {
         "title": "Tooling",
         "summary": "Herramientas pensadas para feedback rápido, depuración clara, carpetas mantenibles y handoff legible para equipos.",
-        "items": ["npm", "pnpm", "Angular CLI", "Chrome DevTools"]
+        "items": ["npm", "pnpm", "VS Code", "GitHub", "Postman", "Codex", "Claude Code"]
       }
     }
   },
