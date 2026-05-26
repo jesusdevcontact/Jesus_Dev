@@ -199,13 +199,26 @@ li:hover {
 }
 
 .tech-codex .tech-mark {
-  background: linear-gradient(135deg, #f7f8fb, #bfc7d5);
-  color: #05060a;
+  border-color: rgba(255, 255, 255, 0.105);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.024)),
+    rgba(5, 6, 10, 0.42);
+  color: var(--text-strong);
 }
 
 .tech-claude-code .tech-mark {
-  background: linear-gradient(135deg, #d97757, #f0b28f);
-  color: #05060a;
+  border-color: rgba(217, 119, 87, 0.2);
+  background:
+    linear-gradient(180deg, rgba(217, 119, 87, 0.12), rgba(255, 255, 255, 0.024)),
+    rgba(5, 6, 10, 0.42);
+  color: var(--text-strong);
+}
+
+.tech-codex .tech-mark img,
+.tech-claude-code .tech-mark img {
+  width: 0.98rem;
+  height: 0.98rem;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.28));
 }
 
 .tech-angular-testing .tech-mark,

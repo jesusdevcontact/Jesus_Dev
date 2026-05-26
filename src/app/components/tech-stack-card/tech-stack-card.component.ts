@@ -169,13 +169,13 @@ export class TechStackCardComponent {
   }
 
   private codexIcon(): string {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#101218"/><path fill="none" stroke="#f7f8fb" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M12 4.45c1.25 0 2.23.62 2.82 1.6 1.12-.14 2.19.23 2.98 1.08.9.96 1.14 2.25.72 3.4.77.84.98 2.05.6 3.17-.42 1.25-1.4 2.05-2.57 2.27-.36 1.07-1.23 1.93-2.38 2.24-1.27.34-2.51-.03-3.34-.85-1.1.23-2.24-.07-3.1-.9-.95-.9-1.26-2.18-.94-3.36-.86-.77-1.22-1.96-.92-3.12.32-1.29 1.26-2.2 2.4-2.55.43-1.1 1.42-1.95 2.66-2.16.37-.06.73-.06 1.07-.02Z"/><path fill="none" stroke="#f7f8fb" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" d="M8.26 7.43 12 9.57l3.73-2.14M8.26 16.47v-4.28L12 10m3.73 6.47v-4.28L12 10m0 8.55v-4.28l3.73-2.08M12 18.55l-3.74-2.08"/></svg>`;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="#dce2ec" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" d="M12 4.75c1.18 0 2.08.56 2.62 1.45 1.05-.12 2.02.24 2.74 1.02.8.86 1.03 2.04.66 3.1.7.78.9 1.88.55 2.9-.38 1.13-1.28 1.86-2.36 2.06-.34.98-1.14 1.76-2.18 2.04-1.16.31-2.3-.03-3.05-.78-1.02.2-2.07-.08-2.85-.84-.86-.83-1.15-2-.86-3.08-.78-.71-1.1-1.8-.84-2.86.3-1.17 1.16-2 2.2-2.32.4-1.02 1.3-1.78 2.43-1.98.33-.05.65-.05.94-.01Z"/><path fill="none" stroke="#dce2ec" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round" d="M8.7 7.72 12 9.62l3.3-1.9M8.7 16.07v-3.82L12 10.3m3.3 5.77v-3.82L12 10.3m0 7.58v-3.8l3.3-1.83M12 17.88l-3.3-1.81"/></svg>`;
 
     return `data:image/svg+xml,${encodeURIComponent(svg)}`;
   }
 
   private claudeIcon(): string {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#19110d"/><path fill="#d97757" d="m12 3.2 1.45 5.35 4.7-2.93-2.93 4.7L20.8 12l-5.58 1.68 2.93 4.7-4.7-2.93L12 20.8l-1.45-5.35-4.7 2.93 2.93-4.7L3.2 12l5.58-1.68-2.93-4.7 4.7 2.93L12 3.2Z"/><path fill="#f2c0a4" d="M12 7.25 13.05 11H17l-3.2 2.28 1.22 3.67L12 14.7l-3.02 2.25 1.22-3.67L7 11h3.95L12 7.25Z"/></svg>`;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#d97757" d="m12 4.05 1.26 4.72 4.08-2.58-2.55 4.1L19.7 12l-4.91 1.71 2.55 4.1-4.08-2.58L12 19.95l-1.26-4.72-4.08 2.58 2.55-4.1L4.3 12l4.91-1.71-2.55-4.1 4.08 2.58L12 4.05Z"/><path fill="#e9a47f" d="M12 7.8 12.9 11h3.35l-2.72 1.96 1.04 3.16L12 14.17l-2.57 1.95 1.04-3.16L7.75 11h3.35L12 7.8Z"/></svg>`;
 
     return `data:image/svg+xml,${encodeURIComponent(svg)}`;
   }
