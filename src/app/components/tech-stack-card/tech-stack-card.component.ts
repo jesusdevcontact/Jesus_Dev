@@ -70,7 +70,8 @@ export class TechStackCardComponent {
       github: 'GH',
       postman: 'Pm',
       'vs-code': 'VS',
-      codex: 'Cx',
+      codex: 'AI',
+      'openai-codex': 'AI',
       'claude-code': 'Cl',
       'rest-apis': 'API',
       'apis-rest': 'API',
@@ -113,8 +114,6 @@ export class TechStackCardComponent {
   techIconUrl(item: string): string | null {
     const customIcons: Record<string, string> = {
       sanctum: this.sanctumIcon(),
-      codex: this.codexIcon(),
-      'claude-code': this.claudeIcon(),
     };
     const icons: Record<string, string> = {
       angular: 'angular/DD0031',
@@ -168,15 +167,4 @@ export class TechStackCardComponent {
     return `data:image/svg+xml,${encodeURIComponent(svg)}`;
   }
 
-  private codexIcon(): string {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="#dce2ec" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" d="M12 4.75c1.18 0 2.08.56 2.62 1.45 1.05-.12 2.02.24 2.74 1.02.8.86 1.03 2.04.66 3.1.7.78.9 1.88.55 2.9-.38 1.13-1.28 1.86-2.36 2.06-.34.98-1.14 1.76-2.18 2.04-1.16.31-2.3-.03-3.05-.78-1.02.2-2.07-.08-2.85-.84-.86-.83-1.15-2-.86-3.08-.78-.71-1.1-1.8-.84-2.86.3-1.17 1.16-2 2.2-2.32.4-1.02 1.3-1.78 2.43-1.98.33-.05.65-.05.94-.01Z"/><path fill="none" stroke="#dce2ec" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round" d="M8.7 7.72 12 9.62l3.3-1.9M8.7 16.07v-3.82L12 10.3m3.3 5.77v-3.82L12 10.3m0 7.58v-3.8l3.3-1.83M12 17.88l-3.3-1.81"/></svg>`;
-
-    return `data:image/svg+xml,${encodeURIComponent(svg)}`;
-  }
-
-  private claudeIcon(): string {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#d97757" d="m12 4.05 1.26 4.72 4.08-2.58-2.55 4.1L19.7 12l-4.91 1.71 2.55 4.1-4.08-2.58L12 19.95l-1.26-4.72-4.08 2.58 2.55-4.1L4.3 12l4.91-1.71-2.55-4.1 4.08 2.58L12 4.05Z"/><path fill="#e9a47f" d="M12 7.8 12.9 11h3.35l-2.72 1.96 1.04 3.16L12 14.17l-2.57 1.95 1.04-3.16L7.75 11h3.35L12 7.8Z"/></svg>`;
-
-    return `data:image/svg+xml,${encodeURIComponent(svg)}`;
-  }
 }

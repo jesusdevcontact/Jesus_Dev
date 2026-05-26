@@ -96,7 +96,7 @@
       "tooling": {
         "title": "Tooling",
         "summary": "Tooling choices aimed at fast feedback, clean debugging, maintainable folders, and readable handoff for teams.",
-        "items": ["VS Code", "GitHub", "Postman", "npm", "pnpm", "Codex", "Claude Code"]
+        "items": ["VS Code", "GitHub", "Postman", "npm", "pnpm", "OpenAI Codex", "Claude Code"]
       }
     }
   },

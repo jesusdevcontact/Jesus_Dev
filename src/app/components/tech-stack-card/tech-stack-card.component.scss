@@ -198,7 +198,8 @@ li:hover {
   background: linear-gradient(135deg, #8892bf, #777bb4);
 }
 
-.tech-codex .tech-mark {
+.tech-codex .tech-mark,
+.tech-openai-codex .tech-mark {
   border-color: rgba(255, 255, 255, 0.105);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.024)),
@@ -209,16 +210,9 @@ li:hover {
 .tech-claude-code .tech-mark {
   border-color: rgba(217, 119, 87, 0.2);
   background:
-    linear-gradient(180deg, rgba(217, 119, 87, 0.12), rgba(255, 255, 255, 0.024)),
+    linear-gradient(180deg, rgba(217, 119, 87, 0.095), rgba(255, 255, 255, 0.022)),
     rgba(5, 6, 10, 0.42);
   color: var(--text-strong);
-}
-
-.tech-codex .tech-mark img,
-.tech-claude-code .tech-mark img {
-  width: 0.98rem;
-  height: 0.98rem;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.28));
 }
 
 .tech-angular-testing .tech-mark,

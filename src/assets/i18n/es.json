@@ -96,7 +96,7 @@
       "tooling": {
         "title": "Tooling",
         "summary": "Herramientas pensadas para feedback rápido, depuración clara, carpetas mantenibles y handoff legible para equipos.",
-        "items": ["VS Code", "GitHub", "Postman", "npm", "pnpm", "Codex", "Claude Code"]
+        "items": ["VS Code", "GitHub", "Postman", "npm", "pnpm", "OpenAI Codex", "Claude Code"]
       }
     }
   },
