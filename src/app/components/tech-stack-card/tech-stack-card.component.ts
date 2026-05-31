@@ -133,7 +133,6 @@ export class TechStackCardComponent {
       cypress: 'cypress/69D3A7',
       vitest: 'vitest/6E9F18',
       karma: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/karma/karma-original.svg',
-      phpunit: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/phpunit/phpunit-original.svg',
       npm: 'npm/CB3837',
       pnpm: 'pnpm/F69220',
       linux: 'linux/FCC624',
