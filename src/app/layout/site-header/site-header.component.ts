@@ -7,7 +7,7 @@ import { fromEvent, map, startWith } from 'rxjs';
 
 import { navItems } from '../../core/data/portfolio.content';
 import { I18nService, SupportedLanguage } from '../../core/i18n/i18n.service';
-import { ThemeService } from '../../core/theme/theme.service';
+import { ThemePreference, ThemeService } from '../../core/theme/theme.service';
 
 @Component({
   selector: 'jd-site-header',
@@ -45,8 +45,8 @@ export class SiteHeaderComponent {
     this.closeMenu();
   }
 
-  toggleTheme(): void {
-    this.theme.toggleTheme();
+  setTheme(theme: ThemePreference): void {
+    this.theme.setTheme(theme);
   }
 
   navHref(target: string): string {

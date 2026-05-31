@@ -74,17 +74,17 @@
 
 [data-theme="light"] {
   color-scheme: light;
-  --bg: #f5f8fb;
+  --bg: #edf3f8;
   --bg-elevated: #ffffff;
-  --bg-page: #f5f8fb;
-  --surface: rgba(255, 255, 255, 0.62);
-  --surface-strong: rgba(255, 255, 255, 0.84);
-  --surface-hover: rgba(255, 255, 255, 0.92);
-  --surface-field: rgba(255, 255, 255, 0.72);
-  --text-strong: #101827;
-  --text-soft: #243145;
-  --text-muted: #526176;
-  --text-faint: #718096;
+  --bg-page: #edf3f8;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --surface-hover: rgba(255, 255, 255, 0.98);
+  --surface-field: rgba(255, 255, 255, 0.82);
+  --text-strong: #0d1726;
+  --text-soft: #223047;
+  --text-muted: #4d5d72;
+  --text-faint: #6b7a8f;
   --text-inverse: #041014;
   --accent-cyan: #007fa8;
   --accent-green: #168357;
@@ -93,40 +93,41 @@
   --accent-blue: #365fbd;
   --accent-primary-bg: linear-gradient(135deg, #0f1d2e 0%, #0c83a8 48%, #15865d 100%);
   --accent-primary-text: #ffffff;
-  --border-subtle: rgba(18, 32, 52, 0.12);
-  --border-strong: rgba(18, 32, 52, 0.22);
+  --border-subtle: rgba(26, 45, 71, 0.16);
+  --border-strong: rgba(26, 45, 71, 0.28);
   --border-glow: rgba(0, 127, 168, 0.24);
-  --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.56));
+  --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 250, 253, 0.64));
   --glass-inset: 0 1px 0 rgba(255, 255, 255, 0.92) inset;
   --glass-inset-strong: 0 1px 0 rgba(255, 255, 255, 0.98) inset;
   --nav-bg:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(239, 246, 252, 0.7)),
-    rgba(255, 255, 255, 0.52);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.91), rgba(235, 244, 250, 0.76)),
+    rgba(255, 255, 255, 0.62);
   --nav-bg-scrolled:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(238, 246, 252, 0.82)),
-    rgba(255, 255, 255, 0.68);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(232, 242, 249, 0.88)),
+    rgba(255, 255, 255, 0.8);
   --panel-bg:
     radial-gradient(circle at 0% 0%, rgba(0, 127, 168, 0.13), transparent 16rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(238, 246, 252, 0.88));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(232, 242, 249, 0.92));
   --body-bg:
-    radial-gradient(ellipse at 50% -18rem, rgba(0, 127, 168, 0.13), transparent 38rem),
-    linear-gradient(180deg, rgba(54, 95, 189, 0.08), transparent 24rem),
+    radial-gradient(ellipse at 50% -18rem, rgba(0, 127, 168, 0.16), transparent 38rem),
+    radial-gradient(ellipse at 15% 12rem, rgba(54, 95, 189, 0.08), transparent 32rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(237, 243, 248, 0.28) 28rem, transparent 52rem),
     var(--bg-page);
   --body-aura:
-    radial-gradient(circle at 18% 20%, rgba(0, 127, 168, 0.09), transparent 28rem),
-    radial-gradient(circle at 84% 8%, rgba(22, 131, 87, 0.075), transparent 24rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.56), transparent);
-  --grid-line: rgba(20, 38, 63, 0.052);
-  --grid-line-strong: rgba(20, 38, 63, 0.07);
+    radial-gradient(circle at 18% 20%, rgba(0, 127, 168, 0.11), transparent 28rem),
+    radial-gradient(circle at 84% 8%, rgba(22, 131, 87, 0.08), transparent 24rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), transparent);
+  --grid-line: rgba(26, 45, 71, 0.06);
+  --grid-line-strong: rgba(26, 45, 71, 0.085);
   --hero-bg:
-    radial-gradient(ellipse at 48% -8%, rgba(0, 127, 168, 0.16), transparent 34rem),
-    radial-gradient(ellipse at 82% 24%, rgba(22, 131, 87, 0.1), transparent 28rem),
-    radial-gradient(ellipse at 12% 42%, rgba(187, 53, 100, 0.065), transparent 28rem),
-    linear-gradient(180deg, #eef6fb 0%, #f8fbff 54%, #edf4f8 100%);
-  --shadow-sm: 0 10px 30px rgba(30, 49, 73, 0.11);
-  --shadow-md: 0 22px 64px rgba(30, 49, 73, 0.16);
-  --shadow-lg: 0 34px 110px rgba(30, 49, 73, 0.2);
-  --shadow-nav: 0 18px 54px rgba(30, 49, 73, 0.12);
+    radial-gradient(ellipse at 48% -8%, rgba(0, 127, 168, 0.19), transparent 34rem),
+    radial-gradient(ellipse at 82% 24%, rgba(22, 131, 87, 0.11), transparent 28rem),
+    radial-gradient(ellipse at 12% 42%, rgba(187, 53, 100, 0.075), transparent 28rem),
+    linear-gradient(180deg, #e7f1f8 0%, #f8fbfe 46%, #edf3f8 100%);
+  --shadow-sm: 0 10px 28px rgba(32, 54, 82, 0.1);
+  --shadow-md: 0 18px 48px rgba(32, 54, 82, 0.14);
+  --shadow-lg: 0 28px 78px rgba(32, 54, 82, 0.18);
+  --shadow-nav: 0 18px 48px rgba(32, 54, 82, 0.13);
 }
 
 * {
@@ -245,6 +246,104 @@ button {
   will-change: auto;
 }
 
+[data-theme="light"] .section-shell::before {
+  background: linear-gradient(90deg, transparent, rgba(26, 45, 71, 0.16), transparent);
+}
+
+[data-theme="light"] .project-card,
+[data-theme="light"] .tech-card {
+  border-color: rgba(26, 45, 71, 0.18);
+  background:
+    radial-gradient(circle at 24% 0%, rgba(255, 255, 255, 0.82), transparent 18rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 249, 252, 0.74)),
+    rgba(255, 255, 255, 0.74);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 18px 46px rgba(32, 54, 82, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.56);
+}
+
+[data-theme="light"] .project-card::before {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.86), transparent 28rem),
+    radial-gradient(circle at 100% 28%, rgba(0, 127, 168, 0.12), transparent 18rem);
+}
+
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .tech-card:hover {
+  border-color: rgba(26, 45, 71, 0.3);
+  background:
+    radial-gradient(circle at 24% 0%, rgba(255, 255, 255, 0.92), transparent 18rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(240, 247, 251, 0.82)),
+    rgba(255, 255, 255, 0.86);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 1) inset,
+    0 24px 58px rgba(32, 54, 82, 0.16),
+    0 0 0 1px rgba(255, 255, 255, 0.68);
+}
+
+[data-theme="light"] .mockup,
+[data-theme="light"] .project-card--cyan .mockup,
+[data-theme="light"] .project-card--green .mockup,
+[data-theme="light"] .project-card--amber .mockup {
+  background:
+    linear-gradient(135deg, rgba(0, 127, 168, 0.12), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(232, 242, 249, 0.62));
+}
+
+[data-theme="light"] .mockup-sidebar,
+[data-theme="light"] .mockup-main,
+[data-theme="light"] .mockup-panel {
+  border-color: rgba(26, 45, 71, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(238, 246, 251, 0.5)),
+    rgba(255, 255, 255, 0.55);
+  box-shadow: 0 14px 34px rgba(32, 54, 82, 0.12);
+}
+
+[data-theme="light"] .problem-block,
+[data-theme="light"] .project-columns > div,
+[data-theme="light"] .stack li,
+[data-theme="light"] .metric-row span,
+[data-theme="light"] .tech-card li,
+[data-theme="light"] .project-action,
+[data-theme="light"] .footer-links a {
+  border-color: rgba(26, 45, 71, 0.15);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(242, 248, 252, 0.62)),
+    rgba(255, 255, 255, 0.62);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.86) inset;
+}
+
+[data-theme="light"] .card-icon,
+[data-theme="light"] .tech-mark {
+  border-color: rgba(26, 45, 71, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(235, 244, 250, 0.66)),
+    rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 24px rgba(32, 54, 82, 0.12);
+}
+
+[data-theme="light"] .tech-card li:hover,
+[data-theme="light"] .project-action:hover,
+[data-theme="light"] .footer-links a:hover {
+  border-color: rgba(26, 45, 71, 0.28);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 1) inset,
+    0 12px 28px rgba(0, 127, 168, 0.11);
+}
+
+[data-theme="light"] .site-footer {
+  border-top-color: rgba(26, 45, 71, 0.18);
+  background:
+    linear-gradient(180deg, rgba(216, 228, 238, 0.62), rgba(237, 243, 248, 0.78) 34%, #e6eef5),
+    var(--bg-page);
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.82) inset;
+}
+
 @keyframes pageEnter {
   from {
     opacity: 0;
@@ -276,6 +375,12 @@ button {
 }
 
 @media (max-width: 560px) {
+  :root {
+    --section-y: clamp(3.25rem, 14vw, 4.35rem);
+    --step-3: clamp(1.76rem, 9vw, 2.35rem);
+    --step-5: clamp(2.42rem, 13.5vw, 3.35rem);
+  }
+
   .container {
     width: min(calc(100% - 1.25rem), var(--container));
   }

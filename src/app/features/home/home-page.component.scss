@@ -296,7 +296,7 @@ h1 {
   top: 18%;
 }
 
-.skill-orbit--mid {
+.skill-orbit--center {
   left: -1.05rem;
   top: 49%;
 }
@@ -663,6 +663,151 @@ code strong {
   .contact {
     padding-bottom: 4rem;
   }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding-top: 8.45rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .hero-grid {
+    gap: 1.8rem;
+  }
+
+  .eyebrow {
+    max-width: 100%;
+    margin-bottom: 0.75rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    line-height: 1.35;
+  }
+
+  h1 {
+    max-width: 12ch;
+    font-size: var(--step-5);
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .hero-lead {
+    margin-top: 1rem;
+    font-size: 0.98rem;
+    line-height: 1.62;
+  }
+
+  .hero-proof {
+    gap: 0.45rem;
+    margin-top: 1rem;
+  }
+
+  .hero-proof span {
+    padding: 0.48rem 0.58rem;
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
+
+  .hero-actions {
+    gap: 0.55rem;
+    margin-top: 1.45rem;
+  }
+
+  .hero-stats {
+    gap: 0.65rem;
+    margin-top: 1.55rem;
+  }
+
+  .hero-stats div {
+    padding: 0.82rem;
+  }
+
+  .profile-card {
+    padding: 0.58rem;
+    animation: none;
+  }
+
+  .profile-status {
+    left: 0.85rem;
+    top: 0.85rem;
+    max-width: calc(100% - 1.7rem);
+    padding: 0.45rem 0.58rem;
+    font-size: 0.74rem;
+  }
+
+  .skill-orbit {
+    min-width: 0;
+    padding: 0.62rem 0.7rem;
+  }
+
+  .terminal-card {
+    position: static;
+    width: auto;
+    margin-top: 0.7rem;
+  }
+
+  .about-layout,
+  .stack-grid,
+  .projects-grid,
+  .journey {
+    gap: 0.78rem;
+  }
+
+  .about-copy h3 {
+    margin-bottom: 0.72rem;
+    font-size: clamp(1.28rem, 7vw, 1.55rem);
+    line-height: 1.08;
+  }
+
+  .about-copy p,
+  .contact p:not(.eyebrow) {
+    font-size: 0.96rem;
+    line-height: 1.62;
+  }
+
+  .principle-grid article {
+    min-height: 0;
+    gap: 0.8rem;
+  }
+
+  .journey article {
+    gap: 0.72rem;
+  }
+
+  .journey-year {
+    width: fit-content;
+    height: auto;
+    padding: 0.48rem 0.68rem;
+  }
+
+  .journey h3 {
+    font-size: 1.12rem;
+    line-height: 1.18;
+  }
+
+  .journey p {
+    line-height: 1.58;
+  }
+
+  .journey ul {
+    gap: 0.42rem;
+    margin-top: 0.78rem;
+  }
+
+  .journey li {
+    border-radius: var(--radius-sm);
+    padding: 0.42rem 0.5rem;
+    line-height: 1.28;
+  }
+
+  .contact {
+    padding-top: 3.4rem;
+    padding-bottom: 3.4rem;
+  }
+
+  .contact-card {
+    gap: 1.25rem;
+  }
+
 }
 
 @keyframes heroCardFloat {

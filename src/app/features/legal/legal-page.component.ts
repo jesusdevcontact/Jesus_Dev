@@ -23,7 +23,7 @@ export class LegalPageComponent {
   readonly sections = computed(() => {
     const sections: Record<LegalPageKey, string[]> = {
       privacy: ['overview', 'data', 'storage', 'hosting', 'cookies', 'contact'],
-      cookies: ['overview', 'essential', 'analytics', 'localStorage', 'manage', 'contact'],
+      cookies: ['overview', 'localStorage', 'notUsed', 'manage', 'contact'],
       legal: ['purpose', 'ownership', 'activity', 'hosting', 'intellectualProperty', 'contact'],
     };
 

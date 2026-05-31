@@ -28,15 +28,26 @@
     </nav>
 
     <div class="nav-preferences">
-      <button
-        class="theme-toggle"
-        type="button"
-        [attr.aria-label]="('accessibility.themeToggle' | translate: { theme: ('theme.' + theme.nextTheme() | translate) })"
-        [attr.aria-pressed]="theme.theme() === 'light'"
-        (click)="toggleTheme()"
-      >
-        <svg [lucideIcon]="theme.icon()" size="17" aria-hidden="true"></svg>
-      </button>
+      <div class="theme-switcher" role="group" [attr.aria-label]="'accessibility.themeSwitcher' | translate">
+        <button
+          type="button"
+          [class.is-active]="theme.theme() === 'dark'"
+          [attr.aria-pressed]="theme.theme() === 'dark'"
+          [attr.aria-label]="'accessibility.themeDark' | translate"
+          (click)="setTheme('dark')"
+        >
+          {{ 'theme.darkLabel' | translate }}
+        </button>
+        <button
+          type="button"
+          [class.is-active]="theme.theme() === 'light'"
+          [attr.aria-pressed]="theme.theme() === 'light'"
+          [attr.aria-label]="'accessibility.themeLight' | translate"
+          (click)="setTheme('light')"
+        >
+          {{ 'theme.lightLabel' | translate }}
+        </button>
+      </div>
 
       <div class="language-switcher" role="group" [attr.aria-label]="'accessibility.languageSwitcher' | translate">
         @for (language of i18n.languages; track language) {

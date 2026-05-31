@@ -13,30 +13,30 @@
     "brandSubtitle": "Angular / Laravel"
   },
   "hero": {
-    "eyebrow": "Fullstack developer / Angular + Laravel",
-    "title": "Building fullstack Angular & Laravel products with clean APIs and polished UX.",
-    "lead": "Fullstack developer focused on Angular frontends, Laravel APIs, relational data, testing habits, and product decisions that make applications easier to use, ship, and maintain.",
+    "eyebrow": "Full Stack Developer / Angular + Laravel",
+    "title": "Building Angular interfaces and Laravel APIs for real-world workflows.",
+    "lead": "Full Stack Developer focused on Angular, TypeScript, Laravel, PHP and MySQL. I build typed UI flows, REST APIs, validation, auth states, responsive layouts and accessible interactions.",
     "proof": [
-      "Available for frontend/fullstack roles",
-      "Frontend architecture and API contracts",
+      "Available for frontend and Full Stack roles",
+      "Angular UI, TypeScript and SCSS",
       "Laravel APIs, MySQL and deployment flow"
     ],
     "stats": {
       "angular": {
         "title": "Angular",
-        "description": "Components, routing, UI state"
+        "description": "Components, routing, typed UI state"
       },
       "laravel": {
         "title": "Laravel",
         "description": "REST APIs, validation, MySQL"
       },
       "mindset": {
-        "title": "Mindset",
-        "description": "Product thinking, tests, delivery"
+        "title": "Delivery",
+        "description": "Testing, accessibility, deployment"
       }
     },
     "profile": {
-      "status": "Interview-ready work",
+      "status": "Project work ready to review",
       "angular": {
         "title": "Angular",
         "description": "Components / RxJS"
@@ -45,17 +45,17 @@
         "title": "Laravel",
         "description": "APIs / validation"
       },
-      "terminal": "technical story: clear"
+      "terminal": "build verified"
     }
   },
   "about": {
     "eyebrow": "About",
-    "title": "A fullstack profile built around readable architecture, API boundaries, and practical delivery.",
-    "intro": "This portfolio makes my engineering decisions visible: what problem each project solves, how the frontend talks to the backend, where data and validation live, and how I think about maintainability.",
-    "cardTitle": "Angular craft with Laravel and data context.",
+    "title": "I build Angular interfaces backed by Laravel APIs and relational data.",
+    "intro": "This portfolio shows how I structure UI flows, REST APIs, validation, database models and deployment-ready projects.",
+    "cardTitle": "Readable Angular code, Laravel APIs and MySQL-backed workflows.",
     "paragraphs": [
-      "I am Jesus Martinez Escobar, a fullstack developer focused on Angular applications, Laravel APIs, and database-backed product workflows. I try to write code another developer can understand, test, and extend without reverse-engineering the intent.",
-      "The projects are presented as engineering cases: product problem, API/UI decisions, architecture, testing approach, and the tradeoffs I would discuss in an interview."
+      "I am Jesus Martinez Escobar, a Full Stack Developer focused on Angular applications, Laravel APIs and database-backed workflows. I try to write code another developer can understand, test and extend without guessing the intent.",
+      "The projects are presented as technical case studies: what the app does, how the frontend and backend are separated, how data is validated, and which quality checks support the user flow."
     ],
     "principles": {
       "decisions": "Explain decisions clearly",
@@ -66,16 +66,16 @@
   },
   "stack": {
     "eyebrow": "Tech Stack",
-    "title": "A practical fullstack toolkit for Angular UI, Laravel APIs, data, testing, and deployment.",
+    "title": "A practical Full Stack toolkit for Angular UI, Laravel APIs, data, testing and deployment.",
     "categories": {
       "frontend": {
         "title": "Frontend",
-        "summary": "Angular interfaces with component boundaries, typed data flow, responsive SCSS, and accessible interaction states.",
+        "summary": "Angular and TypeScript interfaces with component boundaries, typed state, responsive SCSS and accessible interaction states.",
         "items": ["Angular", "TypeScript", "RxJS", "SCSS", "Vite"]
       },
       "backend": {
         "title": "Backend",
-        "summary": "Laravel and PHP foundations for relational data, validation rules, authentication, and admin workflows.",
+        "summary": "Laravel and PHP foundations for REST APIs, validation rules, authentication, relational data and admin workflows.",
         "items": ["Laravel", "PHP", "Sanctum", "MySQL", "PostgreSQL", "Neon"]
       },
       "testing": {
@@ -85,24 +85,24 @@
       },
       "architecture": {
         "title": "Architecture",
-        "summary": "How I connect product screens, API contracts, auth flows, relational data, and feature boundaries.",
+        "summary": "How I connect screens, REST responses, auth flows, relational data and feature-based folders.",
         "items": ["REST APIs", "SPA Architecture", "API/UI Boundaries", "Feature Architecture", "Relational Modeling", "Auth Flows"]
       },
       "devops": {
         "title": "DevOps",
-        "summary": "Production-minded workflows with repeatable builds, hosted demos, environment separation, version control, and CI preparation.",
+        "summary": "Repeatable builds, hosted demos, environment separation, version control and CI preparation.",
         "items": ["Docker", "Vercel", "Railway", "GitHub Actions", "Linux"]
       },
       "tooling": {
         "title": "Tooling",
-        "summary": "Tooling choices aimed at fast feedback, clean debugging, maintainable folders, and readable handoff for teams.",
-        "items": ["VS Code", "GitHub", "Postman", "npm", "pnpm", "OpenAI Codex", "Claude Code"]
+        "summary": "Tools for fast feedback, API checks, dependency management, debugging and readable handoff.",
+        "items": ["VS Code", "GitHub", "Postman", "pnpm", "OpenAI Codex", "Claude Code"]
       }
     }
   },
   "projects": {
     "eyebrow": "Featured Projects",
-    "title": "Product-minded fullstack builds with clear API boundaries, lean UX, and interview-ready tradeoffs.",
+    "title": "Projects that show Angular UI, Laravel APIs, data modeling and quality decisions.",
     "labels": {
       "problem": "Problem",
       "decisions": "Decisions",
@@ -113,52 +113,52 @@
     "items": {
       "focusFlow": {
         "type": "Angular productivity workspace",
-        "summary": "A focused planning product for sessions, priorities, and progress review.",
-        "problem": "Reduces scattered task planning into one calm workflow.",
+        "summary": "Angular productivity app for planning focus sessions, priorities and progress review.",
+        "problem": "Turns scattered tasks into guided work sessions with clear priority and review states.",
         "decisions": [
-          "Angular components organized by feature",
+          "Standalone Angular components organized by feature",
           "Typed session and task transitions",
           "Reusable SCSS tokens for surfaces"
         ],
-        "architecture": ["Feature-first folders", "Typed session state", "Responsive dashboard grid"],
+        "architecture": ["Feature-first folders", "Typed session state", "Responsive dashboard layout"],
         "quality": ["Vitest-ready utilities", "Keyboard focus states", "Reduced-motion support"],
-        "impact": ["Angular architecture", "Product thinking", "Testable state flow"]
+        "impact": ["Angular structure", "Typed state flow", "Accessible UI behavior"]
       },
       "gibora": {
         "type": "Laravel operations platform",
-        "summary": "A Laravel operations platform for inventory, permissions, and admin workflows.",
-        "problem": "Keeps stock, access, and management data consistent.",
+        "summary": "Laravel operations platform concept for inventory, permissions and admin workflows.",
+        "problem": "Keeps stock, access rules and management records structured around relational data.",
         "decisions": [
-          "Laravel domain logic near data rules",
+          "Laravel models and validation close to data rules",
           "Filament-style admin patterns",
           "Relational tables over flat records"
         ],
-        "architecture": ["Laravel models", "MySQL schema", "API/admin workflows"],
+        "architecture": ["Laravel models", "MySQL schema", "API and admin workflows"],
         "quality": ["Backend validation", "Permission-aware screens", "Repeatable local setup"],
-        "impact": ["Laravel fundamentals", "Data modeling", "Production awareness"]
+        "impact": ["Laravel fundamentals", "Relational modeling", "Permission-aware workflows"]
       },
       "devConnect": {
-        "type": "Fullstack developer network",
-        "summary": "A fullstack community product for profiles, auth, and API collaboration.",
-        "problem": "Keeps identity, profiles, and interactions understandable across layers.",
+        "type": "Full Stack developer network",
+        "summary": "Full Stack developer network with Angular UI, Laravel API, authentication and profile workflows.",
+        "problem": "Keeps identity, profiles and user interactions understandable across the frontend and backend.",
         "decisions": [
           "Angular UI separated from Laravel API",
           "Explicit auth and onboarding states",
           "Frontend-friendly API response shapes"
         ],
-        "architecture": ["Angular app shell", "Laravel REST API", "Route and API boundaries"],
+        "architecture": ["Angular app shell", "Laravel REST API", "Route and API separation"],
         "quality": ["Cypress flow targets", "Accessible form feedback", "API error states"],
-        "impact": ["Fullstack progression", "API thinking", "System design"]
+        "impact": ["Full Stack implementation", "API response design", "Auth and profile flows"]
       }
     }
   },
   "experience": {
     "eyebrow": "Experience",
-    "title": "A focused path from DAW studies to real operational context and fullstack interview readiness.",
+    "title": "From DAW training to real operational context and Full Stack project work.",
     "items": {
       "daw": {
         "year": "DAW",
-        "title": "DAW studies: practical fullstack foundations",
+        "title": "DAW studies: practical Full Stack foundations",
         "summary": "Built a working base across frontend structure, backend logic, relational databases, version control, and the discipline needed to explain technical choices clearly.",
         "details": ["Angular and TypeScript fundamentals", "PHP and Laravel API practice", "MySQL modeling and SQL reasoning"]
       },
@@ -170,16 +170,16 @@
       },
       "progression": {
         "year": "Now",
-        "title": "Fullstack progression",
-        "summary": "Progressing from building screens to shaping fullstack features: define API/UI boundaries, test risky behavior, document tradeoffs, and make interfaces usable under real conditions.",
-        "details": ["Reusable Angular architecture", "Laravel/API boundary thinking", "Performance, accessibility, and deployment readiness"]
+        "title": "Current Full Stack focus",
+        "summary": "Building complete features with Angular screens, Laravel endpoints, validation, data handling, accessibility checks and deployment flow.",
+        "details": ["Reusable Angular structure", "Laravel API design", "Performance, accessibility and deployment readiness"]
       }
     }
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Let's talk about fullstack, Angular, Laravel, and product-focused roles.",
-    "text": "I am ready to discuss my code, API/UI decisions, and how I approach Angular, Laravel, data, testing, accessibility, and production-minded learning inside a real team."
+    "title": "Open to Angular, Laravel and Full Stack development roles.",
+    "text": "I am ready to discuss my code, project decisions and how I approach Angular, Laravel, data, testing, accessibility and deployment inside a real team."
   },
   "contactPage": {
     "eyebrow": "Contact",
@@ -194,7 +194,7 @@
       "subject": "Subject",
       "subjectPlaceholder": "Professional inquiry",
       "message": "Message",
-      "messagePlaceholder": "Role, project, collaboration, or context you want to discuss.",
+      "messagePlaceholder": "Role, team, stack or project you want to discuss.",
       "guidance": "Keep it concise. The button opens your email client with this content.",
       "send": "Prepare email"
     },
@@ -205,110 +205,108 @@
   },
   "buttons": {
     "viewProjects": "View projects",
-    "contact": "Contact",
+    "contact": "Contact me",
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "emailMe": "Email me",
     "liveDemo": "Live demo"
   },
   "footer": {
-    "tagline": "Fullstack developer building polished Angular, Laravel, and API-driven products.",
+    "tagline": "Full Stack Developer focused on clear UI, REST APIs and maintainable project code.",
     "privacy": "Privacy",
     "cookies": "Cookies",
     "legal": "Legal"
   },
   "cookies": {
     "eyebrow": "Privacy",
-    "title": "Privacy and cookies",
-    "description": "Essential storage remembers language and consent. Optional analytics, if enabled, only helps understand general portfolio usage.",
-    "accept": "Accept",
-    "reject": "Reject non-essential",
-    "close": "Close privacy preferences and reject non-essential cookies",
+    "title": "Privacy preferences",
+    "description": "This site only stores local preferences for language, theme and this notice. It does not use advertising cookies, tracking pixels or visitor measurement scripts.",
+    "accept": "Got it",
+    "reject": "Close",
+    "close": "Close privacy preferences and save this notice as closed",
     "closeSaved": "Close privacy preferences and keep the current choice",
-    "acceptLabel": "Accept optional analytics cookies",
-    "rejectLabel": "Reject non-essential cookies",
-    "statusAccepted": "Current choice: analytics enabled.",
-    "statusRejected": "Current choice: analytics disabled.",
+    "acceptLabel": "Confirm privacy preferences notice",
+    "rejectLabel": "Close privacy preferences notice",
+    "statusAccepted": "Current choice: privacy notice confirmed.",
+    "statusRejected": "Current choice: privacy notice closed.",
     "openSettings": "Open privacy preferences"
   },
   "theme": {
     "dark": "dark mode",
-    "light": "light mode"
+    "light": "light mode",
+    "darkLabel": "Dark",
+    "lightLabel": "Light"
   },
   "legal": {
     "backHome": "Back to portfolio",
     "contactAction": "Contact",
-    "updated": "Last updated: May 26, 2026",
+    "updated": "Last updated: May 31, 2026",
     "privacy": {
       "eyebrow": "Legal",
       "title": "Privacy Policy",
-      "intro": "This privacy policy explains how jesusdev.dev handles data in a minimal developer portfolio context.",
+      "intro": "This privacy policy explains how jesusdev.dev handles data in a static personal portfolio context.",
       "sections": {
         "overview": {
           "title": "Overview",
-          "items": ["This site is a personal developer portfolio hosted on GitHub Pages.", "It does not collect sensitive personal data or provide account registration."]
+          "items": ["jesusdev.dev is a personal developer portfolio hosted as a static website on GitHub Pages.", "The site has no user accounts, registration, ecommerce, payments, backend database or server-side form storage."]
         },
         "data": {
-          "title": "Data collected",
-          "items": ["The site may receive standard technical request data from hosting infrastructure, such as browser, device, and IP-related logs.", "If you contact me by email, I will receive the information you choose to send."]
+          "title": "Data handled by this site",
+          "items": ["The site itself only stores local browser preferences for language, theme and privacy notice status.", "If you use a contact link, your email application opens a mailto message. The site does not submit, store or process that message through a backend."]
         },
         "storage": {
-          "title": "LocalStorage",
-          "items": ["The selected language is stored in localStorage so the site can restore it on refresh.", "Cookie consent is stored in localStorage so the banner does not reappear after a choice."]
+          "title": "LocalStorage preferences",
+          "items": ["Language preference is stored in localStorage so the selected language can be restored.", "Theme preference is stored in localStorage so dark or light mode can be restored.", "Privacy notice status is stored in localStorage so the notice does not reappear after a choice."]
         },
         "hosting": {
           "title": "Hosting",
-          "items": ["The site is deployed through GitHub Pages.", "GitHub may process basic technical data needed to serve the website."]
+          "items": ["The site is served by GitHub Pages, a GitHub static site hosting service for HTML, CSS and JavaScript files.", "GitHub may process standard technical request data, such as IP address, device/browser information, request date and service logs, as part of providing the hosting service."]
         },
         "cookies": {
-          "title": "Cookies and analytics",
-          "items": ["Essential preferences may be stored locally for language and consent.", "Non-essential analytics cookies are only intended for basic usage understanding and can be rejected."]
+          "title": "Cookies and tracking",
+          "items": ["This site does not set tracking cookies and does not use visitor measurement scripts, advertising pixels or similar tracking tools.", "The preferences described above use browser localStorage, not third-party tracking cookies."]
         },
         "contact": {
           "title": "Contact",
-          "items": ["For privacy questions, use the contact action on this page."]
+          "items": ["For privacy questions, use the contact action on this page. It opens your email client through a mailto link."]
         }
       }
     },
     "cookies": {
       "eyebrow": "Legal",
       "title": "Cookies Policy",
-      "intro": "This cookies policy explains the small amount of browser storage used by jesusdev.dev.",
+      "intro": "This cookie policy explains the browser storage used by jesusdev.dev and clarifies that the site does not use tracking cookies.",
       "sections": {
         "overview": {
           "title": "Overview",
-          "items": ["Cookies and localStorage are used only to support preferences and, if accepted, basic analytics.", "The site remains usable if non-essential cookies are rejected."]
-        },
-        "essential": {
-          "title": "Essential storage",
-          "items": ["Language preference is saved locally.", "Cookie consent choice is saved locally."]
-        },
-        "analytics": {
-          "title": "Analytics",
-          "items": ["Optional analytics may help understand general site usage.", "No analytics are required to browse the portfolio."]
+          "items": ["The site is static and does not use cookies for visitor measurement, advertising, accounts, ecommerce or payments.", "The only browser-side data intentionally stored by the site is localStorage preferences."]
         },
         "localStorage": {
-          "title": "LocalStorage",
-          "items": ["localStorage keys are used for language and cookie consent.", "These values stay in your browser until cleared."]
+          "title": "LocalStorage used",
+          "items": ["Language preference stores the selected language.", "Theme preference stores the selected dark or light theme.", "Privacy notice status stores whether the notice has been confirmed or closed."]
+        },
+        "notUsed": {
+          "title": "What is not used",
+          "items": ["No visitor measurement scripts, advertising cookies or tracking pixels are loaded by this site.", "No preference data is sent to a backend database by this site."]
         },
         "manage": {
-          "title": "Managing preferences",
-          "items": ["Use the floating cookie button to reopen preferences.", "You can also clear site data from your browser settings."]
+          "title": "Managing local preferences",
+          "items": ["Use the floating privacy button to reopen the notice.", "You can clear language, theme and notice preferences from your browser settings by deleting site data for jesusdev.dev."]
         },
         "contact": {
           "title": "Contact",
-          "items": ["For cookie questions, use the contact action on this page."]
+          "items": ["For questions about browser storage, use the contact action on this page."]
         }
       }
     },
     "legal": {
       "eyebrow": "Legal",
       "title": "Legal Notice",
-      "intro": "This legal notice describes the informational purpose and ownership terms for jesusdev.dev.",
+      "intro": "This legal notice describes the purpose, ownership and hosting context of jesusdev.dev.",
       "sections": {
         "purpose": {
           "title": "Purpose",
-          "items": ["jesusdev.dev is a personal developer portfolio for presenting projects, experience, technical writing, and contact paths.", "The site is informational and does not provide ecommerce, subscriptions, or commercial checkout flows."]
+          "items": ["jesusdev.dev is a personal developer portfolio for presenting projects, experience, technical stack and contact paths.", "The site is informational and does not provide user accounts, ecommerce, payments, subscriptions or commercial checkout flows."]
         },
         "ownership": {
           "title": "Ownership of content and projects",
@@ -316,11 +314,11 @@
         },
         "activity": {
           "title": "No ecommerce activity",
-          "items": ["The site does not sell products or services directly.", "External links may point to deployed demos, repositories, professional profiles, or platform-hosted content."]
+          "items": ["The site does not sell products or services directly.", "External links may point to deployed demos, repositories, professional profiles or platform-hosted content."]
         },
         "hosting": {
           "title": "Hosting and platforms",
-          "items": ["The portfolio is deployed through GitHub Pages with the custom domain jesusdev.dev.", "Project demos may use platforms such as Vercel, Railway, GitHub, or other development services."]
+          "items": ["The portfolio is deployed through GitHub Pages with the custom domain jesusdev.dev.", "DNS for the custom domain is managed through Namecheap.", "Project demos or external profiles may be hosted on third-party platforms and are governed by their own terms and privacy information."]
         },
         "intellectualProperty": {
           "title": "Intellectual property",
@@ -341,6 +339,9 @@
     "languageSwitcher": "Language switcher",
     "languageOption": "Change language to {{ language }}",
     "themeToggle": "Switch to {{ theme }}",
+    "themeSwitcher": "Theme switcher",
+    "themeDark": "Use dark theme",
+    "themeLight": "Use light theme",
     "projectActions": "{{ project }} project actions",
     "githubProfile": "Open GitHub profile",
     "linkedinProfile": "Open LinkedIn profile",
@@ -357,8 +358,8 @@
     "emailJesus": "Email Jesus"
   },
   "seo": {
-    "title": "Jesus Dev | Angular & Laravel Fullstack Developer",
-    "description": "Technical portfolio for Jesus Martinez Escobar, a fullstack developer focused on Angular, Laravel APIs, MySQL, testing, accessibility, and production-minded web applications.",
+    "title": "Jesus Dev | Angular & Laravel Full Stack Developer",
+    "description": "Technical portfolio for Jesus Martinez Escobar, a Full Stack Developer focused on Angular, Laravel APIs, MySQL, testing, accessibility and maintainable web applications.",
     "imageAlt": "Jesus Dev portfolio preview"
   }
 }

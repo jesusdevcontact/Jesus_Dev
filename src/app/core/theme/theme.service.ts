@@ -26,6 +26,10 @@ export class ThemeService {
     this.themeSignal.update((theme) => (theme === 'dark' ? 'light' : 'dark'));
   }
 
+  setTheme(theme: ThemePreference): void {
+    this.themeSignal.set(theme);
+  }
+
   private resolveInitialTheme(): ThemePreference {
     const storedTheme = this.readStoredTheme();
 

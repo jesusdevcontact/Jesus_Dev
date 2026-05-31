@@ -14,7 +14,6 @@ import { TranslatePipe } from '@ngx-translate/core';
 const COOKIE_CONSENT_KEY = 'jesusdev-cookie-consent';
 interface CookieConsentState {
   accepted: boolean;
-  analytics: boolean;
   timestamp: string;
 }
 
@@ -33,7 +32,7 @@ export class CookieConsentComponent implements AfterViewInit {
   readonly consent = signal<CookieConsentState | null>(this.readConsent());
   readonly panelOpen = signal(!this.consent());
   readonly hasConsent = computed(() => this.consent() !== null);
-  readonly analyticsEnabled = computed(() => this.consent()?.analytics === true);
+  readonly noticeAccepted = computed(() => this.consent()?.accepted === true);
 
   @HostListener('document:keydown.escape')
   closeWithEscape(): void {
@@ -52,11 +51,11 @@ export class CookieConsentComponent implements AfterViewInit {
   }
 
   accept(): void {
-    this.saveConsent({ accepted: true, analytics: true, timestamp: new Date().toISOString() });
+    this.saveConsent({ accepted: true, timestamp: new Date().toISOString() });
   }
 
   reject(): void {
-    this.saveConsent({ accepted: false, analytics: false, timestamp: new Date().toISOString() });
+    this.saveConsent({ accepted: false, timestamp: new Date().toISOString() });
   }
 
   closePanel(): void {
@@ -90,16 +89,14 @@ export class CookieConsentComponent implements AfterViewInit {
       if (value === 'accepted' || value === 'rejected') {
         return {
           accepted: value === 'accepted',
-          analytics: value === 'accepted',
           timestamp: new Date().toISOString(),
         };
       }
 
       const parsed = JSON.parse(value) as Partial<CookieConsentState>;
-      return typeof parsed.accepted === 'boolean' && typeof parsed.analytics === 'boolean'
+      return typeof parsed.accepted === 'boolean'
         ? {
             accepted: parsed.accepted,
-            analytics: parsed.analytics,
             timestamp: typeof parsed.timestamp === 'string' ? parsed.timestamp : new Date().toISOString(),
           }
         : null;

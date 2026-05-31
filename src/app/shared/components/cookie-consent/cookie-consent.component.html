@@ -34,7 +34,7 @@
         <p id="cookie-description">{{ 'cookies.description' | translate }}</p>
         @if (hasConsent()) {
           <p class="cookie-status" aria-live="polite">
-            {{ (analyticsEnabled() ? 'cookies.statusAccepted' : 'cookies.statusRejected') | translate }}
+            {{ (noticeAccepted() ? 'cookies.statusAccepted' : 'cookies.statusRejected') | translate }}
           </p>
         }
       </div>
@@ -44,7 +44,7 @@
           #acceptButton
           type="button"
           class="cookie-button cookie-button--primary"
-          [class.is-selected]="analyticsEnabled()"
+          [class.is-selected]="noticeAccepted()"
           [attr.aria-label]="'cookies.acceptLabel' | translate"
           (click)="accept()"
         >
@@ -53,7 +53,7 @@
         <button
           type="button"
           class="cookie-button"
-          [class.is-selected]="hasConsent() && !analyticsEnabled()"
+          [class.is-selected]="hasConsent() && !noticeAccepted()"
           [attr.aria-label]="'cookies.rejectLabel' | translate"
           (click)="reject()"
         >
