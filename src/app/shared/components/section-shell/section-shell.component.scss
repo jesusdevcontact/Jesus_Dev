@@ -50,6 +50,10 @@
     padding: clamp(4rem, 16vw, 5.25rem) 0;
   }
 
+  .section-shell#stack {
+    padding-top: clamp(2rem, 8vw, 2.6rem);
+  }
+
   .section-heading {
     margin-bottom: 1.65rem;
   }
