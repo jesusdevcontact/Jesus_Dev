@@ -349,6 +349,21 @@ li:hover {
     0 6px 14px rgba(32, 54, 82, 0.12);
 }
 
+:host-context([data-theme="light"]) .tech-github .tech-mark img,
+:host-context([data-theme="light"]) .tech-railway .tech-mark img,
+:host-context([data-theme="light"]) .tech-vercel .tech-mark img {
+  filter: brightness(0) saturate(1) opacity(0.86) drop-shadow(0 1px 1px rgba(32, 54, 82, 0.16));
+}
+
+:host-context([data-theme="light"]) .tech-github .tech-mark,
+:host-context([data-theme="light"]) .tech-railway .tech-mark,
+:host-context([data-theme="light"]) .tech-vercel .tech-mark {
+  border-color: rgba(13, 31, 56, 0.3);
+  background:
+    linear-gradient(180deg, #ffffff, #eef5fa),
+    #ffffff;
+}
+
 @media (max-width: 680px) {
   .tech-card {
     padding: 1rem;
