@@ -76,6 +76,21 @@
   object-fit: cover;
 }
 
+:host-context([data-theme="light"]) .brand-mark {
+  border-color: rgba(13, 31, 56, 0.34);
+  background:
+    linear-gradient(180deg, #ffffff, #edf5fb),
+    #ffffff;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 8px 18px rgba(32, 54, 82, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.72);
+}
+
+:host-context([data-theme="light"]) .brand-mark img {
+  filter: saturate(1.08) contrast(1.06);
+}
+
 .brand-copy {
   display: grid;
   gap: 0.1rem;

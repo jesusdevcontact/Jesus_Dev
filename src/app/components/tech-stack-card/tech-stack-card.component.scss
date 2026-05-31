@@ -163,6 +163,60 @@ li:hover {
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
 }
 
+:host-context([data-theme="light"]) .card-icon {
+  border-color: rgba(13, 31, 56, 0.22);
+  background:
+    linear-gradient(180deg, #ffffff, #edf5fb),
+    #ffffff;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.96) inset,
+    0 12px 26px rgba(32, 54, 82, 0.14);
+}
+
+:host-context([data-theme="light"]) li {
+  border-color: rgba(13, 31, 56, 0.2);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(237, 246, 251, 0.82)),
+    #ffffff;
+  color: var(--text-soft);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 8px 18px rgba(32, 54, 82, 0.08);
+}
+
+:host-context([data-theme="light"]) li:hover {
+  border-color: rgba(13, 31, 56, 0.36);
+  background:
+    linear-gradient(180deg, #ffffff, rgba(232, 243, 250, 0.92)),
+    #ffffff;
+  color: var(--text-strong);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 1) inset,
+    0 10px 24px rgba(32, 54, 82, 0.13);
+}
+
+:host-context([data-theme="light"]) .tech-mark {
+  border-color: rgba(13, 31, 56, 0.22);
+  background:
+    linear-gradient(180deg, #ffffff, #e9f2f8),
+    #ffffff;
+  color: var(--text-strong);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.96) inset,
+    0 6px 14px rgba(32, 54, 82, 0.12);
+}
+
+:host-context([data-theme="light"]) .tech-mark--logo {
+  border-color: rgba(13, 31, 56, 0.24);
+  background:
+    linear-gradient(180deg, #ffffff, #edf5fb),
+    #ffffff;
+}
+
+:host-context([data-theme="light"]) .tech-mark img {
+  filter: saturate(1.08) contrast(1.08) drop-shadow(0 1px 2px rgba(32, 54, 82, 0.22));
+}
+
 .tech-fallback {
   display: none;
 }
@@ -255,6 +309,44 @@ li:hover {
 .tech-architecture-par-feature .tech-mark {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(83, 216, 255, 0.74));
   color: #041014;
+}
+
+:host-context([data-theme="light"]) .tech-codex .tech-mark,
+:host-context([data-theme="light"]) .tech-openai-codex .tech-mark,
+:host-context([data-theme="light"]) .tech-claude-code .tech-mark {
+  border-color: rgba(13, 31, 56, 0.24);
+  background:
+    linear-gradient(180deg, #ffffff, #edf5fb),
+    #ffffff;
+  color: var(--text-strong);
+}
+
+:host-context([data-theme="light"]) .tech-spa-architecture .tech-mark,
+:host-context([data-theme="light"]) .tech-arquitectura-spa .tech-mark,
+:host-context([data-theme="light"]) .tech-architecture-spa .tech-mark,
+:host-context([data-theme="light"]) .tech-api-ui-boundaries .tech-mark,
+:host-context([data-theme="light"]) .tech-limites-api-ui .tech-mark,
+:host-context([data-theme="light"]) .tech-frontieres-api-ui .tech-mark,
+:host-context([data-theme="light"]) .tech-auth-flows .tech-mark,
+:host-context([data-theme="light"]) .tech-flujos-auth .tech-mark,
+:host-context([data-theme="light"]) .tech-flux-auth .tech-mark,
+:host-context([data-theme="light"]) .tech-relational-modeling .tech-mark,
+:host-context([data-theme="light"]) .tech-modelado-relacional .tech-mark,
+:host-context([data-theme="light"]) .tech-modelisation-relationnelle .tech-mark,
+:host-context([data-theme="light"]) .tech-testing-workflows .tech-mark,
+:host-context([data-theme="light"]) .tech-flujos-de-testing .tech-mark,
+:host-context([data-theme="light"]) .tech-workflows-de-test .tech-mark,
+:host-context([data-theme="light"]) .tech-ci-cd-mindset .tech-mark,
+:host-context([data-theme="light"]) .tech-mentalidad-ci-cd .tech-mark,
+:host-context([data-theme="light"]) .tech-culture-ci-cd .tech-mark,
+:host-context([data-theme="light"]) .tech-feature-driven-architecture .tech-mark,
+:host-context([data-theme="light"]) .tech-feature-architecture .tech-mark,
+:host-context([data-theme="light"]) .tech-arquitectura-por-features .tech-mark,
+:host-context([data-theme="light"]) .tech-architecture-par-feature .tech-mark {
+  border-color: rgba(13, 31, 56, 0.24);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.96) inset,
+    0 6px 14px rgba(32, 54, 82, 0.12);
 }
 
 @media (max-width: 680px) {
