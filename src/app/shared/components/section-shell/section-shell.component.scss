@@ -47,7 +47,11 @@
 
 @media (max-width: 680px) {
   .section-shell {
-    padding: clamp(4rem, 16vw, 5.25rem) 0;
+    padding: var(--section-y) 0;
+  }
+
+  .section-shell#about {
+    padding-bottom: 1.5rem;
   }
 
   .section-shell#stack {

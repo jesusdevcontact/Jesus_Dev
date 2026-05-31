@@ -646,6 +646,11 @@ code strong {
     width: 100%;
   }
 
+  .skill-orbit,
+  .hero-stats {
+    display: none;
+  }
+
   .hero-actions .social-action,
   .contact-actions .social-action {
     width: 2.72rem;
@@ -667,7 +672,7 @@ code strong {
 
 @media (max-width: 560px) {
   .hero {
-    padding-top: 7rem;
+    padding-top: 7.5rem;
     padding-bottom: 2.8rem;
   }
 
@@ -684,10 +689,10 @@ code strong {
   }
 
   h1 {
-    max-width: 12ch;
-    font-size: var(--step-5);
+    max-width: 15ch;
+    font-size: clamp(2.7rem, 10.8vw, 3.15rem);
     letter-spacing: -0.045em;
-    line-height: 0.98;
+    line-height: 0.92;
   }
 
   .hero-lead {
@@ -750,6 +755,10 @@ code strong {
   .projects-grid,
   .journey {
     gap: 0.78rem;
+  }
+
+  .principle-grid {
+    display: none;
   }
 
   .about-copy h3 {
