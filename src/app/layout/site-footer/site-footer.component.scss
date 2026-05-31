@@ -2,7 +2,7 @@
   border-top: 1px solid var(--border-subtle);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
-    #05060a;
+    var(--bg-page);
 }
 
 .footer-shell {

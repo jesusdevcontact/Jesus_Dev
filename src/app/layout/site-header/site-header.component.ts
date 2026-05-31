@@ -7,6 +7,7 @@ import { fromEvent, map, startWith } from 'rxjs';
 
 import { navItems } from '../../core/data/portfolio.content';
 import { I18nService, SupportedLanguage } from '../../core/i18n/i18n.service';
+import { ThemeService } from '../../core/theme/theme.service';
 
 @Component({
   selector: 'jd-site-header',
@@ -19,6 +20,7 @@ import { I18nService, SupportedLanguage } from '../../core/i18n/i18n.service';
 export class SiteHeaderComponent {
   private readonly document = inject(DOCUMENT);
   readonly i18n = inject(I18nService);
+  readonly theme = inject(ThemeService);
   readonly navItems = navItems;
   readonly menuOpen = signal(false);
   readonly scrolled = toSignal(
@@ -41,6 +43,10 @@ export class SiteHeaderComponent {
   changeLanguage(language: SupportedLanguage): void {
     this.i18n.useLanguage(language);
     this.closeMenu();
+  }
+
+  toggleTheme(): void {
+    this.theme.toggleTheme();
   }
 
   navHref(target: string): string {

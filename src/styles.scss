@@ -1,27 +1,62 @@
-:root {
+:root,
+[data-theme="dark"] {
   color-scheme: dark;
   --bg: #05060a;
   --bg-elevated: #080a10;
+  --bg-page: #05060a;
   --surface: rgba(255, 255, 255, 0.042);
   --surface-strong: rgba(255, 255, 255, 0.078);
+  --surface-hover: rgba(255, 255, 255, 0.075);
+  --surface-field: rgba(5, 6, 10, 0.48);
   --text-strong: #f7f8fb;
   --text-soft: #d9dee9;
   --text-muted: #a7b0c2;
   --text-faint: #737d90;
+  --text-inverse: #041014;
   --accent-cyan: #53d8ff;
   --accent-green: #89f4b2;
   --accent-amber: #ffcc66;
   --accent-rose: #ff7aa6;
   --accent-blue: #85a9ff;
+  --accent-primary-bg: linear-gradient(135deg, #fbfdff 0%, #bbf1ff 46%, #ddf9af 100%);
+  --accent-primary-text: #041014;
   --border-subtle: rgba(255, 255, 255, 0.095);
   --border-strong: rgba(255, 255, 255, 0.18);
   --border-glow: rgba(83, 216, 255, 0.24);
+  --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.055));
+  --glass-inset: 0 1px 0 rgba(255, 255, 255, 0.075) inset;
+  --glass-inset-strong: 0 1px 0 rgba(255, 255, 255, 0.11) inset;
+  --nav-bg:
+    linear-gradient(180deg, rgba(12, 14, 21, 0.76), rgba(6, 7, 12, 0.52)),
+    rgba(255, 255, 255, 0.028);
+  --nav-bg-scrolled:
+    linear-gradient(180deg, rgba(12, 14, 21, 0.86), rgba(7, 8, 13, 0.68)),
+    rgba(255, 255, 255, 0.035);
+  --panel-bg:
+    radial-gradient(circle at 0% 0%, rgba(83, 216, 255, 0.14), transparent 16rem),
+    linear-gradient(180deg, rgba(14, 16, 24, 0.92), rgba(7, 8, 13, 0.86));
+  --body-bg:
+    radial-gradient(ellipse at 50% -18rem, rgba(83, 216, 255, 0.1), transparent 38rem),
+    linear-gradient(180deg, rgba(133, 169, 255, 0.055), transparent 24rem),
+    var(--bg-page);
+  --body-aura:
+    radial-gradient(circle at 18% 20%, rgba(83, 216, 255, 0.075), transparent 28rem),
+    radial-gradient(circle at 84% 8%, rgba(137, 244, 178, 0.06), transparent 24rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.024), transparent);
+  --grid-line: rgba(255, 255, 255, 0.022);
+  --grid-line-strong: rgba(255, 255, 255, 0.035);
+  --hero-bg:
+    radial-gradient(ellipse at 48% -8%, rgba(83, 216, 255, 0.2), transparent 34rem),
+    radial-gradient(ellipse at 82% 24%, rgba(137, 244, 178, 0.1), transparent 28rem),
+    radial-gradient(ellipse at 12% 42%, rgba(255, 122, 166, 0.08), transparent 28rem),
+    linear-gradient(180deg, #05060a 0%, #090b12 58%, #05060a 100%);
   --radius-xs: 6px;
   --radius-sm: 8px;
   --radius-md: 8px;
   --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 22px 64px rgba(0, 0, 0, 0.28);
   --shadow-lg: 0 34px 110px rgba(0, 0, 0, 0.42);
+  --shadow-nav: 0 18px 54px rgba(0, 0, 0, 0.22);
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
   --container: 1200px;
   --section-y: clamp(5rem, 9vw, 8rem);
@@ -35,6 +70,63 @@
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f8fb;
+  --bg-elevated: #ffffff;
+  --bg-page: #f5f8fb;
+  --surface: rgba(255, 255, 255, 0.62);
+  --surface-strong: rgba(255, 255, 255, 0.84);
+  --surface-hover: rgba(255, 255, 255, 0.92);
+  --surface-field: rgba(255, 255, 255, 0.72);
+  --text-strong: #101827;
+  --text-soft: #243145;
+  --text-muted: #526176;
+  --text-faint: #718096;
+  --text-inverse: #041014;
+  --accent-cyan: #007fa8;
+  --accent-green: #168357;
+  --accent-amber: #a96600;
+  --accent-rose: #bb3564;
+  --accent-blue: #365fbd;
+  --accent-primary-bg: linear-gradient(135deg, #0f1d2e 0%, #0c83a8 48%, #15865d 100%);
+  --accent-primary-text: #ffffff;
+  --border-subtle: rgba(18, 32, 52, 0.12);
+  --border-strong: rgba(18, 32, 52, 0.22);
+  --border-glow: rgba(0, 127, 168, 0.24);
+  --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.56));
+  --glass-inset: 0 1px 0 rgba(255, 255, 255, 0.92) inset;
+  --glass-inset-strong: 0 1px 0 rgba(255, 255, 255, 0.98) inset;
+  --nav-bg:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(239, 246, 252, 0.7)),
+    rgba(255, 255, 255, 0.52);
+  --nav-bg-scrolled:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(238, 246, 252, 0.82)),
+    rgba(255, 255, 255, 0.68);
+  --panel-bg:
+    radial-gradient(circle at 0% 0%, rgba(0, 127, 168, 0.13), transparent 16rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(238, 246, 252, 0.88));
+  --body-bg:
+    radial-gradient(ellipse at 50% -18rem, rgba(0, 127, 168, 0.13), transparent 38rem),
+    linear-gradient(180deg, rgba(54, 95, 189, 0.08), transparent 24rem),
+    var(--bg-page);
+  --body-aura:
+    radial-gradient(circle at 18% 20%, rgba(0, 127, 168, 0.09), transparent 28rem),
+    radial-gradient(circle at 84% 8%, rgba(22, 131, 87, 0.075), transparent 24rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.56), transparent);
+  --grid-line: rgba(20, 38, 63, 0.052);
+  --grid-line-strong: rgba(20, 38, 63, 0.07);
+  --hero-bg:
+    radial-gradient(ellipse at 48% -8%, rgba(0, 127, 168, 0.16), transparent 34rem),
+    radial-gradient(ellipse at 82% 24%, rgba(22, 131, 87, 0.1), transparent 28rem),
+    radial-gradient(ellipse at 12% 42%, rgba(187, 53, 100, 0.065), transparent 28rem),
+    linear-gradient(180deg, #eef6fb 0%, #f8fbff 54%, #edf4f8 100%);
+  --shadow-sm: 0 10px 30px rgba(30, 49, 73, 0.11);
+  --shadow-md: 0 22px 64px rgba(30, 49, 73, 0.16);
+  --shadow-lg: 0 34px 110px rgba(30, 49, 73, 0.2);
+  --shadow-nav: 0 18px 54px rgba(30, 49, 73, 0.12);
 }
 
 * {
@@ -52,10 +144,7 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  background:
-    radial-gradient(ellipse at 50% -18rem, rgba(83, 216, 255, 0.1), transparent 38rem),
-    linear-gradient(180deg, rgba(133, 169, 255, 0.055), transparent 24rem),
-    #05060a;
+  background: var(--body-bg);
   color: var(--text-soft);
   text-rendering: geometricPrecision;
   animation: pageEnter 720ms var(--ease-premium) both;
@@ -67,9 +156,7 @@ body::before {
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(circle at 18% 20%, rgba(83, 216, 255, 0.075), transparent 28rem),
-    radial-gradient(circle at 84% 8%, rgba(137, 244, 178, 0.06), transparent 24rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.024), transparent);
+    var(--body-aura);
   content: "";
 }
 
@@ -79,8 +166,8 @@ body::after {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-position: center top;
   background-size: 84px 84px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 46rem);
@@ -133,7 +220,7 @@ button {
   border-radius: var(--radius-sm);
   padding: 0.75rem 1rem;
   background: var(--text-strong);
-  color: #05060a;
+  color: var(--bg);
   font-weight: 800;
   transition: transform 160ms ease;
 }

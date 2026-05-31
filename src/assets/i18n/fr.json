@@ -223,8 +223,17 @@
     "description": "Le stockage essentiel mémorise la langue et le consentement. L'analytique optionnelle, si activée, sert seulement à comprendre l'usage général du portfolio.",
     "accept": "Accepter",
     "reject": "Refuser le non essentiel",
-    "contact": "Contacter",
+    "close": "Fermer les préférences et refuser les cookies non essentiels",
+    "closeSaved": "Fermer les préférences et conserver le choix actuel",
+    "acceptLabel": "Accepter les cookies analytiques optionnels",
+    "rejectLabel": "Refuser les cookies non essentiels",
+    "statusAccepted": "Choix actuel : analytique activée.",
+    "statusRejected": "Choix actuel : analytique désactivée.",
     "openSettings": "Ouvrir les préférences de confidentialité"
+  },
+  "theme": {
+    "dark": "mode sombre",
+    "light": "mode clair"
   },
   "legal": {
     "backHome": "Retour au portfolio",
@@ -331,6 +340,7 @@
     "primaryNavigation": "Navigation principale",
     "languageSwitcher": "Sélecteur de langue",
     "languageOption": "Changer la langue en {{ language }}",
+    "themeToggle": "Passer en {{ theme }}",
     "projectActions": "Actions du projet {{ project }}",
     "githubProfile": "Ouvrir le profil GitHub",
     "linkedinProfile": "Ouvrir le profil LinkedIn",

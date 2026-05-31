@@ -223,8 +223,17 @@
     "description": "Essential storage remembers language and consent. Optional analytics, if enabled, only helps understand general portfolio usage.",
     "accept": "Accept",
     "reject": "Reject non-essential",
-    "contact": "Contact",
+    "close": "Close privacy preferences and reject non-essential cookies",
+    "closeSaved": "Close privacy preferences and keep the current choice",
+    "acceptLabel": "Accept optional analytics cookies",
+    "rejectLabel": "Reject non-essential cookies",
+    "statusAccepted": "Current choice: analytics enabled.",
+    "statusRejected": "Current choice: analytics disabled.",
     "openSettings": "Open privacy preferences"
+  },
+  "theme": {
+    "dark": "dark mode",
+    "light": "light mode"
   },
   "legal": {
     "backHome": "Back to portfolio",
@@ -331,6 +340,7 @@
     "primaryNavigation": "Primary navigation",
     "languageSwitcher": "Language switcher",
     "languageOption": "Change language to {{ language }}",
+    "themeToggle": "Switch to {{ theme }}",
     "projectActions": "{{ project }} project actions",
     "githubProfile": "Open GitHub profile",
     "linkedinProfile": "Open LinkedIn profile",

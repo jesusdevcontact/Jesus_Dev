@@ -223,8 +223,17 @@
     "description": "Uso almacenamiento esencial para recordar idioma y consentimiento. La analítica, si se activa, solo ayuda a entender el uso general del portfolio.",
     "accept": "Aceptar",
     "reject": "Rechazar no esenciales",
-    "contact": "Contactar",
+    "close": "Cerrar preferencias de privacidad y rechazar cookies no esenciales",
+    "closeSaved": "Cerrar preferencias de privacidad y mantener la elección actual",
+    "acceptLabel": "Aceptar cookies analíticas opcionales",
+    "rejectLabel": "Rechazar cookies no esenciales",
+    "statusAccepted": "Elección actual: analítica activada.",
+    "statusRejected": "Elección actual: analítica desactivada.",
     "openSettings": "Abrir preferencias de privacidad"
+  },
+  "theme": {
+    "dark": "modo oscuro",
+    "light": "modo claro"
   },
   "legal": {
     "backHome": "Volver al portfolio",
@@ -331,6 +340,7 @@
     "primaryNavigation": "Navegación principal",
     "languageSwitcher": "Selector de idioma",
     "languageOption": "Cambiar idioma a {{ language }}",
+    "themeToggle": "Cambiar a {{ theme }}",
     "projectActions": "Acciones del proyecto {{ project }}",
     "githubProfile": "Abrir perfil de GitHub",
     "linkedinProfile": "Abrir perfil de LinkedIn",

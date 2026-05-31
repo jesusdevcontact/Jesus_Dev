@@ -13,12 +13,12 @@
   border: 1px solid var(--border-subtle);
   border-radius: 999px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.028)),
-    rgba(255, 255, 255, 0.035);
+    var(--glass-sheen),
+    var(--surface);
   color: var(--text-soft);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.06) inset,
-    0 16px 40px rgba(0, 0, 0, 0.28);
+    var(--glass-inset),
+    var(--shadow-sm);
   backdrop-filter: blur(22px) saturate(1.18);
   transition:
     transform 220ms var(--ease-premium),
@@ -39,11 +39,11 @@
 .cookie-button:hover {
   transform: translateY(-2px);
   border-color: var(--border-strong);
-  background: rgba(255, 255, 255, 0.075);
+  background: var(--surface-hover);
   color: var(--text-strong);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.1) inset,
-    0 18px 42px rgba(0, 0, 0, 0.32),
+    var(--glass-inset-strong),
+    var(--shadow-md),
     0 0 0 5px rgba(83, 216, 255, 0.045);
 }
 
@@ -54,9 +54,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 1rem;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(83, 216, 255, 0.14), transparent 16rem),
-    linear-gradient(180deg, rgba(14, 16, 24, 0.92), rgba(7, 8, 13, 0.86));
+  background: var(--panel-bg);
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(26px) saturate(1.24);
   animation: cookieEnter 420ms var(--ease-premium) both;
@@ -83,11 +81,52 @@ h2 {
   letter-spacing: -0.015em;
 }
 
+.cookie-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.cookie-close {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms var(--ease-premium);
+}
+
+.cookie-close:hover,
+.cookie-close:focus-visible {
+  transform: translateY(-1px);
+  background: var(--surface-strong);
+  color: var(--text-strong);
+}
+
 p {
   margin: 0;
   color: var(--text-muted);
   font-size: 0.9rem;
   line-height: 1.58;
+}
+
+.cookie-status {
+  width: fit-content;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  padding: 0.28rem 0.55rem;
+  background: var(--surface);
+  color: var(--text-soft);
+  font-size: 0.76rem;
+  font-weight: 800;
 }
 
 .cookie-actions {
@@ -106,27 +145,15 @@ p {
 }
 
 .cookie-button--primary {
-  background:
-    linear-gradient(135deg, #fbfdff 0%, #bbf1ff 46%, #ddf9af 100%);
-  color: #041014;
+  background: var(--accent-primary-bg);
+  color: var(--accent-primary-text);
 }
 
-.cookie-link {
-  margin-left: 0.15rem;
-  border-radius: 999px;
-  padding: 0.55rem 0.28rem;
-  color: var(--text-faint);
-  font-size: 0.82rem;
-  font-weight: 800;
-  outline-offset: 0.2rem;
-  transition:
-    color 180ms ease,
-    transform 180ms var(--ease-premium);
-}
-
-.cookie-link:hover {
-  transform: translateY(-1px);
-  color: var(--text-soft);
+.cookie-button.is-selected {
+  border-color: var(--border-glow);
+  box-shadow:
+    var(--glass-inset-strong),
+    0 0 0 4px rgba(83, 216, 255, 0.08);
 }
 
 @keyframes cookieEnter {
@@ -158,8 +185,7 @@ p {
     align-items: stretch;
   }
 
-  .cookie-link {
-    margin-left: 0;
-    text-align: center;
+  .cookie-button {
+    justify-content: center;
   }
 }

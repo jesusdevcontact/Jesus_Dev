@@ -1,5 +1,6 @@
 <div class="cookie-consent">
   <button
+    #settingsButton
     class="cookie-fab"
     type="button"
     [attr.aria-label]="'cookies.openSettings' | translate"
@@ -19,20 +20,45 @@
     >
       <div class="cookie-copy">
         <p class="eyebrow">{{ 'cookies.eyebrow' | translate }}</p>
-        <h2 id="cookie-title">{{ 'cookies.title' | translate }}</h2>
+        <div class="cookie-heading">
+          <h2 id="cookie-title">{{ 'cookies.title' | translate }}</h2>
+          <button
+            class="cookie-close"
+            type="button"
+            [attr.aria-label]="(hasConsent() ? 'cookies.closeSaved' : 'cookies.close') | translate"
+            (click)="closePanel()"
+          >
+            <svg lucideIcon="x" size="16" aria-hidden="true"></svg>
+          </button>
+        </div>
         <p id="cookie-description">{{ 'cookies.description' | translate }}</p>
+        @if (hasConsent()) {
+          <p class="cookie-status" aria-live="polite">
+            {{ (analyticsEnabled() ? 'cookies.statusAccepted' : 'cookies.statusRejected') | translate }}
+          </p>
+        }
       </div>
 
       <div class="cookie-actions">
-        <button type="button" class="cookie-button cookie-button--primary" (click)="accept()">
+        <button
+          #acceptButton
+          type="button"
+          class="cookie-button cookie-button--primary"
+          [class.is-selected]="analyticsEnabled()"
+          [attr.aria-label]="'cookies.acceptLabel' | translate"
+          (click)="accept()"
+        >
           {{ 'cookies.accept' | translate }}
         </button>
-        <button type="button" class="cookie-button" (click)="reject()">
+        <button
+          type="button"
+          class="cookie-button"
+          [class.is-selected]="hasConsent() && !analyticsEnabled()"
+          [attr.aria-label]="'cookies.rejectLabel' | translate"
+          (click)="reject()"
+        >
           {{ 'cookies.reject' | translate }}
         </button>
-        <a class="cookie-link" [href]="mailtoHref">
-          {{ 'cookies.contact' | translate }}
-        </a>
       </div>
     </section>
   }
