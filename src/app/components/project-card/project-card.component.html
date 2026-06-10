@@ -19,7 +19,7 @@
               (click)="showPreviousScreenshot($event)"
               [attr.aria-label]="'Show previous screenshot for ' + project().name"
             >
-              <svg lucideIcon="chevron-left" size="18" aria-hidden="true"></svg>
+              <span class="gallery-arrow" aria-hidden="true">&#8249;</span>
             </button>
             <span>{{ selectedScreenshotIndex() + 1 }} / {{ screenshots.length }}</span>
             <button
@@ -28,7 +28,7 @@
               (click)="showNextScreenshot($event)"
               [attr.aria-label]="'Show next screenshot for ' + project().name"
             >
-              <svg lucideIcon="chevron-right" size="18" aria-hidden="true"></svg>
+              <span class="gallery-arrow" aria-hidden="true">&#8250;</span>
             </button>
           </div>
         }
@@ -154,7 +154,7 @@
             (click)="closeLightbox()"
             [attr.aria-label]="'Close enlarged screenshot for ' + project().name"
           >
-            <svg lucideIcon="x" size="20" aria-hidden="true"></svg>
+            <span aria-hidden="true">&times;</span>
           </button>
 
           @if (screenshots.length > 1) {
@@ -164,11 +164,17 @@
               (click)="showPreviousScreenshot($event)"
               [attr.aria-label]="'Show previous screenshot for ' + project().name"
             >
-              <svg lucideIcon="chevron-left" size="22" aria-hidden="true"></svg>
+              <span class="lightbox-arrow" aria-hidden="true">&#8249;</span>
             </button>
           }
 
-          <img [src]="activeScreenshot.src" [alt]="activeScreenshot.alt" loading="lazy" decoding="async" (click)="$event.stopPropagation()">
+          <div class="lightbox-stage">
+            <img [src]="activeScreenshot.src" [alt]="activeScreenshot.alt" loading="lazy" decoding="async" (click)="$event.stopPropagation()">
+          </div>
+
+          <div class="lightbox-counter" aria-live="polite">
+            {{ selectedScreenshotIndex() + 1 }} / {{ screenshots.length }}
+          </div>
 
           @if (screenshots.length > 1) {
             <button
@@ -177,7 +183,7 @@
               (click)="showNextScreenshot($event)"
               [attr.aria-label]="'Show next screenshot for ' + project().name"
             >
-              <svg lucideIcon="chevron-right" size="22" aria-hidden="true"></svg>
+              <span class="lightbox-arrow" aria-hidden="true">&#8250;</span>
             </button>
           }
         </div>
