@@ -6,6 +6,7 @@
   position: relative;
   isolation: isolate;
   display: grid;
+  grid-template-rows: auto 1fr;
   min-height: 100%;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
@@ -46,12 +47,20 @@
   opacity: 1;
 }
 
-.mockup {
+.mockup,
+.project-gallery {
   position: relative;
-  min-height: 15rem;
+  height: clamp(15rem, 22vw, 16.75rem);
+  min-height: 0;
   overflow: hidden;
   padding: 1rem;
   border-bottom: 1px solid var(--border-subtle);
+}
+
+.mockup {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 0.8rem;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 36%),
     rgba(255, 255, 255, 0.035);
@@ -67,14 +76,9 @@
 }
 
 .project-gallery {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 15rem;
-  overflow: hidden;
-  padding: 1rem;
-  border-bottom: 1px solid var(--border-subtle);
   background:
     linear-gradient(135deg, rgba(83, 216, 255, 0.22), transparent 42%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
@@ -96,7 +100,7 @@
   overflow: hidden;
   display: block;
   width: 100%;
-  height: 13rem;
+  height: 100%;
   min-width: 0;
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -361,6 +365,24 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
 }
 
+.mockup-status {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.mockup-status span {
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 0.42rem 0.58rem;
+  background: rgba(5, 6, 10, 0.56);
+  color: var(--text-strong);
+  font-size: 0.72rem;
+  font-weight: 850;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .mockup-bar {
   display: flex;
   gap: 0.4rem;
@@ -377,7 +399,8 @@
 .mockup-grid {
   display: grid;
   position: relative;
-  height: 12rem;
+  height: calc(100% - 1.45rem);
+  min-height: 5.6rem;
   grid-template-columns: 0.55fr 1.2fr 0.75fr;
   gap: 0.75rem;
 }
@@ -611,16 +634,17 @@ h4 {
 @media (max-width: 680px) {
   .mockup,
   .project-gallery {
-    min-height: 10.5rem;
+    height: clamp(12rem, 58vw, 13.5rem);
+    min-height: 0;
     padding: 0.78rem;
   }
 
-  .project-gallery {
-    min-height: 10.5rem;
+  .mockup {
+    gap: 0.62rem;
   }
 
   .project-shot {
-    height: 8.95rem;
+    height: 100%;
   }
 
   .gallery-controls {
@@ -695,7 +719,8 @@ h4 {
   }
 
   .mockup-grid {
-    height: 8.75rem;
+    height: calc(100% - 1.25rem);
+    min-height: 4.75rem;
     grid-template-columns: 1fr;
   }
 

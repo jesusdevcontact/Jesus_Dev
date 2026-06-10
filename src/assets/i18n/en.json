@@ -126,6 +126,10 @@
       },
       "gibora": {
         "type": "Deployment pending",
+        "media": {
+          "badge": "Deployment pending",
+          "caption": "Coming soon: screenshots and public demo are being prepared."
+        },
         "summary": "Full-stack e-commerce in final stage before public deployment.",
         "problem": "Coming soon: GIBORA is being prepared as a Laravel e-commerce with catalog, admin and deployment-ready workflows.",
         "decisions": [
@@ -152,6 +156,10 @@
       },
       "pegasusMedical": {
         "type": "Internal RFID traceability platform",
+        "media": {
+          "badge": "Internal project",
+          "caption": "Private platform: public demo and screenshots are unavailable."
+        },
         "summary": "Internal hospital traceability platform built with Laravel, Filament, MySQL and RFID workflows.",
         "problem": "Centralize access logs, clinical inventory movements and RFID events around user roles and auditable records.",
         "decisions": [

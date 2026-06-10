@@ -35,20 +35,27 @@
       </div>
     }
   } @else {
-    <div class="mockup" aria-hidden="true">
-      <div class="mockup-bar">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="mockup">
+      <div class="mockup-status">
+        <span>{{ 'projects.items.' + project().key + '.media.badge' | translate }}</span>
+        <p>{{ 'projects.items.' + project().key + '.media.caption' | translate }}</p>
       </div>
-      <div class="mockup-grid">
-        <div class="mockup-sidebar"></div>
-        <div class="mockup-main">
+
+      <div class="mockup-window" aria-hidden="true">
+        <div class="mockup-bar">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="mockup-panel"></div>
+        <div class="mockup-grid">
+          <div class="mockup-sidebar"></div>
+          <div class="mockup-main">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="mockup-panel"></div>
+        </div>
       </div>
     </div>
   }
