@@ -1,12 +1,39 @@
 <article class="project-card" [ngClass]="'project-card--' + project().accent">
   @if (project().screenshots; as screenshots) {
-    <div class="project-gallery">
-      @for (screenshot of screenshots; track screenshot.src) {
-        <div class="project-shot" [ngClass]="'project-shot--' + screenshot.variant">
-          <img [src]="screenshot.src" [alt]="screenshot.alt" loading="lazy" decoding="async">
-        </div>
-      }
-    </div>
+    @if (activeScreenshot(screenshots); as activeScreenshot) {
+      <div class="project-gallery">
+        <button
+          class="project-shot"
+          type="button"
+          (click)="openLightbox($event)"
+          [attr.aria-label]="'Open enlarged screenshot for ' + project().name + ': ' + activeScreenshot.alt"
+        >
+          <img [src]="activeScreenshot.src" [alt]="activeScreenshot.alt" loading="lazy" decoding="async">
+        </button>
+
+        @if (screenshots.length > 1) {
+          <div class="gallery-controls" role="group" [attr.aria-label]="'Screenshot navigation for ' + project().name">
+            <button
+              class="gallery-control"
+              type="button"
+              (click)="showPreviousScreenshot($event)"
+              [attr.aria-label]="'Show previous screenshot for ' + project().name"
+            >
+              <svg lucideIcon="chevron-left" size="18" aria-hidden="true"></svg>
+            </button>
+            <span>{{ selectedScreenshotIndex() + 1 }} / {{ screenshots.length }}</span>
+            <button
+              class="gallery-control"
+              type="button"
+              (click)="showNextScreenshot($event)"
+              [attr.aria-label]="'Show next screenshot for ' + project().name"
+            >
+              <svg lucideIcon="chevron-right" size="18" aria-hidden="true"></svg>
+            </button>
+          </div>
+        }
+      </div>
+    }
   } @else {
     <div class="mockup" aria-hidden="true">
       <div class="mockup-bar">
@@ -108,3 +135,53 @@
     </div>
   </div>
 </article>
+
+@if (isLightboxOpen()) {
+  @if (project().screenshots; as screenshots) {
+    @if (activeScreenshot(screenshots); as activeScreenshot) {
+      <div class="lightbox" role="presentation" (click)="closeLightbox()">
+        <div
+          class="lightbox-dialog"
+          role="dialog"
+          aria-modal="true"
+          [attr.aria-label]="project().name + ' screenshot preview'"
+          (click)="closeLightbox()"
+        >
+          <button
+            class="lightbox-close"
+            type="button"
+            autofocus
+            (click)="closeLightbox()"
+            [attr.aria-label]="'Close enlarged screenshot for ' + project().name"
+          >
+            <svg lucideIcon="x" size="20" aria-hidden="true"></svg>
+          </button>
+
+          @if (screenshots.length > 1) {
+            <button
+              class="lightbox-nav lightbox-nav--previous"
+              type="button"
+              (click)="showPreviousScreenshot($event)"
+              [attr.aria-label]="'Show previous screenshot for ' + project().name"
+            >
+              <svg lucideIcon="chevron-left" size="22" aria-hidden="true"></svg>
+            </button>
+          }
+
+          <img [src]="activeScreenshot.src" [alt]="activeScreenshot.alt" loading="lazy" decoding="async" (click)="$event.stopPropagation()">
+
+          @if (screenshots.length > 1) {
+            <button
+              class="lightbox-nav lightbox-nav--next"
+              type="button"
+              (click)="showNextScreenshot($event)"
+              [attr.aria-label]="'Show next screenshot for ' + project().name"
+            >
+              <svg lucideIcon="chevron-right" size="22" aria-hidden="true"></svg>
+            </button>
+          }
+        </div>
+      </div>
+    }
+  }
+}
