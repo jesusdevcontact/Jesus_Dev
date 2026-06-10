@@ -71,11 +71,33 @@ export const projects: Project[] = [
   },
   {
     key: 'devConnect',
-    name: 'DevConnect',
+    name: 'ConnectingDevs',
     stack: ['Angular', 'Laravel', 'PHP', 'MySQL', 'Cypress'],
     accent: 'amber',
     githubUrl: 'https://github.com/jesusdev98/devconnect',
-    demoUrl: 'https://devconnect-free.vercel.app/login',
+    demoUrl: 'https://www.connectingdevs.com',
+    screenshots: [
+      {
+        src: 'assets/Connectingdevs/connectingdevs_feed.png',
+        alt: 'ConnectingDevs feed screenshot',
+        variant: 'web',
+      },
+      {
+        src: 'assets/Connectingdevs/connectingdevs_login.png',
+        alt: 'ConnectingDevs login screenshot',
+        variant: 'web',
+      },
+      {
+        src: 'assets/Connectingdevs/connectingdevs_profile.png',
+        alt: 'ConnectingDevs profile screenshot',
+        variant: 'web',
+      },
+      {
+        src: 'assets/Connectingdevs/connectingdevs_profile2.png',
+        alt: 'ConnectingDevs profile details screenshot',
+        variant: 'web',
+      },
+    ],
   },
 ];
 
