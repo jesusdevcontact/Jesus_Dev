@@ -15,12 +15,12 @@ export interface ProjectScreenshot {
 }
 
 export interface Project {
-  key: 'focusFlow' | 'gibora' | 'devConnect';
+  key: 'focusFlow' | 'devConnect' | 'gibora' | 'pegasusMedical';
   name: string;
   stack: string[];
   accent: 'cyan' | 'green' | 'amber';
-  githubUrl: string;
-  demoUrl: string;
+  githubUrl?: string;
+  demoUrl?: string;
   screenshots?: ProjectScreenshot[];
 }
 

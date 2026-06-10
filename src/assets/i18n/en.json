@@ -125,30 +125,45 @@
         "impact": ["Angular structure", "Typed state flow", "Accessible UI behavior"]
       },
       "gibora": {
-        "type": "Laravel operations platform",
-        "summary": "Laravel operations platform concept for inventory, permissions and admin workflows.",
-        "problem": "Keeps stock, access rules and management records structured around relational data.",
+        "type": "Deployment pending",
+        "summary": "Full-stack e-commerce in final stage before public deployment.",
+        "problem": "Coming soon: GIBORA is being prepared as a Laravel e-commerce with catalog, admin and deployment-ready workflows.",
         "decisions": [
-          "Laravel models and validation close to data rules",
+          "Laravel models and validation close to commerce rules",
           "Filament-style admin patterns",
-          "Relational tables over flat records"
+          "Deployment pending before public demo"
         ],
-        "architecture": ["Laravel models", "MySQL schema", "API and admin workflows"],
+        "architecture": ["Laravel models", "MySQL schema", "Admin and commerce workflows"],
         "quality": ["Backend validation", "Permission-aware screens", "Repeatable local setup"],
-        "impact": ["Laravel fundamentals", "Relational modeling", "Permission-aware workflows"]
+        "impact": ["Coming soon", "Final pre-deployment stage", "Full-stack e-commerce"]
       },
       "devConnect": {
         "type": "Full Stack developer network",
-        "summary": "Full Stack developer network with Angular UI, Laravel API, authentication and profile workflows.",
-        "problem": "Keeps identity, profiles and user interactions understandable across the frontend and backend.",
+        "summary": "Full-stack developer network with an Angular frontend, Laravel/PHP API, authentication, PostgreSQL on Neon and a custom-domain deployment.",
+        "problem": "Keeps identity, profiles, REST API flows and user interactions understandable across the Angular frontend and Laravel backend.",
         "decisions": [
-          "Angular UI separated from Laravel API",
-          "Explicit auth and onboarding states",
-          "Frontend-friendly API response shapes"
+          "Angular frontend separated from Laravel/PHP REST API",
+          "PostgreSQL hosted on Neon",
+          "Docker used for environment consistency"
         ],
-        "architecture": ["Angular app shell", "Laravel REST API", "Route and API separation"],
-        "quality": ["Cypress flow targets", "Accessible form feedback", "API error states"],
-        "impact": ["Full Stack implementation", "API response design", "Auth and profile flows"]
+        "architecture": ["Angular app shell", "Laravel/PHP API", "PostgreSQL + Neon", "Custom domain deployment"],
+        "quality": ["Cypress E2E coverage", "Accessible form feedback", "API auth and error states"],
+        "impact": ["ConnectingDevs public launch", "REST API and data flows", "Auth and profile workflows"]
+      },
+      "pegasusMedical": {
+        "type": "Internal RFID traceability platform",
+        "summary": "Internal hospital traceability platform built with Laravel, Filament, MySQL and RFID workflows.",
+        "problem": "Centralize access logs, clinical inventory movements and RFID events around user roles and auditable records.",
+        "decisions": [
+          "RFID antenna event endpoints",
+          "Reporting module and Metabase dashboards",
+          "Metabase isolated with Docker",
+          "Role, user and traceability flows",
+          "Linux/SSH environment"
+        ],
+        "architecture": ["Laravel + Filament", "MySQL", "RFID events", "Metabase", "Docker", "Gmail SMTP"],
+        "quality": ["Private internal system", "Auditable traceability records", "No public demo or repository"],
+        "impact": ["Hospital RFID workflows", "Reporting module", "Access and room-door flow support"]
       }
     }
   },

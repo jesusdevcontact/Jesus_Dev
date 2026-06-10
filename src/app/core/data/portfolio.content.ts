@@ -62,17 +62,9 @@ export const projects: Project[] = [
     ],
   },
   {
-    key: 'gibora',
-    name: 'GIBORA',
-    stack: ['Laravel', 'PHP', 'Filament', 'MySQL', 'Docker'],
-    accent: 'green',
-    githubUrl: 'https://github.com/jesusdev98/gibora',
-    demoUrl: '#',
-  },
-  {
     key: 'devConnect',
     name: 'ConnectingDevs',
-    stack: ['Angular', 'Laravel', 'PHP', 'MySQL', 'Cypress'],
+    stack: ['Angular', 'Laravel', 'PHP', 'PostgreSQL', 'Neon', 'Docker', 'Cypress'],
     accent: 'amber',
     githubUrl: 'https://github.com/jesusdev98/devconnect',
     demoUrl: 'https://www.connectingdevs.com',
@@ -98,6 +90,19 @@ export const projects: Project[] = [
         variant: 'web',
       },
     ],
+  },
+  {
+    key: 'gibora',
+    name: 'GIBORA',
+    stack: ['Laravel', 'PHP', 'Filament', 'MySQL', 'Docker'],
+    accent: 'green',
+    githubUrl: 'https://github.com/jesusdev98/gibora',
+  },
+  {
+    key: 'pegasusMedical',
+    name: 'Pegasus Medical',
+    stack: ['Laravel', 'Filament', 'MySQL', 'RFID', 'Metabase', 'Docker', 'Linux'],
+    accent: 'cyan',
   },
 ];
 

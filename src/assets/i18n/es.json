@@ -125,30 +125,45 @@
         "impact": ["Estructura Angular", "Flujo de estado tipado", "Comportamiento UI accesible"]
       },
       "gibora": {
-        "type": "Plataforma operacional en Laravel",
-        "summary": "Concepto de plataforma operacional Laravel para inventario, permisos y flujos admin.",
-        "problem": "Organiza stock, reglas de acceso y registros de gestión alrededor de datos relacionales.",
+        "type": "Pendiente de despliegue",
+        "summary": "E-commerce full stack en fase final antes de despliegue público.",
+        "problem": "Próximamente desplegado: GIBORA se está preparando como e-commerce Laravel con catálogo, administración y flujos listos para despliegue.",
         "decisions": [
-          "Modelos Laravel y validación cerca de las reglas de datos",
+          "Modelos Laravel y validación cerca de reglas comerciales",
           "Patrones admin tipo Filament",
-          "Tablas relacionales sobre registros planos"
+          "Despliegue pendiente antes de demo pública"
         ],
-        "architecture": ["Modelos Laravel", "Esquema MySQL", "Flujos API y admin"],
+        "architecture": ["Modelos Laravel", "Esquema MySQL", "Flujos admin y e-commerce"],
         "quality": ["Validación backend", "Pantallas con permisos", "Setup local repetible"],
-        "impact": ["Fundamentos Laravel", "Modelado relacional", "Flujos con permisos"]
+        "impact": ["Próximamente desplegado", "Fase final antes de despliegue", "E-commerce full stack"]
       },
       "devConnect": {
         "type": "Red Full Stack para desarrolladores",
-        "summary": "Red Full Stack para desarrolladores con UI Angular, API Laravel, autenticación y perfiles.",
-        "problem": "Mantiene identidad, perfiles e interacciones de usuario claras entre frontend y backend.",
+        "summary": "Red Full Stack para perfiles developer, con frontend Angular, API Laravel/PHP, autenticación, PostgreSQL en Neon y despliegue con dominio propio.",
+        "problem": "Mantiene identidad, perfiles, flujos REST API e interacciones de usuario claras entre frontend Angular y backend Laravel.",
         "decisions": [
-          "UI Angular separada de API Laravel",
-          "Estados explícitos de auth y onboarding",
-          "Respuestas API pensadas para frontend"
+          "Frontend Angular separado de API REST Laravel/PHP",
+          "PostgreSQL alojado en Neon",
+          "Docker para consistencia de entorno"
         ],
-        "architecture": ["Shell Angular", "API REST Laravel", "Separación entre rutas y API"],
-        "quality": ["Flujos objetivo en Cypress", "Feedback accesible", "Estados de error API"],
-        "impact": ["Implementación Full Stack", "Diseño de respuestas API", "Flujos de auth y perfil"]
+        "architecture": ["Shell Angular", "API Laravel/PHP", "PostgreSQL + Neon", "Despliegue con dominio propio"],
+        "quality": ["Cobertura E2E con Cypress", "Feedback accesible", "Estados de auth y error API"],
+        "impact": ["Lanzamiento público de ConnectingDevs", "REST API y flujos de datos", "Flujos de auth y perfil"]
+      },
+      "pegasusMedical": {
+        "type": "Plataforma interna de trazabilidad RFID",
+        "summary": "Plataforma interna de trazabilidad hospitalaria con Laravel, Filament, MySQL y RFID.",
+        "problem": "Centralizar accesos, movimientos e inventario clínico alrededor de eventos RFID, roles de usuario y registros auditables.",
+        "decisions": [
+          "Endpoints para eventos de antenas RFID",
+          "Módulo de reporting y dashboards con Metabase",
+          "Separación de Metabase mediante Docker",
+          "Gestión de roles, usuarios y trazabilidad",
+          "Trabajo en entorno Linux/SSH"
+        ],
+        "architecture": ["Laravel + Filament", "MySQL", "Eventos RFID", "Metabase", "Docker", "SMTP Gmail"],
+        "quality": ["Sistema interno privado", "Registros auditables de trazabilidad", "Sin demo ni repositorio público"],
+        "impact": ["Flujos RFID hospitalarios", "Módulo de reporting", "Soporte para control de acceso y puertas"]
       }
     }
   },

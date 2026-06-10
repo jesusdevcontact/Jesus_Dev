@@ -125,30 +125,45 @@
         "impact": ["Structure Angular", "Flux d'état typé", "Comportement UI accessible"]
       },
       "gibora": {
-        "type": "Plateforme opérationnelle Laravel",
-        "summary": "Concept de plateforme opérationnelle Laravel pour inventaire, permissions et workflows admin.",
-        "problem": "Organise stock, règles d'accès et registres de gestion autour de données relationnelles.",
+        "type": "Déploiement en attente",
+        "summary": "E-commerce full stack en phase finale avant déploiement public.",
+        "problem": "Bientôt disponible : GIBORA est préparé comme e-commerce Laravel avec catalogue, administration et workflows prêts au déploiement.",
         "decisions": [
-          "Modèles Laravel et validation proches des règles de données",
+          "Modèles Laravel et validation proches des règles commerce",
           "Patterns admin de type Filament",
-          "Tables relationnelles plutôt que données plates"
+          "Déploiement en attente avant démo publique"
         ],
-        "architecture": ["Modèles Laravel", "Schéma MySQL", "Workflows API et admin"],
+        "architecture": ["Modèles Laravel", "Schéma MySQL", "Workflows admin et e-commerce"],
         "quality": ["Validation backend", "Écrans avec permissions", "Setup local répétable"],
-        "impact": ["Bases Laravel", "Modélisation relationnelle", "Workflows avec permissions"]
+        "impact": ["Bientôt disponible", "Phase finale avant déploiement", "E-commerce full stack"]
       },
       "devConnect": {
-        "type": "Réseau Full Stack pour développeurs",
-        "summary": "Réseau Full Stack pour développeurs avec UI Angular, API Laravel, authentification et profils.",
-        "problem": "Garde identité, profils et interactions utilisateur lisibles entre frontend et backend.",
+        "type": "Réseau full stack pour profils développeur",
+        "summary": "Réseau full stack pour profils développeur, avec frontend Angular, API Laravel/PHP, authentification, PostgreSQL sur Neon et déploiement avec domaine personnalisé.",
+        "problem": "Garde identité, profils, flux REST API et interactions utilisateur lisibles entre frontend Angular et backend Laravel.",
         "decisions": [
-          "UI Angular séparée de l'API Laravel",
-          "États explicites auth et onboarding",
-          "Réponses API adaptées au frontend"
+          "Frontend Angular séparé de l'API REST Laravel/PHP",
+          "PostgreSQL hébergé sur Neon",
+          "Docker pour cohérence d'environnement"
         ],
-        "architecture": ["Shell Angular", "API REST Laravel", "Séparation entre routes et API"],
-        "quality": ["Parcours cibles Cypress", "Feedback accessible", "États d'erreur API"],
-        "impact": ["Implémentation Full Stack", "Design des réponses API", "Flux auth et profil"]
+        "architecture": ["Shell Angular", "API Laravel/PHP", "PostgreSQL + Neon", "Déploiement avec domaine personnalisé"],
+        "quality": ["Couverture E2E avec Cypress", "Feedback accessible", "États auth et erreurs API"],
+        "impact": ["Lancement public de ConnectingDevs", "REST API et flux de données", "Flux auth et profil"]
+      },
+      "pegasusMedical": {
+        "type": "Plateforme interne de traçabilité RFID",
+        "summary": "Plateforme interne de traçabilité hospitalière avec Laravel, Filament, MySQL et flux RFID.",
+        "problem": "Centraliser les accès, mouvements d'inventaire clinique et événements RFID autour des rôles utilisateur et de registres auditables.",
+        "decisions": [
+          "Endpoints pour événements d'antennes RFID",
+          "Module de reporting et tableaux de bord Metabase",
+          "Metabase isolé avec Docker",
+          "Gestion des rôles, utilisateurs et traçabilité",
+          "Environnement Linux/SSH"
+        ],
+        "architecture": ["Laravel + Filament", "MySQL", "Événements RFID", "Metabase", "Docker", "SMTP Gmail"],
+        "quality": ["Système interne privé", "Registres auditables de traçabilité", "Pas de démo ni de dépôt public"],
+        "impact": ["Flux RFID hospitaliers", "Module de reporting", "Support du contrôle d'accès et des portes"]
       }
     }
   },
