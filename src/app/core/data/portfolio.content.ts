@@ -66,7 +66,7 @@ export const projects: Project[] = [
     name: 'ConnectingDevs',
     stack: ['Angular', 'Laravel', 'PHP', 'PostgreSQL', 'Neon', 'Docker', 'Cypress'],
     accent: 'amber',
-    githubUrl: 'https://github.com/jesusdev98/devconnect',
+    githubUrl: 'https://github.com/ConnectingDevs/ConnectingDevs-Frontend',
     demoUrl: 'https://www.connectingdevs.com',
     screenshots: [
       {
