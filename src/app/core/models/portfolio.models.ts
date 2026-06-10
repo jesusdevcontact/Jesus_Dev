@@ -8,6 +8,12 @@ export interface TechCategory {
   accent: 'cyan' | 'green' | 'amber' | 'rose' | 'blue';
 }
 
+export interface ProjectScreenshot {
+  src: string;
+  alt: string;
+  variant: 'desktop' | 'web' | 'mobile';
+}
+
 export interface Project {
   key: 'focusFlow' | 'gibora' | 'devConnect';
   name: string;
@@ -15,6 +21,7 @@ export interface Project {
   accent: 'cyan' | 'green' | 'amber';
   githubUrl: string;
   demoUrl: string;
+  screenshots?: ProjectScreenshot[];
 }
 
 export interface JourneyItem {

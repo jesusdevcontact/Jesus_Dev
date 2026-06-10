@@ -1,20 +1,30 @@
 <article class="project-card" [ngClass]="'project-card--' + project().accent">
-  <div class="mockup" aria-hidden="true">
-    <div class="mockup-bar">
-      <span></span>
-      <span></span>
-      <span></span>
+  @if (project().screenshots; as screenshots) {
+    <div class="project-gallery">
+      @for (screenshot of screenshots; track screenshot.src) {
+        <div class="project-shot" [ngClass]="'project-shot--' + screenshot.variant">
+          <img [src]="screenshot.src" [alt]="screenshot.alt" loading="lazy" decoding="async">
+        </div>
+      }
     </div>
-    <div class="mockup-grid">
-      <div class="mockup-sidebar"></div>
-      <div class="mockup-main">
+  } @else {
+    <div class="mockup" aria-hidden="true">
+      <div class="mockup-bar">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="mockup-panel"></div>
+      <div class="mockup-grid">
+        <div class="mockup-sidebar"></div>
+        <div class="mockup-main">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="mockup-panel"></div>
+      </div>
     </div>
-  </div>
+  }
 
   <div class="project-content">
     <div class="project-meta">

@@ -43,6 +43,23 @@ export const projects: Project[] = [
     accent: 'cyan',
     githubUrl: 'https://github.com/jesusdev98/focusflow',
     demoUrl: 'https://focusflowpwa.vercel.app/',
+    screenshots: [
+      {
+        src: 'assets/Focus-Flow/focusflow-desktop.png',
+        alt: 'FocusFlow desktop dashboard screenshot',
+        variant: 'desktop',
+      },
+      {
+        src: 'assets/Focus-Flow/focusflow-web.png',
+        alt: 'FocusFlow web interface screenshot',
+        variant: 'web',
+      },
+      {
+        src: 'assets/Focus-Flow/focusflow-mobile-pwa.png',
+        alt: 'FocusFlow mobile interface screenshot',
+        variant: 'mobile',
+      },
+    ],
   },
   {
     key: 'gibora',
