@@ -214,11 +214,11 @@
     radial-gradient(circle at 83% 66%, rgba(86, 185, 255, 0.22) 0 0.95px, transparent 1.65px),
     radial-gradient(circle at 94% 36%, rgba(226, 171, 68, 0.66) 0 1.12px, transparent 1.9px);
   --cosmic-stars-far:
-    radial-gradient(circle at 18% 24%, rgba(245, 199, 92, 0.34) 0 0.8px, transparent 1.45px),
-    radial-gradient(circle at 38% 34%, rgba(226, 171, 68, 0.4) 0 0.8px, transparent 1.45px),
-    radial-gradient(circle at 46% 62%, rgba(18, 34, 54, 0.1) 0 0.8px, transparent 1.4px),
-    radial-gradient(circle at 73% 38%, rgba(255, 214, 120, 0.28) 0 0.75px, transparent 1.4px),
-    radial-gradient(circle at 91% 78%, rgba(86, 185, 255, 0.16) 0 0.75px, transparent 1.4px);
+    radial-gradient(circle at 18% 24%, rgba(245, 199, 92, 0.5) 0 0.9px, transparent 1.55px),
+    radial-gradient(circle at 38% 34%, rgba(226, 171, 68, 0.52) 0 0.9px, transparent 1.55px),
+    radial-gradient(circle at 46% 62%, rgba(191, 132, 40, 0.34) 0 0.82px, transparent 1.45px),
+    radial-gradient(circle at 73% 38%, rgba(255, 214, 120, 0.44) 0 0.82px, transparent 1.45px),
+    radial-gradient(circle at 91% 78%, rgba(86, 185, 255, 0.18) 0 0.78px, transparent 1.4px);
   --cosmic-orbit-lines:
     radial-gradient(ellipse at 78% 18%, transparent 0 35%, rgba(0, 127, 168, 0.14) 35.12% 35.34%, transparent 35.52% 100%),
     radial-gradient(ellipse at 79% 18%, transparent 0 45%, rgba(101, 82, 195, 0.11) 45.14% 45.34%, transparent 45.54% 100%),
@@ -746,6 +746,20 @@ button {
 [data-theme="light"] .cosmic-planet--distant {
   opacity: 0.62;
   box-shadow: 0 0 2.8rem rgba(86, 185, 255, 0.16);
+}
+
+[data-theme="light"] .hero-bg::before {
+  background-image:
+    var(--cosmic-stars-near),
+    var(--cosmic-stars-far);
+  background-position:
+    0 0,
+    70px 38px;
+  background-size:
+    300px 220px,
+    460px 340px;
+  opacity: 1;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.92), transparent 82%);
 }
 
 @keyframes pageEnter {
