@@ -12,7 +12,11 @@ import { CookieConsentComponent } from './shared/components/cookie-consent/cooki
   standalone: true,
   imports: [RouterOutlet, SiteFooterComponent, SiteHeaderComponent, CookieConsentComponent, TranslatePipe],
   template: `
-    <div class="cosmic-backdrop" aria-hidden="true"></div>
+    <div class="cosmic-backdrop" aria-hidden="true">
+      <span class="cosmic-planet cosmic-planet--saturn"></span>
+      <span class="cosmic-planet cosmic-planet--jupiter"></span>
+      <span class="cosmic-planet cosmic-planet--distant"></span>
+    </div>
     <div class="app-shell">
       <a class="skip-link" href="#main-content">{{ 'accessibility.skipToContent' | translate }}</a>
       <jd-site-header />

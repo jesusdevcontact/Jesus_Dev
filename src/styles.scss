@@ -75,15 +75,18 @@
     radial-gradient(circle at 74% 24%, rgba(133, 169, 255, 0.14), transparent 24rem),
     radial-gradient(circle at 58% 58%, rgba(199, 92, 255, 0.1), transparent 26rem);
   --cosmic-stars-near:
-    radial-gradient(circle at 9% 18%, rgba(236, 253, 255, 0.78) 0 1px, transparent 1.7px),
-    radial-gradient(circle at 31% 72%, rgba(236, 253, 255, 0.56) 0 1px, transparent 1.6px),
-    radial-gradient(circle at 64% 28%, rgba(187, 247, 255, 0.58) 0 1px, transparent 1.6px),
-    radial-gradient(circle at 83% 66%, rgba(236, 253, 255, 0.5) 0 1px, transparent 1.6px);
+    radial-gradient(circle at 9% 18%, rgba(236, 253, 255, 0.86) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 22% 48%, rgba(83, 216, 255, 0.62) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 31% 72%, rgba(236, 253, 255, 0.62) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 64% 28%, rgba(187, 247, 255, 0.68) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 83% 66%, rgba(236, 253, 255, 0.56) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 94% 36%, rgba(255, 255, 255, 0.72) 0 1.15px, transparent 1.9px);
   --cosmic-stars-far:
-    radial-gradient(circle at 18% 24%, rgba(236, 253, 255, 0.42) 0 0.8px, transparent 1.5px),
-    radial-gradient(circle at 46% 62%, rgba(236, 253, 255, 0.3) 0 0.8px, transparent 1.4px),
-    radial-gradient(circle at 73% 38%, rgba(187, 247, 255, 0.32) 0 0.8px, transparent 1.4px),
-    radial-gradient(circle at 91% 78%, rgba(236, 253, 255, 0.28) 0 0.8px, transparent 1.4px);
+    radial-gradient(circle at 18% 24%, rgba(236, 253, 255, 0.46) 0 0.8px, transparent 1.5px),
+    radial-gradient(circle at 38% 34%, rgba(83, 216, 255, 0.3) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 46% 62%, rgba(236, 253, 255, 0.34) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 73% 38%, rgba(187, 247, 255, 0.38) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 91% 78%, rgba(236, 253, 255, 0.32) 0 0.8px, transparent 1.4px);
   --cosmic-orbit-lines:
     radial-gradient(ellipse at 78% 18%, transparent 0 35%, rgba(147, 197, 253, 0.16) 35.12% 35.34%, transparent 35.52% 100%),
     radial-gradient(ellipse at 79% 18%, transparent 0 45%, rgba(199, 92, 255, 0.12) 45.14% 45.34%, transparent 45.54% 100%),
@@ -100,6 +103,16 @@
   --cosmic-page-arcs:
     radial-gradient(ellipse 70rem 34rem at 96% 48rem, transparent 0 62%, rgba(147, 197, 253, 0.11) 62.1% 62.26%, transparent 62.44% 100%),
     radial-gradient(ellipse 76rem 38rem at 2% 105rem, transparent 0 58%, rgba(199, 92, 255, 0.085) 58.1% 58.24%, transparent 58.42% 100%);
+  --planet-saturn:
+    radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.28), transparent 0.8rem),
+    radial-gradient(circle at 38% 35%, rgba(123, 211, 255, 0.38), rgba(86, 126, 255, 0.24) 32%, rgba(132, 87, 255, 0.16) 58%, rgba(8, 12, 30, 0.1) 76%, transparent 78%);
+  --planet-saturn-ring: rgba(147, 197, 253, 0.22);
+  --planet-jupiter:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.22), transparent 0.9rem),
+    linear-gradient(168deg, rgba(83, 216, 255, 0.16), transparent 18% 28%, rgba(199, 92, 255, 0.13) 36% 43%, transparent 48% 58%, rgba(133, 169, 255, 0.13) 66% 74%, transparent 82%),
+    radial-gradient(circle at 54% 54%, rgba(83, 216, 255, 0.16), rgba(109, 80, 255, 0.16) 46%, rgba(4, 8, 24, 0.06) 72%, transparent 75%);
+  --planet-distant:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.18), rgba(83, 216, 255, 0.12) 34%, rgba(199, 92, 255, 0.08) 62%, transparent 74%);
   --radius-xs: 6px;
   --radius-sm: 8px;
   --radius-md: 8px;
@@ -200,15 +213,18 @@
     radial-gradient(circle at 74% 24%, rgba(101, 82, 195, 0.075), transparent 24rem),
     radial-gradient(circle at 58% 58%, rgba(187, 53, 100, 0.03), transparent 26rem);
   --cosmic-stars-near:
-    radial-gradient(circle at 9% 18%, rgba(18, 54, 86, 0.07) 0 1px, transparent 1.7px),
-    radial-gradient(circle at 31% 72%, rgba(18, 54, 86, 0.052) 0 1px, transparent 1.6px),
-    radial-gradient(circle at 64% 28%, rgba(0, 127, 168, 0.06) 0 1px, transparent 1.6px),
-    radial-gradient(circle at 83% 66%, rgba(18, 54, 86, 0.045) 0 1px, transparent 1.6px);
+    radial-gradient(circle at 9% 18%, rgba(245, 199, 92, 0.28) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 22% 48%, rgba(95, 188, 255, 0.18) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 31% 72%, rgba(18, 54, 86, 0.055) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 64% 28%, rgba(95, 188, 255, 0.16) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 83% 66%, rgba(120, 90, 255, 0.12) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 94% 36%, rgba(245, 199, 92, 0.22) 0 1.1px, transparent 1.9px);
   --cosmic-stars-far:
-    radial-gradient(circle at 18% 24%, rgba(18, 54, 86, 0.05) 0 0.8px, transparent 1.5px),
+    radial-gradient(circle at 18% 24%, rgba(95, 188, 255, 0.11) 0 0.8px, transparent 1.5px),
+    radial-gradient(circle at 38% 34%, rgba(245, 199, 92, 0.13) 0 0.8px, transparent 1.4px),
     radial-gradient(circle at 46% 62%, rgba(18, 54, 86, 0.035) 0 0.8px, transparent 1.4px),
-    radial-gradient(circle at 73% 38%, rgba(0, 127, 168, 0.045) 0 0.8px, transparent 1.4px),
-    radial-gradient(circle at 91% 78%, rgba(18, 54, 86, 0.035) 0 0.8px, transparent 1.4px);
+    radial-gradient(circle at 73% 38%, rgba(120, 90, 255, 0.08) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 91% 78%, rgba(95, 188, 255, 0.08) 0 0.8px, transparent 1.4px);
   --cosmic-orbit-lines:
     radial-gradient(ellipse at 78% 18%, transparent 0 35%, rgba(0, 127, 168, 0.14) 35.12% 35.34%, transparent 35.52% 100%),
     radial-gradient(ellipse at 79% 18%, transparent 0 45%, rgba(101, 82, 195, 0.11) 45.14% 45.34%, transparent 45.54% 100%),
@@ -225,6 +241,16 @@
   --cosmic-page-arcs:
     radial-gradient(ellipse 70rem 34rem at 96% 48rem, transparent 0 62%, rgba(0, 127, 168, 0.055) 62.1% 62.24%, transparent 62.42% 100%),
     radial-gradient(ellipse 76rem 38rem at 2% 105rem, transparent 0 58%, rgba(101, 82, 195, 0.045) 58.1% 58.22%, transparent 58.4% 100%);
+  --planet-saturn:
+    radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.74), transparent 0.9rem),
+    radial-gradient(circle at 38% 35%, rgba(255, 255, 255, 0.58), rgba(95, 188, 255, 0.16) 34%, rgba(120, 90, 255, 0.1) 58%, rgba(255, 255, 255, 0.05) 74%, transparent 78%);
+  --planet-saturn-ring: rgba(0, 127, 168, 0.14);
+  --planet-jupiter:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.58), transparent 1rem),
+    linear-gradient(168deg, rgba(95, 188, 255, 0.11), transparent 18% 28%, rgba(245, 199, 92, 0.12) 36% 43%, transparent 48% 58%, rgba(120, 90, 255, 0.08) 66% 74%, transparent 82%),
+    radial-gradient(circle at 54% 54%, rgba(255, 255, 255, 0.46), rgba(95, 188, 255, 0.1) 46%, rgba(120, 90, 255, 0.05) 72%, transparent 75%);
+  --planet-distant:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.5), rgba(95, 188, 255, 0.1) 34%, rgba(120, 90, 255, 0.055) 62%, transparent 74%);
   --shadow-sm: 0 10px 28px rgba(32, 54, 82, 0.1);
   --shadow-md: 0 18px 48px rgba(32, 54, 82, 0.14);
   --shadow-lg: 0 28px 78px rgba(32, 54, 82, 0.18);
@@ -342,6 +368,111 @@ jd-root {
   opacity: 0.48;
   transform: translate3d(0, 0, 0);
   animation: cosmicPulse 22s ease-in-out infinite;
+}
+
+.cosmic-planet {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+}
+
+.cosmic-planet::before,
+.cosmic-planet::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+}
+
+.cosmic-planet--saturn {
+  right: clamp(-5rem, -4vw, -2rem);
+  top: clamp(5.5rem, 12vh, 8rem);
+  width: clamp(10rem, 18vw, 17rem);
+  aspect-ratio: 1;
+  background: var(--planet-saturn);
+  opacity: 0.72;
+  box-shadow:
+    0 0 4rem rgba(83, 216, 255, 0.08),
+    0 0 7rem rgba(155, 118, 255, 0.08);
+  animation: planetDriftUp 52s ease-in-out infinite alternate;
+}
+
+.cosmic-planet--saturn::before {
+  left: -32%;
+  top: 39%;
+  z-index: -1;
+  width: 164%;
+  height: 25%;
+  border: 1px solid var(--planet-saturn-ring);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent, var(--planet-saturn-ring), transparent),
+    radial-gradient(ellipse at center, transparent 0 54%, rgba(255, 255, 255, 0.08) 55%, transparent 72%);
+  opacity: 0.82;
+  transform: rotate(-14deg);
+}
+
+.cosmic-planet--saturn::after {
+  inset: 12%;
+  border-radius: inherit;
+  background:
+    linear-gradient(135deg, transparent 0 48%, rgba(2, 5, 16, 0.16) 72%),
+    radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.18), transparent 16%);
+  opacity: 0.7;
+}
+
+.cosmic-planet--jupiter {
+  left: clamp(-8rem, -7vw, -3rem);
+  top: 48vh;
+  width: clamp(13rem, 24vw, 24rem);
+  aspect-ratio: 1;
+  background: var(--planet-jupiter);
+  opacity: 0.52;
+  box-shadow:
+    0 0 5rem rgba(83, 216, 255, 0.06),
+    0 0 8rem rgba(199, 92, 255, 0.07);
+  animation: planetDriftUpLong 60s ease-in-out infinite alternate;
+}
+
+.cosmic-planet--jupiter::before {
+  inset: 11%;
+  border-radius: inherit;
+  background:
+    linear-gradient(174deg, transparent 0 22%, rgba(255, 255, 255, 0.08) 26% 29%, transparent 34% 43%, rgba(83, 216, 255, 0.08) 46% 49%, transparent 54% 66%, rgba(199, 92, 255, 0.07) 70% 73%, transparent 78%),
+    radial-gradient(circle at 66% 58%, rgba(255, 204, 102, 0.08), transparent 16%);
+  opacity: 0.82;
+  transform: rotate(-8deg);
+}
+
+.cosmic-planet--jupiter::after {
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 72% 72%, rgba(2, 5, 16, 0.22), transparent 44%);
+  opacity: 0.62;
+}
+
+.cosmic-planet--distant {
+  right: clamp(1.6rem, 10vw, 9rem);
+  bottom: clamp(3rem, 10vh, 8rem);
+  width: clamp(4rem, 7vw, 6.5rem);
+  aspect-ratio: 1;
+  background: var(--planet-distant);
+  opacity: 0.48;
+  box-shadow: 0 0 3.4rem rgba(83, 216, 255, 0.08);
+  animation: planetDriftUpSmall 44s ease-in-out infinite alternate;
+}
+
+.cosmic-planet--distant::before {
+  left: -22%;
+  top: 46%;
+  width: 144%;
+  height: 16%;
+  border-top: 1px solid rgba(147, 197, 253, 0.13);
+  border-radius: 50%;
+  opacity: 0.7;
+  transform: rotate(18deg);
 }
 
 body::before {
@@ -606,6 +737,21 @@ button {
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.82) inset;
 }
 
+[data-theme="light"] .cosmic-planet--saturn {
+  opacity: 0.5;
+  box-shadow:
+    0 0 4rem rgba(0, 127, 168, 0.055),
+    0 0 7rem rgba(101, 82, 195, 0.055);
+}
+
+[data-theme="light"] .cosmic-planet--jupiter {
+  opacity: 0.34;
+}
+
+[data-theme="light"] .cosmic-planet--distant {
+  opacity: 0.34;
+}
+
 @keyframes pageEnter {
   from {
     opacity: 0;
@@ -642,6 +788,36 @@ button {
   }
 }
 
+@keyframes planetDriftUp {
+  from {
+    transform: translate3d(0, 1.1rem, 0) rotate(-1deg);
+  }
+
+  to {
+    transform: translate3d(-0.6rem, -1.25rem, 0) rotate(1deg);
+  }
+}
+
+@keyframes planetDriftUpLong {
+  from {
+    transform: translate3d(0, 1.6rem, 0) rotate(1deg);
+  }
+
+  to {
+    transform: translate3d(0.8rem, -1.8rem, 0) rotate(-1deg);
+  }
+}
+
+@keyframes planetDriftUpSmall {
+  from {
+    transform: translate3d(0, 0.8rem, 0);
+  }
+
+  to {
+    transform: translate3d(-0.4rem, -1rem, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -662,7 +838,8 @@ button {
   }
 
   .cosmic-backdrop::before,
-  .cosmic-backdrop::after {
+  .cosmic-backdrop::after,
+  .cosmic-planet {
     animation: none !important;
     transform: none;
     will-change: auto;
@@ -693,5 +870,31 @@ button {
 
   .container {
     width: min(calc(100% - 1.25rem), var(--container));
+  }
+
+  .cosmic-planet--saturn {
+    right: -4.5rem;
+    top: 8rem;
+    width: 9.5rem;
+    opacity: 0.5;
+  }
+
+  .cosmic-planet--jupiter {
+    left: -7.5rem;
+    top: 52vh;
+    width: 14rem;
+    opacity: 0.3;
+  }
+
+  .cosmic-planet--distant {
+    display: none;
+  }
+
+  [data-theme="light"] .cosmic-planet--saturn {
+    opacity: 0.34;
+  }
+
+  [data-theme="light"] .cosmic-planet--jupiter {
+    opacity: 0.22;
   }
 }
