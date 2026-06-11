@@ -222,6 +222,8 @@
     top: calc(100% + 0.6rem);
     display: none;
     width: min(22rem, calc(100vw - 2rem));
+    width: min(22rem, calc(100dvw - 2rem));
+    max-width: calc(100% - 2rem);
     flex-direction: column;
     align-items: stretch;
     border: 1px solid var(--border-strong);
@@ -325,9 +327,11 @@
   }
 
   .site-nav {
+    left: 0.44rem;
     right: 0.44rem;
     top: calc(100% + 0.45rem);
-    width: calc(100vw - 1.8rem);
+    width: auto;
+    max-width: none;
     border-radius: 1rem;
   }
 }

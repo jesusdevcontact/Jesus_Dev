@@ -1,6 +1,7 @@
 .legal-page {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   padding: clamp(7rem, 13vw, 9rem) 0 var(--section-y);
 }
 

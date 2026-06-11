@@ -253,6 +253,8 @@
 
 html {
   min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
   background: var(--bg);
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
@@ -260,6 +262,7 @@ html {
 
 body {
   min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
   overflow-x: hidden;
   background: var(--cosmic-bg-base);
@@ -273,6 +276,7 @@ jd-root {
   isolation: isolate;
   display: block;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .app-shell {
@@ -281,6 +285,7 @@ jd-root {
   z-index: 1;
   overflow-x: clip;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .app-shell::before,
@@ -750,9 +755,9 @@ button {
 
 [data-theme="light"] .hero-bg::before {
   background-image:
-    radial-gradient(circle at 16% 26%, rgba(255, 218, 135, 0.68) 0 1.65px, rgba(255, 218, 135, 0.18) 2.4px, transparent 3.6px),
-    radial-gradient(circle at 78% 18%, rgba(226, 171, 68, 0.62) 0 1.45px, rgba(226, 171, 68, 0.16) 2.2px, transparent 3.2px),
-    radial-gradient(circle at 48% 62%, rgba(185, 123, 32, 0.42) 0 1.35px, rgba(245, 199, 92, 0.14) 2.1px, transparent 3px),
+    radial-gradient(circle at 16% 26%, rgba(255, 218, 135, 0.68) 0 2.1px, rgba(255, 218, 135, 0.2) 3px, transparent 4.1px),
+    radial-gradient(circle at 78% 18%, rgba(226, 171, 68, 0.62) 0 1.95px, rgba(226, 171, 68, 0.18) 2.8px, transparent 3.8px),
+    radial-gradient(circle at 48% 62%, rgba(185, 123, 32, 0.42) 0 1.8px, rgba(245, 199, 92, 0.16) 2.65px, transparent 3.6px),
     var(--cosmic-stars-near),
     var(--cosmic-stars-far);
   background-position:
