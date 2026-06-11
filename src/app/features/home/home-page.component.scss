@@ -660,8 +660,14 @@ code strong {
 
 @media (max-width: 560px) {
   .hero {
-    padding-top: 7.5rem;
+    padding-top: clamp(6.2rem, 17svh, 7rem);
     padding-bottom: 2.8rem;
+  }
+
+  .hero .reveal {
+    transform: none;
+    opacity: 1;
+    transition: none;
   }
 
   .hero-grid {
