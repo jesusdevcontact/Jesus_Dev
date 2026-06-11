@@ -12,11 +12,14 @@ import { CookieConsentComponent } from './shared/components/cookie-consent/cooki
   standalone: true,
   imports: [RouterOutlet, SiteFooterComponent, SiteHeaderComponent, CookieConsentComponent, TranslatePipe],
   template: `
-    <a class="skip-link" href="#main-content">{{ 'accessibility.skipToContent' | translate }}</a>
-    <jd-site-header />
-    <router-outlet />
-    <jd-site-footer />
-    <jd-cookie-consent />
+    <div class="cosmic-backdrop" aria-hidden="true"></div>
+    <div class="app-shell">
+      <a class="skip-link" href="#main-content">{{ 'accessibility.skipToContent' | translate }}</a>
+      <jd-site-header />
+      <router-outlet />
+      <jd-site-footer />
+      <jd-cookie-consent />
+    </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

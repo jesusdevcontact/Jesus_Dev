@@ -9,13 +9,10 @@
   grid-template-rows: auto 1fr;
   min-height: 100%;
   overflow: hidden;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
-  background:
-    radial-gradient(circle at 22% 0%, rgba(255, 255, 255, 0.08), transparent 18rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.074), rgba(255, 255, 255, 0.022)),
-    rgba(255, 255, 255, 0.03);
-  box-shadow: var(--shadow-md);
+  background: var(--card-surface);
+  box-shadow: var(--card-shadow);
   transition:
     transform 360ms var(--ease-premium),
     border-color 360ms ease,
@@ -37,7 +34,8 @@
 
 .project-card:hover {
   transform: translateY(-6px);
-  border-color: var(--border-strong);
+  border-color: var(--card-border-strong);
+  background: var(--card-surface-hover);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.11) inset,
     var(--shadow-lg);
@@ -447,7 +445,7 @@ h3 {
   margin: 0;
   color: var(--text-strong);
   font-size: clamp(1.38rem, 2vw, 1.58rem);
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 p {
@@ -464,12 +462,12 @@ p {
 .problem-block {
   display: grid;
   gap: 0.45rem;
-  border: 1px solid rgba(255, 255, 255, 0.078);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
   padding: 0.78rem 0.84rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.052), rgba(255, 255, 255, 0.022)),
-    rgba(255, 255, 255, 0.026);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.064), rgba(255, 255, 255, 0.026)),
+    rgba(7, 10, 20, 0.34);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.055) inset;
 }
 
@@ -526,10 +524,10 @@ ul {
   grid-template-columns: 5.25rem 1fr;
   gap: 0.7rem;
   align-items: start;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
   padding: 0.72rem;
-  background: rgba(255, 255, 255, 0.022);
+  background: rgba(7, 10, 20, 0.28);
 }
 
 h4 {

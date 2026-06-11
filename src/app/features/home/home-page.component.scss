@@ -10,28 +10,20 @@
   inset: 0;
   z-index: -1;
   background: var(--hero-bg);
+  pointer-events: none;
 }
 
 .hero-bg::before {
   position: absolute;
   inset: 0;
   background-image:
+    var(--cosmic-stars-far),
     linear-gradient(var(--grid-line-strong) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line-strong) 1px, transparent 1px);
   background-position: center;
-  background-size: 72px 72px;
+  background-size: 520px 420px, 72px 72px, 72px 72px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent 78%);
-  content: "";
-}
-
-.hero-bg::after {
-  position: absolute;
-  left: 50%;
-  bottom: -16rem;
-  width: min(92rem, 120vw);
-  height: 38rem;
-  transform: translateX(-50%);
-  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.065), transparent 64%);
+  opacity: 0.84;
   content: "";
 }
 
@@ -60,11 +52,11 @@
 
 h1 {
   margin: 0;
-  max-width: 13ch;
+  max-width: 14ch;
   color: var(--text-strong);
   font-size: var(--step-5);
-  letter-spacing: -0.06em;
-  line-height: 0.91;
+  letter-spacing: 0;
+  line-height: 0.94;
   text-wrap: balance;
 }
 
@@ -85,10 +77,12 @@ h1 {
 }
 
 .hero-proof span {
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid var(--card-border);
   border-radius: 999px;
   padding: 0.5rem 0.62rem;
-  background: rgba(255, 255, 255, 0.035);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.028)),
+    rgba(7, 10, 20, 0.38);
   color: var(--text-muted);
   font-size: 0.84rem;
   font-weight: 760;
@@ -168,14 +162,12 @@ h1 {
 .hero-stats div {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
   padding: 1rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
-    rgba(255, 255, 255, 0.035);
+  background: var(--card-surface);
   backdrop-filter: blur(18px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--card-shadow);
 }
 
 .hero-stats div::after {
@@ -206,11 +198,9 @@ h1 {
   position: relative;
   isolation: isolate;
   padding: 0.78rem;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.04)),
-    rgba(255, 255, 255, 0.035);
+  background: var(--card-surface);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.12) inset,
     var(--shadow-lg);
@@ -223,8 +213,8 @@ h1 {
   z-index: -1;
   border-radius: inherit;
   background:
-    linear-gradient(135deg, rgba(83, 216, 255, 0.34), transparent 34%, rgba(137, 244, 178, 0.2));
-  opacity: 0.34;
+    linear-gradient(135deg, rgba(83, 216, 255, 0.34), transparent 34%, rgba(199, 92, 255, 0.2));
+  opacity: 0.42;
   content: "";
 }
 
@@ -348,12 +338,10 @@ code strong {
 .principle-grid article,
 .journey article,
 .contact-card {
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.078), rgba(255, 255, 255, 0.026)),
-    rgba(255, 255, 255, 0.035);
-  box-shadow: var(--shadow-sm);
+  background: var(--card-surface);
+  box-shadow: var(--card-shadow);
 }
 
 .about-copy {
@@ -364,7 +352,7 @@ code strong {
   margin: 0 0 1rem;
   color: var(--text-strong);
   font-size: clamp(1.45rem, 3vw, 2rem);
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .about-copy p {
@@ -401,8 +389,8 @@ code strong {
 
 .principle-grid article:hover {
   transform: translateY(-3px);
-  border-color: var(--border-strong);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--card-border-strong);
+  background: var(--card-surface-hover);
 }
 
 .principle-grid svg {
@@ -489,8 +477,8 @@ code strong {
 
 .journey article:hover {
   transform: translateX(4px);
-  border-color: var(--border-strong);
-  background: rgba(255, 255, 255, 0.055);
+  border-color: var(--card-border-strong);
+  background: var(--card-surface-hover);
 }
 
 .journey-year {
@@ -562,7 +550,7 @@ code strong {
   margin: 0;
   color: var(--text-strong);
   font-size: var(--step-3);
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
   line-height: 1.05;
 }
 
@@ -691,8 +679,8 @@ code strong {
   h1 {
     max-width: 15ch;
     font-size: clamp(2.7rem, 10.8vw, 3.15rem);
-    letter-spacing: -0.045em;
-    line-height: 0.92;
+    letter-spacing: 0;
+    line-height: 0.96;
   }
 
   .hero-lead {

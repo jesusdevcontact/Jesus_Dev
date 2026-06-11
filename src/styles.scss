@@ -23,6 +23,19 @@
   --border-subtle: rgba(255, 255, 255, 0.095);
   --border-strong: rgba(255, 255, 255, 0.18);
   --border-glow: rgba(83, 216, 255, 0.24);
+  --card-surface:
+    radial-gradient(circle at 22% 0%, rgba(147, 197, 253, 0.09), transparent 18rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.03)),
+    rgba(7, 10, 20, 0.58);
+  --card-surface-hover:
+    radial-gradient(circle at 24% 0%, rgba(147, 197, 253, 0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.04)),
+    rgba(8, 12, 24, 0.66);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --card-border-strong: rgba(156, 210, 255, 0.26);
+  --card-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.075) inset,
+    0 24px 70px rgba(0, 0, 0, 0.3);
   --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.055));
   --glass-inset: 0 1px 0 rgba(255, 255, 255, 0.075) inset;
   --glass-inset-strong: 0 1px 0 rgba(255, 255, 255, 0.11) inset;
@@ -46,10 +59,38 @@
   --grid-line: rgba(255, 255, 255, 0.022);
   --grid-line-strong: rgba(255, 255, 255, 0.035);
   --hero-bg:
-    radial-gradient(ellipse at 48% -8%, rgba(83, 216, 255, 0.2), transparent 34rem),
-    radial-gradient(ellipse at 82% 24%, rgba(137, 244, 178, 0.1), transparent 28rem),
-    radial-gradient(ellipse at 12% 42%, rgba(255, 122, 166, 0.08), transparent 28rem),
-    linear-gradient(180deg, #05060a 0%, #090b12 58%, #05060a 100%);
+    radial-gradient(ellipse at 48% -8%, rgba(83, 216, 255, 0.22), transparent 34rem),
+    radial-gradient(ellipse at 82% 24%, rgba(155, 118, 255, 0.16), transparent 30rem),
+    radial-gradient(ellipse at 12% 42%, rgba(199, 92, 255, 0.1), transparent 28rem),
+    linear-gradient(180deg, rgba(4, 7, 17, 0.72) 0%, rgba(8, 11, 23, 0.6) 58%, rgba(4, 7, 17, 0.8) 100%);
+  --cosmic-bg-base: #030611;
+  --cosmic-bg-vignette:
+    radial-gradient(ellipse at 50% -12%, rgba(83, 216, 255, 0.16), transparent 34rem),
+    radial-gradient(ellipse at 78% 16%, rgba(153, 112, 255, 0.15), transparent 28rem),
+    radial-gradient(ellipse at 16% 34%, rgba(199, 92, 255, 0.1), transparent 30rem),
+    linear-gradient(180deg, rgba(7, 10, 24, 0.92), rgba(3, 6, 17, 0.94));
+  --cosmic-nebula:
+    radial-gradient(circle at 18% 20%, rgba(83, 216, 255, 0.1), transparent 18rem),
+    radial-gradient(circle at 74% 24%, rgba(133, 169, 255, 0.12), transparent 22rem),
+    radial-gradient(circle at 58% 58%, rgba(199, 92, 255, 0.08), transparent 24rem);
+  --cosmic-stars-near:
+    radial-gradient(circle at 9% 18%, rgba(236, 253, 255, 0.78) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 31% 72%, rgba(236, 253, 255, 0.56) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 64% 28%, rgba(187, 247, 255, 0.58) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 83% 66%, rgba(236, 253, 255, 0.5) 0 1px, transparent 1.6px);
+  --cosmic-stars-far:
+    radial-gradient(circle at 18% 24%, rgba(236, 253, 255, 0.42) 0 0.8px, transparent 1.5px),
+    radial-gradient(circle at 46% 62%, rgba(236, 253, 255, 0.3) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 73% 38%, rgba(187, 247, 255, 0.32) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 91% 78%, rgba(236, 253, 255, 0.28) 0 0.8px, transparent 1.4px);
+  --cosmic-orbit-lines:
+    radial-gradient(ellipse at 78% 18%, transparent 0 35%, rgba(147, 197, 253, 0.16) 35.12% 35.34%, transparent 35.52% 100%),
+    radial-gradient(ellipse at 79% 18%, transparent 0 45%, rgba(199, 92, 255, 0.12) 45.14% 45.34%, transparent 45.54% 100%),
+    radial-gradient(ellipse at 9% 76%, transparent 0 39%, rgba(83, 216, 255, 0.08) 39.14% 39.36%, transparent 39.56% 100%);
+  --cosmic-orb-primary:
+    radial-gradient(circle at 82% 22%, rgba(236, 253, 255, 0.34), rgba(83, 216, 255, 0.18) 2.8rem, rgba(83, 216, 255, 0.05) 6rem, transparent 10rem);
+  --cosmic-orb-secondary:
+    radial-gradient(circle at 10% 72%, rgba(199, 92, 255, 0.2), rgba(133, 169, 255, 0.08) 3.8rem, transparent 9rem);
   --radius-xs: 6px;
   --radius-sm: 8px;
   --radius-md: 8px;
@@ -96,6 +137,20 @@
   --border-subtle: rgba(26, 45, 71, 0.16);
   --border-strong: rgba(26, 45, 71, 0.28);
   --border-glow: rgba(0, 127, 168, 0.24);
+  --card-surface:
+    radial-gradient(circle at 24% 0%, rgba(255, 255, 255, 0.88), transparent 18rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 249, 252, 0.76)),
+    rgba(255, 255, 255, 0.76);
+  --card-surface-hover:
+    radial-gradient(circle at 24% 0%, rgba(255, 255, 255, 0.98), transparent 18rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(240, 247, 251, 0.84)),
+    rgba(255, 255, 255, 0.88);
+  --card-border: rgba(26, 45, 71, 0.18);
+  --card-border-strong: rgba(26, 45, 71, 0.32);
+  --card-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 20px 54px rgba(32, 54, 82, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.58);
   --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 250, 253, 0.64));
   --glass-inset: 0 1px 0 rgba(255, 255, 255, 0.92) inset;
   --glass-inset-strong: 0 1px 0 rgba(255, 255, 255, 0.98) inset;
@@ -120,10 +175,38 @@
   --grid-line: rgba(26, 45, 71, 0.06);
   --grid-line-strong: rgba(26, 45, 71, 0.085);
   --hero-bg:
-    radial-gradient(ellipse at 48% -8%, rgba(0, 127, 168, 0.19), transparent 34rem),
-    radial-gradient(ellipse at 82% 24%, rgba(22, 131, 87, 0.11), transparent 28rem),
-    radial-gradient(ellipse at 12% 42%, rgba(187, 53, 100, 0.075), transparent 28rem),
-    linear-gradient(180deg, #e7f1f8 0%, #f8fbfe 46%, #edf3f8 100%);
+    radial-gradient(ellipse at 48% -8%, rgba(0, 127, 168, 0.17), transparent 34rem),
+    radial-gradient(ellipse at 82% 24%, rgba(101, 82, 195, 0.11), transparent 28rem),
+    radial-gradient(ellipse at 12% 42%, rgba(187, 53, 100, 0.06), transparent 28rem),
+    linear-gradient(180deg, rgba(231, 241, 248, 0.82) 0%, rgba(248, 251, 254, 0.72) 46%, rgba(237, 243, 248, 0.86) 100%);
+  --cosmic-bg-base: #edf4fb;
+  --cosmic-bg-vignette:
+    radial-gradient(ellipse at 50% -12%, rgba(0, 127, 168, 0.14), transparent 34rem),
+    radial-gradient(ellipse at 78% 16%, rgba(101, 82, 195, 0.12), transparent 28rem),
+    radial-gradient(ellipse at 16% 34%, rgba(155, 89, 182, 0.07), transparent 30rem),
+    linear-gradient(180deg, rgba(248, 252, 255, 0.94), rgba(237, 244, 251, 0.96));
+  --cosmic-nebula:
+    radial-gradient(circle at 18% 20%, rgba(0, 127, 168, 0.1), transparent 18rem),
+    radial-gradient(circle at 74% 24%, rgba(101, 82, 195, 0.09), transparent 22rem),
+    radial-gradient(circle at 58% 58%, rgba(187, 53, 100, 0.045), transparent 24rem);
+  --cosmic-stars-near:
+    radial-gradient(circle at 9% 18%, rgba(18, 54, 86, 0.2) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 31% 72%, rgba(18, 54, 86, 0.14) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 64% 28%, rgba(0, 127, 168, 0.16) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 83% 66%, rgba(18, 54, 86, 0.12) 0 1px, transparent 1.6px);
+  --cosmic-stars-far:
+    radial-gradient(circle at 18% 24%, rgba(18, 54, 86, 0.12) 0 0.8px, transparent 1.5px),
+    radial-gradient(circle at 46% 62%, rgba(18, 54, 86, 0.08) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 73% 38%, rgba(0, 127, 168, 0.1) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 91% 78%, rgba(18, 54, 86, 0.08) 0 0.8px, transparent 1.4px);
+  --cosmic-orbit-lines:
+    radial-gradient(ellipse at 78% 18%, transparent 0 35%, rgba(0, 127, 168, 0.14) 35.12% 35.34%, transparent 35.52% 100%),
+    radial-gradient(ellipse at 79% 18%, transparent 0 45%, rgba(101, 82, 195, 0.11) 45.14% 45.34%, transparent 45.54% 100%),
+    radial-gradient(ellipse at 9% 76%, transparent 0 39%, rgba(0, 127, 168, 0.08) 39.14% 39.36%, transparent 39.56% 100%);
+  --cosmic-orb-primary:
+    radial-gradient(circle at 82% 22%, rgba(255, 255, 255, 0.72), rgba(0, 127, 168, 0.16) 2.8rem, rgba(0, 127, 168, 0.04) 6rem, transparent 10rem);
+  --cosmic-orb-secondary:
+    radial-gradient(circle at 10% 72%, rgba(101, 82, 195, 0.12), rgba(0, 127, 168, 0.05) 3.8rem, transparent 9rem);
   --shadow-sm: 0 10px 28px rgba(32, 54, 82, 0.1);
   --shadow-md: 0 18px 48px rgba(32, 54, 82, 0.14);
   --shadow-lg: 0 28px 78px rgba(32, 54, 82, 0.18);
@@ -145,10 +228,81 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  background: var(--body-bg);
+  background: var(--cosmic-bg-base);
   color: var(--text-soft);
   text-rendering: geometricPrecision;
   animation: pageEnter 720ms var(--ease-premium) both;
+}
+
+jd-root {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  min-height: 100vh;
+}
+
+.app-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.cosmic-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    var(--cosmic-nebula),
+    var(--cosmic-stars-near),
+    var(--cosmic-stars-far),
+    var(--cosmic-bg-vignette),
+    var(--body-bg),
+    var(--cosmic-bg-base);
+  background-position:
+    center,
+    0 0,
+    70px 38px,
+    center,
+    center,
+    center;
+  background-size:
+    auto,
+    360px 260px,
+    520px 420px,
+    auto,
+    auto,
+    auto;
+  contain: paint;
+}
+
+.cosmic-backdrop::before,
+.cosmic-backdrop::after {
+  position: absolute;
+  inset: -16vh -12vw;
+  pointer-events: none;
+  content: "";
+  will-change: transform, opacity;
+}
+
+.cosmic-backdrop::before {
+  background:
+    var(--cosmic-orb-primary),
+    var(--cosmic-orb-secondary),
+    var(--cosmic-orbit-lines);
+  opacity: 0.9;
+  transform: translate3d(0, 0, 0) rotate(-10deg);
+  animation: cosmicDrift 34s ease-in-out infinite;
+}
+
+.cosmic-backdrop::after {
+  background:
+    linear-gradient(115deg, transparent 0 28%, rgba(255, 255, 255, 0.035) 44%, transparent 60%),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.05), transparent 42rem);
+  opacity: 0.48;
+  transform: translate3d(0, 0, 0);
+  animation: cosmicPulse 22s ease-in-out infinite;
 }
 
 body::before {
@@ -329,15 +483,9 @@ button {
 
 [data-theme="light"] .project-card,
 [data-theme="light"] .tech-card {
-  border-color: rgba(26, 45, 71, 0.18);
-  background:
-    radial-gradient(circle at 24% 0%, rgba(255, 255, 255, 0.82), transparent 18rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 249, 252, 0.74)),
-    rgba(255, 255, 255, 0.74);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.95) inset,
-    0 18px 46px rgba(32, 54, 82, 0.12),
-    0 0 0 1px rgba(255, 255, 255, 0.56);
+  border-color: var(--card-border);
+  background: var(--card-surface);
+  box-shadow: var(--card-shadow);
 }
 
 [data-theme="light"] .project-card::before {
@@ -348,11 +496,8 @@ button {
 
 [data-theme="light"] .project-card:hover,
 [data-theme="light"] .tech-card:hover {
-  border-color: rgba(26, 45, 71, 0.3);
-  background:
-    radial-gradient(circle at 24% 0%, rgba(255, 255, 255, 0.92), transparent 18rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(240, 247, 251, 0.82)),
-    rgba(255, 255, 255, 0.86);
+  border-color: var(--card-border-strong);
+  background: var(--card-surface-hover);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 1) inset,
     0 24px 58px rgba(32, 54, 82, 0.16),
@@ -431,6 +576,32 @@ button {
   }
 }
 
+@keyframes cosmicDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-10deg);
+    opacity: 0.82;
+  }
+
+  50% {
+    transform: translate3d(1.2rem, -0.8rem, 0) rotate(-8deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cosmicPulse {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.38;
+  }
+
+  50% {
+    transform: translate3d(-0.7rem, 0.5rem, 0);
+    opacity: 0.56;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -448,6 +619,13 @@ button {
   .reveal {
     transform: none;
     opacity: 1;
+  }
+
+  .cosmic-backdrop::before,
+  .cosmic-backdrop::after {
+    animation: none !important;
+    transform: none;
+    will-change: auto;
   }
 }
 
