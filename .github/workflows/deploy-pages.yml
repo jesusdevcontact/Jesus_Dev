@@ -41,6 +41,16 @@ jobs:
       - name: Build Angular app
         run: pnpm build:pages
 
+      - name: Verify Pages artifact
+        run: |
+          test -f dist/jesusdev-portfolio/browser/index.html
+          test -f dist/jesusdev-portfolio/browser/404.html
+          test -f dist/jesusdev-portfolio/browser/CNAME
+          test -f dist/jesusdev-portfolio/browser/.nojekyll
+          test -d dist/jesusdev-portfolio/browser/assets
+          grep -qx "jesusdev.dev" dist/jesusdev-portfolio/browser/CNAME
+          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/index.html
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
