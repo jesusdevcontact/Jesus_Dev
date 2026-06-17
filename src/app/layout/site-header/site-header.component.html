@@ -28,6 +28,17 @@
     </nav>
 
     <div class="nav-preferences">
+      <button
+        class="theme-toggle-mobile"
+        type="button"
+        [attr.aria-label]="'accessibility.themeToggle' | translate: { theme: ('theme.' + theme.nextTheme() + 'Label' | translate) }"
+        [attr.title]="'accessibility.themeToggle' | translate: { theme: ('theme.' + theme.nextTheme() + 'Label' | translate) }"
+        (click)="toggleTheme()"
+      >
+        <svg [lucideIcon]="theme.icon()" size="16" aria-hidden="true"></svg>
+        <span>{{ 'theme.' + theme.nextTheme() + 'Label' | translate }}</span>
+      </button>
+
       <div class="theme-switcher" role="group" [attr.aria-label]="'accessibility.themeSwitcher' | translate">
         <button
           type="button"

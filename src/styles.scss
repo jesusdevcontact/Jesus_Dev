@@ -552,6 +552,10 @@ button {
   transform: translateY(0);
 }
 
+jd-home-page .hero-scroll-cue {
+  display: none;
+}
+
 .back-to-top {
   position: fixed;
   right: 0.85rem;
@@ -880,6 +884,32 @@ button {
   }
 }
 
+@keyframes backToTopFloat {
+  0%,
+  100% {
+    transform: translateY(2px);
+    opacity: 0.72;
+  }
+
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+@keyframes scrollCueFloat {
+  0%,
+  100% {
+    transform: translateY(-2px) rotate(45deg);
+    opacity: 0.58;
+  }
+
+  50% {
+    transform: translateY(5px) rotate(45deg);
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -901,7 +931,9 @@ button {
 
   .cosmic-backdrop::before,
   .cosmic-backdrop::after,
-  .cosmic-planet {
+  .cosmic-planet,
+  .back-to-top,
+  jd-home-page .hero-scroll-cue i {
     animation: none !important;
     transform: none;
     will-change: auto;
@@ -953,7 +985,27 @@ button {
   }
 
   .back-to-top {
-    display: grid;
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 0;
+    padding: 0.42rem;
+    background: transparent;
+    color: var(--text-muted);
+    box-shadow: none;
+    backdrop-filter: none;
+    animation: backToTopFloat 1.9s ease-in-out infinite;
+  }
+
+  .back-to-top:hover,
+  .back-to-top:focus-visible {
+    transform: translateY(-2px);
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
   }
 
   jd-home-page .hero-proof:not(.hero-proof--compact) {
@@ -961,7 +1013,7 @@ button {
   }
 
   jd-home-page .hero-proof--compact {
-    display: flex;
+    display: none;
   }
 
   jd-home-page .hero-proof span {
@@ -981,8 +1033,34 @@ button {
     flex: 1 1 calc(50% - 0.3rem);
   }
 
+  jd-home-page .hero {
+    min-height: 100svh;
+  }
+
+  jd-home-page .hero-scroll-cue {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.52rem;
+    margin-top: 1.2rem;
+    color: var(--text-faint);
+    font-size: 0.72rem;
+    font-weight: 820;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  jd-home-page .hero-scroll-cue i {
+    display: block;
+    width: 0.62rem;
+    height: 0.62rem;
+    transform: rotate(45deg);
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    animation: scrollCueFloat 1.8s ease-in-out infinite;
+  }
+
   jd-home-page .hero-quick-nav {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.42rem;
     margin-top: 0.95rem;
@@ -1138,6 +1216,10 @@ button {
   [data-theme="light"] jd-project-card .metric-row span,
   [data-theme="light"] jd-project-card .problem-block {
     border-color: rgba(26, 45, 71, 0.22);
+    color: var(--text-soft);
+  }
+
+  [data-theme="light"] .back-to-top {
     color: var(--text-soft);
   }
 

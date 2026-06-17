@@ -158,6 +158,10 @@
   gap: 0.35rem;
 }
 
+.theme-toggle-mobile {
+  display: none;
+}
+
 .theme-switcher,
 .language-switcher {
   border: 1px solid var(--border-subtle);
@@ -323,27 +327,30 @@
   }
 
   .theme-switcher {
-    flex: 0 0 auto;
+    display: none;
+  }
+
+  .theme-toggle-mobile {
+    display: inline-flex;
+    min-height: 1.94rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.34rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    padding: 0.24rem 0.58rem;
+    background:
+      var(--glass-sheen),
+      var(--surface);
+    color: var(--text-soft);
+    font-size: 0.68rem;
+    font-weight: 850;
+    line-height: 1;
+    box-shadow: var(--glass-inset);
   }
 
   .language-switcher {
     flex: 0 0 auto;
-  }
-
-  .theme-switcher button {
-    min-width: 1.94rem;
-    min-height: 1.94rem;
-    padding-inline: 0;
-  }
-
-  .theme-switcher button span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    clip-path: inset(50%);
   }
 
   .language-switcher button {
@@ -372,14 +379,14 @@
     font-size: 0.78rem;
   }
 
-  .theme-switcher button,
+  .theme-toggle-mobile,
   .language-switcher button {
     font-size: 0.68rem;
   }
 
-  .theme-switcher button {
-    min-width: 1.82rem;
+  .theme-toggle-mobile {
     min-height: 1.82rem;
+    padding-inline: 0.48rem;
   }
 
   .language-switcher button {

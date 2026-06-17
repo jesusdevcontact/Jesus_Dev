@@ -379,7 +379,8 @@
     "socialLinks": "Social links",
     "legalLinks": "Legal links",
     "emailJesus": "Email Jesus",
-    "backToTop": "Back to top"
+    "backToTop": "Back to top",
+    "scrollGently": "scroll gently"
   },
   "seo": {
     "title": "Jesus Dev | Angular & Laravel Full Stack Developer",

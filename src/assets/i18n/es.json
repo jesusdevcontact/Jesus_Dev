@@ -379,7 +379,8 @@
     "socialLinks": "Enlaces sociales",
     "legalLinks": "Enlaces legales",
     "emailJesus": "Enviar email a Jesús",
-    "backToTop": "Volver arriba"
+    "backToTop": "Volver arriba",
+    "scrollGently": "desliza suavemente"
   },
   "seo": {
     "title": "Jesus Dev | Desarrollador Full Stack Angular y Laravel",

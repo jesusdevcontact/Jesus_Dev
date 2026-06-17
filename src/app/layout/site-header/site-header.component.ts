@@ -49,6 +49,10 @@ export class SiteHeaderComponent {
     this.theme.setTheme(theme);
   }
 
+  toggleTheme(): void {
+    this.theme.toggleTheme();
+  }
+
   navHref(target: string): string {
     return target.startsWith('/') ? target : `/#${target}`;
   }

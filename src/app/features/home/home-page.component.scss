@@ -668,8 +668,8 @@ code strong {
 
 @media (max-width: 560px) {
   .hero {
-    padding-top: clamp(5.25rem, 13svh, 6rem);
-    padding-bottom: 2.45rem;
+    padding-top: clamp(4.85rem, 12svh, 5.55rem);
+    padding-bottom: 2.1rem;
   }
 
   .hero .reveal {
@@ -679,42 +679,42 @@ code strong {
   }
 
   .hero-grid {
-    gap: 1.45rem;
+    align-items: start;
+    gap: 1.2rem;
   }
 
   .eyebrow {
-    max-width: 100%;
-    margin-bottom: 0.75rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
+    margin-bottom: 0.58rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.085em;
     line-height: 1.35;
   }
 
   h1 {
-    max-width: 15ch;
-    font-size: clamp(2.7rem, 10.8vw, 3.15rem);
+    max-width: 13ch;
+    font-size: clamp(2.36rem, 9.8vw, 2.92rem);
     letter-spacing: 0;
-    line-height: 0.96;
+    line-height: 0.98;
   }
 
   .hero-lead {
     display: -webkit-box;
     overflow: hidden;
-    margin-top: 0.88rem;
-    font-size: 0.94rem;
-    line-height: 1.55;
+    max-width: 24rem;
+    margin-top: 0.78rem;
+    font-size: 0.9rem;
+    line-height: 1.48;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-  }
-
-  .hero-proof {
-    gap: 0.42rem;
-    margin-top: 0.9rem;
+    -webkit-line-clamp: 2;
   }
 
   .hero-actions {
-    gap: 0.52rem;
-    margin-top: 1.25rem;
+    gap: 0.46rem;
+    margin-top: 1.05rem;
+  }
+
+  .hero-actions .social-action {
+    display: none;
   }
 
   .profile-card {
