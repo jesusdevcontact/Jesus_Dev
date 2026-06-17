@@ -378,7 +378,8 @@
     "projectDemo": "Abrir demo de {{ project }}",
     "socialLinks": "Enlaces sociales",
     "legalLinks": "Enlaces legales",
-    "emailJesus": "Enviar email a Jesús"
+    "emailJesus": "Enviar email a Jesús",
+    "backToTop": "Volver arriba"
   },
   "seo": {
     "title": "Jesus Dev | Desarrollador Full Stack Angular y Laravel",

@@ -18,6 +18,13 @@
           }
         </div>
 
+        <div class="hero-proof hero-proof--compact" [attr.aria-label]="'accessibility.currentFocus' | translate">
+          <span>Angular</span>
+          <span>Laravel</span>
+          <span>Testing</span>
+          <span>Deploy</span>
+        </div>
+
         <div class="hero-actions" [attr.aria-label]="'accessibility.primaryActions' | translate">
           <jd-ui-button href="#projects" [label]="'buttons.viewProjects' | translate" icon="arrow-right" />
           <jd-ui-button [href]="mailtoHref" [label]="'buttons.contact' | translate" icon="mail" variant="secondary" />
@@ -32,6 +39,13 @@
             </svg>
           </a>
         </div>
+
+        <nav class="hero-quick-nav" [attr.aria-label]="'accessibility.primaryNavigation' | translate">
+          <a href="#projects">{{ 'nav.projects' | translate }}</a>
+          <a href="#stack">{{ 'nav.stack' | translate }}</a>
+          <a href="#about">{{ 'nav.about' | translate }}</a>
+          <a href="#contact">{{ 'nav.contact' | translate }}</a>
+        </nav>
 
         <dl class="hero-stats" [attr.aria-label]="'accessibility.professionalStrengths' | translate">
           <div>

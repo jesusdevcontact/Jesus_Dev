@@ -36,7 +36,8 @@
           [attr.aria-label]="'accessibility.themeDark' | translate"
           (click)="setTheme('dark')"
         >
-          {{ 'theme.darkLabel' | translate }}
+          <svg lucideIcon="moon" size="15" aria-hidden="true"></svg>
+          <span>{{ 'theme.darkLabel' | translate }}</span>
         </button>
         <button
           type="button"
@@ -45,7 +46,8 @@
           [attr.aria-label]="'accessibility.themeLight' | translate"
           (click)="setTheme('light')"
         >
-          {{ 'theme.lightLabel' | translate }}
+          <svg lucideIcon="sun" size="15" aria-hidden="true"></svg>
+          <span>{{ 'theme.lightLabel' | translate }}</span>
         </button>
       </div>
 
