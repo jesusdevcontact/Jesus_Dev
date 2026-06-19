@@ -4,11 +4,16 @@ export interface NavItem {
 }
 
 export interface TechCategory {
-  key: 'frontend' | 'backend' | 'testing' | 'architecture' | 'devops' | 'tooling';
+  key: 'frontend' | 'backend' | 'databases' | 'testing' | 'architecture' | 'devops' | 'tooling';
   accent: 'cyan' | 'green' | 'amber' | 'rose' | 'blue';
 }
 
 export type TechCategoryKey = TechCategory['key'];
+
+export type TechIcon = {
+  type: 'lucide';
+  name: string;
+};
 
 export interface ProjectScreenshot {
   src: string;

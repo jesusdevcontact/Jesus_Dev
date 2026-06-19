@@ -210,9 +210,20 @@ li {
     0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
+.tech-mark svg {
+  width: 0.88rem;
+  height: 0.88rem;
+  stroke-width: 2.25;
+}
+
+.tech-name {
+  overflow-wrap: anywhere;
+}
+
 .tech-rest-apis .tech-mark,
 .tech-api-rest .tech-mark,
-.tech-apis-rest .tech-mark {
+.tech-apis-rest .tech-mark,
+.tech-rest-api .tech-mark {
   background: linear-gradient(135deg, #53d8ff, #3b82f6);
   color: #041014;
 }
@@ -221,11 +232,30 @@ li {
 .tech-typescript .tech-mark,
 .tech-laravel .tech-mark,
 .tech-php .tech-mark,
+.tech-filament .tech-mark,
+.tech-react .tech-mark,
+.tech-javascript .tech-mark,
+.tech-html5 .tech-mark,
+.tech-css3 .tech-mark,
+.tech-scss .tech-mark,
+.tech-rxjs .tech-mark,
 .tech-mysql .tech-mark,
 .tech-postgresql .tech-mark,
+.tech-neon .tech-mark,
 .tech-cypress .tech-mark,
 .tech-vitest .tech-mark,
-.tech-phpunit .tech-mark {
+.tech-phpunit .tech-mark,
+.tech-git .tech-mark,
+.tech-github .tech-mark,
+.tech-github-actions .tech-mark,
+.tech-docker .tech-mark,
+.tech-linux .tech-mark,
+.tech-vercel .tech-mark,
+.tech-railway .tech-mark,
+.tech-github-pages .tech-mark,
+.tech-vs-code .tech-mark,
+.tech-postman .tech-mark,
+.tech-metabase .tech-mark {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(83, 216, 255, 0.74));
   color: #041014;
 }
@@ -234,7 +264,25 @@ li {
 .tech-claude-code .tech-mark,
 .tech-ai-assisted-development .tech-mark,
 .tech-ia-aplicada-al-desarrollo .tech-mark,
-.tech-ia-appliquee-au-developpement .tech-mark {
+.tech-ia-appliquee-au-developpement .tech-mark,
+.tech-unit-testing .tech-mark,
+.tech-testing-unitario .tech-mark,
+.tech-tests-unitaires .tech-mark,
+.tech-e2e-testing .tech-mark,
+.tech-testing-e2e .tech-mark,
+.tech-tests-e2e .tech-mark,
+.tech-spa .tech-mark,
+.tech-component-architecture .tech-mark,
+.tech-arquitectura-por-componentes .tech-mark,
+.tech-architecture-par-composants .tech-mark,
+.tech-responsive-design .tech-mark,
+.tech-diseno-responsive .tech-mark,
+.tech-design-responsive .tech-mark,
+.tech-accessibility .tech-mark,
+.tech-accessibilite .tech-mark,
+.tech-separation-of-concerns .tech-mark,
+.tech-separacion-de-responsabilidades .tech-mark,
+.tech-separation-des-responsabilites .tech-mark {
   border-color: rgba(255, 255, 255, 0.105);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.024)),

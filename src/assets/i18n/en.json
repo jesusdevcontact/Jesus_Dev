@@ -84,9 +84,15 @@
       },
       "backend": {
         "title": "Backend",
-        "summary": "APIs, business logic and relational data.",
-        "primaryItems": ["Laravel", "PHP", "MySQL", "PostgreSQL", "REST APIs", "Filament"],
+        "summary": "APIs, business logic and admin panels.",
+        "primaryItems": ["Laravel", "PHP", "Filament"],
         "complementaryItems": ["Python", "Java"]
+      },
+      "databases": {
+        "title": "Databases",
+        "summary": "Relational modeling, SQL queries, and managed data platforms.",
+        "primaryItems": ["MySQL", "PostgreSQL"],
+        "complementaryItems": ["Neon"]
       },
       "testing": {
         "title": "Testing",
@@ -97,7 +103,7 @@
       "architecture": {
         "title": "Architecture",
         "summary": "Maintainable applications organized by responsibility.",
-        "primaryItems": ["SPA", "REST API", "Component architecture", "Responsive design", "Accessibility", "Relational modeling"],
+        "primaryItems": ["SPA", "REST API", "Component architecture", "Responsive design", "Accessibility", "Separation of concerns"],
         "complementaryItems": []
       },
       "devops": {
