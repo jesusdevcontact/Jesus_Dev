@@ -45,11 +45,19 @@ jobs:
         run: |
           test -f dist/jesusdev-portfolio/browser/index.html
           test -f dist/jesusdev-portfolio/browser/404.html
+          test -f dist/jesusdev-portfolio/browser/contact/index.html
+          test -f dist/jesusdev-portfolio/browser/legal/index.html
+          test -f dist/jesusdev-portfolio/browser/privacy/index.html
+          test -f dist/jesusdev-portfolio/browser/cookies/index.html
           test -f dist/jesusdev-portfolio/browser/CNAME
           test -f dist/jesusdev-portfolio/browser/.nojekyll
           test -d dist/jesusdev-portfolio/browser/assets
           grep -qx "jesusdev.dev" dist/jesusdev-portfolio/browser/CNAME
           grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/index.html
+          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/contact/index.html
+          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/legal/index.html
+          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/privacy/index.html
+          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/cookies/index.html
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

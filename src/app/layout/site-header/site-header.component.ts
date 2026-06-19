@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { RouterLink } from '@angular/router';
 import { LucideDynamicIcon } from '@lucide/angular';
 import { TranslatePipe } from '@ngx-translate/core';
 import { fromEvent, map, startWith } from 'rxjs';
@@ -12,7 +13,7 @@ import { ThemePreference, ThemeService } from '../../core/theme/theme.service';
 @Component({
   selector: 'jd-site-header',
   standalone: true,
-  imports: [LucideDynamicIcon, TranslatePipe],
+  imports: [LucideDynamicIcon, TranslatePipe, RouterLink],
   templateUrl: './site-header.component.html',
   styleUrl: './site-header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -55,5 +56,9 @@ export class SiteHeaderComponent {
 
   navHref(target: string): string {
     return target.startsWith('/') ? target : `/#${target}`;
+  }
+
+  isRouteTarget(target: string): boolean {
+    return target.startsWith('/');
   }
 }

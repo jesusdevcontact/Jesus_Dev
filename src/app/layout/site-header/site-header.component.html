@@ -23,7 +23,11 @@
 
     <nav id="primary-navigation" class="site-nav" [class.site-nav--open]="menuOpen()" [attr.aria-label]="'accessibility.primaryNavigation' | translate">
       @for (item of navItems; track item.target) {
-        <a [href]="navHref(item.target)" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
+        @if (isRouteTarget(item.target)) {
+          <a [routerLink]="item.target" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
+        } @else {
+          <a [href]="navHref(item.target)" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
+        }
       }
     </nav>
 

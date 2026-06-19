@@ -1,11 +1,23 @@
-<a
-  class="ui-button"
-  [ngClass]="'ui-button--' + variant()"
-  [href]="href()"
-  [attr.aria-label]="ariaLabel() || label()"
-  [attr.target]="external() ? '_blank' : null"
-  [attr.rel]="external() ? 'noopener noreferrer' : null"
->
-  <svg [lucideIcon]="iconName()" size="18" aria-hidden="true"></svg>
-  <span>{{ label() }}</span>
-</a>
+@if (routerLink()) {
+  <a
+    class="ui-button"
+    [ngClass]="'ui-button--' + variant()"
+    [routerLink]="routerLink()"
+    [attr.aria-label]="ariaLabel() || label()"
+  >
+    <svg [lucideIcon]="iconName()" size="18" aria-hidden="true"></svg>
+    <span>{{ label() }}</span>
+  </a>
+} @else {
+  <a
+    class="ui-button"
+    [ngClass]="'ui-button--' + variant()"
+    [href]="href()"
+    [attr.aria-label]="ariaLabel() || label()"
+    [attr.target]="external() ? '_blank' : null"
+    [attr.rel]="external() ? 'noopener noreferrer' : null"
+  >
+    <svg [lucideIcon]="iconName()" size="18" aria-hidden="true"></svg>
+    <span>{{ label() }}</span>
+  </a>
+}

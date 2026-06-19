@@ -1,17 +1,19 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { LucideDynamicIcon } from '@lucide/angular';
 
 @Component({
   selector: 'jd-ui-button',
   standalone: true,
-  imports: [LucideDynamicIcon, NgClass],
+  imports: [LucideDynamicIcon, NgClass, RouterLink],
   templateUrl: './ui-button.component.html',
   styleUrl: './ui-button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UiButtonComponent {
-  readonly href = input.required<string>();
+  readonly href = input<string>();
+  readonly routerLink = input<string>();
   readonly label = input.required<string>();
   readonly icon = input<string>('arrow-right');
   readonly variant = input<'primary' | 'secondary' | 'ghost'>('primary');
