@@ -159,20 +159,36 @@
 
     <div class="journey" jdReveal>
       @for (item of journeyItems; track item.key) {
-        <article [class]="'journey-card journey-card--' + item.accent">
-          <div class="journey-card-header">
+        <article [class]="'journey-card journey-card--' + item.accent" [class.journey-card--open]="openJourneyItem() === item.key">
+          <button
+            class="journey-trigger"
+            type="button"
+            [id]="journeyTriggerId(item.key)"
+            [attr.aria-expanded]="openJourneyItem() === item.key"
+            [attr.aria-controls]="journeyPanelId(item.key)"
+            (click)="toggleJourneyItem(item.key)"
+          >
             <span class="journey-icon" aria-hidden="true">
               <svg [lucideIcon]="item.icon" size="18"></svg>
             </span>
-            <div>
+            <span class="journey-heading">
               <span class="journey-type">{{ 'experience.types.' + item.type | translate }}</span>
-              <h3>{{ 'experience.items.' + item.key + '.title' | translate }}</h3>
-              <p class="journey-organization">{{ 'experience.items.' + item.key + '.organization' | translate }}</p>
-            </div>
+              <span class="journey-title">{{ 'experience.items.' + item.key + '.title' | translate }}</span>
+              <span class="journey-organization">{{ 'experience.items.' + item.key + '.organization' | translate }}</span>
+            </span>
             <span class="journey-period">{{ 'experience.items.' + item.key + '.period' | translate }}</span>
-          </div>
+            <span class="journey-toggle" aria-hidden="true">
+              <svg lucideIcon="chevron-down" size="18"></svg>
+            </span>
+          </button>
 
-          <div class="journey-card-body">
+          @if (openJourneyItem() === item.key) {
+          <div
+            class="journey-card-body"
+            role="region"
+            [id]="journeyPanelId(item.key)"
+            [attr.aria-labelledby]="journeyTriggerId(item.key)"
+          >
             <p>{{ 'experience.items.' + item.key + '.summary' | translate }}</p>
 
             <ul class="journey-highlights">
@@ -192,6 +208,7 @@
               </div>
             }
           </div>
+          }
         </article>
       }
     </div>

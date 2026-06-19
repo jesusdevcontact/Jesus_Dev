@@ -43,29 +43,30 @@ jobs:
 
       - name: Verify Pages artifact
         run: |
-          test -f dist/jesusdev-portfolio/browser/index.html
-          test -f dist/jesusdev-portfolio/browser/404.html
-          test -f dist/jesusdev-portfolio/browser/contact/index.html
-          test -f dist/jesusdev-portfolio/browser/legal/index.html
-          test -f dist/jesusdev-portfolio/browser/privacy/index.html
-          test -f dist/jesusdev-portfolio/browser/cookies/index.html
-          test -f dist/jesusdev-portfolio/browser/projects/focusflow/index.html
-          test -f dist/jesusdev-portfolio/browser/projects/connectingdevs/index.html
-          test -f dist/jesusdev-portfolio/browser/projects/gibora/index.html
-          test -f dist/jesusdev-portfolio/browser/projects/pegasus-medical/index.html
-          test -f dist/jesusdev-portfolio/browser/CNAME
-          test -f dist/jesusdev-portfolio/browser/.nojekyll
-          test -d dist/jesusdev-portfolio/browser/assets
-          grep -qx "jesusdev.dev" dist/jesusdev-portfolio/browser/CNAME
-          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/index.html
-          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/contact/index.html
-          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/legal/index.html
-          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/privacy/index.html
-          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/cookies/index.html
-          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/projects/focusflow/index.html
-          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/projects/connectingdevs/index.html
-          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/projects/gibora/index.html
-          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/projects/pegasus-medical/index.html
+          artifact="dist/jesusdev-portfolio/browser"
+          test -f "$artifact/index.html"
+          test -f "$artifact/404.html"
+          test -f "$artifact/contact/index.html"
+          test -f "$artifact/legal/index.html"
+          test -f "$artifact/privacy/index.html"
+          test -f "$artifact/cookies/index.html"
+          test -f "$artifact/projects/focusflow/index.html"
+          test -f "$artifact/projects/connectingdevs/index.html"
+          test -f "$artifact/projects/gibora/index.html"
+          test -f "$artifact/projects/pegasus-medical/index.html"
+          test -f "$artifact/CNAME"
+          test -f "$artifact/.nojekyll"
+          test -d "$artifact/assets"
+          grep -qx "jesusdev.dev" "$artifact/CNAME"
+          grep -Eq 'main-[A-Z0-9]+\.js' "$artifact/index.html"
+          grep -Eq 'main-[A-Z0-9]+\.js' "$artifact/contact/index.html"
+          grep -Eq 'main-[A-Z0-9]+\.js' "$artifact/legal/index.html"
+          grep -Eq 'main-[A-Z0-9]+\.js' "$artifact/privacy/index.html"
+          grep -Eq 'main-[A-Z0-9]+\.js' "$artifact/cookies/index.html"
+          grep -Eq 'main-[A-Z0-9]+\.js' "$artifact/projects/focusflow/index.html"
+          grep -Eq 'main-[A-Z0-9]+\.js' "$artifact/projects/connectingdevs/index.html"
+          grep -Eq 'main-[A-Z0-9]+\.js' "$artifact/projects/gibora/index.html"
+          grep -Eq 'main-[A-Z0-9]+\.js' "$artifact/projects/pegasus-medical/index.html"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

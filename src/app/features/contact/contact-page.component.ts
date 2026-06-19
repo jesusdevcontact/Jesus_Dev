@@ -1,9 +1,12 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { LucideDynamicIcon } from '@lucide/angular';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { startWith } from 'rxjs';
 
+import { SeoService } from '../../core/seo/seo.service';
 import { buildContactMailto } from '../../core/utils/contact-mailto';
 
 @Component({
@@ -15,6 +18,9 @@ import { buildContactMailto } from '../../core/utils/contact-mailto';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactPageComponent {
+  private readonly seo = inject(SeoService);
+  private readonly translate = inject(TranslateService);
+
   readonly fallbackMailto = buildContactMailto();
   readonly githubUrl = 'https://github.com/jesusdev98';
   readonly linkedinUrl = 'https://linkedin.com/in/jesus-martinez-escobar-223722374';
@@ -23,6 +29,23 @@ export class ContactPageComponent {
   company = '';
   subject = '';
   message = '';
+
+  constructor() {
+    const languageChanges = toSignal(this.translate.onLangChange.pipe(startWith(null)), { initialValue: null });
+
+    effect(() => {
+      languageChanges();
+      this.seo.update({
+        title: this.translate.instant('seo.pages.contact.title'),
+        description: this.translate.instant('seo.pages.contact.description'),
+        imageAlt: this.translate.instant('seo.imageAlt'),
+        path: '/contact',
+        locale: this.localeFor(this.translate.currentLang),
+      });
+      this.seo.removeJsonLd('profile');
+      this.seo.removeJsonLd('project');
+    });
+  }
 
   mailtoHref(): string {
     const subject = this.subject.trim() || 'Oportunidad o proyecto digital · Jesus Martinez Escobar';
@@ -39,5 +62,15 @@ export class ContactPageComponent {
     ].join('\n');
 
     return buildContactMailto(subject, body);
+  }
+
+  private localeFor(language: string): string {
+    const locales: Record<string, string> = {
+      es: 'es_ES',
+      en: 'en_US',
+      fr: 'fr_FR',
+    };
+
+    return locales[language] ?? 'es_ES';
   }
 }

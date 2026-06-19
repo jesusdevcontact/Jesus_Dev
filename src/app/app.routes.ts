@@ -5,34 +5,34 @@ export const routes: Routes = [
     path: '',
     loadComponent: () =>
       import('./features/home/home-page.component').then((component) => component.HomePageComponent),
-    title: 'Jesus Dev | Angular & Laravel Full Stack Developer',
+    title: 'Jesús Martínez Escobar | Desarrollador Full Stack Angular y Laravel',
   },
   {
     path: 'privacy',
     loadComponent: () =>
       import('./features/legal/legal-page.component').then((component) => component.LegalPageComponent),
     data: { page: 'privacy' },
-    title: 'Privacy Policy | Jesus Dev',
+    title: 'Política de privacidad | Jesús Martínez Escobar',
   },
   {
     path: 'cookies',
     loadComponent: () =>
       import('./features/legal/legal-page.component').then((component) => component.LegalPageComponent),
     data: { page: 'cookies' },
-    title: 'Cookies Policy | Jesus Dev',
+    title: 'Política de cookies | Jesús Martínez Escobar',
   },
   {
     path: 'legal',
     loadComponent: () =>
       import('./features/legal/legal-page.component').then((component) => component.LegalPageComponent),
     data: { page: 'legal' },
-    title: 'Legal Notice | Jesus Dev',
+    title: 'Aviso legal | Jesús Martínez Escobar',
   },
   {
     path: 'contact',
     loadComponent: () =>
       import('./features/contact/contact-page.component').then((component) => component.ContactPageComponent),
-    title: 'Contact | Jesus Dev',
+    title: 'Contacto | Jesús Martínez Escobar',
   },
   {
     path: 'projects/:slug',

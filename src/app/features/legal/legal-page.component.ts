@@ -1,9 +1,12 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterLink, ActivatedRoute } from '@angular/router';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { startWith } from 'rxjs';
 
 import { TranslateArrayPipe } from '../../shared/pipes/translate-array.pipe';
 import { buildContactMailto } from '../../core/utils/contact-mailto';
+import { SeoService } from '../../core/seo/seo.service';
 
 type LegalPageKey = 'privacy' | 'cookies' | 'legal';
 
@@ -17,6 +20,8 @@ type LegalPageKey = 'privacy' | 'cookies' | 'legal';
 })
 export class LegalPageComponent {
   private readonly route = inject(ActivatedRoute);
+  private readonly seo = inject(SeoService);
+  private readonly translate = inject(TranslateService);
   readonly mailtoHref = buildContactMailto();
 
   readonly page = computed<LegalPageKey>(() => this.route.snapshot.data['page'] ?? 'privacy');
@@ -29,4 +34,33 @@ export class LegalPageComponent {
 
     return sections[this.page()];
   });
+
+  constructor() {
+    const languageChanges = toSignal(this.translate.onLangChange.pipe(startWith(null)), { initialValue: null });
+
+    effect(() => {
+      languageChanges();
+      const page = this.page();
+
+      this.seo.update({
+        title: this.translate.instant(`seo.pages.${page}.title`),
+        description: this.translate.instant(`seo.pages.${page}.description`),
+        imageAlt: this.translate.instant('seo.imageAlt'),
+        path: `/${page}`,
+        locale: this.localeFor(this.translate.currentLang),
+      });
+      this.seo.removeJsonLd('profile');
+      this.seo.removeJsonLd('project');
+    });
+  }
+
+  private localeFor(language: string): string {
+    const locales: Record<string, string> = {
+      es: 'es_ES',
+      en: 'en_US',
+      fr: 'fr_FR',
+    };
+
+    return locales[language] ?? 'es_ES';
+  }
 }

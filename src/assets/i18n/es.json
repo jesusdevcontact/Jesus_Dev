@@ -14,7 +14,7 @@
   },
   "hero": {
     "eyebrow": "Desarrollador Full Stack / Angular + Laravel",
-    "title": "Desarrollo webs que llevan tus ideas a otra órbita.",
+    "title": "Jesús Martínez Escobar, Full Stack Angular y Laravel.",
     "lead": "Full-Stack Developer especializado en Angular, Laravel y experiencias digitales limpias, rápidas y escalables. Construyo interfaces tipadas, APIs REST y flujos responsive para equipos reales.",
     "proof": [
       "Disponible para roles frontend y Full Stack",
@@ -164,7 +164,7 @@
         "quality": ["Utilidades listas para Vitest", "Foco visible con teclado", "Soporte reduced motion"],
         "deployment": "Demo pública desplegada en Vercel y repositorio disponible en GitHub.",
         "impact": ["Estructura Angular", "Flujo de estado tipado", "Comportamiento UI accesible"],
-        "seoTitle": "FocusFlow | Proyecto Angular PWA | Jesus Dev",
+        "seoTitle": "FocusFlow | Proyecto Angular PWA | Jesús Martínez Escobar",
         "seoDescription": "Detalle de FocusFlow, una PWA Angular para sesiones de foco, prioridades y revisión de progreso."
       },
       "gibora": {
@@ -186,7 +186,7 @@
         "quality": ["Validación backend", "Pantallas con permisos", "Setup local repetible"],
         "deployment": "El despliegue público sigue pendiente; por eso no se muestra enlace de demo.",
         "impact": ["Próximamente desplegado", "Fase final antes de despliegue", "E-commerce full stack"],
-        "seoTitle": "GIBORA | E-commerce Laravel | Jesus Dev",
+        "seoTitle": "GIBORA | E-commerce Laravel | Jesús Martínez Escobar",
         "seoDescription": "Detalle de GIBORA, e-commerce Laravel y Filament en fase final antes de despliegue público."
       },
       "devConnect": {
@@ -204,7 +204,7 @@
         "quality": ["Cobertura E2E con Cypress", "Feedback accesible", "Estados de auth y error API"],
         "deployment": "Proyecto público desplegado con dominio propio, demo disponible y repositorio frontend en GitHub.",
         "impact": ["Lanzamiento público de ConnectingDevs", "REST API y flujos de datos", "Flujos de auth y perfil"],
-        "seoTitle": "ConnectingDevs | Plataforma Full Stack | Jesus Dev",
+        "seoTitle": "ConnectingDevs | Plataforma Full Stack | Jesús Martínez Escobar",
         "seoDescription": "Detalle de ConnectingDevs, red Full Stack para perfiles developer con Angular, Laravel y PostgreSQL."
       },
       "pegasusMedical": {
@@ -228,7 +228,7 @@
         "quality": ["Sistema interno privado", "Registros auditables de trazabilidad", "Sin demo ni repositorio público"],
         "deployment": "Proyecto interno privado; no se publican demo, repositorio ni capturas para proteger el contexto operativo.",
         "impact": ["Flujos RFID hospitalarios", "Módulo de reporting", "Soporte para control de acceso y puertas"],
-        "seoTitle": "Pegasus Medical | Proyecto interno Laravel RFID | Jesus Dev",
+        "seoTitle": "Pegasus Medical | Proyecto interno Laravel RFID | Jesús Martínez Escobar",
         "seoDescription": "Resumen técnico de Pegasus Medical, proyecto interno con Laravel, Filament, MySQL, RFID y Metabase sin información privada."
       }
     }
@@ -491,8 +491,26 @@
     "scrollGently": "desliza suavemente"
   },
   "seo": {
-    "title": "Jesus Dev | Desarrollador Full Stack Angular y Laravel",
-    "description": "Portfolio de Jesús Martínez Escobar, Desarrollador Full Stack enfocado en Angular, Laravel, aplicaciones web, colaboraciones técnicas y proyectos digitales.",
-    "imageAlt": "Vista previa del portfolio Jesus Dev"
+    "title": "Jesús Martínez Escobar | Desarrollador Full Stack Angular y Laravel",
+    "description": "Portfolio de Jesús Martínez Escobar, desarrollador Full Stack especializado en Angular y Laravel. Proyectos, experiencia, stack técnico y contacto.",
+    "imageAlt": "Vista previa del portfolio Jesus Dev",
+    "pages": {
+      "contact": {
+        "title": "Contacto | Jesús Martínez Escobar",
+        "description": "Contacto profesional de Jesús Martínez Escobar para oportunidades Frontend, Full Stack, Angular, Laravel y proyectos web."
+      },
+      "privacy": {
+        "title": "Política de privacidad | Jesús Martínez Escobar",
+        "description": "Política de privacidad de jesusdev.dev, portfolio personal de Jesús Martínez Escobar alojado en GitHub Pages."
+      },
+      "cookies": {
+        "title": "Política de cookies | Jesús Martínez Escobar",
+        "description": "Información sobre preferencias locales, cookies y almacenamiento del navegador en jesusdev.dev."
+      },
+      "legal": {
+        "title": "Aviso legal | Jesús Martínez Escobar",
+        "description": "Aviso legal de jesusdev.dev, portfolio personal de Jesús Martínez Escobar para proyectos, experiencia y contacto profesional."
+      }
+    }
   }
 }

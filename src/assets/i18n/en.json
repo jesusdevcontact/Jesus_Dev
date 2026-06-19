@@ -14,7 +14,7 @@
   },
   "hero": {
     "eyebrow": "Full Stack Developer / Angular + Laravel",
-    "title": "I build web experiences that take your ideas into orbit.",
+    "title": "Jesus Martinez Escobar, Angular and Laravel Full Stack.",
     "lead": "Full Stack Developer specialized in Angular, Laravel, and clean, fast, scalable digital experiences. I build typed interfaces, REST APIs and responsive flows for real teams.",
     "proof": [
       "Available for frontend and Full Stack roles",
@@ -164,7 +164,7 @@
         "quality": ["Vitest-ready utilities", "Keyboard focus states", "Reduced-motion support"],
         "deployment": "Public demo deployed on Vercel and repository available on GitHub.",
         "impact": ["Angular structure", "Typed state flow", "Accessible UI behavior"],
-        "seoTitle": "FocusFlow | Angular PWA Project | Jesus Dev",
+        "seoTitle": "FocusFlow | Angular PWA Project | Jesus Martinez Escobar",
         "seoDescription": "Project detail for FocusFlow, an Angular PWA for focus sessions, priorities and progress review."
       },
       "gibora": {
@@ -186,7 +186,7 @@
         "quality": ["Backend validation", "Permission-aware screens", "Repeatable local setup"],
         "deployment": "Public deployment is still pending; that is why no demo link is shown.",
         "impact": ["Coming soon", "Final pre-deployment stage", "Full-stack e-commerce"],
-        "seoTitle": "GIBORA | Laravel E-commerce | Jesus Dev",
+        "seoTitle": "GIBORA | Laravel E-commerce | Jesus Martinez Escobar",
         "seoDescription": "Project detail for GIBORA, a Laravel and Filament e-commerce in final stage before public deployment."
       },
       "devConnect": {
@@ -204,7 +204,7 @@
         "quality": ["Cypress E2E coverage", "Accessible form feedback", "API auth and error states"],
         "deployment": "Public project deployed with a custom domain, live demo available and frontend repository on GitHub.",
         "impact": ["ConnectingDevs public launch", "REST API and data flows", "Auth and profile workflows"],
-        "seoTitle": "ConnectingDevs | Full Stack Platform | Jesus Dev",
+        "seoTitle": "ConnectingDevs | Full Stack Platform | Jesus Martinez Escobar",
         "seoDescription": "Project detail for ConnectingDevs, a Full Stack developer network with Angular, Laravel and PostgreSQL."
       },
       "pegasusMedical": {
@@ -228,7 +228,7 @@
         "quality": ["Private internal system", "Auditable traceability records", "No public demo or repository"],
         "deployment": "Private internal project; no demo, repository or screenshots are published to protect the operational context.",
         "impact": ["Hospital RFID workflows", "Reporting module", "Access and room-door flow support"],
-        "seoTitle": "Pegasus Medical | Internal Laravel RFID Project | Jesus Dev",
+        "seoTitle": "Pegasus Medical | Internal Laravel RFID Project | Jesus Martinez Escobar",
         "seoDescription": "Technical summary for Pegasus Medical, an internal project with Laravel, Filament, MySQL, RFID and Metabase without private information."
       }
     }
@@ -491,8 +491,26 @@
     "scrollGently": "scroll gently"
   },
   "seo": {
-    "title": "Jesus Dev | Angular & Laravel Full Stack Developer",
-    "description": "Portfolio for Jesus Martinez Escobar, a Full Stack Developer focused on Angular, Laravel, web applications, technical collaborations and digital projects.",
-    "imageAlt": "Jesus Dev portfolio preview"
+    "title": "Jesus Martinez Escobar | Angular & Laravel Full Stack Developer",
+    "description": "Portfolio for Jesus Martinez Escobar, a Full Stack Developer specialized in Angular and Laravel. Projects, experience, technical stack and contact.",
+    "imageAlt": "Jesus Dev portfolio preview",
+    "pages": {
+      "contact": {
+        "title": "Contact | Jesus Martinez Escobar",
+        "description": "Professional contact page for Jesus Martinez Escobar for Frontend, Full Stack, Angular, Laravel and web project opportunities."
+      },
+      "privacy": {
+        "title": "Privacy Policy | Jesus Martinez Escobar",
+        "description": "Privacy policy for jesusdev.dev, the personal portfolio of Jesus Martinez Escobar hosted on GitHub Pages."
+      },
+      "cookies": {
+        "title": "Cookies Policy | Jesus Martinez Escobar",
+        "description": "Information about local preferences, cookies and browser storage on jesusdev.dev."
+      },
+      "legal": {
+        "title": "Legal Notice | Jesus Martinez Escobar",
+        "description": "Legal notice for jesusdev.dev, the personal portfolio of Jesus Martinez Escobar for projects, experience and professional contact."
+      }
+    }
   }
 }

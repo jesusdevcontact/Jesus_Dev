@@ -41,3 +41,5 @@ export interface JourneyItem {
   icon: 'database' | 'workflow' | 'code-2' | 'check-circle-2';
   accent: 'cyan' | 'green' | 'amber' | 'rose';
 }
+
+export type JourneyKey = JourneyItem['key'];

@@ -1,6 +1,5 @@
 import { DOCUMENT } from '@angular/common';
 import { Injectable, inject, signal } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 export type SupportedLanguage = 'es' | 'en' | 'fr';
@@ -13,8 +12,6 @@ const SUPPORTED_LANGUAGES: SupportedLanguage[] = ['es', 'en', 'fr'];
 export class I18nService {
   private readonly translate = inject(TranslateService);
   private readonly document = inject(DOCUMENT);
-  private readonly title = inject(Title);
-  private readonly meta = inject(Meta);
 
   readonly languages = SUPPORTED_LANGUAGES;
   readonly currentLanguage = signal<SupportedLanguage>(FALLBACK_LANGUAGE);
@@ -30,7 +27,6 @@ export class I18nService {
       const language = this.normalizeLanguage(event.lang);
       this.currentLanguage.set(language);
       this.document.documentElement.lang = language;
-      this.updateSeo();
     });
   }
 
@@ -40,7 +36,6 @@ export class I18nService {
     this.translate.use(normalizedLanguage).subscribe(() => {
       this.currentLanguage.set(normalizedLanguage);
       this.document.documentElement.lang = normalizedLanguage;
-      this.updateSeo();
     });
   }
 
@@ -94,29 +89,4 @@ export class I18nService {
     }
   }
 
-  private updateSeo(): void {
-    const title = this.translate.instant('seo.title');
-    const description = this.translate.instant('seo.description');
-    const imageAlt = this.translate.instant('seo.imageAlt');
-
-    this.title.setTitle(title);
-    this.meta.updateTag({ name: 'description', content: description });
-    this.meta.updateTag({ property: 'og:title', content: title });
-    this.meta.updateTag({ property: 'og:description', content: description });
-    this.meta.updateTag({ property: 'og:locale', content: this.localeFor(this.currentLanguage()) });
-    this.meta.updateTag({ name: 'twitter:title', content: title });
-    this.meta.updateTag({ name: 'twitter:description', content: description });
-    this.meta.updateTag({ property: 'og:image:alt', content: imageAlt });
-    this.meta.updateTag({ name: 'twitter:image:alt', content: imageAlt });
-  }
-
-  private localeFor(language: SupportedLanguage): string {
-    const locales: Record<SupportedLanguage, string> = {
-      es: 'es_ES',
-      en: 'en_US',
-      fr: 'fr_FR',
-    };
-
-    return locales[language];
-  }
 }
