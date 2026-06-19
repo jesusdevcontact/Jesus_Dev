@@ -234,26 +234,76 @@
     }
   },
   "experience": {
-    "eyebrow": "Experiencia",
-    "title": "De la formación DAW al contexto operacional real y proyectos Full Stack.",
+    "eyebrow": "Experiencia y formación",
+    "title": "De dirigir equipos a construir soluciones de software.",
+    "intro": "Mi perfil técnico actual se apoya también en años trabajando con personas, procesos, objetivos e incidencias: una base profesional que hoy aplico al análisis, la organización y la entrega por fases.",
+    "transferableLabel": "Conexión con desarrollo",
+    "types": {
+      "technicalExperience": "Experiencia técnica",
+      "managementExperience": "Gestión y operaciones",
+      "technicalEducation": "Formación técnica",
+      "previousEducation": "Formación previa"
+    },
     "items": {
-      "daw": {
-        "year": "DAW",
-        "title": "DAW: fundamentos Full Stack prácticos",
-        "summary": "Construí una base funcional en estructura frontend, lógica backend, bases de datos relacionales, control de versiones y la disciplina de explicar decisiones técnicas con claridad.",
-        "details": ["Fundamentos de Angular y TypeScript", "Práctica de APIs con PHP y Laravel", "Modelado MySQL y razonamiento SQL"]
-      },
       "pegasus": {
-        "year": "Prácticas",
-        "title": "Prácticas en Pegasus Medical",
-        "summary": "Trabajé en un contexto operacional real donde las decisiones de software se conectan con inventario, control de acceso, flujos sanitarios y manejo fiable de datos.",
-        "details": ["Contexto RFID y gestión de stock", "Exposición a flujos admin con Laravel/Filament", "Conciencia de producción, privacidad y trazabilidad"]
+        "period": "Febrero - junio 2026",
+        "title": "Prácticas Full Stack",
+        "organization": "Pegasus Medical Iberia",
+        "summary": "Participé en un proyecto interno de trazabilidad hospitalaria mediante RFID, trabajando con Laravel 12, Filament 5, MySQL y un dominio donde los datos debían ser claros, mantenibles y auditables.",
+        "highlights": [
+          "Desarrollo y mantenimiento de funcionalidades con Laravel, Filament y MySQL",
+          "Tratamiento de eventos procedentes de sistemas RFID",
+          "Creación de un módulo de reporting y apoyo en dashboards con Metabase",
+          "Gestión de roles, usuarios, inventario, accesos, movimientos e históricos",
+          "Trabajo con Docker, Linux, SSH, SMTP, testing e incidencias del entorno"
+        ],
+        "transferable": [
+          "Comprender un dominio nuevo antes de implementar",
+          "Analizar flujos reales, trabajar por fases y validar resultados"
+        ]
       },
-      "progression": {
-        "year": "Ahora",
-        "title": "Enfoque Full Stack actual",
-        "summary": "Construyo features completas con pantallas Angular, endpoints Laravel, validación, manejo de datos, revisiones de accesibilidad y flujo de despliegue.",
-        "details": ["Estructura Angular reutilizable", "Diseño de APIs Laravel", "Rendimiento, accesibilidad y preparación de despliegue"]
+      "fitup": {
+        "period": "Etapa previa",
+        "title": "Director de Centro",
+        "organization": "Fitup",
+        "summary": "Mi trayectoria en el sector deportivo empezó en funciones operativas, atención y acompañamiento de usuarios, y progresó hasta la dirección de un centro con más de 3.000 socios y un equipo aproximado de 15 personas.",
+        "highlights": [
+          "Coordinación diaria de operaciones, equipo y prioridades",
+          "Seguimiento de objetivos y organización del trabajo del centro",
+          "Atención al cliente y comunicación con perfiles muy distintos",
+          "Resolución de incidencias con impacto en usuarios, equipo y servicio",
+          "Responsabilidad sobre decisiones operativas y corrección de problemas"
+        ],
+        "transferable": [
+          "Analizar antes de actuar y priorizar por impacto, urgencia y recursos",
+          "Dividir problemas complejos en tareas manejables y hacer seguimiento hasta cerrarlos",
+          "Ordenar procesos, comunicar con claridad y asumir responsabilidad sobre el resultado"
+        ]
+      },
+      "daw": {
+        "period": "Formación técnica",
+        "title": "Técnico Superior en Desarrollo de Aplicaciones Web",
+        "organization": "Formación DAW",
+        "summary": "Esta formación me permitió trasladar capacidades previas de análisis, organización y constancia al desarrollo de software, con una base práctica en interfaces, APIs, datos y despliegue.",
+        "highlights": [
+          "Angular, TypeScript y construcción de interfaces",
+          "Laravel, PHP y diseño de APIs REST",
+          "Bases de datos relacionales, modelado y razonamiento SQL",
+          "Testing, arquitectura por responsabilidades y flujo de despliegue"
+        ],
+        "transferable": []
+      },
+      "physicalConditioning": {
+        "period": "Formación previa",
+        "title": "Técnico Superior en Acondicionamiento Físico",
+        "organization": "Formación deportiva",
+        "summary": "Una base orientada al trabajo con personas, la planificación, el seguimiento y la comunicación. Refuerza una forma de trabajar constante, cercana y centrada en objetivos reales.",
+        "highlights": [
+          "Planificación y seguimiento de procesos",
+          "Comunicación con usuarios y adaptación a cada contexto",
+          "Disciplina, constancia y mejora continua"
+        ],
+        "transferable": []
       }
     }
   },

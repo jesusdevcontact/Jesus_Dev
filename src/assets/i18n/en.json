@@ -234,26 +234,76 @@
     }
   },
   "experience": {
-    "eyebrow": "Experience",
-    "title": "From DAW training to real operational context and Full Stack project work.",
+    "eyebrow": "Experience and education",
+    "title": "From managing teams to building software solutions.",
+    "intro": "My current technical profile also builds on years working with people, processes, goals and incidents: a professional base I now apply to analysis, organization and phased delivery.",
+    "transferableLabel": "Connection to development",
+    "types": {
+      "technicalExperience": "Technical experience",
+      "managementExperience": "Management and operations",
+      "technicalEducation": "Technical education",
+      "previousEducation": "Previous education"
+    },
     "items": {
-      "daw": {
-        "year": "DAW",
-        "title": "DAW studies: practical Full Stack foundations",
-        "summary": "Built a working base across frontend structure, backend logic, relational databases, version control, and the discipline needed to explain technical choices clearly.",
-        "details": ["Angular and TypeScript fundamentals", "PHP and Laravel API practice", "MySQL modeling and SQL reasoning"]
-      },
       "pegasus": {
-        "year": "Internship",
-        "title": "Pegasus Medical internship",
-        "summary": "Worked in a real operational context where software decisions connect to inventory, access control, healthcare workflows, and the need for clear, reliable data handling.",
-        "details": ["RFID and stock-management context", "Laravel/Filament admin workflow exposure", "Production constraints, privacy, and traceability awareness"]
+        "period": "February - June 2026",
+        "title": "Full Stack internship",
+        "organization": "Pegasus Medical Iberia",
+        "summary": "I contributed to an internal hospital traceability project based on RFID, working with Laravel 12, Filament 5, MySQL and a domain where data needed to be clear, maintainable and auditable.",
+        "highlights": [
+          "Development and maintenance of features with Laravel, Filament and MySQL",
+          "Handling events coming from RFID systems",
+          "Creation of a reporting module and support for dashboards with Metabase",
+          "Management of roles, users, inventory, access, movements and history",
+          "Work with Docker, Linux, SSH, SMTP, testing and environment incidents"
+        ],
+        "transferable": [
+          "Understanding a new domain before implementing",
+          "Analyzing real flows, working in phases and validating results"
+        ]
       },
-      "progression": {
-        "year": "Now",
-        "title": "Current Full Stack focus",
-        "summary": "Building complete features with Angular screens, Laravel endpoints, validation, data handling, accessibility checks and deployment flow.",
-        "details": ["Reusable Angular structure", "Laravel API design", "Performance, accessibility and deployment readiness"]
+      "fitup": {
+        "period": "Previous stage",
+        "title": "Sports center manager",
+        "organization": "Fitup",
+        "summary": "My path in the sports sector began with operational work, customer care and user support, and progressed to managing a center with more than 3,000 members and a team of around 15 people.",
+        "highlights": [
+          "Daily coordination of operations, team and priorities",
+          "Goal tracking and organization of center work",
+          "Customer care and communication with very different profiles",
+          "Incident resolution affecting users, team and service",
+          "Responsibility for operational decisions and correcting problems"
+        ],
+        "transferable": [
+          "Analyzing before acting and prioritizing by impact, urgency and available resources",
+          "Breaking complex problems into manageable tasks and following them through",
+          "Organizing processes, communicating clearly and taking responsibility for outcomes"
+        ]
+      },
+      "daw": {
+        "period": "Technical education",
+        "title": "Higher Technician in Web Application Development",
+        "organization": "DAW training",
+        "summary": "This training helped me transfer previous skills in analysis, organization and consistency into software development, with a practical base in interfaces, APIs, data and deployment.",
+        "highlights": [
+          "Angular, TypeScript and interface building",
+          "Laravel, PHP and REST API design",
+          "Relational databases, modeling and SQL reasoning",
+          "Testing, responsibility-based architecture and deployment flow"
+        ],
+        "transferable": []
+      },
+      "physicalConditioning": {
+        "period": "Previous education",
+        "title": "Higher Technician in Physical Conditioning",
+        "organization": "Sports training",
+        "summary": "A people-focused foundation built around planning, follow-up and communication. It reinforces a consistent, approachable way of working toward real goals.",
+        "highlights": [
+          "Planning and tracking processes",
+          "Communication with users and adaptation to each context",
+          "Discipline, consistency and continuous improvement"
+        ],
+        "transferable": []
       }
     }
   },

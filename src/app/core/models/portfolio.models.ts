@@ -36,5 +36,8 @@ export interface Project {
 }
 
 export interface JourneyItem {
-  key: 'daw' | 'pegasus' | 'progression';
+  key: 'pegasus' | 'fitup' | 'daw' | 'physicalConditioning';
+  type: 'technicalExperience' | 'managementExperience' | 'technicalEducation' | 'previousEducation';
+  icon: 'database' | 'workflow' | 'code-2' | 'check-circle-2';
+  accent: 'cyan' | 'green' | 'amber' | 'rose';
 }

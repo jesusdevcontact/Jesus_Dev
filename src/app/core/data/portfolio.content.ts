@@ -131,7 +131,28 @@ export const projects: Project[] = [
 ];
 
 export const journeyItems: JourneyItem[] = [
-  { key: 'daw' },
-  { key: 'pegasus' },
-  { key: 'progression' },
+  {
+    key: 'pegasus',
+    type: 'technicalExperience',
+    icon: 'database',
+    accent: 'cyan',
+  },
+  {
+    key: 'fitup',
+    type: 'managementExperience',
+    icon: 'workflow',
+    accent: 'green',
+  },
+  {
+    key: 'daw',
+    type: 'technicalEducation',
+    icon: 'code-2',
+    accent: 'amber',
+  },
+  {
+    key: 'physicalConditioning',
+    type: 'previousEducation',
+    icon: 'check-circle-2',
+    accent: 'rose',
+  },
 ];

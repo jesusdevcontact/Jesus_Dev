@@ -155,18 +155,42 @@
     [eyebrow]="'experience.eyebrow' | translate"
     [title]="'experience.title' | translate"
   >
+    <p class="journey-intro">{{ 'experience.intro' | translate }}</p>
+
     <div class="journey" jdReveal>
       @for (item of journeyItems; track item.key) {
-        <article>
-          <span class="journey-year">{{ 'experience.items.' + item.key + '.year' | translate }}</span>
-          <div>
-            <h3>{{ 'experience.items.' + item.key + '.title' | translate }}</h3>
+        <article [class]="'journey-card journey-card--' + item.accent">
+          <div class="journey-card-header">
+            <span class="journey-icon" aria-hidden="true">
+              <svg [lucideIcon]="item.icon" size="18"></svg>
+            </span>
+            <div>
+              <span class="journey-type">{{ 'experience.types.' + item.type | translate }}</span>
+              <h3>{{ 'experience.items.' + item.key + '.title' | translate }}</h3>
+              <p class="journey-organization">{{ 'experience.items.' + item.key + '.organization' | translate }}</p>
+            </div>
+            <span class="journey-period">{{ 'experience.items.' + item.key + '.period' | translate }}</span>
+          </div>
+
+          <div class="journey-card-body">
             <p>{{ 'experience.items.' + item.key + '.summary' | translate }}</p>
-            <ul>
-              @for (detail of ('experience.items.' + item.key + '.details' | translate | translateArray); track detail) {
-                <li>{{ detail }}</li>
+
+            <ul class="journey-highlights">
+              @for (highlight of ('experience.items.' + item.key + '.highlights' | translate | translateArray); track highlight) {
+                <li>{{ highlight }}</li>
               }
             </ul>
+
+            @if (('experience.items.' + item.key + '.transferable' | translate | translateArray).length) {
+              <div class="journey-transfer">
+                <h4>{{ 'experience.transferableLabel' | translate }}</h4>
+                <ul>
+                  @for (skill of ('experience.items.' + item.key + '.transferable' | translate | translateArray); track skill) {
+                    <li>{{ skill }}</li>
+                  }
+                </ul>
+              </div>
+            }
           </div>
         </article>
       }
