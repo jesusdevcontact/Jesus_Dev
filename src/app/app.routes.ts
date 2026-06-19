@@ -35,6 +35,11 @@ export const routes: Routes = [
     title: 'Contact | Jesus Dev',
   },
   {
+    path: 'projects/:slug',
+    loadComponent: () =>
+      import('./features/project-detail/project-detail-page.component').then((component) => component.ProjectDetailPageComponent),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

@@ -119,16 +119,42 @@
     "title": "Projects that show Angular UI, Laravel APIs, data modeling and quality decisions.",
     "labels": {
       "problem": "Problem",
+      "solution": "Solution built",
       "decisions": "Decisions",
       "architecture": "Architecture",
       "quality": "Quality",
-      "stack": "Stack used"
+      "deployment": "Deployment and status",
+      "stack": "Stack used",
+      "featuredStack": "Featured stack"
+    },
+    "categories": {
+      "pwa": "PWA",
+      "fullStack": "Full Stack",
+      "ecommerce": "E-commerce",
+      "internal": "Internal project",
+      "collaborative": "Collaborative platform"
+    },
+    "status": {
+      "pendingDeployment": "Deployment pending",
+      "internal": "Internal project"
+    },
+    "actions": {
+      "viewProject": "View project",
+      "viewProjectAria": "View {{ project }} project",
+      "backToProjects": "Back to projects",
+      "contactCta": "Talk about a project"
+    },
+    "notFound": {
+      "title": "Project not found",
+      "text": "This route does not match any project currently published in the portfolio."
     },
     "items": {
       "focusFlow": {
         "type": "Angular productivity workspace",
+        "shortDescription": "Angular PWA for organizing focus sessions, priorities and progress review.",
         "summary": "Angular productivity app for planning focus sessions, priorities and progress review.",
         "problem": "Turns scattered tasks into guided work sessions with clear priority and review states.",
+        "solution": "I built a PWA experience with feature-based Angular screens, typed state and a responsive interface designed to keep the workflow clear.",
         "decisions": [
           "Standalone Angular components organized by feature",
           "Typed session and task transitions",
@@ -136,7 +162,10 @@
         ],
         "architecture": ["Feature-first folders", "Typed session state", "Responsive dashboard layout"],
         "quality": ["Vitest-ready utilities", "Keyboard focus states", "Reduced-motion support"],
-        "impact": ["Angular structure", "Typed state flow", "Accessible UI behavior"]
+        "deployment": "Public demo deployed on Vercel and repository available on GitHub.",
+        "impact": ["Angular structure", "Typed state flow", "Accessible UI behavior"],
+        "seoTitle": "FocusFlow | Angular PWA Project | Jesus Dev",
+        "seoDescription": "Project detail for FocusFlow, an Angular PWA for focus sessions, priorities and progress review."
       },
       "gibora": {
         "type": "Deployment pending",
@@ -144,8 +173,10 @@
           "badge": "Deployment pending",
           "caption": "Coming soon: screenshots and public demo are being prepared."
         },
+        "shortDescription": "Laravel e-commerce in final stage before public deployment.",
         "summary": "Full-stack e-commerce in final stage before public deployment.",
         "problem": "Coming soon: GIBORA is being prepared as a Laravel e-commerce with catalog, admin and deployment-ready workflows.",
+        "solution": "The project base organizes catalog, administration and validation rules with Laravel, PHP, Filament, MySQL and Docker.",
         "decisions": [
           "Laravel models and validation close to commerce rules",
           "Filament-style admin patterns",
@@ -153,12 +184,17 @@
         ],
         "architecture": ["Laravel models", "MySQL schema", "Admin and commerce workflows"],
         "quality": ["Backend validation", "Permission-aware screens", "Repeatable local setup"],
-        "impact": ["Coming soon", "Final pre-deployment stage", "Full-stack e-commerce"]
+        "deployment": "Public deployment is still pending; that is why no demo link is shown.",
+        "impact": ["Coming soon", "Final pre-deployment stage", "Full-stack e-commerce"],
+        "seoTitle": "GIBORA | Laravel E-commerce | Jesus Dev",
+        "seoDescription": "Project detail for GIBORA, a Laravel and Filament e-commerce in final stage before public deployment."
       },
       "devConnect": {
         "type": "Full Stack developer network",
+        "shortDescription": "Collaborative Full Stack platform for developer profiles with Angular, Laravel and PostgreSQL.",
         "summary": "Full-stack developer network with an Angular frontend, Laravel/PHP API, authentication, PostgreSQL on Neon and a custom-domain deployment.",
         "problem": "Keeps identity, profiles, REST API flows and user interactions understandable across the Angular frontend and Laravel backend.",
+        "solution": "I separated the Angular frontend from the Laravel/PHP API to support profiles, authentication, feed behavior and PostgreSQL integration on Neon.",
         "decisions": [
           "Angular frontend separated from Laravel/PHP REST API",
           "PostgreSQL hosted on Neon",
@@ -166,7 +202,10 @@
         ],
         "architecture": ["Angular app shell", "Laravel/PHP API", "PostgreSQL + Neon", "Custom domain deployment"],
         "quality": ["Cypress E2E coverage", "Accessible form feedback", "API auth and error states"],
-        "impact": ["ConnectingDevs public launch", "REST API and data flows", "Auth and profile workflows"]
+        "deployment": "Public project deployed with a custom domain, live demo available and frontend repository on GitHub.",
+        "impact": ["ConnectingDevs public launch", "REST API and data flows", "Auth and profile workflows"],
+        "seoTitle": "ConnectingDevs | Full Stack Platform | Jesus Dev",
+        "seoDescription": "Project detail for ConnectingDevs, a Full Stack developer network with Angular, Laravel and PostgreSQL."
       },
       "pegasusMedical": {
         "type": "Internal RFID traceability platform",
@@ -174,8 +213,10 @@
           "badge": "Internal project",
           "caption": "Private platform: public demo and screenshots are unavailable."
         },
+        "shortDescription": "Internal hospital traceability project with Laravel, Filament, MySQL and RFID.",
         "summary": "Internal hospital traceability platform built with Laravel, Filament, MySQL and RFID workflows.",
         "problem": "Centralize access logs, clinical inventory movements and RFID events around user roles and auditable records.",
+        "solution": "I developed internal modules to process RFID events, administer data with Filament and support technical reporting through Metabase.",
         "decisions": [
           "RFID antenna event endpoints",
           "Reporting module and Metabase dashboards",
@@ -185,7 +226,10 @@
         ],
         "architecture": ["Laravel + Filament", "MySQL", "RFID events", "Metabase", "Docker", "Gmail SMTP"],
         "quality": ["Private internal system", "Auditable traceability records", "No public demo or repository"],
-        "impact": ["Hospital RFID workflows", "Reporting module", "Access and room-door flow support"]
+        "deployment": "Private internal project; no demo, repository or screenshots are published to protect the operational context.",
+        "impact": ["Hospital RFID workflows", "Reporting module", "Access and room-door flow support"],
+        "seoTitle": "Pegasus Medical | Internal Laravel RFID Project | Jesus Dev",
+        "seoDescription": "Technical summary for Pegasus Medical, an internal project with Laravel, Filament, MySQL, RFID and Metabase without private information."
       }
     }
   },

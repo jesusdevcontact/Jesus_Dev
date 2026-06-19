@@ -1,0 +1,87 @@
+@if (activeScreenshot(); as activeScreenshot) {
+  <div class="project-gallery" [class.project-gallery--compact]="compact()">
+    <button
+      class="project-shot"
+      type="button"
+      (click)="openLightbox($event)"
+      [attr.aria-label]="'Open enlarged screenshot for ' + projectName() + ': ' + activeScreenshot.alt"
+    >
+      <img [src]="activeScreenshot.src" [alt]="activeScreenshot.alt" loading="lazy" decoding="async">
+    </button>
+
+    @if (screenshots().length > 1) {
+      <div class="gallery-controls" role="group" [attr.aria-label]="'Screenshot navigation for ' + projectName()">
+        <button
+          class="gallery-control"
+          type="button"
+          (click)="showPreviousScreenshot($event)"
+          [attr.aria-label]="'Show previous screenshot for ' + projectName()"
+        >
+          <span class="gallery-arrow" aria-hidden="true">&#8249;</span>
+        </button>
+        <span class="gallery-counter">{{ selectedScreenshotIndex() + 1 }} / {{ screenshots().length }}</span>
+        <button
+          class="gallery-control"
+          type="button"
+          (click)="showNextScreenshot($event)"
+          [attr.aria-label]="'Show next screenshot for ' + projectName()"
+        >
+          <span class="gallery-arrow" aria-hidden="true">&#8250;</span>
+        </button>
+      </div>
+    }
+  </div>
+}
+
+@if (isLightboxOpen()) {
+  @if (activeScreenshot(); as activeScreenshot) {
+    <div class="lightbox" role="presentation" (click)="closeLightbox()">
+      <div
+        class="lightbox-dialog"
+        role="dialog"
+        aria-modal="true"
+        [attr.aria-label]="projectName() + ' screenshot preview'"
+      >
+        <button
+          class="lightbox-close"
+          type="button"
+          autofocus
+          (click)="closeLightbox()"
+          [attr.aria-label]="'Close enlarged screenshot for ' + projectName()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        @if (screenshots().length > 1) {
+          <button
+            class="lightbox-nav lightbox-nav--previous"
+            type="button"
+            (click)="showPreviousScreenshot($event)"
+            [attr.aria-label]="'Show previous screenshot for ' + projectName()"
+          >
+            <span class="lightbox-arrow" aria-hidden="true">&#8249;</span>
+          </button>
+        }
+
+        <div class="lightbox-stage">
+          <img [src]="activeScreenshot.src" [alt]="activeScreenshot.alt" loading="lazy" decoding="async" (click)="$event.stopPropagation()">
+        </div>
+
+        <div class="lightbox-counter" aria-live="polite">
+          {{ selectedScreenshotIndex() + 1 }} / {{ screenshots().length }}
+        </div>
+
+        @if (screenshots().length > 1) {
+          <button
+            class="lightbox-nav lightbox-nav--next"
+            type="button"
+            (click)="showNextScreenshot($event)"
+            [attr.aria-label]="'Show next screenshot for ' + projectName()"
+          >
+            <span class="lightbox-arrow" aria-hidden="true">&#8250;</span>
+          </button>
+        }
+      </div>
+    </div>
+  }
+}

@@ -16,13 +16,22 @@ export interface ProjectScreenshot {
   variant: 'desktop' | 'web' | 'mobile';
 }
 
+export type ProjectKey = 'focusFlow' | 'devConnect' | 'gibora' | 'pegasusMedical';
+
+export type ProjectStatus = 'pendingDeployment' | 'internal';
+
 export interface Project {
-  key: 'focusFlow' | 'devConnect' | 'gibora' | 'pegasusMedical';
+  key: ProjectKey;
+  slug: 'focusflow' | 'connectingdevs' | 'gibora' | 'pegasus-medical';
   name: string;
+  category: 'pwa' | 'fullStack' | 'ecommerce' | 'internal' | 'collaborative';
   stack: string[];
+  featuredStack: string[];
   accent: 'cyan' | 'green' | 'amber';
+  status?: ProjectStatus;
   githubUrl?: string;
   demoUrl?: string;
+  coverImage?: ProjectScreenshot;
   screenshots?: ProjectScreenshot[];
 }
 

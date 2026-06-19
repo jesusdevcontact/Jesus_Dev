@@ -38,11 +38,19 @@ export const techCategories: TechCategory[] = [
 export const projects: Project[] = [
   {
     key: 'focusFlow',
+    slug: 'focusflow',
     name: 'FocusFlow',
+    category: 'pwa',
     stack: ['Angular', 'TypeScript', 'RxJS', 'SCSS', 'Vitest'],
+    featuredStack: ['Angular', 'TypeScript', 'RxJS', 'SCSS'],
     accent: 'cyan',
     githubUrl: 'https://github.com/jesusdev98/focusflow',
     demoUrl: 'https://focusflowpwa.vercel.app/',
+    coverImage: {
+      src: 'assets/Focus-Flow/focusflow-desktop.png',
+      alt: 'FocusFlow desktop dashboard screenshot',
+      variant: 'desktop',
+    },
     screenshots: [
       {
         src: 'assets/Focus-Flow/focusflow-desktop.png',
@@ -63,11 +71,19 @@ export const projects: Project[] = [
   },
   {
     key: 'devConnect',
+    slug: 'connectingdevs',
     name: 'ConnectingDevs',
+    category: 'collaborative',
     stack: ['Angular', 'Laravel', 'PHP', 'PostgreSQL', 'Neon', 'Docker', 'Cypress'],
+    featuredStack: ['Angular', 'Laravel', 'PostgreSQL', 'Cypress'],
     accent: 'amber',
     githubUrl: 'https://github.com/ConnectingDevs/ConnectingDevs-Frontend',
     demoUrl: 'https://www.connectingdevs.com',
+    coverImage: {
+      src: 'assets/Connectingdevs/connectingdevs_feed.png',
+      alt: 'ConnectingDevs feed screenshot',
+      variant: 'web',
+    },
     screenshots: [
       {
         src: 'assets/Connectingdevs/connectingdevs_feed.png',
@@ -93,16 +109,24 @@ export const projects: Project[] = [
   },
   {
     key: 'gibora',
+    slug: 'gibora',
     name: 'GIBORA',
+    category: 'ecommerce',
     stack: ['Laravel', 'PHP', 'Filament', 'MySQL', 'Docker'],
+    featuredStack: ['Laravel', 'PHP', 'Filament', 'MySQL'],
     accent: 'green',
+    status: 'pendingDeployment',
     githubUrl: 'https://github.com/jesusdev98/gibora',
   },
   {
     key: 'pegasusMedical',
+    slug: 'pegasus-medical',
     name: 'Pegasus Medical',
+    category: 'internal',
     stack: ['Laravel', 'Filament', 'MySQL', 'RFID', 'Metabase', 'Docker', 'Linux'],
+    featuredStack: ['Laravel', 'Filament', 'MySQL', 'RFID'],
     accent: 'cyan',
+    status: 'internal',
   },
 ];
 

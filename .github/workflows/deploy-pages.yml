@@ -49,6 +49,10 @@ jobs:
           test -f dist/jesusdev-portfolio/browser/legal/index.html
           test -f dist/jesusdev-portfolio/browser/privacy/index.html
           test -f dist/jesusdev-portfolio/browser/cookies/index.html
+          test -f dist/jesusdev-portfolio/browser/projects/focusflow/index.html
+          test -f dist/jesusdev-portfolio/browser/projects/connectingdevs/index.html
+          test -f dist/jesusdev-portfolio/browser/projects/gibora/index.html
+          test -f dist/jesusdev-portfolio/browser/projects/pegasus-medical/index.html
           test -f dist/jesusdev-portfolio/browser/CNAME
           test -f dist/jesusdev-portfolio/browser/.nojekyll
           test -d dist/jesusdev-portfolio/browser/assets
@@ -58,6 +62,10 @@ jobs:
           grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/legal/index.html
           grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/privacy/index.html
           grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/cookies/index.html
+          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/projects/focusflow/index.html
+          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/projects/connectingdevs/index.html
+          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/projects/gibora/index.html
+          grep -Eq 'main-[A-Z0-9]+\.js' dist/jesusdev-portfolio/browser/projects/pegasus-medical/index.html
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

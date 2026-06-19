@@ -5,7 +5,16 @@ const browserOutputPath = join(process.cwd(), 'dist', 'jesusdev-portfolio', 'bro
 const indexPath = join(browserOutputPath, 'index.html');
 const fallbackPath = join(browserOutputPath, '404.html');
 const nojekyllPath = join(browserOutputPath, '.nojekyll');
-const directRoutes = ['contact', 'legal', 'privacy', 'cookies'];
+const directRoutes = [
+  'contact',
+  'legal',
+  'privacy',
+  'cookies',
+  'projects/focusflow',
+  'projects/connectingdevs',
+  'projects/gibora',
+  'projects/pegasus-medical',
+];
 
 if (!existsSync(indexPath)) {
   throw new Error(`Cannot create GitHub Pages SPA fallback. Missing ${indexPath}`);
