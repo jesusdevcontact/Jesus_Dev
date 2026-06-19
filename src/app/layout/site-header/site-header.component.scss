@@ -394,3 +394,14 @@
     min-height: 1.82rem;
   }
 }
+
+@media (max-width: 430px) {
+  .theme-toggle-mobile {
+    width: 2.06rem;
+    padding-inline: 0;
+  }
+
+  .theme-toggle-mobile span {
+    display: none;
+  }
+}

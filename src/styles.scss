@@ -956,9 +956,9 @@ jd-home-page .hero-scroll-cue {
 
 @media (max-width: 560px) {
   :root {
-    --section-y: clamp(3rem, 10vw, 4rem);
-    --step-3: clamp(1.76rem, 9vw, 2.35rem);
-    --step-5: clamp(2.42rem, 13.5vw, 3.35rem);
+    --section-y: clamp(2.45rem, 7.5vw, 3.15rem);
+    --step-3: clamp(1.92rem, 6.2vw, 2.32rem);
+    --step-5: clamp(2.45rem, 8.4vw, 2.95rem);
     --cosmic-page-orbs:
       radial-gradient(circle at 100% 10rem, rgba(83, 216, 255, 0.1), transparent 14rem),
       radial-gradient(circle at 0% 54rem, rgba(155, 118, 255, 0.11), transparent 18rem),
@@ -1034,14 +1034,14 @@ jd-home-page .hero-scroll-cue {
   }
 
   jd-home-page .hero {
-    min-height: 100svh;
+    min-height: auto;
   }
 
   jd-home-page .hero-scroll-cue {
     display: inline-flex;
     align-items: center;
     gap: 0.52rem;
-    margin-top: 1.2rem;
+    margin-top: 0.9rem;
     color: var(--text-faint);
     font-size: 0.72rem;
     font-weight: 820;
