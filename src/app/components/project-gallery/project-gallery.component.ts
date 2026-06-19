@@ -20,6 +20,7 @@ import { ProjectScreenshot } from '../../core/models/portfolio.models';
 })
 export class ProjectGalleryComponent {
   private readonly document = inject(DOCUMENT);
+  private previouslyFocusedElement?: HTMLElement;
 
   readonly screenshots = input.required<ProjectScreenshot[]>();
   readonly projectName = input.required<string>();
@@ -90,11 +91,16 @@ export class ProjectGalleryComponent {
       return;
     }
 
+    this.previouslyFocusedElement = this.document.activeElement instanceof HTMLElement
+      ? this.document.activeElement
+      : undefined;
     this.isLightboxOpen.set(true);
   }
 
   closeLightbox(): void {
     this.isLightboxOpen.set(false);
+    this.previouslyFocusedElement?.focus();
+    this.previouslyFocusedElement = undefined;
   }
 
   private updateScreenshotIndex(delta: number): void {

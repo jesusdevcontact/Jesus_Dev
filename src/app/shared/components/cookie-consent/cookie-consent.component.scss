@@ -187,11 +187,13 @@ p {
     left: 0.65rem;
     right: 0.85rem;
     bottom: calc(0.85rem + env(safe-area-inset-bottom));
+    width: auto;
     gap: 0.55rem;
   }
 
   .cookie-panel {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     padding: 0.85rem;
   }
 
