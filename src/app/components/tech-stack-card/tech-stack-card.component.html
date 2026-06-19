@@ -1,23 +1,57 @@
-<article class="tech-card" [ngClass]="'tech-card--' + category().accent">
-  <div class="card-icon">
-    <svg [lucideIcon]="iconFor(category().key)" size="20" aria-hidden="true"></svg>
-  </div>
-  <h3>{{ 'stack.categories.' + category().key + '.title' | translate }}</h3>
-  <p>{{ 'stack.categories.' + category().key + '.summary' | translate }}</p>
+<article class="tech-card" [class.tech-card--open]="expanded()" [ngClass]="'tech-card--' + category().accent">
+  <button
+    class="tech-trigger"
+    type="button"
+    [id]="triggerId()"
+    [attr.aria-expanded]="expanded()"
+    [attr.aria-controls]="panelId()"
+    [attr.aria-label]="(expanded() ? 'stack.a11y.collapse' : 'stack.a11y.expand') | translate: { category: ('stack.categories.' + category().key + '.title' | translate) }"
+    (click)="toggle()"
+  >
+    <span class="card-icon" aria-hidden="true">
+      <svg [lucideIcon]="iconFor(category().key)" size="20"></svg>
+    </span>
+    <span class="tech-heading">
+      <span class="tech-title">{{ 'stack.categories.' + category().key + '.title' | translate }}</span>
+      <span class="tech-summary">{{ 'stack.categories.' + category().key + '.summary' | translate }}</span>
+    </span>
+    <span class="tech-toggle" aria-hidden="true">
+      <svg lucideIcon="chevron-down" size="18"></svg>
+    </span>
+  </button>
 
-  <ul [attr.aria-label]="'accessibility.technologies' | translate">
-    @for (item of ('stack.categories.' + category().key + '.items' | translate | translateArray); track item) {
-      <li [ngClass]="'tech-' + techSlug(item)">
-        <span class="tech-mark" [class.tech-mark--logo]="techIconUrl(item)" aria-hidden="true">
-          @if (techIconUrl(item); as iconUrl) {
-            <img [src]="iconUrl" alt="" width="18" height="18" loading="lazy" (error)="useIconFallback($event)">
-            <span class="tech-fallback">{{ techMark(item) }}</span>
-          } @else {
-            {{ techMark(item) }}
+  @if (expanded()) {
+    <div
+      class="tech-panel"
+      role="region"
+      [id]="panelId()"
+      [attr.aria-labelledby]="triggerId()"
+    >
+      <div class="tech-group">
+        <h4>{{ 'stack.labels.primary' | translate }}</h4>
+        <ul [attr.aria-label]="'stack.labels.primary' | translate">
+          @for (item of ('stack.categories.' + category().key + '.primaryItems' | translate | translateArray); track item) {
+            <li [ngClass]="'tech-' + techSlug(item)">
+              <span class="tech-mark" aria-hidden="true">{{ techMark(item) }}</span>
+              <span>{{ item }}</span>
+            </li>
           }
-        </span>
-        <span>{{ item }}</span>
-      </li>
-    }
-  </ul>
+        </ul>
+      </div>
+
+      @if (('stack.categories.' + category().key + '.complementaryItems' | translate | translateArray).length) {
+        <div class="tech-group tech-group--secondary">
+          <h4>{{ 'stack.labels.complementary' | translate }}</h4>
+          <ul [attr.aria-label]="'stack.labels.complementary' | translate">
+            @for (item of ('stack.categories.' + category().key + '.complementaryItems' | translate | translateArray); track item) {
+              <li [ngClass]="'tech-' + techSlug(item)">
+                <span class="tech-mark" aria-hidden="true">{{ techMark(item) }}</span>
+                <span>{{ item }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  }
 </article>

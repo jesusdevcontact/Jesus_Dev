@@ -8,6 +8,8 @@ export interface TechCategory {
   accent: 'cyan' | 'green' | 'amber' | 'rose' | 'blue';
 }
 
+export type TechCategoryKey = TechCategory['key'];
+
 export interface ProjectScreenshot {
   src: string;
   alt: string;

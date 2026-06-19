@@ -129,7 +129,11 @@
   >
     <div class="stack-grid" jdReveal>
       @for (category of techCategories; track category.key) {
-        <jd-tech-stack-card [category]="category" />
+        <jd-tech-stack-card
+          [category]="category"
+          [expanded]="openTechCategory() === category.key"
+          (toggled)="toggleTechCategory($event)"
+        />
       }
     </div>
   </jd-section-shell>

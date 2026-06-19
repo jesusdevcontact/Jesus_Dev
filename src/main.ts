@@ -7,6 +7,7 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import {
   LucideArrowRight,
   LucideArrowUp,
+  LucideChevronDown,
   LucideCheckCircle2,
   LucideCode2,
   LucideCookie,
@@ -44,6 +45,7 @@ bootstrapApplication(AppComponent, {
     provideLucideIcons(
       LucideArrowRight,
       LucideArrowUp,
+      LucideChevronDown,
       LucideCheckCircle2,
       LucideCode2,
       LucideCookie,

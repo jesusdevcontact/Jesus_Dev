@@ -67,36 +67,50 @@
   "stack": {
     "eyebrow": "Stack technique",
     "title": "Un toolkit Full Stack pratique pour UI Angular, APIs Laravel, données, tests et déploiement.",
+    "labels": {
+      "primary": "Stack principale",
+      "complementary": "Technologies complémentaires"
+    },
+    "a11y": {
+      "expand": "Afficher les technologies {{ category }}",
+      "collapse": "Masquer les technologies {{ category }}"
+    },
     "categories": {
       "frontend": {
         "title": "Frontend",
-        "summary": "Interfaces Angular et TypeScript avec limites de composants, état typé, SCSS responsive et états d'interaction accessibles.",
-        "items": ["Angular", "TypeScript", "RxJS", "SCSS", "Vite"]
+        "summary": "Interfaces modernes, réactives et accessibles.",
+        "primaryItems": ["Angular", "TypeScript", "HTML5", "CSS3", "SCSS", "RxJS"],
+        "complementaryItems": ["React", "JavaScript"]
       },
       "backend": {
         "title": "Backend",
-        "summary": "Bases Laravel et PHP pour APIs REST, règles de validation, authentification, données relationnelles et flux d'administration.",
-        "items": ["Laravel", "PHP", "Sanctum", "MySQL", "PostgreSQL", "Neon"]
+        "summary": "APIs, logique métier et données relationnelles.",
+        "primaryItems": ["Laravel", "PHP", "MySQL", "PostgreSQL", "REST APIs", "Filament"],
+        "complementaryItems": ["Python", "Java"]
       },
       "testing": {
         "title": "Tests",
-        "summary": "Couverture pratique avec les outils utilisés côté UI, Angular, Laravel et accessibilité.",
-        "items": ["Cypress", "Vitest", "Karma", "PHPUnit", "Accessibilité"]
+        "summary": "Tests unitaires et E2E pour réduire les régressions.",
+        "primaryItems": ["Cypress", "Vitest", "PHPUnit"],
+        "complementaryItems": ["Tests unitaires", "Tests E2E"]
       },
       "architecture": {
         "title": "Architecture",
-        "summary": "Comment je relie écrans, réponses REST, flux auth, données relationnelles et dossiers par feature.",
-        "items": ["APIs REST", "Architecture SPA", "Frontières API/UI", "Architecture par feature", "Modélisation relationnelle", "Flux auth"]
+        "summary": "Applications maintenables organisées par responsabilités.",
+        "primaryItems": ["SPA", "API REST", "Architecture par composants", "Design responsive", "Accessibilité", "Modélisation relationnelle"],
+        "complementaryItems": []
       },
       "devops": {
         "title": "DevOps",
-        "summary": "Builds répétables, démos déployées, séparation d'environnements, versioning et préparation CI.",
-        "items": ["Docker", "Vercel", "Railway", "GitHub Actions", "Linux"]
+        "summary": "Automatisation, déploiement et environnements reproductibles.",
+        "primaryItems": ["Git", "GitHub", "GitHub Actions", "Docker", "Linux", "SSH"],
+        "complementaryItems": ["Vercel", "Railway", "GitHub Pages"]
       },
       "tooling": {
-        "title": "Outillage",
-        "summary": "Outils pour feedback rapide, vérification d'API, gestion des dépendances, debug et handoff lisible.",
-        "items": ["VS Code", "GitHub", "Postman", "pnpm", "OpenAI Codex", "Claude Code"]
+        "title": "Outils et IA",
+        "summary": "Développement assisté avec revue technique, tests et contrôle des changements.",
+        "primaryItems": ["VS Code", "Postman", "Metabase"],
+        "complementaryItems": ["OpenAI Codex", "Claude Code", "IA appliquée au développement avec revue, tests et contrôle des changements"]
       }
     }
   },

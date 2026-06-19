@@ -1,57 +1,76 @@
 .tech-card {
   position: relative;
+  isolation: isolate;
   min-width: 0;
   min-height: 100%;
   overflow: hidden;
   border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
-  padding: 1.3rem;
   background: var(--card-surface);
   box-shadow: var(--card-shadow);
   transition:
-    transform 320ms var(--ease-premium),
-    border-color 320ms ease,
-    background 320ms ease,
-    box-shadow 320ms ease;
+    border-color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .tech-card::before {
   position: absolute;
   inset: 0;
+  z-index: -1;
   pointer-events: none;
+  opacity: 0.32;
   content: "";
-  opacity: 0.35;
 }
 
+.tech-card--open,
 .tech-card:hover {
-  transform: translateY(-5px);
   border-color: var(--card-border-strong);
   background: var(--card-surface-hover);
   box-shadow: var(--shadow-md);
 }
 
 .tech-card--cyan::before {
-  background: linear-gradient(135deg, rgba(83, 216, 255, 0.22), transparent 42%);
+  background: linear-gradient(135deg, rgba(83, 216, 255, 0.2), transparent 42%);
 }
 
 .tech-card--green::before {
-  background: linear-gradient(135deg, rgba(137, 244, 178, 0.22), transparent 42%);
+  background: linear-gradient(135deg, rgba(137, 244, 178, 0.2), transparent 42%);
 }
 
 .tech-card--amber::before {
-  background: linear-gradient(135deg, rgba(255, 204, 102, 0.2), transparent 42%);
+  background: linear-gradient(135deg, rgba(255, 204, 102, 0.18), transparent 42%);
 }
 
 .tech-card--rose::before {
-  background: linear-gradient(135deg, rgba(255, 122, 166, 0.18), transparent 42%);
+  background: linear-gradient(135deg, rgba(255, 122, 166, 0.16), transparent 42%);
 }
 
 .tech-card--blue::before {
-  background: linear-gradient(135deg, rgba(133, 169, 255, 0.2), transparent 42%);
+  background: linear-gradient(135deg, rgba(133, 169, 255, 0.18), transparent 42%);
+}
+
+.tech-trigger {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 5.2rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.85rem;
+  align-items: center;
+  border: 0;
+  padding: 1rem;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.tech-trigger:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: -4px;
 }
 
 .card-icon {
-  position: relative;
   display: grid;
   width: 2.4rem;
   height: 2.4rem;
@@ -65,41 +84,95 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
-h3,
-p,
-ul {
-  position: relative;
+.tech-heading {
+  display: grid;
+  min-width: 0;
+  gap: 0.35rem;
 }
 
-h3 {
-  margin: 1rem 0 0;
+.tech-title {
   color: var(--text-strong);
-  font-size: 1.08rem;
+  font-size: 1.05rem;
+  font-weight: 850;
   letter-spacing: 0;
+  line-height: 1.15;
   text-wrap: balance;
 }
 
-p {
-  margin: 0.65rem 0 0;
+.tech-summary {
+  display: -webkit-box;
+  overflow: hidden;
   color: var(--text-muted);
-  font-size: 0.92rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.tech-toggle {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  color: var(--text-muted);
+  transition:
+    transform 180ms var(--ease-premium),
+    border-color 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.tech-card--open .tech-toggle {
+  transform: rotate(180deg);
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-strong);
+}
+
+.tech-panel {
+  display: grid;
+  gap: 0.95rem;
+  border-top: 1px solid var(--border-subtle);
+  padding: 0 1rem 1rem;
+  animation: panelEnter 180ms var(--ease-premium) both;
+}
+
+.tech-group {
+  display: grid;
+  gap: 0.62rem;
+}
+
+.tech-group h4 {
+  margin: 0;
+  color: var(--accent-cyan);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.tech-group--secondary h4 {
+  color: var(--text-faint);
 }
 
 ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1.1rem 0 0;
+  gap: 0.45rem;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
 li {
   display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  max-width: 100%;
   min-height: 2rem;
+  align-items: center;
+  gap: 0.42rem;
   border: 1px solid rgba(255, 255, 255, 0.088);
   border-radius: 999px;
   padding: 0.3rem 0.58rem 0.3rem 0.32rem;
@@ -108,36 +181,28 @@ li {
     rgba(255, 255, 255, 0.028);
   color: var(--text-soft);
   font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
+  font-weight: 720;
+  line-height: 1.05;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.045) inset;
-  transition:
-    transform 200ms var(--ease-premium),
-    border-color 200ms ease,
-    background 200ms ease,
-    color 200ms ease;
 }
 
-li:hover {
-  transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.07);
-  color: var(--text-strong);
+.tech-group--secondary li {
+  border-style: dashed;
+  color: var(--text-muted);
 }
 
 .tech-mark {
   display: inline-grid;
-  flex: 0 0 1.6rem;
-  width: 1.6rem;
-  min-width: 1.6rem;
-  height: 1.6rem;
+  flex: 0 0 1.55rem;
+  width: 1.55rem;
+  min-width: 1.55rem;
+  height: 1.55rem;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 0.46rem;
   background: rgba(255, 255, 255, 0.06);
   color: var(--text-strong);
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 900;
   letter-spacing: 0;
   box-shadow:
@@ -145,29 +210,49 @@ li:hover {
     0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
-.tech-mark--logo {
-  border-color: rgba(255, 255, 255, 0.12);
+.tech-rest-apis .tech-mark,
+.tech-api-rest .tech-mark,
+.tech-apis-rest .tech-mark {
+  background: linear-gradient(135deg, #53d8ff, #3b82f6);
+  color: #041014;
+}
+
+.tech-angular .tech-mark,
+.tech-typescript .tech-mark,
+.tech-laravel .tech-mark,
+.tech-php .tech-mark,
+.tech-mysql .tech-mark,
+.tech-postgresql .tech-mark,
+.tech-cypress .tech-mark,
+.tech-vitest .tech-mark,
+.tech-phpunit .tech-mark {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(83, 216, 255, 0.74));
+  color: #041014;
+}
+
+.tech-openai-codex .tech-mark,
+.tech-claude-code .tech-mark,
+.tech-ai-assisted-development .tech-mark,
+.tech-ia-aplicada-al-desarrollo .tech-mark,
+.tech-ia-appliquee-au-developpement .tech-mark {
+  border-color: rgba(255, 255, 255, 0.105);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.028)),
-    rgba(5, 6, 10, 0.45);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.024)),
+    rgba(5, 6, 10, 0.42);
+  color: var(--text-strong);
 }
 
-.tech-mark img {
-  display: block;
-  width: 1.05rem;
-  height: 1.05rem;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
-}
-
-:host-context([data-theme="light"]) .card-icon {
+:host-context([data-theme="light"]) .card-icon,
+:host-context([data-theme="light"]) .tech-toggle,
+:host-context([data-theme="light"]) .tech-mark {
   border-color: rgba(13, 31, 56, 0.22);
   background:
     linear-gradient(180deg, #ffffff, #edf5fb),
     #ffffff;
+  color: var(--text-strong);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.96) inset,
-    0 12px 26px rgba(32, 54, 82, 0.14);
+    0 8px 18px rgba(32, 54, 82, 0.12);
 }
 
 :host-context([data-theme="light"]) li {
@@ -181,213 +266,76 @@ li:hover {
     0 8px 18px rgba(32, 54, 82, 0.08);
 }
 
-:host-context([data-theme="light"]) li:hover {
-  border-color: rgba(13, 31, 56, 0.36);
-  background:
-    linear-gradient(180deg, #ffffff, rgba(232, 243, 250, 0.92)),
-    #ffffff;
-  color: var(--text-strong);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 1) inset,
-    0 10px 24px rgba(32, 54, 82, 0.13);
+:host-context([data-theme="light"]) .tech-group--secondary li {
+  color: var(--text-muted);
 }
 
-:host-context([data-theme="light"]) .tech-mark {
-  border-color: rgba(13, 31, 56, 0.22);
-  background:
-    linear-gradient(180deg, #ffffff, #e9f2f8),
-    #ffffff;
-  color: var(--text-strong);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.96) inset,
-    0 6px 14px rgba(32, 54, 82, 0.12);
+@keyframes panelEnter {
+  from {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-:host-context([data-theme="light"]) .tech-mark--logo {
-  border-color: rgba(13, 31, 56, 0.24);
-  background:
-    linear-gradient(180deg, #ffffff, #edf5fb),
-    #ffffff;
-}
+@media (min-width: 900px) {
+  .tech-trigger {
+    min-height: 6rem;
+    padding: 1.15rem;
+  }
 
-:host-context([data-theme="light"]) .tech-mark img {
-  filter: saturate(1.08) contrast(1.08) drop-shadow(0 1px 2px rgba(32, 54, 82, 0.22));
-}
-
-.tech-fallback {
-  display: none;
-}
-
-.tech-mark--fallback img {
-  display: none;
-}
-
-.tech-mark--fallback .tech-fallback {
-  display: inline;
-  line-height: 1;
-}
-
-.tech-rest-apis .tech-mark,
-.tech-apis-rest .tech-mark {
-  background: linear-gradient(135deg, #53d8ff, #3b82f6);
-  color: #041014;
-}
-
-.tech-filament .tech-mark {
-  background: linear-gradient(135deg, #f59e0b, #d946ef);
-}
-
-.tech-sanctum .tech-mark {
-  background: linear-gradient(135deg, #ff2d20, #fb7185);
-}
-
-.tech-karma .tech-mark {
-  background: linear-gradient(135deg, #429c46, #89f4b2);
-}
-
-.tech-phpunit .tech-mark {
-  background: linear-gradient(135deg, #8892bf, #777bb4);
-}
-
-.tech-codex .tech-mark,
-.tech-openai-codex .tech-mark {
-  border-color: rgba(255, 255, 255, 0.105);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.024)),
-    rgba(5, 6, 10, 0.42);
-  color: var(--text-strong);
-}
-
-.tech-claude-code .tech-mark {
-  border-color: rgba(217, 119, 87, 0.2);
-  background:
-    linear-gradient(180deg, rgba(217, 119, 87, 0.095), rgba(255, 255, 255, 0.022)),
-    rgba(5, 6, 10, 0.42);
-  color: var(--text-strong);
-}
-
-.tech-angular-testing .tech-mark,
-.tech-pruebas-angular .tech-mark,
-.tech-tests-angular .tech-mark,
-.tech-a11y-checks .tech-mark,
-.tech-revision-a11y .tech-mark,
-.tech-controles-a11y .tech-mark {
-  background: linear-gradient(135deg, #89f4b2, #53d8ff);
-  color: #041014;
-}
-
-.tech-angular-cli .tech-mark,
-.tech-chrome-devtools .tech-mark {
-  background: linear-gradient(135deg, #85a9ff, #53d8ff);
-  color: #041014;
-}
-
-.tech-spa-architecture .tech-mark,
-.tech-arquitectura-spa .tech-mark,
-.tech-architecture-spa .tech-mark,
-.tech-api-ui-boundaries .tech-mark,
-.tech-limites-api-ui .tech-mark,
-.tech-frontieres-api-ui .tech-mark,
-.tech-auth-flows .tech-mark,
-.tech-flujos-auth .tech-mark,
-.tech-flux-auth .tech-mark,
-.tech-relational-modeling .tech-mark,
-.tech-modelado-relacional .tech-mark,
-.tech-modelisation-relationnelle .tech-mark,
-.tech-testing-workflows .tech-mark,
-.tech-flujos-de-testing .tech-mark,
-.tech-workflows-de-test .tech-mark,
-.tech-ci-cd-mindset .tech-mark,
-.tech-mentalidad-ci-cd .tech-mark,
-.tech-culture-ci-cd .tech-mark,
-.tech-feature-driven-architecture .tech-mark,
-.tech-feature-architecture .tech-mark,
-.tech-arquitectura-por-features .tech-mark,
-.tech-architecture-par-feature .tech-mark {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(83, 216, 255, 0.74));
-  color: #041014;
-}
-
-:host-context([data-theme="light"]) .tech-codex .tech-mark,
-:host-context([data-theme="light"]) .tech-openai-codex .tech-mark,
-:host-context([data-theme="light"]) .tech-claude-code .tech-mark {
-  border-color: rgba(13, 31, 56, 0.24);
-  background:
-    linear-gradient(180deg, #ffffff, #edf5fb),
-    #ffffff;
-  color: var(--text-strong);
-}
-
-:host-context([data-theme="light"]) .tech-spa-architecture .tech-mark,
-:host-context([data-theme="light"]) .tech-arquitectura-spa .tech-mark,
-:host-context([data-theme="light"]) .tech-architecture-spa .tech-mark,
-:host-context([data-theme="light"]) .tech-api-ui-boundaries .tech-mark,
-:host-context([data-theme="light"]) .tech-limites-api-ui .tech-mark,
-:host-context([data-theme="light"]) .tech-frontieres-api-ui .tech-mark,
-:host-context([data-theme="light"]) .tech-auth-flows .tech-mark,
-:host-context([data-theme="light"]) .tech-flujos-auth .tech-mark,
-:host-context([data-theme="light"]) .tech-flux-auth .tech-mark,
-:host-context([data-theme="light"]) .tech-relational-modeling .tech-mark,
-:host-context([data-theme="light"]) .tech-modelado-relacional .tech-mark,
-:host-context([data-theme="light"]) .tech-modelisation-relationnelle .tech-mark,
-:host-context([data-theme="light"]) .tech-testing-workflows .tech-mark,
-:host-context([data-theme="light"]) .tech-flujos-de-testing .tech-mark,
-:host-context([data-theme="light"]) .tech-workflows-de-test .tech-mark,
-:host-context([data-theme="light"]) .tech-ci-cd-mindset .tech-mark,
-:host-context([data-theme="light"]) .tech-mentalidad-ci-cd .tech-mark,
-:host-context([data-theme="light"]) .tech-culture-ci-cd .tech-mark,
-:host-context([data-theme="light"]) .tech-feature-driven-architecture .tech-mark,
-:host-context([data-theme="light"]) .tech-feature-architecture .tech-mark,
-:host-context([data-theme="light"]) .tech-arquitectura-por-features .tech-mark,
-:host-context([data-theme="light"]) .tech-architecture-par-feature .tech-mark {
-  border-color: rgba(13, 31, 56, 0.24);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.96) inset,
-    0 6px 14px rgba(32, 54, 82, 0.12);
-}
-
-:host-context([data-theme="light"]) .tech-github .tech-mark img,
-:host-context([data-theme="light"]) .tech-railway .tech-mark img,
-:host-context([data-theme="light"]) .tech-vercel .tech-mark img {
-  filter: brightness(0) saturate(1) opacity(0.86) drop-shadow(0 1px 1px rgba(32, 54, 82, 0.16));
-}
-
-:host-context([data-theme="light"]) .tech-github .tech-mark,
-:host-context([data-theme="light"]) .tech-railway .tech-mark,
-:host-context([data-theme="light"]) .tech-vercel .tech-mark {
-  border-color: rgba(13, 31, 56, 0.3);
-  background:
-    linear-gradient(180deg, #ffffff, #eef5fa),
-    #ffffff;
+  .tech-panel {
+    padding: 0 1.15rem 1.15rem;
+  }
 }
 
 @media (max-width: 680px) {
-  .tech-card {
-    padding: 0.9rem;
+  .tech-trigger {
+    min-height: 4.7rem;
+    gap: 0.72rem;
+    padding: 0.82rem;
   }
 
-  h3 {
-    margin-top: 0.7rem;
+  .card-icon {
+    width: 2.15rem;
+    height: 2.15rem;
+  }
+
+  .tech-title {
     font-size: 1rem;
-    line-height: 1.2;
   }
 
-  p {
-    margin-top: 0.45rem;
-    font-size: 0.86rem;
-    line-height: 1.46;
+  .tech-summary {
+    font-size: 0.84rem;
+    line-height: 1.4;
+    -webkit-line-clamp: 1;
+  }
+
+  .tech-panel {
+    gap: 0.8rem;
+    padding: 0 0.82rem 0.82rem;
   }
 
   ul {
     gap: 0.36rem;
-    margin-top: 0.72rem;
   }
 
   li {
-    max-width: 100%;
-    min-height: 2.15rem;
+    min-height: 2.05rem;
     border-radius: var(--radius-sm);
-    padding: 0.3rem 0.52rem 0.3rem 0.3rem;
+    padding: 0.3rem 0.5rem 0.3rem 0.3rem;
     white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-toggle,
+  .tech-panel {
+    animation: none;
+    transition: none;
   }
 }
