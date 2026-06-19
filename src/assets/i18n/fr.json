@@ -50,12 +50,12 @@
   },
   "about": {
     "eyebrow": "Profil",
-    "title": "Je construis des interfaces Angular appuyées par des APIs Laravel et des données relationnelles.",
-    "intro": "Ce portfolio montre comment je structure des flux UI, APIs REST, validation, modèles de base de données et projets prêts au déploiement.",
-    "cardTitle": "Code Angular lisible, APIs Laravel et workflows avec MySQL.",
+    "title": "Je développe des logiciels avec discipline, constance et sens des solutions utiles.",
+    "intro": "Je suis Jesus Martinez Escobar, développeur Full Stack orienté Angular et Laravel. Mon parcours vient aussi du sport et de la gestion d’équipes, où j’ai appris à travailler avec méthode, communication et attention aux résultats.",
+    "cardTitle": "Sport, relation humaine et logiciel maintenable.",
     "paragraphs": [
-      "Je suis Jesus Martinez Escobar, Développeur Full Stack concentré sur les applications Angular, les APIs Laravel et les workflows basés sur des données. J'essaie d'écrire du code qu'un autre développeur peut comprendre, tester et étendre sans deviner l'intention.",
-      "Les projets sont présentés comme des cas techniques : ce que fait l'app, comment frontend et backend sont séparés, comment les données sont validées et quels contrôles qualité soutiennent le parcours utilisateur."
+      "Ma formation en conditionnement physique et mon expérience en centres sportifs, avec coordination d’équipes et relation client, influencent encore ma façon de travailler : écouter, prioriser et avancer avec méthode.",
+      "Le karaté, le judo, le football et l’entraînement physique m’ont donné un rapport concret à la discipline et à l’amélioration continue. J’applique cet état d’esprit au développement : découper les problèmes, avancer par étapes et construire un logiciel clair et maintenable."
     ],
     "principles": {
       "decisions": "Expliquer clairement les décisions",
@@ -201,13 +201,13 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Ouvert aux rôles Angular, Laravel et Full Stack.",
-    "text": "Je suis prêt à discuter de mon code, de mes décisions de projet et de ma façon d'aborder Angular, Laravel, données, tests, accessibilité et déploiement dans une vraie équipe."
+    "title": "Parlons d’une opportunité, d’une collaboration ou d’un projet digital.",
+    "text": "Je suis ouvert aux équipes Frontend ou Full Stack, aux collaborations techniques et aux projets web avec Angular, Laravel ou technologies proches. Je peux aussi échanger sur des landings, sites vitrines et solutions simples pour petites entreprises."
   },
   "contactPage": {
     "eyebrow": "Contact",
-    "title": "Une façon simple de lancer une conversation technique.",
-    "intro": "Utilisez le formulaire pour préparer un email avec un contexte clair, ou passez directement par LinkedIn et GitHub.",
+    "title": "Parlez-moi d’une opportunité ou d’un projet digital.",
+    "intro": "Utilisez le formulaire pour présenter une opportunité professionnelle, une collaboration, une application web, une landing page, un site pour entreprise ou un besoin digital précis.",
     "form": {
       "title": "Détails du message",
       "name": "Nom",
@@ -215,15 +215,15 @@
       "company": "Entreprise",
       "companyPlaceholder": "Entreprise ou équipe, optionnel",
       "subject": "Objet",
-      "subjectPlaceholder": "Demande professionnelle",
+      "subjectPlaceholder": "Opportunité, collaboration ou projet",
       "message": "Message",
-      "messagePlaceholder": "Rôle, équipe, stack ou projet à discuter.",
-      "guidance": "Restez concis. Le bouton ouvre votre client email avec ce contenu.",
-      "send": "Préparer l'email"
+      "messagePlaceholder": "Expliquez l’objectif, le type de projet ou l’opportunité que vous souhaitez aborder.",
+      "guidance": "Restez concis. Le bouton prépare un message dans votre client email.",
+      "send": "Continuer par email"
     },
     "direct": {
       "title": "Canaux directs",
-      "text": "Si vous préférez un chemin plus rapide, ces actions gardent le même contexte professionnel sans backend."
+      "text": "Vous pouvez aussi m’écrire par email, me contacter sur LinkedIn ou consulter mon travail sur GitHub."
     }
   },
   "buttons": {
@@ -231,7 +231,7 @@
     "contact": "Contact",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "emailMe": "M'écrire",
+    "emailMe": "Parlez-moi de votre projet",
     "liveDemo": "Démo"
   },
   "footer": {
@@ -384,7 +384,7 @@
   },
   "seo": {
     "title": "Jesus Dev | Développeur Full Stack Angular et Laravel",
-    "description": "Portfolio technique de Jesus Martinez Escobar, Développeur Full Stack orienté Angular, APIs Laravel, MySQL, tests, accessibilité et applications web maintenables.",
+    "description": "Portfolio de Jesus Martinez Escobar, développeur Full Stack orienté Angular, Laravel, applications web, collaborations techniques et projets digitaux.",
     "imageAlt": "Aperçu du portfolio Jesus Dev"
   }
 }

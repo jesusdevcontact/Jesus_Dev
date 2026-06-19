@@ -50,12 +50,12 @@
   },
   "about": {
     "eyebrow": "About",
-    "title": "I build Angular interfaces backed by Laravel APIs and relational data.",
-    "intro": "This portfolio shows how I structure UI flows, REST APIs, validation, database models and deployment-ready projects.",
-    "cardTitle": "Readable Angular code, Laravel APIs and MySQL-backed workflows.",
+    "title": "I build software with discipline, consistency and a focus on useful solutions.",
+    "intro": "I am Jesus Martinez Escobar, a Full Stack Developer focused on Angular and Laravel. I moved into development after working in sport and team management, where I learned to stay organized, communicate clearly and work toward results.",
+    "cardTitle": "Sport, people and maintainable software.",
     "paragraphs": [
-      "I am Jesus Martinez Escobar, a Full Stack Developer focused on Angular applications, Laravel APIs and database-backed workflows. I try to write code another developer can understand, test and extend without guessing the intent.",
-      "The projects are presented as technical case studies: what the app does, how the frontend and backend are separated, how data is validated, and which quality checks support the user flow."
+      "My background in physical conditioning and my experience in sports centers, including team coordination and customer service, still shape how I work: listen first, prioritize well and move forward with method.",
+      "Karate, judo, football and physical training gave me a practical relationship with discipline and continuous improvement. I bring that mindset into development by breaking problems down, working in phases and building clear, maintainable software."
     ],
     "principles": {
       "decisions": "Explain decisions clearly",
@@ -201,13 +201,13 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Open to Angular, Laravel and Full Stack development roles.",
-    "text": "I am ready to discuss my code, project decisions and how I approach Angular, Laravel, data, testing, accessibility and deployment inside a real team."
+    "title": "Let’s talk about an opportunity, collaboration or digital project.",
+    "text": "I am open to Frontend or Full Stack teams, technical collaborations and web projects with Angular, Laravel or related technologies. I can also discuss landing pages, corporate websites and simple solutions for small businesses."
   },
   "contactPage": {
     "eyebrow": "Contact",
-    "title": "A simple way to start a technical conversation.",
-    "intro": "Use the form to prepare a clean email with context, or jump directly to LinkedIn and GitHub.",
+    "title": "Tell me about an opportunity or digital project.",
+    "intro": "Use the form to describe a professional opportunity, a collaboration, a web application, a landing page, a business website or a specific digital need.",
     "form": {
       "title": "Message details",
       "name": "Name",
@@ -215,15 +215,15 @@
       "company": "Company",
       "companyPlaceholder": "Company or team, optional",
       "subject": "Subject",
-      "subjectPlaceholder": "Professional inquiry",
+      "subjectPlaceholder": "Opportunity, collaboration or project",
       "message": "Message",
-      "messagePlaceholder": "Role, team, stack or project you want to discuss.",
-      "guidance": "Keep it concise. The button opens your email client with this content.",
-      "send": "Prepare email"
+      "messagePlaceholder": "Tell me the goal, the type of project or the opportunity you want to discuss.",
+      "guidance": "Keep it concise. The button prepares a message in your email client.",
+      "send": "Continue by email"
     },
     "direct": {
       "title": "Direct channels",
-      "text": "Prefer a faster path? These actions keep the same professional context without adding a backend form."
+      "text": "You can also email me, connect on LinkedIn or review my work on GitHub."
     }
   },
   "buttons": {
@@ -231,7 +231,7 @@
     "contact": "Contact me",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "emailMe": "Email me",
+    "emailMe": "Tell me your project",
     "liveDemo": "Live demo"
   },
   "footer": {
@@ -384,7 +384,7 @@
   },
   "seo": {
     "title": "Jesus Dev | Angular & Laravel Full Stack Developer",
-    "description": "Technical portfolio for Jesus Martinez Escobar, a Full Stack Developer focused on Angular, Laravel APIs, MySQL, testing, accessibility and maintainable web applications.",
+    "description": "Portfolio for Jesus Martinez Escobar, a Full Stack Developer focused on Angular, Laravel, web applications, technical collaborations and digital projects.",
     "imageAlt": "Jesus Dev portfolio preview"
   }
 }

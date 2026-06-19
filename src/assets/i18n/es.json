@@ -50,12 +50,12 @@
   },
   "about": {
     "eyebrow": "Sobre mí",
-    "title": "Construyo interfaces Angular respaldadas por APIs Laravel y datos relacionales.",
-    "intro": "Este portfolio muestra cómo estructuro flujos UI, APIs REST, validación, modelos de base de datos y proyectos preparados para despliegue.",
-    "cardTitle": "Código Angular legible, APIs Laravel y flujos con MySQL.",
+    "title": "Desarrollo software con disciplina, constancia y foco en soluciones útiles.",
+    "intro": "Soy Jesús Martínez Escobar, Desarrollador Full Stack centrado en Angular y Laravel. Vengo del ámbito deportivo y de la gestión de equipos, una etapa que me enseñó a trabajar con organización, comunicación y orientación a resultados.",
+    "cardTitle": "Deporte, personas y software mantenible.",
     "paragraphs": [
-      "Soy Jesús Martínez Escobar, Desarrollador Full Stack enfocado en aplicaciones Angular, APIs Laravel y flujos respaldados por base de datos. Intento escribir código que otro desarrollador pueda entender, probar y extender sin adivinar la intención.",
-      "Los proyectos se presentan como casos técnicos: qué hace la app, cómo se separan frontend y backend, cómo se validan los datos y qué revisiones de calidad apoyan el flujo de usuario."
+      "Mi formación en Acondicionamiento Físico y mi experiencia en centros deportivos, incluyendo la coordinación de equipos y atención al cliente, forman parte de mi manera de trabajar: escuchar, priorizar y avanzar con método.",
+      "El karate, el judo, el fútbol y el entrenamiento físico me han dado una relación natural con la disciplina y la mejora continua. Hoy aplico esa mentalidad al desarrollo: dividir problemas, trabajar por fases y construir software claro, mantenible y útil."
     ],
     "principles": {
       "decisions": "Explicar decisiones con claridad",
@@ -201,13 +201,13 @@
   },
   "contact": {
     "eyebrow": "Contacto",
-    "title": "Abierto a roles Angular, Laravel y Full Stack.",
-    "text": "Estoy preparado para hablar de mi código, decisiones de proyecto y cómo abordo Angular, Laravel, datos, testing, accesibilidad y despliegue dentro de un equipo real."
+    "title": "Hablemos de una oportunidad, colaboración o proyecto digital.",
+    "text": "Estoy abierto a equipos Frontend o Full Stack, colaboraciones técnicas y proyectos web con Angular, Laravel o tecnologías relacionadas. También puedo valorar landings, webs corporativas y soluciones sencillas para pequeños negocios."
   },
   "contactPage": {
     "eyebrow": "Contacto",
-    "title": "Una forma sencilla de iniciar una conversación técnica.",
-    "intro": "Usa el formulario para preparar un email con contexto claro, o ve directamente a LinkedIn y GitHub.",
+    "title": "Cuéntame una oportunidad o proyecto digital.",
+    "intro": "Usa el formulario para comentar una oportunidad profesional, una colaboración, una aplicación web, una landing, una web para negocio o una necesidad digital concreta.",
     "form": {
       "title": "Detalles del mensaje",
       "name": "Nombre",
@@ -215,15 +215,15 @@
       "company": "Empresa",
       "companyPlaceholder": "Empresa o equipo, opcional",
       "subject": "Asunto",
-      "subjectPlaceholder": "Consulta profesional",
+      "subjectPlaceholder": "Oportunidad, colaboración o proyecto",
       "message": "Mensaje",
-      "messagePlaceholder": "Rol, equipo, stack o proyecto que quieras comentar.",
-      "guidance": "Mantenlo conciso. El botón abre tu cliente de email con este contenido.",
-      "send": "Preparar email"
+      "messagePlaceholder": "Cuéntame el objetivo, el tipo de proyecto o la oportunidad que quieres comentar.",
+      "guidance": "Mantenlo conciso. El botón prepara un mensaje en tu cliente de email.",
+      "send": "Continuar por email"
     },
     "direct": {
       "title": "Canales directos",
-      "text": "Si prefieres una vía más rápida, estas acciones mantienen el contexto profesional sin añadir backend."
+      "text": "También puedes escribirme por email, conectar en LinkedIn o revisar mi trabajo en GitHub."
     }
   },
   "buttons": {
@@ -231,7 +231,7 @@
     "contact": "Contactarme",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "emailMe": "Escríbeme",
+    "emailMe": "Cuéntame tu proyecto",
     "liveDemo": "Demo"
   },
   "footer": {
@@ -384,7 +384,7 @@
   },
   "seo": {
     "title": "Jesus Dev | Desarrollador Full Stack Angular y Laravel",
-    "description": "Portfolio técnico de Jesús Martínez Escobar, Desarrollador Full Stack enfocado en Angular, APIs Laravel, MySQL, testing, accesibilidad y aplicaciones web mantenibles.",
+    "description": "Portfolio de Jesús Martínez Escobar, Desarrollador Full Stack enfocado en Angular, Laravel, aplicaciones web, colaboraciones técnicas y proyectos digitales.",
     "imageAlt": "Vista previa del portfolio Jesus Dev"
   }
 }

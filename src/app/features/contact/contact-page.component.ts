@@ -25,11 +25,11 @@ export class ContactPageComponent {
   message = '';
 
   mailtoHref(): string {
-    const subject = this.subject.trim() || 'Consulta profesional · Jesus Martinez Escobar';
+    const subject = this.subject.trim() || 'Oportunidad o proyecto digital · Jesus Martinez Escobar';
     const body = [
       'Buenas,',
       '',
-      'Me pongo en contacto contigo desde tu portfolio.',
+      'Me pongo en contacto contigo para comentar una oportunidad, colaboración o proyecto digital.',
       '',
       `Nombre: ${this.name.trim()}`,
       `Empresa: ${this.company.trim()}`,
