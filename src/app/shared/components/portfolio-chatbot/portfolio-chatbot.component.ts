@@ -47,7 +47,7 @@ export class PortfolioChatbotComponent {
   private readonly nodesById = new Map<ChatbotNodeId, ChatbotNode>(chatbotNodes.map((node) => [node.id, node]));
   private opener: HTMLElement | null = null;
   private responseTimer: ReturnType<typeof setTimeout> | null = null;
-  private scrollRaf: number | null = null;
+  private readonly frameIds = new Set<number>();
   private bodyLock: {
     overflow: string;
     position: string;
@@ -192,7 +192,7 @@ export class PortfolioChatbotComponent {
 
   ngOnDestroy(): void {
     this.cancelPendingResponse();
-    this.cancelScrollFrame();
+    this.cancelAnimationFrames();
     this.unlockBodyScroll();
   }
 
@@ -318,7 +318,6 @@ export class PortfolioChatbotComponent {
   }
 
   private requestFrame(callback: () => void): void {
-    this.cancelScrollFrame();
     const view = this.document.defaultView;
 
     if (!view) {
@@ -326,20 +325,23 @@ export class PortfolioChatbotComponent {
       return;
     }
 
-    this.scrollRaf = view.requestAnimationFrame(() => {
-      this.scrollRaf = null;
+    const frameId = view.requestAnimationFrame(() => {
+      this.frameIds.delete(frameId);
       callback();
     });
+    this.frameIds.add(frameId);
   }
 
-  private cancelScrollFrame(): void {
+  private cancelAnimationFrames(): void {
     const view = this.document.defaultView;
 
-    if (this.scrollRaf !== null && view) {
-      view.cancelAnimationFrame(this.scrollRaf);
+    if (view) {
+      for (const frameId of this.frameIds) {
+        view.cancelAnimationFrame(frameId);
+      }
     }
 
-    this.scrollRaf = null;
+    this.frameIds.clear();
   }
 
   private lockBodyScrollIfNeeded(): void {
