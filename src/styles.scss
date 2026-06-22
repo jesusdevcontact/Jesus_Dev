@@ -985,6 +985,9 @@ jd-home-page .hero-scroll-cue {
   }
 
   .back-to-top {
+    left: 50%;
+    right: auto;
+    bottom: calc(0.75rem + env(safe-area-inset-bottom));
     display: inline-flex;
     width: auto;
     height: auto;
@@ -997,6 +1000,7 @@ jd-home-page .hero-scroll-cue {
     color: var(--text-muted);
     box-shadow: none;
     backdrop-filter: none;
+    translate: -50% 0;
     animation: backToTopFloat 1.9s ease-in-out infinite;
   }
 
