@@ -10,10 +10,15 @@ export interface TechCategory {
 
 export type TechCategoryKey = TechCategory['key'];
 
-export type TechIcon = {
-  type: 'lucide';
-  name: string;
-};
+export type TechIcon =
+  | {
+      type: 'asset';
+      path: string;
+    }
+  | {
+      type: 'lucide';
+      name: string;
+    };
 
 export interface ProjectScreenshot {
   src: string;

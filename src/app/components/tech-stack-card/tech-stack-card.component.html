@@ -32,8 +32,13 @@
         <ul [attr.aria-label]="'stack.labels.primary' | translate">
           @for (item of ('stack.categories.' + category().key + '.primaryItems' | translate | translateArray); track item) {
             <li [ngClass]="'tech-' + techSlug(item)">
+              @let icon = techIcon(item);
               <span class="tech-mark" aria-hidden="true">
-                <svg [lucideIcon]="techIcon(item).name" size="14"></svg>
+                @if (icon.type === 'asset') {
+                  <img [src]="icon.path" alt="" aria-hidden="true" class="tech-mark__logo" />
+                } @else {
+                  <svg [lucideIcon]="icon.name" size="14"></svg>
+                }
               </span>
               <span class="tech-name">{{ item }}</span>
             </li>
@@ -47,8 +52,13 @@
           <ul [attr.aria-label]="'stack.labels.complementary' | translate">
             @for (item of ('stack.categories.' + category().key + '.complementaryItems' | translate | translateArray); track item) {
               <li [ngClass]="'tech-' + techSlug(item)">
+                @let icon = techIcon(item);
                 <span class="tech-mark" aria-hidden="true">
-                  <svg [lucideIcon]="techIcon(item).name" size="14"></svg>
+                  @if (icon.type === 'asset') {
+                    <img [src]="icon.path" alt="" aria-hidden="true" class="tech-mark__logo" />
+                  } @else {
+                    <svg [lucideIcon]="icon.name" size="14"></svg>
+                  }
                 </span>
                 <span class="tech-name">{{ item }}</span>
               </li>

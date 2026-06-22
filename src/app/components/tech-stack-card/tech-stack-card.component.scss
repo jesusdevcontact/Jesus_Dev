@@ -1,8 +1,14 @@
+:host {
+  display: block;
+  align-self: start;
+  height: auto;
+}
+
 .tech-card {
   position: relative;
   isolation: isolate;
   min-width: 0;
-  min-height: 100%;
+  height: auto;
   overflow: hidden;
   border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
@@ -216,6 +222,13 @@ li {
   stroke-width: 2.25;
 }
 
+.tech-mark__logo {
+  display: block;
+  width: 1.18rem;
+  height: 1.18rem;
+  object-fit: contain;
+}
+
 .tech-name {
   overflow-wrap: anywhere;
 }
@@ -256,12 +269,20 @@ li {
 .tech-vs-code .tech-mark,
 .tech-postman .tech-mark,
 .tech-metabase .tech-mark {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(83, 216, 255, 0.74));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(235, 244, 249, 0.9)),
+    #ffffff;
+  color: #041014;
+}
+
+.tech-claude-code .tech-mark {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 239, 232, 0.9)),
+    #ffffff;
   color: #041014;
 }
 
 .tech-openai-codex .tech-mark,
-.tech-claude-code .tech-mark,
 .tech-ai-assisted-development .tech-mark,
 .tech-ia-aplicada-al-desarrollo .tech-mark,
 .tech-ia-appliquee-au-developpement .tech-mark,
