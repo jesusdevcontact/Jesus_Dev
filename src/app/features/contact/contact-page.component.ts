@@ -6,6 +6,7 @@ import { LucideDynamicIcon } from '@lucide/angular';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { startWith } from 'rxjs';
 
+import { socialLinks } from '../../core/data/portfolio.content';
 import { SeoService } from '../../core/seo/seo.service';
 import { buildContactMailto } from '../../core/utils/contact-mailto';
 
@@ -22,8 +23,8 @@ export class ContactPageComponent {
   private readonly translate = inject(TranslateService);
 
   readonly fallbackMailto = buildContactMailto();
-  readonly githubUrl = 'https://github.com/jesusdev98';
-  readonly linkedinUrl = 'https://linkedin.com/in/jesus-martinez-escobar-223722374';
+  readonly githubUrl = socialLinks.github;
+  readonly linkedinUrl = socialLinks.linkedin;
 
   name = '';
   company = '';

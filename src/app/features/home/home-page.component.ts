@@ -6,7 +6,7 @@ import { startWith } from 'rxjs';
 
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
 import { TechStackCardComponent } from '../../components/tech-stack-card/tech-stack-card.component';
-import { journeyItems, projects, techCategories } from '../../core/data/portfolio.content';
+import { journeyItems, projects, socialLinks, techCategories } from '../../core/data/portfolio.content';
 import { JourneyKey, TechCategoryKey } from '../../core/models/portfolio.models';
 import { SeoService } from '../../core/seo/seo.service';
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
@@ -38,6 +38,7 @@ export class HomePageComponent {
   readonly techCategories = techCategories;
   readonly projects = projects;
   readonly journeyItems = journeyItems;
+  readonly socialLinks = socialLinks;
   readonly openTechCategory = signal<TechCategoryKey | null>(null);
   readonly openJourneyItem = signal<JourneyKey | null>(null);
 
@@ -98,10 +99,7 @@ export class HomePageComponent {
         description,
         url: 'https://jesusdev.dev/',
         image: 'https://jesusdev.dev/assets/img/og-image.jpg',
-        sameAs: [
-          'https://github.com/jesusdev98',
-          'https://linkedin.com/in/jesus-martinez-escobar-223722374',
-        ],
+        sameAs: [socialLinks.github, socialLinks.linkedin],
         knowsAbout: ['Angular', 'TypeScript', 'Laravel', 'PHP', 'MySQL', 'REST APIs', 'RxJS', 'Docker', 'Testing', 'Accessibility'],
         mainEntityOfPage: 'https://jesusdev.dev/',
       },

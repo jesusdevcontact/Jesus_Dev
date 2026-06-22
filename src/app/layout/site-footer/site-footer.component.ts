@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { LucideDynamicIcon } from '@lucide/angular';
 import { TranslatePipe } from '@ngx-translate/core';
 
+import { socialLinks } from '../../core/data/portfolio.content';
 import { buildContactMailto } from '../../core/utils/contact-mailto';
 
 @Component({
@@ -16,4 +17,5 @@ import { buildContactMailto } from '../../core/utils/contact-mailto';
 export class SiteFooterComponent {
   readonly year = new Date().getFullYear();
   readonly mailtoHref = buildContactMailto();
+  readonly socialLinks = socialLinks;
 }

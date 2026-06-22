@@ -10,11 +10,20 @@ import { I18nService } from './core/i18n/i18n.service';
 import { SiteFooterComponent } from './layout/site-footer/site-footer.component';
 import { SiteHeaderComponent } from './layout/site-header/site-header.component';
 import { CookieConsentComponent } from './shared/components/cookie-consent/cookie-consent.component';
+import { PortfolioChatbotComponent } from './shared/components/portfolio-chatbot/portfolio-chatbot.component';
 
 @Component({
   selector: 'jd-root',
   standalone: true,
-  imports: [RouterOutlet, SiteFooterComponent, SiteHeaderComponent, CookieConsentComponent, LucideDynamicIcon, TranslatePipe],
+  imports: [
+    RouterOutlet,
+    SiteFooterComponent,
+    SiteHeaderComponent,
+    CookieConsentComponent,
+    PortfolioChatbotComponent,
+    LucideDynamicIcon,
+    TranslatePipe,
+  ],
   template: `
     <div class="cosmic-backdrop" aria-hidden="true">
       <span class="cosmic-planet cosmic-planet--saturn"></span>
@@ -27,6 +36,7 @@ import { CookieConsentComponent } from './shared/components/cookie-consent/cooki
       <router-outlet />
       <jd-site-footer />
       <jd-cookie-consent />
+      <jd-portfolio-chatbot />
       @if (showBackToTop()) {
         <button
           class="back-to-top"

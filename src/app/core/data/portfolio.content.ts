@@ -1,4 +1,9 @@
-import { JourneyItem, NavItem, Project, TechCategory } from '../models/portfolio.models';
+import { JourneyItem, NavItem, Project, SocialLinks, TechCategory } from '../models/portfolio.models';
+
+export const socialLinks: SocialLinks = {
+  github: 'https://github.com/jesusdev98',
+  linkedin: 'https://linkedin.com/in/jesus-martinez-escobar-223722374',
+};
 
 export const navItems: NavItem[] = [
   { labelKey: 'nav.about', target: 'about' },

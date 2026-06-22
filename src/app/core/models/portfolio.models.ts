@@ -3,6 +3,11 @@ export interface NavItem {
   target: string;
 }
 
+export interface SocialLinks {
+  github: string;
+  linkedin: string;
+}
+
 export interface TechCategory {
   key: 'frontend' | 'backend' | 'databases' | 'testing' | 'architecture' | 'devops' | 'tooling';
   accent: 'cyan' | 'green' | 'amber' | 'rose' | 'blue';
@@ -53,3 +58,36 @@ export interface JourneyItem {
 }
 
 export type JourneyKey = JourneyItem['key'];
+
+export type ChatbotNodeId =
+  | 'welcome'
+  | 'projects'
+  | 'stack'
+  | 'experience'
+  | 'availability'
+  | 'services'
+  | 'contact';
+
+export type ChatbotAction =
+  | {
+      type: 'node';
+      labelKey: string;
+      targetNodeId: ChatbotNodeId;
+    }
+  | {
+      type: 'route';
+      labelKey: string;
+      route: string;
+      fragment?: string;
+    }
+  | {
+      type: 'external';
+      labelKey: string;
+      url: string;
+    };
+
+export interface ChatbotNode {
+  id: ChatbotNodeId;
+  messageKey: string;
+  actions: readonly ChatbotAction[];
+}

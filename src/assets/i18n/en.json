@@ -12,6 +12,51 @@
     "contact": "Contact",
     "brandSubtitle": "Angular / Laravel"
   },
+  "chatbot": {
+    "title": "Jesus assistant",
+    "status": "Quick information about his profile",
+    "messages": {
+      "welcome": "Hi. I can help you explore Jesus projects, experience and technical profile. What would you like to check?",
+      "projects": "Jesus is currently continuing GIBORA, a Full Stack e-commerce project with Angular and Laravel, and maintains projects such as FocusFlow and ConnectingDevs. He also keeps improving his technical portfolio.",
+      "stack": "His main stack is centered on Angular, TypeScript, Laravel, PHP, MySQL and PostgreSQL. He also works with testing, Docker, GitHub Actions and AI-assisted tools used with technical review.",
+      "experience": "Jesus has technical experience at Pegasus Medical, where he worked with Laravel, Filament, MySQL, RFID, reporting, Docker and Linux. Before that, he built experience in team management and operations as a Center Director.",
+      "availability": "He is open to Frontend and Full Stack opportunities, especially in Angular and Laravel environments, as well as technical collaborations.",
+      "services": "He is also open to building landing pages, corporate websites, digital menus and web solutions for small businesses, always defining the real project scope first.",
+      "contact": "You can contact Jesus from the contact page, LinkedIn, GitHub or email."
+    },
+    "statuses": {
+      "preparing": "Preparing response"
+    },
+    "actions": {
+      "currentProjects": "What projects is he working on now?",
+      "mainStack": "What is his main stack?",
+      "professionalExperience": "What professional experience does he have?",
+      "availability": "Is he available for work?",
+      "clientProjects": "Does he build client projects?",
+      "contactJesus": "How can I contact Jesus?",
+      "viewGibora": "View GIBORA",
+      "viewAllProjects": "View all projects",
+      "viewFullStack": "View full stack",
+      "viewProjects": "View projects",
+      "viewExperience": "View experience",
+      "viewPegasus": "View Pegasus Medical",
+      "goContact": "Go to contact",
+      "tellProject": "Describe a project",
+      "viewContact": "View contact",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "backHome": "Back to start",
+      "restart": "Restart conversation"
+    },
+    "a11y": {
+      "open": "Open assistant",
+      "close": "Close assistant",
+      "panelLabel": "Guided portfolio assistant",
+      "conversation": "Assistant conversation",
+      "options": "Response options",
+      "externalAction": "{{ label }}. Opens in a new tab"
+    }
+  },
   "hero": {
     "eyebrow": "Full Stack Developer / Angular + Laravel",
     "title": "Jesus Martinez Escobar, Angular and Laravel Full Stack.",

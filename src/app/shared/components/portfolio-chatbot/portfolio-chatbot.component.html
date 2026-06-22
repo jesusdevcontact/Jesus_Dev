@@ -1,0 +1,102 @@
+<div class="chatbot" [class.chatbot--open]="isOpen()">
+  @if (isOpen()) {
+    <section
+      #panel
+      class="chatbot-panel"
+      role="dialog"
+      aria-modal="true"
+      [id]="panelId"
+      [attr.aria-labelledby]="titleId"
+      [attr.aria-describedby]="descriptionId"
+    >
+      <header class="chatbot-header">
+        <span class="chatbot-avatar" aria-hidden="true">
+          <svg lucideIcon="bot" size="18"></svg>
+        </span>
+        <span class="chatbot-heading">
+          <strong #dialogTitle [id]="titleId" tabindex="-1">{{ 'chatbot.title' | translate }}</strong>
+          <span [id]="descriptionId">{{ 'chatbot.status' | translate }}</span>
+        </span>
+        <button
+          #closeButton
+          class="chatbot-close"
+          type="button"
+          [attr.aria-label]="'chatbot.a11y.close' | translate"
+          [attr.title]="'chatbot.a11y.close' | translate"
+          (click)="close()"
+        >
+          <svg lucideIcon="x" size="16" aria-hidden="true"></svg>
+        </button>
+      </header>
+
+      <div #chatBody class="chatbot-body" role="log" [attr.aria-label]="'chatbot.a11y.conversation' | translate">
+        @for (message of messages(); track $index) {
+          <p
+            class="chatbot-message"
+            [class.chatbot-message--visitor]="message.author === 'visitor'"
+            [attr.aria-live]="message.author === 'assistant' && message.textKey === latestResponseKey() ? 'polite' : null"
+          >
+            {{ message.textKey | translate }}
+          </p>
+        }
+        @if (responsePending()) {
+          <p class="chatbot-message chatbot-message--pending" aria-live="polite">
+            <span aria-hidden="true"></span>
+            {{ 'chatbot.statuses.preparing' | translate }}
+          </p>
+        }
+      </div>
+
+      <div class="chatbot-actions" [attr.aria-label]="'chatbot.a11y.options' | translate">
+        @for (action of actions(); track action.labelKey) {
+          @if (action.type === 'node') {
+            <button class="chatbot-action" type="button" (click)="selectNodeAction(action)">
+              {{ action.labelKey | translate }}
+            </button>
+          } @else if (action.type === 'route') {
+            <a
+              class="chatbot-action"
+              [routerLink]="routeCommands(action)"
+              [fragment]="action.fragment"
+              (click)="closeAfterNavigation()"
+            >
+              {{ action.labelKey | translate }}
+            </a>
+          } @else {
+            <a
+              class="chatbot-action"
+              [href]="action.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              [attr.aria-label]="'chatbot.a11y.externalAction' | translate: { label: (action.labelKey | translate) }"
+              (click)="closeAfterNavigation()"
+            >
+              {{ action.labelKey | translate }}
+              <svg lucideIcon="external-link" size="14" aria-hidden="true"></svg>
+            </a>
+          }
+        }
+      </div>
+
+      @if (!isAtWelcome()) {
+        <button class="chatbot-reset" type="button" (click)="returnHome()">
+          <svg lucideIcon="arrow-right" size="14" aria-hidden="true"></svg>
+          {{ 'chatbot.actions.backHome' | translate }}
+        </button>
+      }
+    </section>
+  }
+
+  <button
+    #launcherButton
+    class="chatbot-launcher"
+    type="button"
+    [attr.aria-expanded]="isOpen()"
+    [attr.aria-controls]="panelId"
+    [attr.aria-label]="(isOpen() ? 'chatbot.a11y.close' : 'chatbot.a11y.open') | translate"
+    [attr.title]="(isOpen() ? 'chatbot.a11y.close' : 'chatbot.a11y.open') | translate"
+    (click)="toggle()"
+  >
+    <svg [lucideIcon]="isOpen() ? 'x' : 'message-circle'" size="22" aria-hidden="true"></svg>
+  </button>
+</div>
