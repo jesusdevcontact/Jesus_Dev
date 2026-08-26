@@ -552,6 +552,16 @@ button {
   transform: translateY(0);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 jd-home-page .hero-scroll-cue {
   display: none;
 }
@@ -1012,12 +1022,8 @@ jd-home-page .hero-scroll-cue {
     box-shadow: none;
   }
 
-  jd-home-page .hero-proof:not(.hero-proof--compact) {
-    display: none;
-  }
-
-  jd-home-page .hero-proof--compact {
-    display: none;
+  jd-home-page .hero-proof {
+    display: flex;
   }
 
   jd-home-page .hero-proof span {
@@ -1112,18 +1118,9 @@ jd-home-page .hero-scroll-cue {
     font-size: 0.66rem;
   }
 
-  jd-project-card .mockup-status p,
-  jd-project-card .project-content > p,
-  jd-project-card .problem-block p {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-  }
-
   jd-project-card .mockup-status p {
     font-size: 0.82rem;
     line-height: 1.35;
-    -webkit-line-clamp: 2;
   }
 
   jd-project-card .gallery-controls {
@@ -1160,7 +1157,6 @@ jd-home-page .hero-scroll-cue {
   jd-project-card .project-content > p {
     font-size: 0.88rem;
     line-height: 1.46;
-    -webkit-line-clamp: 2;
   }
 
   jd-project-card .problem-block {
@@ -1171,11 +1167,6 @@ jd-home-page .hero-scroll-cue {
   jd-project-card .problem-block p {
     font-size: 0.84rem;
     line-height: 1.42;
-    -webkit-line-clamp: 2;
-  }
-
-  jd-project-card .project-columns {
-    display: none;
   }
 
   jd-project-card .stack,
@@ -1188,11 +1179,6 @@ jd-home-page .hero-scroll-cue {
   jd-project-card .metric-row span {
     padding: 0.34rem 0.46rem;
     font-size: 0.72rem;
-  }
-
-  jd-project-card .metric-row span:nth-child(n + 3),
-  jd-project-card .stack li:nth-child(n + 7) {
-    display: none;
   }
 
   jd-project-card .project-actions {

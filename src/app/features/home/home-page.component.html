@@ -18,13 +18,6 @@
           }
         </div>
 
-        <div class="hero-proof hero-proof--compact" [attr.aria-label]="'accessibility.currentFocus' | translate">
-          <span>Angular</span>
-          <span>Laravel</span>
-          <span>Testing</span>
-          <span>Deploy</span>
-        </div>
-
         <div class="hero-actions" [attr.aria-label]="'accessibility.primaryActions' | translate">
           <jd-ui-button href="#projects" [label]="'buttons.viewProjects' | translate" icon="arrow-right" />
           <jd-ui-button routerLink="/contact" [label]="'buttons.contact' | translate" icon="mail" variant="secondary" />
@@ -52,20 +45,6 @@
           <i aria-hidden="true"></i>
         </a>
 
-        <dl class="hero-stats" [attr.aria-label]="'accessibility.professionalStrengths' | translate">
-          <div>
-            <dt>{{ 'hero.stats.angular.title' | translate }}</dt>
-            <dd>{{ 'hero.stats.angular.description' | translate }}</dd>
-          </div>
-          <div>
-            <dt>{{ 'hero.stats.laravel.title' | translate }}</dt>
-            <dd>{{ 'hero.stats.laravel.description' | translate }}</dd>
-          </div>
-          <div>
-            <dt>{{ 'hero.stats.mindset.title' | translate }}</dt>
-            <dd>{{ 'hero.stats.mindset.description' | translate }}</dd>
-          </div>
-        </dl>
       </div>
 
       <aside class="hero-panel" [attr.aria-label]="'accessibility.profileSummary' | translate" jdReveal>
@@ -75,7 +54,26 @@
             {{ 'hero.profile.status' | translate }}
           </div>
           <div class="profile-media">
-            <img src="assets/img/jesus_dev_corporativo.png" [alt]="'accessibility.profileImageAlt' | translate" width="520" height="378">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="assets/img/jesus_dev_corporativo-480.avif 480w, assets/img/jesus_dev_corporativo-960.avif 960w, assets/img/jesus_dev_corporativo-1408.avif 1408w"
+                sizes="(max-width: 900px) calc(100vw - 2rem), 520px"
+              >
+              <source
+                type="image/webp"
+                srcset="assets/img/jesus_dev_corporativo-480.webp 480w, assets/img/jesus_dev_corporativo-960.webp 960w, assets/img/jesus_dev_corporativo-1408.webp 1408w"
+                sizes="(max-width: 900px) calc(100vw - 2rem), 520px"
+              >
+              <img
+                src="assets/img/jesus_dev_corporativo-960.webp"
+                [alt]="'accessibility.profileImageAlt' | translate"
+                width="1408"
+                height="768"
+                fetchpriority="high"
+                decoding="async"
+              >
+            </picture>
           </div>
           <div class="skill-orbit skill-orbit--top">
             <strong>{{ 'hero.profile.angular.title' | translate }}</strong>
@@ -99,6 +97,18 @@
   </section>
 
   <jd-section-shell
+    sectionId="projects"
+    [eyebrow]="'projects.eyebrow' | translate"
+    [title]="'projects.title' | translate"
+  >
+    <div class="projects-grid" jdReveal>
+      @for (project of projects; track project.name) {
+        <jd-project-card [project]="project" />
+      }
+    </div>
+  </jd-section-shell>
+
+  <jd-section-shell
     sectionId="about"
     [eyebrow]="'about.eyebrow' | translate"
     [title]="'about.title' | translate"
@@ -120,6 +130,21 @@
         }
       </div>
     </div>
+
+    <dl class="hero-stats" [attr.aria-label]="'accessibility.professionalStrengths' | translate" jdReveal>
+      <div>
+        <dt>{{ 'hero.stats.angular.title' | translate }}</dt>
+        <dd>{{ 'hero.stats.angular.description' | translate }}</dd>
+      </div>
+      <div>
+        <dt>{{ 'hero.stats.laravel.title' | translate }}</dt>
+        <dd>{{ 'hero.stats.laravel.description' | translate }}</dd>
+      </div>
+      <div>
+        <dt>{{ 'hero.stats.mindset.title' | translate }}</dt>
+        <dd>{{ 'hero.stats.mindset.description' | translate }}</dd>
+      </div>
+    </dl>
   </jd-section-shell>
 
   <jd-section-shell
@@ -134,18 +159,6 @@
           [expanded]="openTechCategory() === category.key"
           (toggled)="toggleTechCategory($event)"
         />
-      }
-    </div>
-  </jd-section-shell>
-
-  <jd-section-shell
-    sectionId="projects"
-    [eyebrow]="'projects.eyebrow' | translate"
-    [title]="'projects.title' | translate"
-  >
-    <div class="projects-grid" jdReveal>
-      @for (project of projects; track project.name) {
-        <jd-project-card [project]="project" />
       }
     </div>
   </jd-section-shell>

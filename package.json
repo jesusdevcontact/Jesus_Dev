@@ -9,7 +9,7 @@
     "build": "ng build",
     "build:pages": "ng build --configuration production --base-href / && node tools/copy-spa-fallback.mjs",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --watch=false"
   },
   "dependencies": {
     "@angular/animations": "^21.2.15",
@@ -27,9 +27,11 @@
     "zone.js": "~0.16.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^21.2.13",
+    "@angular/build": "21.2.13",
     "@angular/cli": "^21.2.13",
     "@angular/compiler-cli": "^21.2.15",
-    "typescript": "~5.9.3"
+    "jsdom": "^30.0.1",
+    "typescript": "~5.9.3",
+    "vitest": "^4.1.11"
   }
 }

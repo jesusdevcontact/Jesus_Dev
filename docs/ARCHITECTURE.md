@@ -44,7 +44,7 @@ Important core files:
 <jd-site-header />
 <router-outlet />
 <jd-site-footer />
-<jd-cookie-consent />
+<jd-portfolio-chatbot />
 ```
 
 `SiteHeaderComponent` owns:
@@ -63,7 +63,7 @@ Important core files:
 | --- | --- |
 | `ui-button` | Shared button styling and link/button presentation. |
 | `section-shell` | Common section layout wrapper. |
-| `cookie-consent` | Persistent cookie consent and preferences panel. |
+| `portfolio-chatbot` | Guided portfolio assistant registered with the shared overlay stack. |
 
 Shared utilities:
 
@@ -76,7 +76,7 @@ Shared utilities:
 | --- | --- | --- |
 | `I18nService` | Current language signal | `localStorage: jesusdev-language` |
 | `ThemeService` | Current theme signal | `localStorage: theme` |
-| `CookieConsentComponent` local state | Consent signal | `localStorage: jesusdev-cookie-consent` |
+| `OverlayStackService` | Modal stack, inert state, focus and scroll lock | None |
 
 ## State Management Approach
 
@@ -85,7 +85,7 @@ The app uses local Angular signals for small UI state:
 - Header menu open/closed.
 - Scroll state.
 - Theme preference.
-- Cookie consent panel and stored choice.
+- Modal overlay stack.
 - Current language.
 
 There is no global store. This is intentional because the application is static, content-driven, and low-interaction.

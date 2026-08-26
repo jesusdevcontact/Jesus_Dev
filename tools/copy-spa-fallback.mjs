@@ -33,14 +33,14 @@ const directRoutes = [
     route: 'projects/focusflow',
     title: 'FocusFlow | Proyecto Angular PWA | Jesús Martínez Escobar',
     description: 'Detalle de FocusFlow, una PWA Angular para sesiones de foco, prioridades y revisión de progreso.',
-    image: 'https://jesusdev.dev/assets/Focus-Flow/focusflow-desktop.png',
+    image: 'https://jesusdev.dev/assets/Focus-Flow/focusflow-desktop.webp',
     type: 'article',
   },
   {
     route: 'projects/connectingdevs',
     title: 'ConnectingDevs | Plataforma Full Stack | Jesús Martínez Escobar',
     description: 'Detalle de ConnectingDevs, red Full Stack para perfiles developer con Angular, Laravel y PostgreSQL.',
-    image: 'https://jesusdev.dev/assets/Connectingdevs/connectingdevs_feed.png',
+    image: 'https://jesusdev.dev/assets/Connectingdevs/connectingdevs_feed.webp',
     type: 'article',
   },
   {

@@ -60,7 +60,7 @@
   "hero": {
     "eyebrow": "Full Stack Developer / Angular + Laravel",
     "title": "Jesus Martinez Escobar, Angular and Laravel Full Stack.",
-    "lead": "Full Stack Developer specialized in Angular, Laravel, and clean, fast, scalable digital experiences. I build typed interfaces, REST APIs and responsive flows for real teams.",
+    "lead": "I build maintainable, accessible Angular interfaces and Laravel APIs for real teams.",
     "proof": [
       "Available for frontend and Full Stack roles",
       "Angular UI, TypeScript and SCSS",
@@ -194,6 +194,27 @@
       "viewProjectAria": "View {{ project }} project",
       "backToProjects": "Back to projects",
       "contactCta": "Talk about a project"
+    },
+    "gallery": {
+      "open": "Enlarge {{ project }} screenshot: {{ screenshot }}",
+      "navigation": "{{ project }} screenshot navigation",
+      "previous": "Show previous {{ project }} screenshot",
+      "next": "Show next {{ project }} screenshot",
+      "preview": "Enlarged {{ project }} screenshot preview",
+      "close": "Close enlarged {{ project }} screenshot"
+    },
+    "screenshots": {
+      "focusFlow": {
+        "desktop": "FocusFlow desktop dashboard",
+        "web": "FocusFlow web interface",
+        "mobile": "FocusFlow mobile interface"
+      },
+      "devConnect": {
+        "feed": "ConnectingDevs feed",
+        "login": "ConnectingDevs login",
+        "profile": "ConnectingDevs profile",
+        "profileDetails": "ConnectingDevs profile details"
+      }
     },
     "notFound": {
       "title": "Project not found",
@@ -366,9 +387,10 @@
   "contactPage": {
     "eyebrow": "Contact",
     "title": "Tell me about an opportunity or digital project.",
-    "intro": "Use the form to describe a professional opportunity, a collaboration, a web application, a landing page, a business website or a specific digital need.",
+    "intro": "Complete the details to prepare an email about an opportunity, collaboration or project. This site does not send or store the message.",
     "form": {
       "title": "Message details",
+      "delivery": "These fields only prepare the content. Continuing opens your email application so you can review and send the message.",
       "name": "Name",
       "namePlaceholder": "Your name",
       "company": "Company",
@@ -377,12 +399,23 @@
       "subjectPlaceholder": "Opportunity, collaboration or project",
       "message": "Message",
       "messagePlaceholder": "Tell me the goal, the type of project or the opportunity you want to discuss.",
-      "guidance": "Keep it concise. The button prepares a message in your email client.",
-      "send": "Continue by email"
+      "guidance": "Keep it concise. Nothing is sent from this page.",
+      "send": "Open my email application",
+      "alternative": "If it does not open, email me directly at"
     },
     "direct": {
       "title": "Direct channels",
       "text": "You can also email me, connect on LinkedIn or review my work on GitHub."
+    },
+    "email": {
+      "fallbackSubject": "Professional inquiry · Jesus Martinez Escobar",
+      "fallbackBody": "Hello,\n\nI am contacting you from your portfolio.\n\nName:\nCompany:\nMessage:\n",
+      "defaultSubject": "Opportunity or digital project · Jesus Martinez Escobar",
+      "greeting": "Hello,",
+      "messageIntro": "I am contacting you to discuss an opportunity, collaboration or digital project.",
+      "nameLine": "Name: {{ value }}",
+      "companyLine": "Company: {{ value }}",
+      "messageLabel": "Message:"
     }
   },
   "buttons": {
@@ -399,20 +432,6 @@
     "cookies": "Cookies",
     "legal": "Legal"
   },
-  "cookies": {
-    "eyebrow": "Privacy",
-    "title": "Privacy preferences",
-    "description": "This site only stores local preferences for language, theme and this notice. It does not use advertising cookies, tracking pixels or visitor measurement scripts.",
-    "accept": "Got it",
-    "reject": "Close",
-    "close": "Close privacy preferences and save this notice as closed",
-    "closeSaved": "Close privacy preferences and keep the current choice",
-    "acceptLabel": "Confirm privacy preferences notice",
-    "rejectLabel": "Close privacy preferences notice",
-    "statusAccepted": "Current choice: privacy notice confirmed.",
-    "statusRejected": "Current choice: privacy notice closed.",
-    "openSettings": "Open privacy preferences"
-  },
   "theme": {
     "dark": "dark mode",
     "light": "light mode",
@@ -422,7 +441,7 @@
   "legal": {
     "backHome": "Back to portfolio",
     "contactAction": "Contact",
-    "updated": "Last updated: May 31, 2026",
+    "updated": "Last updated: August 26, 2026",
     "privacy": {
       "eyebrow": "Legal",
       "title": "Privacy Policy",
@@ -434,11 +453,11 @@
         },
         "data": {
           "title": "Data handled by this site",
-          "items": ["The site itself only stores local browser preferences for language, theme and privacy notice status.", "If you use a contact link, your email application opens a mailto message. The site does not submit, store or process that message through a backend."]
+          "items": ["The site itself only stores functional browser preferences for language and theme.", "If you use a contact link, your email application opens a mailto message. The site does not submit, store or process that message through a backend."]
         },
         "storage": {
           "title": "LocalStorage preferences",
-          "items": ["Language preference is stored in localStorage so the selected language can be restored.", "Theme preference is stored in localStorage so dark or light mode can be restored.", "Privacy notice status is stored in localStorage so the notice does not reappear after a choice."]
+          "items": ["Language preference is stored in localStorage under jesusdev-language.", "Theme preference is stored in localStorage under theme."]
         },
         "hosting": {
           "title": "Hosting",
@@ -465,7 +484,7 @@
         },
         "localStorage": {
           "title": "LocalStorage used",
-          "items": ["Language preference stores the selected language.", "Theme preference stores the selected dark or light theme.", "Privacy notice status stores whether the notice has been confirmed or closed."]
+          "items": ["jesusdev-language stores the selected language: es, en or fr.", "theme stores the selected theme: dark or light."]
         },
         "notUsed": {
           "title": "What is not used",
@@ -473,7 +492,7 @@
         },
         "manage": {
           "title": "Managing local preferences",
-          "items": ["Use the floating privacy button to reopen the notice.", "You can clear language, theme and notice preferences from your browser settings by deleting site data for jesusdev.dev."]
+          "items": ["You can change language and theme from the header at any time.", "You can also clear both preferences from your browser settings by deleting site data for jesusdev.dev."]
         },
         "contact": {
           "title": "Contact",

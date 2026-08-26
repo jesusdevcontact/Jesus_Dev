@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideDynamicIcon } from '@lucide/angular';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 import { socialLinks } from '../../core/data/portfolio.content';
 import { buildContactMailto } from '../../core/utils/contact-mailto';
@@ -15,7 +15,15 @@ import { buildContactMailto } from '../../core/utils/contact-mailto';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SiteFooterComponent {
+  private readonly translate = inject(TranslateService);
+
   readonly year = new Date().getFullYear();
-  readonly mailtoHref = buildContactMailto();
   readonly socialLinks = socialLinks;
+
+  mailtoHref(): string {
+    return buildContactMailto(
+      this.translate.instant('contactPage.email.fallbackSubject'),
+      this.translate.instant('contactPage.email.fallbackBody'),
+    );
+  }
 }

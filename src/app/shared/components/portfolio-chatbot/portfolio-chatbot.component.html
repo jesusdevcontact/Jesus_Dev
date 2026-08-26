@@ -1,14 +1,15 @@
 <div class="chatbot" [class.chatbot--open]="isOpen()">
   @if (isOpen()) {
-    <section
-      #panel
-      class="chatbot-panel"
-      role="dialog"
-      aria-modal="true"
-      [id]="panelId"
-      [attr.aria-labelledby]="titleId"
-      [attr.aria-describedby]="descriptionId"
-    >
+    <div #layer class="chatbot-layer">
+      <div class="chatbot-backdrop" aria-hidden="true" (click)="close()"></div>
+      <section
+        class="chatbot-panel"
+        role="dialog"
+        aria-modal="true"
+        [id]="panelId"
+        [attr.aria-labelledby]="titleId"
+        [attr.aria-describedby]="descriptionId"
+      >
       <header class="chatbot-header">
         <span class="chatbot-avatar" aria-hidden="true">
           <svg lucideIcon="bot" size="18"></svg>
@@ -18,7 +19,6 @@
           <span [id]="descriptionId">{{ 'chatbot.status' | translate }}</span>
         </span>
         <button
-          #closeButton
           class="chatbot-close"
           type="button"
           [attr.aria-label]="'chatbot.a11y.close' | translate"
@@ -84,7 +84,8 @@
           {{ 'chatbot.actions.backHome' | translate }}
         </button>
       }
-    </section>
+      </section>
+    </div>
   }
 
   <button

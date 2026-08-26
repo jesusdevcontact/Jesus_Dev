@@ -3,7 +3,6 @@ import {
   Component,
   DestroyRef,
   ElementRef,
-  HostListener,
   ViewChild,
   computed,
   effect,
@@ -19,6 +18,7 @@ import { filter } from 'rxjs';
 
 import { chatbotNodes } from '../../../core/data/chatbot.content';
 import { ChatbotAction, ChatbotNode, ChatbotNodeId } from '../../../core/models/portfolio.models';
+import { OverlayRef, OverlayStackService } from '../../../core/overlay/overlay-stack.service';
 
 interface ChatbotMessage {
   author: 'assistant' | 'visitor';
@@ -36,25 +36,19 @@ interface ChatbotMessage {
 export class PortfolioChatbotComponent {
   private readonly destroyRef = inject(DestroyRef);
   private readonly document = inject(DOCUMENT);
+  private readonly overlayStack = inject(OverlayStackService);
   private readonly router = inject(Router);
 
-  @ViewChild('panel') private panel?: ElementRef<HTMLElement>;
+  @ViewChild('layer') private layer?: ElementRef<HTMLElement>;
   @ViewChild('chatBody') private chatBody?: ElementRef<HTMLElement>;
-  @ViewChild('closeButton') private closeButton?: ElementRef<HTMLButtonElement>;
   @ViewChild('dialogTitle') private dialogTitle?: ElementRef<HTMLElement>;
   @ViewChild('launcherButton') private launcherButton?: ElementRef<HTMLButtonElement>;
 
   private readonly nodesById = new Map<ChatbotNodeId, ChatbotNode>(chatbotNodes.map((node) => [node.id, node]));
   private opener: HTMLElement | null = null;
+  private overlayRef: OverlayRef | null = null;
   private responseTimer: ReturnType<typeof setTimeout> | null = null;
   private readonly frameIds = new Set<number>();
-  private bodyLock: {
-    overflow: string;
-    position: string;
-    top: string;
-    width: string;
-    scrollY: number;
-  } | null = null;
 
   readonly panelId = 'portfolio-chatbot-panel';
   readonly titleId = 'portfolio-chatbot-title';
@@ -88,30 +82,12 @@ export class PortfolioChatbotComponent {
 
     effect(() => {
       if (this.isOpen()) {
-        this.lockBodyScrollIfNeeded();
-        this.focusDialogTitle();
+        this.requestFrame(() => this.registerOverlay());
         return;
       }
 
-      this.unlockBodyScroll();
+      this.releaseOverlay();
     });
-  }
-
-  @HostListener('document:keydown', ['$event'])
-  handleDocumentKeydown(event: KeyboardEvent): void {
-    if (!this.isOpen() || event.defaultPrevented) {
-      return;
-    }
-
-    if (event.key === 'Escape') {
-      event.preventDefault();
-      this.close();
-      return;
-    }
-
-    if (event.key === 'Tab') {
-      this.trapFocus(event);
-    }
   }
 
   toggle(): void {
@@ -131,9 +107,10 @@ export class PortfolioChatbotComponent {
   close(options: { restoreFocus?: boolean } = { restoreFocus: true }): void {
     this.cancelPendingResponse();
     this.isOpen.set(false);
-    this.unlockBodyScroll();
+    const hadOverlay = this.overlayRef !== null;
+    this.releaseOverlay(options.restoreFocus ?? true);
 
-    if (options.restoreFocus ?? true) {
+    if (!hadOverlay && (options.restoreFocus ?? true)) {
       this.restoreFocus();
     }
   }
@@ -193,7 +170,7 @@ export class PortfolioChatbotComponent {
   ngOnDestroy(): void {
     this.cancelPendingResponse();
     this.cancelAnimationFrames();
-    this.unlockBodyScroll();
+    this.releaseOverlay(false);
   }
 
   private nodeFor(id: ChatbotNodeId): ChatbotNode {
@@ -252,7 +229,7 @@ export class PortfolioChatbotComponent {
   }
 
   private focusFirstAction(): void {
-    this.requestFrame(() => this.focusableElements()[0]?.focus());
+    this.requestFrame(() => this.layer?.nativeElement.querySelector<HTMLElement>('.chatbot-action')?.focus());
   }
 
   private restoreFocus(): void {
@@ -261,45 +238,6 @@ export class PortfolioChatbotComponent {
       target?.focus();
       this.opener = null;
     });
-  }
-
-  private trapFocus(event: KeyboardEvent): void {
-    const focusable = this.focusableElements();
-
-    if (!focusable.length) {
-      event.preventDefault();
-      this.dialogTitle?.nativeElement.focus();
-      return;
-    }
-
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    const active = this.document.activeElement;
-
-    if (event.shiftKey && active === first) {
-      event.preventDefault();
-      last.focus();
-      return;
-    }
-
-    if (!event.shiftKey && active === last) {
-      event.preventDefault();
-      first.focus();
-    }
-  }
-
-  private focusableElements(): HTMLElement[] {
-    const panel = this.panel?.nativeElement;
-
-    if (!panel) {
-      return [];
-    }
-
-    return Array.from(
-      panel.querySelectorAll<HTMLElement>(
-        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
-      ),
-    ).filter((element) => !element.hasAttribute('disabled') && element.offsetParent !== null);
   }
 
   private scrollConversationToEnd(): void {
@@ -344,44 +282,27 @@ export class PortfolioChatbotComponent {
     this.frameIds.clear();
   }
 
-  private lockBodyScrollIfNeeded(): void {
-    const view = this.document.defaultView;
-
-    if (!view || !view.matchMedia('(max-width: 699px)').matches || this.bodyLock) {
+  private registerOverlay(): void {
+    const layer = this.layer?.nativeElement;
+    if (!this.isOpen() || !layer || this.overlayRef) {
       return;
     }
 
-    const body = this.document.body;
-    const scrollY = view.scrollY;
-    this.bodyLock = {
-      overflow: body.style.overflow,
-      position: body.style.position,
-      top: body.style.top,
-      width: body.style.width,
-      scrollY,
-    };
-
-    body.style.overflow = 'hidden';
-    body.style.position = 'fixed';
-    body.style.top = `-${scrollY}px`;
-    body.style.width = '100%';
+    this.overlayRef = this.overlayStack.open({
+      element: layer,
+      opener: this.opener,
+      initialFocus: this.dialogTitle?.nativeElement,
+      requestClose: () => this.close(),
+    });
   }
 
-  private unlockBodyScroll(): void {
-    const view = this.document.defaultView;
-
-    if (!this.bodyLock || !view) {
-      return;
+  private releaseOverlay(restoreFocus = true): void {
+    const overlayRef = this.overlayRef;
+    this.overlayRef = null;
+    overlayRef?.close(restoreFocus);
+    if (overlayRef) {
+      this.opener = null;
     }
-
-    const body = this.document.body;
-    const lock = this.bodyLock;
-    body.style.overflow = lock.overflow;
-    body.style.position = lock.position;
-    body.style.top = lock.top;
-    body.style.width = lock.width;
-    this.bodyLock = null;
-    view.scrollTo({ top: lock.scrollY, behavior: 'auto' });
   }
 
   private prefersReducedMotion(): boolean {

@@ -27,7 +27,12 @@ export type TechIcon =
 
 export interface ProjectScreenshot {
   src: string;
-  alt: string;
+  avifSrc: string;
+  thumbnailSrc: string;
+  thumbnailAvifSrc: string;
+  altKey: string;
+  width: number;
+  height: number;
   variant: 'desktop' | 'web' | 'mobile';
 }
 

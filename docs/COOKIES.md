@@ -1,86 +1,36 @@
-# Cookie Consent
+# Browser Storage And Cookies
 
-## Overview
+## Decision
 
-Cookie consent is implemented by:
+The site does not show a cookie consent banner because the application does not set tracking cookies or load analytics, advertising pixels, session replay, tag managers, or other non-essential third-party scripts.
 
-```text
-src/app/shared/components/cookie-consent/
-```
+A consent prompt for functional preferences would imply a tracking choice that does not exist. The former consent component was therefore removed.
 
-The component uses Angular signals and localStorage. No external consent-management platform is currently used.
+## Storage Inventory
 
-## Consent Model
+The application intentionally writes only these functional `localStorage` preferences:
 
-Storage key:
+| Key | Values | Purpose |
+| --- | --- | --- |
+| `jesusdev-language` | `es`, `en`, `fr` | Restore the visitor's selected language. |
+| `theme` | `dark`, `light` | Restore the visitor's selected color theme. |
 
-```text
-jesusdev-cookie-consent
-```
+The application does not intentionally write `sessionStorage` or `document.cookie` values. It has no backend session, account, checkout, or server-side form submission.
 
-Stored JSON shape:
+The obsolete `jesusdev-cookie-consent` value is removed during application startup. Language and theme preferences are not removed.
 
-```json
-{
-  "accepted": true,
-  "analytics": true,
-  "timestamp": "2026-05-31T00:00:00.000Z"
-}
-```
+## Third Parties
 
-Rejecting non-essential cookies stores:
+The production document contains no analytics SDK, tag manager, tracking pixel, embedded social widget, advertising script, or remote font loader. External GitHub, LinkedIn, demo, and email destinations are ordinary links and load only after the visitor activates them.
 
-```json
-{
-  "accepted": false,
-  "analytics": false,
-  "timestamp": "2026-05-31T00:00:00.000Z"
-}
-```
+GitHub Pages provides static hosting and may process standard request metadata as described in GitHub's own terms. This application does not receive or combine those hosting logs.
 
-Legacy string values, `accepted` and `rejected`, are read and normalized for backward compatibility.
+## Verification Evidence
 
-## First-Visit Behavior
+The storage and tracking review covered application TypeScript, templates, the static `index.html`, configuration, dependencies, documentation, and generated-page tooling. The only runtime storage calls are:
 
-If no consent exists:
+- `I18nService`: reads and writes `jesusdev-language`.
+- `ThemeService` and the pre-render theme bootstrap: read and write `theme`.
+- `AppComponent`: removes the obsolete `jesusdev-cookie-consent` value.
 
-1. The panel opens automatically.
-2. The user sees the consent decision immediately.
-3. The available actions are:
-   - `Aceptar`
-   - `Rechazar no esenciales`
-4. Closing with the X button or Escape behaves like rejecting non-essential cookies.
-
-This prevents closing the first-visit prompt without recording a decision.
-
-## Reopening Preferences
-
-The floating cookie icon remains visible. Clicking it:
-
-- Reopens the preferences panel.
-- Shows the current analytics state.
-- Allows the user to change consent.
-
-If the user closes a reopened panel without choosing a new action, the previous consent remains unchanged.
-
-## Accessibility Behavior
-
-The component includes:
-
-- Dialog semantics.
-- Keyboard-accessible buttons.
-- Escape key handling.
-- Focus on the primary action when opened.
-- Focus restoration to the floating cookie button when closed.
-- State-aware aria labels for closing behavior.
-- `aria-live` status text when a saved choice exists.
-
-## Analytics Integration Point
-
-The app currently records the analytics preference but does not wire an analytics provider in this codebase. If analytics is added later, initialize it only when:
-
-```ts
-analytics === true
-```
-
-Do not load non-essential analytics scripts before consent.
+If analytics or another non-essential service is introduced later, this decision must be revisited before its script is loaded.

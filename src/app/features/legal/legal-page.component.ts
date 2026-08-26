@@ -22,8 +22,6 @@ export class LegalPageComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly seo = inject(SeoService);
   private readonly translate = inject(TranslateService);
-  readonly mailtoHref = buildContactMailto();
-
   readonly page = computed<LegalPageKey>(() => this.route.snapshot.data['page'] ?? 'privacy');
   readonly sections = computed(() => {
     const sections: Record<LegalPageKey, string[]> = {
@@ -52,6 +50,13 @@ export class LegalPageComponent {
       this.seo.removeJsonLd('profile');
       this.seo.removeJsonLd('project');
     });
+  }
+
+  mailtoHref(): string {
+    return buildContactMailto(
+      this.translate.instant('contactPage.email.fallbackSubject'),
+      this.translate.instant('contactPage.email.fallbackBody'),
+    );
   }
 
   private localeFor(language: string): string {

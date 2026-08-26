@@ -31,7 +31,7 @@ The project is production-ready:
 | High | Add committed screenshots | Helps README and portfolio previews. |
 | High | Add automated accessibility checks | Consider Playwright + axe or similar tooling. |
 | Medium | Expand project case studies | Add deeper architecture screenshots or diagrams. |
-| Medium | Add consent-gated analytics | Only initialize if `analytics: true`. |
+| Medium | Evaluate privacy-preserving analytics | Re-audit storage, third parties, and consent requirements before loading any script. |
 | Medium | Add route-level SEO data | Current i18n service updates global SEO text. |
 | Low | Add visual regression checks | Useful once screenshots stabilize. |
 | Low | Add richer docs diagrams | Keep diagrams lightweight and maintainable. |

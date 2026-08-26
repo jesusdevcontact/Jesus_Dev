@@ -8,7 +8,7 @@ import { startWith } from 'rxjs';
 
 import { socialLinks } from '../../core/data/portfolio.content';
 import { SeoService } from '../../core/seo/seo.service';
-import { buildContactMailto } from '../../core/utils/contact-mailto';
+import { buildContactMailto, CONTACT_EMAIL } from '../../core/utils/contact-mailto';
 
 @Component({
   selector: 'jd-contact-page',
@@ -22,7 +22,7 @@ export class ContactPageComponent {
   private readonly seo = inject(SeoService);
   private readonly translate = inject(TranslateService);
 
-  readonly fallbackMailto = buildContactMailto();
+  readonly contactEmail = CONTACT_EMAIL;
   readonly githubUrl = socialLinks.github;
   readonly linkedinUrl = socialLinks.linkedin;
 
@@ -49,20 +49,27 @@ export class ContactPageComponent {
   }
 
   mailtoHref(): string {
-    const subject = this.subject.trim() || 'Oportunidad o proyecto digital · Jesus Martinez Escobar';
+    const subject = this.subject.trim() || this.translate.instant('contactPage.email.defaultSubject');
     const body = [
-      'Buenas,',
+      this.translate.instant('contactPage.email.greeting'),
       '',
-      'Me pongo en contacto contigo para comentar una oportunidad, colaboración o proyecto digital.',
+      this.translate.instant('contactPage.email.messageIntro'),
       '',
-      `Nombre: ${this.name.trim()}`,
-      `Empresa: ${this.company.trim()}`,
-      'Mensaje:',
+      this.translate.instant('contactPage.email.nameLine', { value: this.name.trim() }),
+      this.translate.instant('contactPage.email.companyLine', { value: this.company.trim() }),
+      this.translate.instant('contactPage.email.messageLabel'),
       this.message.trim(),
       '',
     ].join('\n');
 
     return buildContactMailto(subject, body);
+  }
+
+  fallbackMailto(): string {
+    return buildContactMailto(
+      this.translate.instant('contactPage.email.fallbackSubject'),
+      this.translate.instant('contactPage.email.fallbackBody'),
+    );
   }
 
   private localeFor(language: string): string {

@@ -1,8 +1,14 @@
 <header class="site-header" [class.site-header--scrolled]="scrolled()">
-  <div class="container nav-shell">
-    <a class="brand" href="/#hero" [attr.aria-label]="'accessibility.home' | translate" (click)="closeMenu()">
+  <div #navShell class="container nav-shell">
+    <a class="brand" routerLink="/" fragment="hero" [attr.aria-label]="'accessibility.home' | translate" (click)="closeMenu()">
       <span class="brand-mark">
-        <img src="assets/img/jesus_dev_logo.png" alt="" width="36" height="36">
+        <img
+          src="assets/img/jesus_dev_logo-36.webp"
+          srcset="assets/img/jesus_dev_logo-36.webp 1x, assets/img/jesus_dev_logo-72.webp 2x"
+          alt=""
+          width="36"
+          height="36"
+        >
       </span>
       <span class="brand-copy">
         <strong>Jesus Dev</strong>
@@ -11,6 +17,7 @@
     </a>
 
     <button
+      #menuToggle
       class="nav-toggle"
       type="button"
       [attr.aria-expanded]="menuOpen()"
@@ -21,12 +28,12 @@
       <svg [lucideIcon]="menuIcon()" size="20" aria-hidden="true"></svg>
     </button>
 
-    <nav id="primary-navigation" class="site-nav" [class.site-nav--open]="menuOpen()" [attr.aria-label]="'accessibility.primaryNavigation' | translate">
+    <nav #navigation id="primary-navigation" class="site-nav" [class.site-nav--open]="menuOpen()" [attr.aria-label]="'accessibility.primaryNavigation' | translate">
       @for (item of navItems; track item.target) {
         @if (isRouteTarget(item.target)) {
           <a [routerLink]="item.target" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
         } @else {
-          <a [href]="navHref(item.target)" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
+          <a routerLink="/" [fragment]="item.target" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
         }
       }
     </nav>

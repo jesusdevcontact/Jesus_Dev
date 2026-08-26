@@ -13,8 +13,9 @@
       </div>
 
       <div class="contact-layout">
-        <form class="contact-form" aria-labelledby="contact-form-title">
+        <section class="contact-form" aria-labelledby="contact-form-title">
           <h2 id="contact-form-title">{{ 'contactPage.form.title' | translate }}</h2>
+          <p class="email-explanation">{{ 'contactPage.form.delivery' | translate }}</p>
 
           <label>
             <span>{{ 'contactPage.form.name' | translate }}</span>
@@ -41,14 +42,18 @@
             <svg lucideIcon="mail" size="18" aria-hidden="true"></svg>
             <span>{{ 'contactPage.form.send' | translate }}</span>
           </a>
-        </form>
+          <p class="email-fallback">
+            {{ 'contactPage.form.alternative' | translate }}
+            <a [href]="fallbackMailto()">{{ contactEmail }}</a>
+          </p>
+        </section>
 
         <aside class="contact-aside" aria-labelledby="contact-aside-title">
           <h2 id="contact-aside-title">{{ 'contactPage.direct.title' | translate }}</h2>
           <p>{{ 'contactPage.direct.text' | translate }}</p>
 
           <div class="direct-actions">
-            <a [href]="fallbackMailto">
+            <a [href]="fallbackMailto()">
               <svg lucideIcon="mail" size="18" aria-hidden="true"></svg>
               <span>{{ 'buttons.emailMe' | translate }}</span>
             </a>

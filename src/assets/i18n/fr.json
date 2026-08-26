@@ -60,7 +60,7 @@
   "hero": {
     "eyebrow": "Développeur Full Stack / Angular + Laravel",
     "title": "Jesus Martinez Escobar, Full Stack Angular et Laravel.",
-    "lead": "Développeur Full Stack spécialisé en Angular, Laravel et expériences digitales propres, rapides et évolutives. Je construis des interfaces typées, APIs REST et flux responsives pour des équipes réelles.",
+    "lead": "Je développe des interfaces Angular et des APIs Laravel maintenables et accessibles pour des équipes réelles.",
     "proof": [
       "Disponible pour des rôles frontend et Full Stack",
       "UI Angular, TypeScript et SCSS",
@@ -194,6 +194,27 @@
       "viewProjectAria": "Voir le projet {{ project }}",
       "backToProjects": "Retour aux projets",
       "contactCta": "Parler d'un projet"
+    },
+    "gallery": {
+      "open": "Agrandir la capture de {{ project }} : {{ screenshot }}",
+      "navigation": "Navigation des captures de {{ project }}",
+      "previous": "Afficher la capture précédente de {{ project }}",
+      "next": "Afficher la capture suivante de {{ project }}",
+      "preview": "Aperçu agrandi des captures de {{ project }}",
+      "close": "Fermer la capture agrandie de {{ project }}"
+    },
+    "screenshots": {
+      "focusFlow": {
+        "desktop": "Tableau de bord ordinateur de FocusFlow",
+        "web": "Interface web de FocusFlow",
+        "mobile": "Interface mobile de FocusFlow"
+      },
+      "devConnect": {
+        "feed": "Fil d'actualité de ConnectingDevs",
+        "login": "Connexion à ConnectingDevs",
+        "profile": "Profil ConnectingDevs",
+        "profileDetails": "Détails du profil ConnectingDevs"
+      }
     },
     "notFound": {
       "title": "Projet introuvable",
@@ -366,9 +387,10 @@
   "contactPage": {
     "eyebrow": "Contact",
     "title": "Parlez-moi d’une opportunité ou d’un projet digital.",
-    "intro": "Utilisez le formulaire pour présenter une opportunité professionnelle, une collaboration, une application web, une landing page, un site pour entreprise ou un besoin digital précis.",
+    "intro": "Complétez les informations pour préparer un email sur une opportunité, une collaboration ou un projet. Ce site n’envoie ni ne stocke le message.",
     "form": {
       "title": "Détails du message",
+      "delivery": "Ces champs servent uniquement à préparer le contenu. Continuer ouvre votre application email afin de vérifier et d’envoyer le message.",
       "name": "Nom",
       "namePlaceholder": "Votre nom",
       "company": "Entreprise",
@@ -377,12 +399,23 @@
       "subjectPlaceholder": "Opportunité, collaboration ou projet",
       "message": "Message",
       "messagePlaceholder": "Expliquez l’objectif, le type de projet ou l’opportunité que vous souhaitez aborder.",
-      "guidance": "Restez concis. Le bouton prépare un message dans votre client email.",
-      "send": "Continuer par email"
+      "guidance": "Restez concis. Rien n’est envoyé depuis cette page.",
+      "send": "Ouvrir mon application email",
+      "alternative": "Si elle ne s’ouvre pas, écrivez-moi directement à"
     },
     "direct": {
       "title": "Canaux directs",
       "text": "Vous pouvez aussi m’écrire par email, me contacter sur LinkedIn ou consulter mon travail sur GitHub."
+    },
+    "email": {
+      "fallbackSubject": "Demande professionnelle · Jesus Martinez Escobar",
+      "fallbackBody": "Bonjour,\n\nJe vous contacte depuis votre portfolio.\n\nNom :\nEntreprise :\nMessage :\n",
+      "defaultSubject": "Opportunité ou projet digital · Jesus Martinez Escobar",
+      "greeting": "Bonjour,",
+      "messageIntro": "Je vous contacte pour échanger sur une opportunité, une collaboration ou un projet digital.",
+      "nameLine": "Nom : {{ value }}",
+      "companyLine": "Entreprise : {{ value }}",
+      "messageLabel": "Message :"
     }
   },
   "buttons": {
@@ -399,20 +432,6 @@
     "cookies": "Cookies",
     "legal": "Mentions légales"
   },
-  "cookies": {
-    "eyebrow": "Confidentialité",
-    "title": "Préférences de confidentialité",
-    "description": "Ce site stocke seulement des préférences locales pour la langue, le thème et cet avis. Il n'utilise pas de cookies publicitaires, pixels de suivi ni scripts de mesure de visites.",
-    "accept": "Compris",
-    "reject": "Fermer",
-    "close": "Fermer les préférences de confidentialité et enregistrer cet avis comme fermé",
-    "closeSaved": "Fermer les préférences et conserver le choix actuel",
-    "acceptLabel": "Confirmer l'avis de préférences de confidentialité",
-    "rejectLabel": "Fermer l'avis de préférences de confidentialité",
-    "statusAccepted": "Choix actuel : avis de confidentialité confirmé.",
-    "statusRejected": "Choix actuel : avis de confidentialité fermé.",
-    "openSettings": "Ouvrir les préférences de confidentialité"
-  },
   "theme": {
     "dark": "mode sombre",
     "light": "mode clair",
@@ -422,7 +441,7 @@
   "legal": {
     "backHome": "Retour au portfolio",
     "contactAction": "Contacter",
-    "updated": "Dernière mise à jour : 31 mai 2026",
+    "updated": "Dernière mise à jour : 26 août 2026",
     "privacy": {
       "eyebrow": "Légal",
       "title": "Politique de confidentialité",
@@ -434,11 +453,11 @@
         },
         "data": {
           "title": "Données traitées par ce site",
-          "items": ["Le site stocke seulement des préférences locales du navigateur pour la langue, le thème et l'état de l'avis de confidentialité.", "Si vous utilisez un lien de contact, votre application email ouvre un message mailto. Le site n'envoie, ne stocke ni ne traite ce message via un backend."]
+          "items": ["Le site stocke seulement des préférences fonctionnelles du navigateur pour la langue et le thème.", "Si vous utilisez un lien de contact, votre application email ouvre un message mailto. Le site n'envoie, ne stocke ni ne traite ce message via un backend."]
         },
         "storage": {
           "title": "Préférences localStorage",
-          "items": ["La préférence de langue est stockée dans localStorage afin de restaurer la langue sélectionnée.", "La préférence de thème est stockée dans localStorage afin de restaurer le mode clair ou sombre.", "L'état de l'avis de confidentialité est stocké dans localStorage afin de ne pas le réafficher après un choix."]
+          "items": ["La préférence de langue est stockée dans localStorage sous la clé jesusdev-language.", "La préférence de thème est stockée dans localStorage sous la clé theme."]
         },
         "hosting": {
           "title": "Hébergement",
@@ -465,7 +484,7 @@
         },
         "localStorage": {
           "title": "LocalStorage utilisé",
-          "items": ["La préférence de langue stocke la langue sélectionnée.", "La préférence de thème stocke le thème clair ou sombre sélectionné.", "L'état de l'avis de confidentialité stocke si l'avis a été confirmé ou fermé."]
+          "items": ["jesusdev-language stocke la langue sélectionnée : es, en ou fr.", "theme stocke le thème sélectionné : dark ou light."]
         },
         "notUsed": {
           "title": "Ce qui n'est pas utilisé",
@@ -473,7 +492,7 @@
         },
         "manage": {
           "title": "Gérer les préférences locales",
-          "items": ["Utilisez le bouton flottant de confidentialité pour rouvrir l'avis.", "Vous pouvez supprimer les préférences de langue, thème et avis depuis les réglages du navigateur en effaçant les données du site jesusdev.dev."]
+          "items": ["Vous pouvez changer la langue et le thème depuis l’en-tête à tout moment.", "Vous pouvez aussi supprimer les deux préférences dans les réglages du navigateur en effaçant les données du site jesusdev.dev."]
         },
         "contact": {
           "title": "Contact",

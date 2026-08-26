@@ -15,6 +15,22 @@
   pointer-events: auto;
 }
 
+.chatbot-layer,
+.chatbot-backdrop {
+  position: fixed;
+  inset: 0;
+}
+
+.chatbot-layer {
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.chatbot-backdrop {
+  background: rgba(2, 4, 8, 0.48);
+  backdrop-filter: blur(3px);
+}
+
 .chatbot-panel {
   position: fixed;
   left: 0.75rem;
@@ -30,6 +46,15 @@
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(28px) saturate(1.22);
   animation: chatbotEnter 220ms var(--ease-premium) both;
+}
+
+.chatbot-panel,
+.chatbot-launcher {
+  z-index: 1;
+}
+
+.chatbot-launcher {
+  position: relative;
 }
 
 .chatbot-header {

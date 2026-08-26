@@ -1,15 +1,5 @@
-const CONTACT_EMAIL = 'jesusdevcontact@gmail.com';
-const DEFAULT_SUBJECT = 'Consulta profesional · Jesus Martinez Escobar';
-const DEFAULT_BODY = `Buenas,
+export const CONTACT_EMAIL = 'jesusdevcontact@gmail.com';
 
-Me pongo en contacto contigo desde tu portfolio.
-
-Nombre:
-Empresa:
-Mensaje:
-
-`;
-
-export function buildContactMailto(subject = DEFAULT_SUBJECT, body = DEFAULT_BODY): string {
+export function buildContactMailto(subject: string, body: string): string {
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }

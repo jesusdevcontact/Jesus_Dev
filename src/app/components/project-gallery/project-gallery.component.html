@@ -4,18 +4,28 @@
       class="project-shot"
       type="button"
       (click)="openLightbox($event)"
-      [attr.aria-label]="'Open enlarged screenshot for ' + projectName() + ': ' + activeScreenshot.alt"
+      [attr.aria-label]="'projects.gallery.open' | translate: { project: projectName(), screenshot: (activeScreenshot.altKey | translate) }"
     >
-      <img [src]="activeScreenshot.src" [alt]="activeScreenshot.alt" loading="lazy" decoding="async">
+      <picture>
+        <source [srcset]="activeScreenshot.thumbnailAvifSrc" type="image/avif">
+        <img
+          [src]="activeScreenshot.thumbnailSrc"
+          [alt]="activeScreenshot.altKey | translate"
+          [width]="activeScreenshot.width"
+          [height]="activeScreenshot.height"
+          loading="lazy"
+          decoding="async"
+        >
+      </picture>
     </button>
 
     @if (screenshots().length > 1) {
-      <div class="gallery-controls" role="group" [attr.aria-label]="'Screenshot navigation for ' + projectName()">
+      <div class="gallery-controls" role="group" [attr.aria-label]="'projects.gallery.navigation' | translate: { project: projectName() }">
         <button
           class="gallery-control"
           type="button"
           (click)="showPreviousScreenshot($event)"
-          [attr.aria-label]="'Show previous screenshot for ' + projectName()"
+          [attr.aria-label]="'projects.gallery.previous' | translate: { project: projectName() }"
         >
           <span class="gallery-arrow" aria-hidden="true">&#8249;</span>
         </button>
@@ -24,7 +34,7 @@
           class="gallery-control"
           type="button"
           (click)="showNextScreenshot($event)"
-          [attr.aria-label]="'Show next screenshot for ' + projectName()"
+          [attr.aria-label]="'projects.gallery.next' | translate: { project: projectName() }"
         >
           <span class="gallery-arrow" aria-hidden="true">&#8250;</span>
         </button>
@@ -35,19 +45,22 @@
 
 @if (isLightboxOpen()) {
   @if (activeScreenshot(); as activeScreenshot) {
-    <div class="lightbox" role="presentation" (click)="closeLightbox()">
+    <dialog
+      #lightbox
+      class="lightbox"
+      [attr.aria-label]="'projects.gallery.preview' | translate: { project: projectName() }"
+      (click)="closeFromBackdrop($event)"
+      (cancel)="$event.preventDefault()"
+    >
       <div
         class="lightbox-dialog"
-        role="dialog"
-        aria-modal="true"
-        [attr.aria-label]="projectName() + ' screenshot preview'"
       >
         <button
+          #closeButton
           class="lightbox-close"
           type="button"
-          autofocus
           (click)="closeLightbox()"
-          [attr.aria-label]="'Close enlarged screenshot for ' + projectName()"
+          [attr.aria-label]="'projects.gallery.close' | translate: { project: projectName() }"
         >
           <span aria-hidden="true">&times;</span>
         </button>
@@ -57,14 +70,23 @@
             class="lightbox-nav lightbox-nav--previous"
             type="button"
             (click)="showPreviousScreenshot($event)"
-            [attr.aria-label]="'Show previous screenshot for ' + projectName()"
+            [attr.aria-label]="'projects.gallery.previous' | translate: { project: projectName() }"
           >
             <span class="lightbox-arrow" aria-hidden="true">&#8249;</span>
           </button>
         }
 
         <div class="lightbox-stage">
-          <img [src]="activeScreenshot.src" [alt]="activeScreenshot.alt" loading="lazy" decoding="async" (click)="$event.stopPropagation()">
+          <picture>
+            <source [srcset]="activeScreenshot.avifSrc" type="image/avif">
+            <img
+              [src]="activeScreenshot.src"
+              [alt]="activeScreenshot.altKey | translate"
+              [width]="activeScreenshot.width"
+              [height]="activeScreenshot.height"
+              decoding="async"
+            >
+          </picture>
         </div>
 
         <div class="lightbox-counter" aria-live="polite">
@@ -76,12 +98,12 @@
             class="lightbox-nav lightbox-nav--next"
             type="button"
             (click)="showNextScreenshot($event)"
-            [attr.aria-label]="'Show next screenshot for ' + projectName()"
+            [attr.aria-label]="'projects.gallery.next' | translate: { project: projectName() }"
           >
             <span class="lightbox-arrow" aria-hidden="true">&#8250;</span>
           </button>
         }
       </div>
-    </div>
+    </dialog>
   }
 }

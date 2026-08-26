@@ -41,7 +41,7 @@ Do not add `package-lock.json` or `yarn.lock`.
 Angular uses the application builder:
 
 ```json
-"builder": "@angular-devkit/build-angular:application"
+"builder": "@angular/build:application"
 ```
 
 Production output:

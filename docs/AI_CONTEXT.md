@@ -42,7 +42,7 @@ Important files:
 | `src/app/app.routes.ts` | Route map. |
 | `src/app/core/i18n/i18n.service.ts` | Language, document lang, SEO metadata. |
 | `src/app/core/theme/theme.service.ts` | Theme preference and `data-theme`. |
-| `src/app/shared/components/cookie-consent/` | Cookie consent UI and storage. |
+| `src/app/core/overlay/overlay-stack.service.ts` | Shared modal stack, focus trap, inert state and scroll lock. |
 | `src/styles.scss` | Global tokens, dark/light themes, base styles. |
 | `.github/workflows/deploy-pages.yml` | GitHub Pages deployment. |
 | `tools/copy-spa-fallback.mjs` | Copies `index.html` to `404.html`. |
@@ -62,7 +62,7 @@ Important files:
 - Use pnpm only.
 - Do not reintroduce `package-lock.json` or `yarn.lock`.
 - Keep GitHub Pages static hosting constraints in mind.
-- Preserve accessibility behavior when changing header, cookies, or navigation.
+- Preserve accessibility behavior when changing the header, overlays, storage, or navigation.
 
 ## Coding Conventions
 
@@ -80,17 +80,7 @@ Important files:
 | --- | --- | --- |
 | Language | `jesusdev-language` | `es`, `en`, `fr` |
 | Theme | `theme` | `dark`, `light` |
-| Cookie consent | `jesusdev-cookie-consent` | JSON object with `accepted`, `analytics`, `timestamp` |
-
-Cookie consent shape:
-
-```json
-{
-  "accepted": false,
-  "analytics": false,
-  "timestamp": "2026-05-31T00:00:00.000Z"
-}
-```
+No analytics, tracking pixels, tracking cookies, or consent UI are present. `AppComponent` removes the obsolete `jesusdev-cookie-consent` key without touching language or theme.
 
 ## Deployment Strategy
 
@@ -136,6 +126,6 @@ Maintain:
 
 - Add committed screenshots.
 - Add automated accessibility checks.
-- Add consent-gated analytics if needed.
+- Re-audit privacy and consent requirements before adding any analytics.
 - Expand project case studies.
 - Add route-specific SEO improvements.

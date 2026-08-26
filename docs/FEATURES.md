@@ -68,9 +68,9 @@ The header includes an icon-only theme toggle:
 
 See [THEMING.md](THEMING.md).
 
-## Cookie Consent
+## Browser Storage
 
-The floating cookie icon is always available. On first visit, the consent panel opens automatically and requires a decision. The consent state is stored in localStorage.
+The site stores only functional language and theme preferences. It has no analytics, advertising pixels, tracking cookies, or consent banner.
 
 See [COOKIES.md](COOKIES.md).
 

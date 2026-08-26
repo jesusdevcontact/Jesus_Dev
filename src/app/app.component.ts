@@ -1,15 +1,14 @@
 import { DOCUMENT } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
+import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { LucideDynamicIcon } from '@lucide/angular';
 import { TranslatePipe } from '@ngx-translate/core';
-import { fromEvent, map, startWith } from 'rxjs';
+import { filter, fromEvent, map, startWith } from 'rxjs';
 
 import { I18nService } from './core/i18n/i18n.service';
 import { SiteFooterComponent } from './layout/site-footer/site-footer.component';
 import { SiteHeaderComponent } from './layout/site-header/site-header.component';
-import { CookieConsentComponent } from './shared/components/cookie-consent/cookie-consent.component';
 import { PortfolioChatbotComponent } from './shared/components/portfolio-chatbot/portfolio-chatbot.component';
 
 @Component({
@@ -19,7 +18,6 @@ import { PortfolioChatbotComponent } from './shared/components/portfolio-chatbot
     RouterOutlet,
     SiteFooterComponent,
     SiteHeaderComponent,
-    CookieConsentComponent,
     PortfolioChatbotComponent,
     LucideDynamicIcon,
     TranslatePipe,
@@ -32,10 +30,10 @@ import { PortfolioChatbotComponent } from './shared/components/portfolio-chatbot
     </div>
     <div class="app-shell">
       <a class="skip-link" href="#main-content">{{ 'accessibility.skipToContent' | translate }}</a>
+      <p class="sr-only" aria-live="polite" aria-atomic="true">{{ navigationAnnouncement() }}</p>
       <jd-site-header />
       <router-outlet />
       <jd-site-footer />
-      <jd-cookie-consent />
       <jd-portfolio-chatbot />
       @if (showBackToTop()) {
         <button
@@ -54,6 +52,11 @@ import { PortfolioChatbotComponent } from './shared/components/portfolio-chatbot
 })
 export class AppComponent {
   private readonly document = inject(DOCUMENT);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly router = inject(Router);
+  private hasCompletedInitialNavigation = false;
+
+  readonly navigationAnnouncement = signal('');
 
   readonly showBackToTop = toSignal(
     fromEvent(this.document, 'scroll').pipe(
@@ -64,7 +67,14 @@ export class AppComponent {
   );
 
   constructor(i18n: I18nService) {
+    this.clearLegacyConsent();
     i18n.init();
+    this.router.events
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        takeUntilDestroyed(this.destroyRef),
+      )
+      .subscribe((event) => this.handleNavigation(event));
   }
 
   scrollToTop(): void {
@@ -75,5 +85,38 @@ export class AppComponent {
       top: 0,
       behavior: prefersReducedMotion ? 'auto' : 'smooth',
     });
+  }
+
+  private handleNavigation(event: NavigationEnd): void {
+    if (!this.hasCompletedInitialNavigation) {
+      this.hasCompletedInitialNavigation = true;
+      return;
+    }
+
+    const view = this.document.defaultView;
+    view?.requestAnimationFrame(() => {
+      const fragment = event.urlAfterRedirects.split('#')[1];
+      const fragmentTarget = fragment
+        ? this.document.getElementById(decodeURIComponent(fragment))
+        : null;
+      const focusTarget = fragmentTarget ?? this.document.querySelector<HTMLElement>('main h1, main');
+      if (focusTarget) {
+        if (!focusTarget.hasAttribute('tabindex')) {
+          focusTarget.setAttribute('tabindex', '-1');
+        }
+        focusTarget.focus({ preventScroll: true });
+      }
+
+      this.navigationAnnouncement.set('');
+      view.requestAnimationFrame(() => this.navigationAnnouncement.set(this.document.title));
+    });
+  }
+
+  private clearLegacyConsent(): void {
+    try {
+      this.document.defaultView?.localStorage.removeItem('jesusdev-cookie-consent');
+    } catch {
+      // Storage can be unavailable; the obsolete value is harmless when unread.
+    }
   }
 }

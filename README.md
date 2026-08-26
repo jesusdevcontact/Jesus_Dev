@@ -15,7 +15,6 @@ Screenshots are not committed yet. Recommended captures:
 | --- | --- |
 | Dark home | `docs/screenshots/home-dark.png` |
 | Light home | `docs/screenshots/home-light.png` |
-| Cookie preferences | `docs/screenshots/cookie-preferences.png` |
 | Mobile navigation | `docs/screenshots/mobile-nav.png` |
 
 ## Technology Stack
@@ -38,7 +37,7 @@ See [docs/STACK.md](docs/STACK.md) for full dependency and tooling notes.
 - Lazy routed legal and contact pages.
 - Multi-language support for Spanish, English, and French.
 - Persistent light/dark theme toggle.
-- Production-style cookie consent with localStorage persistence.
+- Functional language and theme preferences with transparent browser-storage documentation.
 - Accessible navigation, skip link, visible focus states, and reduced-motion support.
 
 See [docs/FEATURES.md](docs/FEATURES.md) for the feature inventory.
@@ -49,17 +48,9 @@ The app uses CSS design tokens under `:root`, `[data-theme="dark"]`, and `[data-
 
 See [docs/THEMING.md](docs/THEMING.md).
 
-## Cookie Consent
+## Browser Storage
 
-Cookie consent is managed by `CookieConsentComponent` and stored in localStorage under `jesusdev-cookie-consent`.
-
-```json
-{
-  "accepted": true,
-  "analytics": true,
-  "timestamp": "2026-05-31T00:00:00.000Z"
-}
-```
+The site does not use analytics, advertising pixels, tracking cookies, or a consent banner. It stores only the selected language (`jesusdev-language`) and theme (`theme`) in `localStorage`.
 
 See [docs/COOKIES.md](docs/COOKIES.md).
 
@@ -78,7 +69,7 @@ Translations live in `src/assets/i18n`:
 The app includes:
 
 - Skip link to main content.
-- Keyboard-accessible navigation, language selector, theme toggle, and cookie preferences.
+- Keyboard-accessible navigation, language selector, theme toggle, modal chatbot, and screenshot lightbox.
 - Visible focus styling.
 - Reduced-motion handling.
 - `aria-label`, `aria-pressed`, `aria-expanded`, and dialog semantics where appropriate.
@@ -142,7 +133,7 @@ Detailed notes are in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 Completed: Angular 21 migration, pnpm migration, theme system, cookie consent rework, audit remediation, GitHub Pages deployment, and documentation baseline.
 
-Next candidates: committed screenshots, richer project case studies, automated accessibility checks, and optional analytics integration gated by consent.
+Next candidates: committed portfolio captures, richer project case studies, automated accessibility checks, and a fresh privacy review before any analytics integration.
 
 See [docs/ROADMAP.md](docs/ROADMAP.md).
 

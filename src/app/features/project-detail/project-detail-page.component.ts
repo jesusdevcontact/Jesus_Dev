@@ -53,7 +53,9 @@ export class ProjectDetailPageComponent {
       description,
       path,
       image,
-      imageAlt: project.coverImage?.alt ?? this.translate.instant('seo.imageAlt'),
+      imageAlt: project.coverImage
+        ? this.translate.instant(project.coverImage.altKey)
+        : this.translate.instant('seo.imageAlt'),
       type: 'article',
       locale: this.localeFor(this.translate.currentLang),
     });

@@ -277,6 +277,10 @@ h1 {
   filter: saturate(0.95) contrast(1.06);
 }
 
+.profile-media picture {
+  display: block;
+}
+
 .skill-orbit {
   display: grid;
   gap: 0.12rem;
@@ -663,8 +667,7 @@ code strong {
     width: 100%;
   }
 
-  .skill-orbit,
-  .hero-stats {
+  .skill-orbit {
     display: none;
   }
 
@@ -711,23 +714,15 @@ code strong {
   }
 
   .hero-lead {
-    display: -webkit-box;
-    overflow: hidden;
     max-width: 28rem;
     margin-top: 0.68rem;
     font-size: 0.9rem;
     line-height: 1.44;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
   }
 
   .hero-actions {
     gap: 0.46rem;
     margin-top: 0.9rem;
-  }
-
-  .hero-actions .social-action {
-    display: none;
   }
 
   .profile-card {
@@ -759,10 +754,6 @@ code strong {
   .projects-grid,
   .journey {
     gap: 0.68rem;
-  }
-
-  .principle-grid {
-    display: none;
   }
 
   .about-copy h3 {
