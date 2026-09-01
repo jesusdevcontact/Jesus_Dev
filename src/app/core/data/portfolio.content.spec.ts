@@ -25,6 +25,13 @@ describe('published project content', () => {
       githubUrl: 'https://github.com/jesusdev98/fundamentos_de_programacion',
     });
     expect(project.featuredStack.every((technology) => project.stack.includes(technology))).toBe(true);
+    expect(project.coverImage).toBe(project.screenshots?.[0]);
+    expect(project.screenshots?.map((screenshot) => screenshot.variant)).toEqual(['web', 'web', 'mobile']);
+    expect(project.screenshots?.map((screenshot) => screenshot.altKey)).toEqual([
+      'projects.screenshots.aprendeConJesusDev.home',
+      'projects.screenshots.aprendeConJesusDev.learning',
+      'projects.screenshots.aprendeConJesusDev.mobile',
+    ]);
   });
 
   it('uses the generic project route instead of a literal Aprende route', () => {

@@ -207,6 +207,11 @@
       "close": "Cerrar captura ampliada de {{ project }}"
     },
     "screenshots": {
+      "aprendeConJesusDev": {
+        "home": "Página de inicio de Aprende con Jesús Dev con métricas y rutas de JavaScript, TypeScript y Python",
+        "learning": "Práctica interactiva de JavaScript con editor, ejecución correcta y salida en consola",
+        "mobile": "Ruta móvil de JavaScript con niveles de aprendizaje y acceso a sus contenidos"
+      },
       "focusFlow": {
         "desktop": "Panel de escritorio de FocusFlow",
         "web": "Interfaz web de FocusFlow",

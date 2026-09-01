@@ -207,6 +207,11 @@
       "close": "Close enlarged {{ project }} screenshot"
     },
     "screenshots": {
+      "aprendeConJesusDev": {
+        "home": "Aprende con Jesús Dev home page with metrics and JavaScript, TypeScript and Python learning paths",
+        "learning": "Interactive JavaScript exercise with code editor, successful execution and console output",
+        "mobile": "Mobile JavaScript path with learning levels and access to their content"
+      },
       "focusFlow": {
         "desktop": "FocusFlow desktop dashboard",
         "web": "FocusFlow web interface",

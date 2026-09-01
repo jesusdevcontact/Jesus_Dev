@@ -44,6 +44,39 @@ export const techCategories: TechCategory[] = [
   },
 ];
 
+const aprendeConJesusDevScreenshots = [
+  {
+    src: 'assets/AprendeConJesusDev/aprende-home-desktop.webp',
+    avifSrc: 'assets/AprendeConJesusDev/aprende-home-desktop.avif',
+    thumbnailSrc: 'assets/AprendeConJesusDev/thumbs/aprende-home-desktop.webp',
+    thumbnailAvifSrc: 'assets/AprendeConJesusDev/thumbs/aprende-home-desktop.avif',
+    altKey: 'projects.screenshots.aprendeConJesusDev.home',
+    width: 1440,
+    height: 900,
+    variant: 'web',
+  },
+  {
+    src: 'assets/AprendeConJesusDev/aprende-learning-desktop.webp',
+    avifSrc: 'assets/AprendeConJesusDev/aprende-learning-desktop.avif',
+    thumbnailSrc: 'assets/AprendeConJesusDev/thumbs/aprende-learning-desktop.webp',
+    thumbnailAvifSrc: 'assets/AprendeConJesusDev/thumbs/aprende-learning-desktop.avif',
+    altKey: 'projects.screenshots.aprendeConJesusDev.learning',
+    width: 1440,
+    height: 900,
+    variant: 'web',
+  },
+  {
+    src: 'assets/AprendeConJesusDev/aprende-mobile.webp',
+    avifSrc: 'assets/AprendeConJesusDev/aprende-mobile.avif',
+    thumbnailSrc: 'assets/AprendeConJesusDev/thumbs/aprende-mobile.webp',
+    thumbnailAvifSrc: 'assets/AprendeConJesusDev/thumbs/aprende-mobile.avif',
+    altKey: 'projects.screenshots.aprendeConJesusDev.mobile',
+    width: 390,
+    height: 844,
+    variant: 'mobile',
+  },
+] satisfies Project['screenshots'];
+
 const focusFlowScreenshots = [
   {
     src: 'assets/Focus-Flow/focusflow-desktop.webp',
@@ -132,6 +165,8 @@ export const projects: Project[] = [
     status: 'public',
     githubUrl: 'https://github.com/jesusdev98/fundamentos_de_programacion',
     demoUrl: 'https://aprendeconjesusdev.vercel.app',
+    coverImage: aprendeConJesusDevScreenshots[0],
+    screenshots: aprendeConJesusDevScreenshots,
   },
   {
     key: 'focusFlow',
