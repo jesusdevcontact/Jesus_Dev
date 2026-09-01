@@ -30,6 +30,12 @@ const directRoutes = [
     description: 'Información sobre preferencias locales, cookies y almacenamiento del navegador en jesusdev.dev.',
   },
   {
+    route: 'projects/aprende-con-jesus-dev',
+    title: 'Aprende con Jesús Dev | Plataforma educativa de programación',
+    description: 'Plataforma educativa pública con 3 lenguajes, 9 niveles, 210 lecciones, 114 ejercicios y 450 preguntas con práctica aislada en el navegador.',
+    type: 'article',
+  },
+  {
     route: 'projects/focusflow',
     title: 'FocusFlow | Proyecto Angular PWA | Jesús Martínez Escobar',
     description: 'Detalle de FocusFlow, una PWA Angular para sesiones de foco, prioridades y revisión de progreso.',

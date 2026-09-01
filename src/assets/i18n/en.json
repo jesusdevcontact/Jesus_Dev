@@ -17,7 +17,7 @@
     "status": "Quick information about his profile",
     "messages": {
       "welcome": "Hi. I can help you explore Jesus projects, experience and technical profile. What would you like to check?",
-      "projects": "Jesus is currently continuing GIBORA, a Full Stack e-commerce project with Angular and Laravel, and maintains projects such as FocusFlow and ConnectingDevs. He also keeps improving his technical portfolio.",
+      "projects": "Jesus's portfolio includes Aprende con Jesús Dev, FocusFlow, ConnectingDevs and GIBORA. It spans a public learning platform and frontend and Full Stack projects at different stages.",
       "stack": "His main stack is centered on Angular, TypeScript, Laravel, PHP, MySQL and PostgreSQL. He also works with testing, Docker, GitHub Actions and AI-assisted tools used with technical review.",
       "experience": "Jesus has technical experience at Pegasus Medical, where he worked with Laravel, Filament, MySQL, RFID, reporting, Docker and Linux. Before that, he built experience in team management and operations as a Center Director.",
       "availability": "He is open to Frontend and Full Stack opportunities, especially in Angular and Laravel environments, as well as technical collaborations.",
@@ -125,7 +125,7 @@
         "title": "Frontend",
         "summary": "Modern, reactive and accessible interfaces.",
         "primaryItems": ["Angular", "TypeScript", "HTML5", "CSS3", "SCSS", "RxJS"],
-        "complementaryItems": ["React", "JavaScript"]
+        "complementaryItems": ["React", "Next.js", "Tailwind CSS", "JavaScript"]
       },
       "backend": {
         "title": "Backend",
@@ -143,7 +143,7 @@
         "title": "Testing",
         "summary": "Unit and E2E testing to reduce regressions.",
         "primaryItems": ["Cypress", "Vitest", "PHPUnit"],
-        "complementaryItems": ["Unit testing", "E2E testing"]
+        "complementaryItems": ["Playwright", "Unit testing", "E2E testing"]
       },
       "architecture": {
         "title": "Architecture",
@@ -161,7 +161,7 @@
         "title": "Tools and AI",
         "summary": "Assisted development with technical review, testing and change control.",
         "primaryItems": ["VS Code", "Postman", "Metabase"],
-        "complementaryItems": ["OpenAI Codex", "Claude Code", "AI-assisted development with review, testing and change control"]
+        "complementaryItems": ["Node.js", "Pyodide", "OpenAI Codex", "Claude Code", "AI-assisted development with review, testing and change control"]
       }
     }
   },
@@ -174,11 +174,13 @@
       "decisions": "Decisions",
       "architecture": "Architecture",
       "quality": "Quality",
+      "impact": "Impact",
       "deployment": "Deployment and status",
       "stack": "Stack used",
       "featuredStack": "Featured stack"
     },
     "categories": {
+      "educational": "Learning platform",
       "pwa": "PWA",
       "fullStack": "Full Stack",
       "ecommerce": "E-commerce",
@@ -186,6 +188,7 @@
       "collaborative": "Collaborative platform"
     },
     "status": {
+      "public": "Public project",
       "pendingDeployment": "Deployment pending",
       "internal": "Internal project"
     },
@@ -221,6 +224,36 @@
       "text": "This route does not match any project currently published in the portfolio."
     },
     "items": {
+      "aprendeConJesusDev": {
+        "type": "Programming fundamentals learning platform",
+        "media": {
+          "badge": "Public project",
+          "caption": "Public learning platform: the production demo is available for exploring its content and practice environments."
+        },
+        "shortDescription": "Public learning platform with complete JavaScript, TypeScript and Python paths.",
+        "summary": "Public learning platform covering 3 languages and 9 levels through 210 lessons, 114 exercises and 450 questions, with isolated in-browser practice.",
+        "problem": "Bring JavaScript, TypeScript and Python fundamentals into coherent, verifiable and accessible learning paths without relying on accounts, saved progress or server-side code execution.",
+        "solution": "I built a mobile-first catalog grounded in official sources, combining theory, exercises, quizzes and isolated runners for practicing each language directly in the browser.",
+        "decisions": [
+          "Original content linked to official documentation and organized through stable identifiers",
+          "No users, forms, saved progress or product backend",
+          "Runtimes loaded on demand with explicit limits around learner code execution"
+        ],
+        "architecture": [
+          "Next.js App Router with React and typed curriculum data",
+          "Opaque sandbox and disposable Workers for JavaScript and TypeScript",
+          "Dedicated Pyodide Worker for Python without sending learner code to a server"
+        ],
+        "quality": [
+          "Node tests and 100% coverage scoped to four explicit core logic and protocol modules",
+          "Playwright Chromium E2E on desktop and mobile, including a 320 px overflow check",
+          "Build, lint, HTTP smoke and browser smoke automated in GitHub Actions"
+        ],
+        "deployment": "GitHub Actions runs the quality gates and, after a valid push to main, deploys to Vercel and verifies the stable domain with HTTP smoke and Playwright.",
+        "impact": ["3 languages organized across 9 levels", "210 original lessons", "114 practical exercises", "450 questions with explanations"],
+        "seoTitle": "Aprende con Jesús Dev | Programming Learning Platform",
+        "seoDescription": "Public learning platform with 3 languages, 9 levels, 210 lessons, 114 exercises and 450 questions with isolated in-browser practice."
+      },
       "focusFlow": {
         "type": "Angular productivity workspace",
         "shortDescription": "Angular PWA for organizing focus sessions, priorities and progress review.",

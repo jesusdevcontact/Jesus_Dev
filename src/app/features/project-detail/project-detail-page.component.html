@@ -106,6 +106,15 @@
           </article>
 
           <article>
+            <h2>{{ 'projects.labels.impact' | translate }}</h2>
+            <ul>
+              @for (item of ('projects.items.' + project.key + '.impact' | translate | translateArray); track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </article>
+
+          <article>
             <h2>{{ 'projects.labels.deployment' | translate }}</h2>
             <p>{{ 'projects.items.' + project.key + '.deployment' | translate }}</p>
           </article>

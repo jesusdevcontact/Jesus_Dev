@@ -36,15 +36,15 @@ export interface ProjectScreenshot {
   variant: 'desktop' | 'web' | 'mobile';
 }
 
-export type ProjectKey = 'focusFlow' | 'devConnect' | 'gibora' | 'pegasusMedical';
+export type ProjectKey = 'aprendeConJesusDev' | 'focusFlow' | 'devConnect' | 'gibora' | 'pegasusMedical';
 
-export type ProjectStatus = 'pendingDeployment' | 'internal';
+export type ProjectStatus = 'public' | 'pendingDeployment' | 'internal';
 
 export interface Project {
   key: ProjectKey;
-  slug: 'focusflow' | 'connectingdevs' | 'gibora' | 'pegasus-medical';
+  slug: 'aprende-con-jesus-dev' | 'focusflow' | 'connectingdevs' | 'gibora' | 'pegasus-medical';
   name: string;
-  category: 'pwa' | 'fullStack' | 'ecommerce' | 'internal' | 'collaborative';
+  category: 'educational' | 'pwa' | 'fullStack' | 'ecommerce' | 'internal' | 'collaborative';
   stack: string[];
   featuredStack: string[];
   accent: 'cyan' | 'green' | 'amber';

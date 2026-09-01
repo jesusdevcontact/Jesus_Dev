@@ -122,6 +122,18 @@ const connectingDevsScreenshots = [
 
 export const projects: Project[] = [
   {
+    key: 'aprendeConJesusDev',
+    slug: 'aprende-con-jesus-dev',
+    name: 'Aprende con Jesús Dev',
+    category: 'educational',
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Playwright', 'GitHub Actions', 'Vercel', 'Pyodide'],
+    featuredStack: ['Next.js', 'React', 'TypeScript', 'Playwright'],
+    accent: 'green',
+    status: 'public',
+    githubUrl: 'https://github.com/jesusdev98/fundamentos_de_programacion',
+    demoUrl: 'https://aprendeconjesusdev.vercel.app',
+  },
+  {
     key: 'focusFlow',
     slug: 'focusflow',
     name: 'FocusFlow',

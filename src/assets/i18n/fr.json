@@ -17,7 +17,7 @@
     "status": "Informations rapides sur son profil",
     "messages": {
       "welcome": "Bonjour. Je peux vous aider à découvrir les projets, l’expérience et le profil technique de Jesús. Que souhaitez-vous consulter ?",
-      "projects": "Jesús continue actuellement GIBORA, un e-commerce Full Stack avec Angular et Laravel, et maintient des projets comme FocusFlow et ConnectingDevs. Il continue aussi à améliorer son portfolio technique.",
+      "projects": "Le portfolio de Jesús réunit Aprende con Jesús Dev, FocusFlow, ConnectingDevs et GIBORA. Il comprend une plateforme éducative publique ainsi que des projets frontend et Full Stack à différents stades.",
       "stack": "Sa stack principale est centrée sur Angular, TypeScript, Laravel, PHP, MySQL et PostgreSQL. Il travaille aussi avec le testing, Docker, GitHub Actions et des outils d’IA utilisés avec revue technique.",
       "experience": "Jesús a une expérience technique chez Pegasus Medical, où il a travaillé avec Laravel, Filament, MySQL, RFID, reporting, Docker et Linux. Auparavant, il a développé une expérience en gestion d’équipes et opérations comme Directeur de Centre.",
       "availability": "Il est ouvert aux opportunités Frontend et Full Stack, surtout dans des environnements Angular et Laravel, ainsi qu’aux collaborations techniques.",
@@ -125,7 +125,7 @@
         "title": "Frontend",
         "summary": "Interfaces modernes, réactives et accessibles.",
         "primaryItems": ["Angular", "TypeScript", "HTML5", "CSS3", "SCSS", "RxJS"],
-        "complementaryItems": ["React", "JavaScript"]
+        "complementaryItems": ["React", "Next.js", "Tailwind CSS", "JavaScript"]
       },
       "backend": {
         "title": "Backend",
@@ -143,7 +143,7 @@
         "title": "Tests",
         "summary": "Tests unitaires et E2E pour réduire les régressions.",
         "primaryItems": ["Cypress", "Vitest", "PHPUnit"],
-        "complementaryItems": ["Tests unitaires", "Tests E2E"]
+        "complementaryItems": ["Playwright", "Tests unitaires", "Tests E2E"]
       },
       "architecture": {
         "title": "Architecture",
@@ -161,7 +161,7 @@
         "title": "Outils et IA",
         "summary": "Développement assisté avec revue technique, tests et contrôle des changements.",
         "primaryItems": ["VS Code", "Postman", "Metabase"],
-        "complementaryItems": ["OpenAI Codex", "Claude Code", "IA appliquée au développement avec revue, tests et contrôle des changements"]
+        "complementaryItems": ["Node.js", "Pyodide", "OpenAI Codex", "Claude Code", "IA appliquée au développement avec revue, tests et contrôle des changements"]
       }
     }
   },
@@ -174,11 +174,13 @@
       "decisions": "Décisions",
       "architecture": "Architecture",
       "quality": "Qualité",
+      "impact": "Impact",
       "deployment": "Déploiement et état",
       "stack": "Stack utilisé",
       "featuredStack": "Stack principal"
     },
     "categories": {
+      "educational": "Plateforme éducative",
       "pwa": "PWA",
       "fullStack": "Full Stack",
       "ecommerce": "E-commerce",
@@ -186,6 +188,7 @@
       "collaborative": "Plateforme collaborative"
     },
     "status": {
+      "public": "Projet public",
       "pendingDeployment": "Déploiement en attente",
       "internal": "Projet interne"
     },
@@ -221,6 +224,36 @@
       "text": "Cette route ne correspond à aucun projet publié dans le portfolio."
     },
     "items": {
+      "aprendeConJesusDev": {
+        "type": "Plateforme éducative sur les fondamentaux de la programmation",
+        "media": {
+          "badge": "Projet public",
+          "caption": "Plateforme éducative publique : la démo en production permet d'explorer les contenus et les environnements de pratique."
+        },
+        "shortDescription": "Plateforme éducative publique avec des parcours complets en JavaScript, TypeScript et Python.",
+        "summary": "Plateforme éducative publique couvrant 3 langages et 9 niveaux à travers 210 leçons, 114 exercices et 450 questions, avec des environnements isolés dans le navigateur.",
+        "problem": "Réunir les fondamentaux de JavaScript, TypeScript et Python dans des parcours cohérents, vérifiables et accessibles, sans comptes, progression enregistrée ni exécution de code côté serveur.",
+        "solution": "J'ai construit un catalogue mobile-first fondé sur des sources officielles, associant théorie, exercices, quiz et runners isolés pour pratiquer chaque langage directement dans le navigateur.",
+        "decisions": [
+          "Contenu original relié à la documentation officielle et organisé par des identifiants stables",
+          "Aucun utilisateur, formulaire, suivi de progression ni backend produit",
+          "Runtimes chargés à la demande avec des limites explicites pour l'exécution du code"
+        ],
+        "architecture": [
+          "Next.js App Router avec React et données curriculaires typées",
+          "Sandbox opaque et Workers jetables pour JavaScript et TypeScript",
+          "Worker Pyodide dédié à Python, sans envoyer le code de l'apprenant à un serveur"
+        ],
+        "quality": [
+          "Tests Node et couverture à 100 % limitée à quatre modules explicites de logique et de protocoles",
+          "E2E Playwright sous Chromium sur ordinateur et mobile, avec contrôle de l'overflow à 320 px",
+          "Build, lint, smoke HTTP et smoke navigateur automatisés dans GitHub Actions"
+        ],
+        "deployment": "GitHub Actions exécute les contrôles qualité puis, après un push valide sur main, déploie sur Vercel et vérifie le domaine stable avec un smoke HTTP et Playwright.",
+        "impact": ["3 langages organisés sur 9 niveaux", "210 leçons originales", "114 exercices pratiques", "450 questions avec explications"],
+        "seoTitle": "Aprende con Jesús Dev | Plateforme éducative de programmation",
+        "seoDescription": "Plateforme éducative publique avec 3 langages, 9 niveaux, 210 leçons, 114 exercices et 450 questions, avec pratique isolée dans le navigateur."
+      },
       "focusFlow": {
         "type": "Workspace de productivité Angular",
         "shortDescription": "PWA Angular pour organiser sessions de focus, priorités et revue de progression.",

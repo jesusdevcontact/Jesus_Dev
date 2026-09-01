@@ -17,7 +17,7 @@
     "status": "Información rápida sobre su perfil",
     "messages": {
       "welcome": "Hola. Puedo ayudarte a conocer los proyectos, la experiencia y el perfil técnico de Jesús. ¿Qué te gustaría consultar?",
-      "projects": "Actualmente Jesús continúa desarrollando GIBORA, un e-commerce Full Stack con Angular y Laravel, y mantiene proyectos como FocusFlow y ConnectingDevs. También sigue mejorando su portfolio técnico.",
+      "projects": "El portfolio de Jesús reúne Aprende con Jesús Dev, FocusFlow, ConnectingDevs y GIBORA. Incluye tanto una plataforma educativa pública como proyectos frontend y Full Stack en distintas fases.",
       "stack": "Su stack principal está centrado en Angular, TypeScript, Laravel, PHP, MySQL y PostgreSQL. También trabaja con testing, Docker, GitHub Actions y herramientas de IA aplicadas con revisión técnica.",
       "experience": "Jesús cuenta con experiencia técnica en Pegasus Medical, donde trabajó con Laravel, Filament, MySQL, RFID, reporting, Docker y Linux. Antes desarrolló experiencia en gestión de equipos y operaciones como Director de Centro.",
       "availability": "Está abierto a oportunidades Frontend y Full Stack, especialmente en entornos Angular y Laravel, además de colaboraciones técnicas.",
@@ -125,7 +125,7 @@
         "title": "Frontend",
         "summary": "Interfaces modernas, reactivas y accesibles.",
         "primaryItems": ["Angular", "TypeScript", "HTML5", "CSS3", "SCSS", "RxJS"],
-        "complementaryItems": ["React", "JavaScript"]
+        "complementaryItems": ["React", "Next.js", "Tailwind CSS", "JavaScript"]
       },
       "backend": {
         "title": "Backend",
@@ -143,7 +143,7 @@
         "title": "Testing",
         "summary": "Pruebas unitarias y E2E para reducir regresiones.",
         "primaryItems": ["Cypress", "Vitest", "PHPUnit"],
-        "complementaryItems": ["Testing unitario", "Testing E2E"]
+        "complementaryItems": ["Playwright", "Testing unitario", "Testing E2E"]
       },
       "architecture": {
         "title": "Arquitectura",
@@ -161,7 +161,7 @@
         "title": "Herramientas e IA",
         "summary": "Desarrollo asistido con revisión técnica, testing y control de cambios.",
         "primaryItems": ["VS Code", "Postman", "Metabase"],
-        "complementaryItems": ["OpenAI Codex", "Claude Code", "IA aplicada al desarrollo con revisión, testing y control de cambios"]
+        "complementaryItems": ["Node.js", "Pyodide", "OpenAI Codex", "Claude Code", "IA aplicada al desarrollo con revisión, testing y control de cambios"]
       }
     }
   },
@@ -174,11 +174,13 @@
       "decisions": "Decisiones",
       "architecture": "Arquitectura",
       "quality": "Calidad",
+      "impact": "Impacto",
       "deployment": "Despliegue y estado",
       "stack": "Stack utilizado",
       "featuredStack": "Stack destacado"
     },
     "categories": {
+      "educational": "Plataforma educativa",
       "pwa": "PWA",
       "fullStack": "Full Stack",
       "ecommerce": "E-commerce",
@@ -186,6 +188,7 @@
       "collaborative": "Plataforma colaborativa"
     },
     "status": {
+      "public": "Proyecto público",
       "pendingDeployment": "Pendiente de despliegue",
       "internal": "Proyecto interno"
     },
@@ -221,6 +224,36 @@
       "text": "La ruta no coincide con ninguno de los proyectos publicados en el portfolio."
     },
     "items": {
+      "aprendeConJesusDev": {
+        "type": "Plataforma educativa de fundamentos de programación",
+        "media": {
+          "badge": "Proyecto público",
+          "caption": "Plataforma educativa pública: la demo en producción está disponible para explorar el contenido y las prácticas."
+        },
+        "shortDescription": "Plataforma educativa pública con rutas completas de JavaScript, TypeScript y Python.",
+        "summary": "Plataforma educativa pública con 3 lenguajes, 9 niveles, 210 lecciones, 114 ejercicios y 450 preguntas, además de prácticas aisladas en el navegador.",
+        "problem": "Reunir fundamentos de JavaScript, TypeScript y Python en recorridos coherentes, verificables y accesibles, sin depender de cuentas, progreso persistido ni ejecución de código en un backend.",
+        "solution": "Construí un catálogo mobile-first basado en fuentes oficiales, con teoría, ejercicios, cuestionarios y runners aislados para practicar cada lenguaje directamente en el navegador.",
+        "decisions": [
+          "Contenido original enlazado a documentación oficial y organizado mediante identificadores estables",
+          "Sin usuarios, formularios, progreso guardado ni backend de producto",
+          "Runtimes cargados bajo demanda y límites explícitos para la ejecución de código"
+        ],
+        "architecture": [
+          "Next.js App Router con React y datos curriculares tipados",
+          "Sandbox opaco y Workers desechables para JavaScript y TypeScript",
+          "Worker dedicado con Pyodide para Python, sin enviar código del estudiante a un servidor"
+        ],
+        "quality": [
+          "Tests Node y cobertura del 100 % limitada a cuatro módulos explícitos de lógica y protocolos",
+          "E2E con Playwright en Chromium para escritorio y móvil, incluido control de overflow a 320 px",
+          "Build, lint, smoke HTTP y smoke de navegador automatizados en GitHub Actions"
+        ],
+        "deployment": "GitHub Actions ejecuta los gates de calidad y, tras un push válido a main, despliega en Vercel y verifica el dominio estable con smoke HTTP y Playwright.",
+        "impact": ["3 lenguajes organizados en 9 niveles", "210 lecciones originales", "114 ejercicios prácticos", "450 preguntas con explicación"],
+        "seoTitle": "Aprende con Jesús Dev | Plataforma educativa de programación",
+        "seoDescription": "Plataforma educativa pública con 3 lenguajes, 9 niveles, 210 lecciones, 114 ejercicios y 450 preguntas con práctica aislada en el navegador."
+      },
       "focusFlow": {
         "type": "Workspace de productividad en Angular",
         "shortDescription": "PWA Angular para organizar sesiones de foco, prioridades y revisión de progreso.",
