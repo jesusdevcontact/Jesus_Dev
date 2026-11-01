@@ -164,6 +164,16 @@ const aiMigratorScreenshots = [
     height: 1000,
     variant: 'web',
   },
+  ...['mongodb', 'postgresql', 'mariadb'].map((target) => ({
+    src: `assets/MigradorBasesDeDatos/migrator-results-${target}.webp`,
+    avifSrc: `assets/MigradorBasesDeDatos/migrator-results-${target}.avif`,
+    thumbnailSrc: `assets/MigradorBasesDeDatos/thumbs/migrator-results-${target}.webp`,
+    thumbnailAvifSrc: `assets/MigradorBasesDeDatos/thumbs/migrator-results-${target}.avif`,
+    altKey: `projects.screenshots.aiMigrator.${target}`,
+    width: 1440,
+    height: 1000,
+    variant: 'web' as const,
+  })),
 ] satisfies Project['screenshots'];
 
 export const projects: Project[] = [

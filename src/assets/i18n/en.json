@@ -208,7 +208,10 @@
     },
     "screenshots": {
       "aiMigrator": {
-        "local": "Local interface showing the Pokémon SQLite fixture, unloaded model and migration controls for PostgreSQL, MongoDB and MariaDB"
+        "local": "Local interface showing the Pokémon SQLite fixture, unloaded model and migration controls for PostgreSQL, MongoDB and MariaDB",
+        "mongodb": "Actual results read from MongoDB after migration, showing the created destination and stored Pokémon cards",
+        "postgresql": "Actual results read from PostgreSQL after migration, showing the created destination and stored Pokémon cards",
+        "mariadb": "Actual results read from MariaDB after migration, showing the created destination and stored Pokémon cards"
       },
       "aprendeConJesusDev": {
         "home": "Aprende con Jesús Dev home page with metrics and JavaScript, TypeScript and Python learning paths",

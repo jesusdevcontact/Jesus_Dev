@@ -208,7 +208,10 @@
     },
     "screenshots": {
       "aiMigrator": {
-        "local": "Interfaz local con el conjunto Pokémon SQLite, el modelo sin cargar y controles de migración a PostgreSQL, MongoDB y MariaDB"
+        "local": "Interfaz local con el conjunto Pokémon SQLite, el modelo sin cargar y controles de migración a PostgreSQL, MongoDB y MariaDB",
+        "mongodb": "Resultados reales leídos desde MongoDB después de la migración, con el destino creado y las fichas de los Pokémon almacenados",
+        "postgresql": "Resultados reales leídos desde PostgreSQL después de la migración, con el destino creado y las fichas de los Pokémon almacenados",
+        "mariadb": "Resultados reales leídos desde MariaDB después de la migración, con el destino creado y las fichas de los Pokémon almacenados"
       },
       "aprendeConJesusDev": {
         "home": "Página de inicio de Aprende con Jesús Dev con métricas y rutas de JavaScript, TypeScript y Python",

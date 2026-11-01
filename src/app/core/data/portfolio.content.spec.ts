@@ -25,7 +25,16 @@ describe('published project content', () => {
       width: 1440,
       height: 1000,
       variant: 'web',
-    }]);
+    }, ...['mongodb', 'postgresql', 'mariadb'].map((target) => ({
+      src: `assets/MigradorBasesDeDatos/migrator-results-${target}.webp`,
+      avifSrc: `assets/MigradorBasesDeDatos/migrator-results-${target}.avif`,
+      thumbnailSrc: `assets/MigradorBasesDeDatos/thumbs/migrator-results-${target}.webp`,
+      thumbnailAvifSrc: `assets/MigradorBasesDeDatos/thumbs/migrator-results-${target}.avif`,
+      altKey: `projects.screenshots.aiMigrator.${target}`,
+      width: 1440,
+      height: 1000,
+      variant: 'web',
+    }))]);
   });
 
   it('preserves the existing project identities, links and gallery sizes', () => {
@@ -55,8 +64,11 @@ describe('published project content', () => {
     expect(item.deployment).toMatch(/SQLite/);
     expect(item.decisions.join(' ')).toMatch(/MongoDB/);
     expect(item.decisions.join(' ')).toMatch(/(?:Futuro|Future|À venir).*UI/);
-    const screenshots = translation.projects.screenshots as unknown as Record<string, { local: string }>;
-    expect(screenshots['aiMigrator']?.local).toMatch(/SQLite/);
+    const screenshots = translation.projects.screenshots as unknown as Record<string, Record<string, string>>;
+    expect(screenshots['aiMigrator']?.['local']).toMatch(/SQLite/);
+    for (const [target, label] of [['mongodb', 'MongoDB'], ['postgresql', 'PostgreSQL'], ['mariadb', 'MariaDB']]) {
+      expect(screenshots['aiMigrator']?.[target]).toContain(label);
+    }
   });
 
   it('publishes Aprende con Jesus Dev once with its exact links and typed project contract', () => {

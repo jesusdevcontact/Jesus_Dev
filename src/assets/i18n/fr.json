@@ -208,7 +208,10 @@
     },
     "screenshots": {
       "aiMigrator": {
-        "local": "Interface locale affichant le jeu de test Pokémon SQLite, le modèle non chargé et les commandes de migration vers PostgreSQL, MongoDB et MariaDB"
+        "local": "Interface locale affichant le jeu de test Pokémon SQLite, le modèle non chargé et les commandes de migration vers PostgreSQL, MongoDB et MariaDB",
+        "mongodb": "Résultats réels lus depuis MongoDB après migration, avec la destination créée et les fiches des Pokémon enregistrés",
+        "postgresql": "Résultats réels lus depuis PostgreSQL après migration, avec la destination créée et les fiches des Pokémon enregistrés",
+        "mariadb": "Résultats réels lus depuis MariaDB après migration, avec la destination créée et les fiches des Pokémon enregistrés"
       },
       "aprendeConJesusDev": {
         "home": "Page d'accueil d'Aprende con Jesús Dev avec les chiffres clés et les parcours JavaScript, TypeScript et Python",

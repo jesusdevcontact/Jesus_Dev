@@ -10,17 +10,19 @@ const helper = fileURLToPath(new URL('./copy-spa-fallback.mjs', import.meta.url)
 const fixtureHtml = '<html><head><title>Fixture</title><meta name="description" content="Fixture"><link rel="canonical" href="https://jesusdev.dev/"><meta property="og:title" content="Fixture"><meta property="og:description" content="Fixture"><meta property="og:type" content="website"><meta property="og:url" content="https://jesusdev.dev/"><meta property="og:image" content="fixture.jpg"><meta name="twitter:title" content="Fixture"><meta name="twitter:description" content="Fixture"><meta name="twitter:image" content="fixture.jpg"></head><body>Fixture</body></html>';
 
 test('ships real WebP and AVIF screenshot assets and thumbnails', () => {
-  for (const folder of ['', 'thumbs/']) {
-    const root = new URL(`../assets/MigradorBasesDeDatos/${folder}`, import.meta.url);
-    const webp = readFileSync(new URL('migrator-local-desktop.webp', root));
-    assert.equal(webp.toString('ascii', 0, 4), 'RIFF');
-    assert.equal(webp.toString('ascii', 8, 12), 'WEBP');
-    const avif = readFileSync(new URL('migrator-local-desktop.avif', root));
-    assert.equal(avif.toString('ascii', 4, 12), 'ftypavif');
-    const sizeOffset = avif.indexOf(Buffer.from('ispe'));
-    assert.ok(sizeOffset > 0);
-    assert.equal(avif.readUInt32BE(sizeOffset + 8), folder ? 600 : 1440);
-    assert.equal(avif.readUInt32BE(sizeOffset + 12), folder ? 417 : 1000);
+  for (const name of ['migrator-local-desktop', 'migrator-results-mongodb', 'migrator-results-postgresql', 'migrator-results-mariadb']) {
+    for (const folder of ['', 'thumbs/']) {
+      const root = new URL(`../assets/MigradorBasesDeDatos/${folder}`, import.meta.url);
+      const webp = readFileSync(new URL(`${name}.webp`, root));
+      assert.equal(webp.toString('ascii', 0, 4), 'RIFF');
+      assert.equal(webp.toString('ascii', 8, 12), 'WEBP');
+      const avif = readFileSync(new URL(`${name}.avif`, root));
+      assert.equal(avif.toString('ascii', 4, 12), 'ftypavif');
+      const sizeOffset = avif.indexOf(Buffer.from('ispe'));
+      assert.ok(sizeOffset > 0);
+      assert.equal(avif.readUInt32BE(sizeOffset + 8), folder ? 600 : 1440);
+      assert.equal(avif.readUInt32BE(sizeOffset + 12), folder ? 417 : 1000);
+    }
   }
 });
 
