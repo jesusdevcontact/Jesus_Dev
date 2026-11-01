@@ -36,13 +36,13 @@ export interface ProjectScreenshot {
   variant: 'desktop' | 'web' | 'mobile';
 }
 
-export type ProjectKey = 'aprendeConJesusDev' | 'focusFlow' | 'devConnect' | 'gibora' | 'pegasusMedical';
+export type ProjectKey = 'aprendeConJesusDev' | 'focusFlow' | 'devConnect' | 'gibora' | 'pegasusMedical' | 'aiMigrator';
 
 export type ProjectStatus = 'public' | 'pendingDeployment' | 'internal';
 
 export interface Project {
   key: ProjectKey;
-  slug: 'aprende-con-jesus-dev' | 'focusflow' | 'connectingdevs' | 'gibora' | 'pegasus-medical';
+  slug: 'aprende-con-jesus-dev' | 'focusflow' | 'connectingdevs' | 'gibora' | 'pegasus-medical' | 'migrador-bases-de-datos';
   name: string;
   category: 'educational' | 'pwa' | 'fullStack' | 'ecommerce' | 'internal' | 'collaborative';
   stack: string[];

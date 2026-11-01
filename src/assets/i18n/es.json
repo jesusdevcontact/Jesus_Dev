@@ -207,6 +207,9 @@
       "close": "Cerrar captura ampliada de {{ project }}"
     },
     "screenshots": {
+      "aiMigrator": {
+        "local": "Interfaz local con el conjunto Pokémon SQLite, el modelo sin cargar y controles de migración a PostgreSQL, MongoDB y MariaDB"
+      },
       "aprendeConJesusDev": {
         "home": "Página de inicio de Aprende con Jesús Dev con métricas y rutas de JavaScript, TypeScript y Python",
         "learning": "Práctica interactiva de JavaScript con editor, ejecución correcta y salida en consola",
@@ -229,6 +232,36 @@
       "text": "La ruta no coincide con ninguno de los proyectos publicados en el portfolio."
     },
     "items": {
+      "aiMigrator": {
+        "type": "Experimento de migración de bases de datos asistida por IA",
+        "media": {
+          "badge": "Repositorio público · Ejecución local",
+          "caption": "Interfaz experimental local; no hay una demostración pública de la aplicación."
+        },
+        "shortDescription": "Migración asistida por IA de un conjunto de prueba Pokémon en SQLite a PostgreSQL, MariaDB y MongoDB.",
+        "summary": "Proyecto de aprendizaje que separa el JSON generado por IA de la validación determinista, la persistencia y la verificación mediante relectura en Python. No es un agente autónomo de migración universal.",
+        "problem": "Un JSON válido puede alterar los valores de origen. Migrar entre bases relacionales y documentales exige comprobar tanto la estructura de salida como la fidelidad a la fuente.",
+        "solution": "El modelo genera JSON en el navegador a partir del conjunto de prueba SQLite. Python lo valida frente al origen, guarda los datos aceptados en destinos aislados y los vuelve a leer para verificar el resultado almacenado.",
+        "decisions": [
+          "Separar generación, validación y escritura; MongoDB utiliza recuperación individual con IA y límites explícitos para los registros rechazados",
+          "Futuro, no implementado: cargar archivos de bases de datos compatibles, inspeccionar esquemas y diseñar el mapeo de tipos y la migración; mejorar la UI"
+        ],
+        "architecture": [
+          "Llama 3.2 · 3B q4f32 se ejecuta en el navegador mediante WebLLM 0.2.87 y WebGPU",
+          "Python valida, persiste y relee los datos en PostgreSQL, MariaDB y MongoDB; SQLite es el conjunto de origen controlado"
+        ],
+        "quality": [
+          "Cambio de Qwen a Llama tras observar alteraciones de los valores de origen",
+          "JSON Schema limita la forma, no garantiza la fidelidad; siguen siendo necesarias la comparación con el origen y la verificación de los datos guardados"
+        ],
+        "deployment": "Código público; ejecución local con un conjunto de prueba SQLite y servicios locales de bases de datos. No hay una demostración pública de la aplicación.",
+        "impact": [
+          "151 Pokémon y 218 relaciones de tipos verificados en cada destino: PostgreSQL, MariaDB y MongoDB",
+          "Experimento acotado y verificado, no una prueba de soporte universal para migraciones"
+        ],
+        "seoTitle": "Migrador de bases de datos con IA | Jesus Martinez Escobar",
+        "seoDescription": "Experimento de migración SQLite con Llama en el navegador, WebLLM y validación Python: resultados verificados en PostgreSQL, MariaDB y MongoDB y próximos pasos."
+      },
       "aprendeConJesusDev": {
         "type": "Plataforma educativa de fundamentos de programación",
         "media": {

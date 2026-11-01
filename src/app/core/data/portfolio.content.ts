@@ -153,6 +153,19 @@ const connectingDevsScreenshots = [
   },
 ] satisfies Project['screenshots'];
 
+const aiMigratorScreenshots = [
+  {
+    src: 'assets/MigradorBasesDeDatos/migrator-local-desktop.webp',
+    avifSrc: 'assets/MigradorBasesDeDatos/migrator-local-desktop.avif',
+    thumbnailSrc: 'assets/MigradorBasesDeDatos/thumbs/migrator-local-desktop.webp',
+    thumbnailAvifSrc: 'assets/MigradorBasesDeDatos/thumbs/migrator-local-desktop.avif',
+    altKey: 'projects.screenshots.aiMigrator.local',
+    width: 1440,
+    height: 1000,
+    variant: 'web',
+  },
+] satisfies Project['screenshots'];
+
 export const projects: Project[] = [
   {
     key: 'aprendeConJesusDev',
@@ -214,6 +227,19 @@ export const projects: Project[] = [
     featuredStack: ['Laravel', 'Filament', 'MySQL', 'RFID'],
     accent: 'cyan',
     status: 'internal',
+  },
+  {
+    key: 'aiMigrator',
+    slug: 'migrador-bases-de-datos',
+    name: 'Migrador de bases de datos con IA',
+    category: 'fullStack',
+    stack: ['Python', 'WebLLM', 'WebGPU', 'SQLite', 'PostgreSQL', 'MariaDB', 'MongoDB'],
+    featuredStack: ['Python', 'WebLLM', 'SQLite', 'PostgreSQL'],
+    accent: 'amber',
+    status: 'public',
+    githubUrl: 'https://github.com/jesusdev98/migrador-bases-de-datos',
+    coverImage: aiMigratorScreenshots[0],
+    screenshots: aiMigratorScreenshots,
   },
 ];
 

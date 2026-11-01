@@ -62,6 +62,13 @@ const directRoutes = [
     description: 'Resumen técnico de Pegasus Medical, proyecto interno con Laravel, Filament, MySQL, RFID y Metabase sin información privada.',
     type: 'article',
   },
+  {
+    route: 'projects/migrador-bases-de-datos',
+    title: 'Migrador de bases de datos con IA | Jesús Martínez Escobar',
+    description: 'Experimento de migración SQLite con Llama en el navegador, WebLLM y validación Python, con resultados verificados en PostgreSQL, MariaDB y MongoDB.',
+    image: 'https://jesusdev.dev/assets/MigradorBasesDeDatos/migrator-local-desktop.webp',
+    type: 'article',
+  },
 ];
 
 if (!existsSync(indexPath)) {
