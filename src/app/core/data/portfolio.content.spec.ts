@@ -14,6 +14,7 @@ describe('published project content', () => {
       githubUrl: 'https://github.com/jesusdev98/migrador-bases-de-datos',
     });
     expect(project.demoUrl).toBeUndefined();
+    expect(project.stack).toEqual(expect.arrayContaining(['React', 'Three.js']));
     expect(project.featuredStack.every((technology) => project.stack.includes(technology))).toBe(true);
     expect(project.coverImage).toBe(project.screenshots?.[0]);
     expect(project.screenshots).toEqual([{
@@ -56,6 +57,8 @@ describe('published project content', () => {
     expect(Object.keys(item).sort()).toEqual(Object.keys(items['aprendeConJesusDev']).sort());
     expect(item.architecture.join(' ')).toMatch(/Llama 3\.2.*3B.*q4f32/);
     expect(item.architecture.join(' ')).toContain('WebLLM 0.2.87');
+    expect(item.architecture.join(' ')).toMatch(/React.*Three\.js/);
+    expect(item.media.caption).toContain('Pokédex');
     expect(item.quality.join(' ')).toMatch(/JSON Schema/);
     expect(item.quality.join(' ')).toMatch(/Qwen.*Llama/);
     expect(item.impact.join(' ')).toMatch(/151/);

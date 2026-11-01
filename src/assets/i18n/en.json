@@ -208,7 +208,7 @@
     },
     "screenshots": {
       "aiMigrator": {
-        "local": "Local interface showing the Pokémon SQLite fixture, unloaded model and migration controls for PostgreSQL, MongoDB and MariaDB",
+        "local": "Pokédex-themed React interface with a decorative Three.js Poké Ball and the Pokémon SQLite fixture, without loading the model",
         "mongodb": "Actual results read from MongoDB after migration, showing the created destination and stored Pokémon cards",
         "postgresql": "Actual results read from PostgreSQL after migration, showing the created destination and stored Pokémon cards",
         "mariadb": "Actual results read from MariaDB after migration, showing the created destination and stored Pokémon cards"
@@ -239,7 +239,7 @@
         "type": "AI-assisted database migration experiment",
         "media": {
           "badge": "Public repository · Local execution",
-          "caption": "Local experimental interface; no public application demo is available."
+          "caption": "Local Pokédex-themed interface and actual results stored in all three database engines. No public application demo is available."
         },
         "shortDescription": "AI-assisted migration of a SQLite Pokémon fixture to PostgreSQL, MariaDB and MongoDB.",
         "summary": "A learning project separating AI-generated JSON from deterministic Python validation, persistence and read-back verification. It is not an autonomous universal migration agent.",
@@ -247,11 +247,12 @@
         "solution": "The in-browser model generates JSON from the SQLite fixture. Python validates it against the source, writes accepted data to isolated destinations and reads it back to verify the stored result.",
         "decisions": [
           "Keep generation, validation and database writes separate; MongoDB uses bounded, individual AI recovery for rejected records",
-          "Future work only: upload supported database files, inspect schemas and design type mapping and migration flows; improve the UI. These features are not implemented"
+          "Future work, not implemented: upload supported source database files or exports, inspect their structure, review mappings and migrate to another engine with validation; extend the UI for this workflow"
         ],
         "architecture": [
           "Llama 3.2 · 3B q4f32 runs in the browser through WebLLM 0.2.87 and WebGPU",
-          "Python validates, persists and reads back data in PostgreSQL, MariaDB and MongoDB; SQLite is the controlled source fixture"
+          "Python validates, persists and reads back data in PostgreSQL, MariaDB and MongoDB; SQLite is the controlled source fixture",
+          "React presents the Pokédex-themed workspace and Three.js renders a decorative Poké Ball; 3D pauses to yield graphics resources to AI"
         ],
         "quality": [
           "Switched from Qwen to Llama after observing altered source values",

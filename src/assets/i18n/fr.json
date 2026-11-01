@@ -208,7 +208,7 @@
     },
     "screenshots": {
       "aiMigrator": {
-        "local": "Interface locale affichant le jeu de test Pokémon SQLite, le modèle non chargé et les commandes de migration vers PostgreSQL, MongoDB et MariaDB",
+        "local": "Interface React au thème Pokédex avec une Poké Ball décorative Three.js et le jeu de test Pokémon SQLite, sans charger le modèle",
         "mongodb": "Résultats réels lus depuis MongoDB après migration, avec la destination créée et les fiches des Pokémon enregistrés",
         "postgresql": "Résultats réels lus depuis PostgreSQL après migration, avec la destination créée et les fiches des Pokémon enregistrés",
         "mariadb": "Résultats réels lus depuis MariaDB après migration, avec la destination créée et les fiches des Pokémon enregistrés"
@@ -239,7 +239,7 @@
         "type": "Expérimentation de migration de bases de données assistée par IA",
         "media": {
           "badge": "Dépôt public · Exécution locale",
-          "caption": "Interface expérimentale locale ; aucune démonstration publique de l’application n’est disponible."
+          "caption": "Interface locale au thème Pokédex et résultats réels enregistrés dans les trois moteurs. Aucune démonstration publique de l’application n’est disponible."
         },
         "shortDescription": "Migration assistée par IA d’un jeu de test Pokémon SQLite vers PostgreSQL, MariaDB et MongoDB.",
         "summary": "Projet d’apprentissage séparant le JSON généré par IA de la validation déterministe, de la persistance et de la vérification par relecture en Python. Il ne s’agit pas d’un agent autonome de migration universelle.",
@@ -247,11 +247,12 @@
         "solution": "Le modèle génère du JSON dans le navigateur à partir du jeu de test SQLite. Python le valide par rapport à la source, enregistre les données acceptées dans des destinations isolées et les relit pour vérifier le résultat stocké.",
         "decisions": [
           "Séparer génération, validation et écriture ; MongoDB utilise une récupération individuelle par IA, avec des limites explicites, pour les enregistrements rejetés",
-          "À venir uniquement : charger des fichiers de bases de données compatibles, inspecter les schémas et concevoir le mappage des types et la migration ; améliorer l’UI. Ces fonctions ne sont pas implémentées"
+          "À venir, non implémenté : charger des fichiers ou exports compatibles d’une base source, inspecter leur structure, vérifier le mappage et migrer vers un autre moteur avec validation ; étendre l’UI pour ce parcours"
         ],
         "architecture": [
           "Llama 3.2 · 3B q4f32 s’exécute dans le navigateur avec WebLLM 0.2.87 et WebGPU",
-          "Python valide, enregistre et relit les données dans PostgreSQL, MariaDB et MongoDB ; SQLite constitue le jeu source contrôlé"
+          "Python valide, enregistre et relit les données dans PostgreSQL, MariaDB et MongoDB ; SQLite constitue le jeu source contrôlé",
+          "React présente l’espace de travail au thème Pokédex et Three.js affiche une Poké Ball décorative ; la 3D se met en pause pour laisser des ressources graphiques à l’IA"
         ],
         "quality": [
           "Passage de Qwen à Llama après observation de valeurs sources altérées",

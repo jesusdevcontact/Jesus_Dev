@@ -208,7 +208,7 @@
     },
     "screenshots": {
       "aiMigrator": {
-        "local": "Interfaz local con el conjunto Pokémon SQLite, el modelo sin cargar y controles de migración a PostgreSQL, MongoDB y MariaDB",
+        "local": "Interfaz React con tema Pokédex, Poké Ball decorativa de Three.js y conjunto Pokémon SQLite, sin cargar el modelo",
         "mongodb": "Resultados reales leídos desde MongoDB después de la migración, con el destino creado y las fichas de los Pokémon almacenados",
         "postgresql": "Resultados reales leídos desde PostgreSQL después de la migración, con el destino creado y las fichas de los Pokémon almacenados",
         "mariadb": "Resultados reales leídos desde MariaDB después de la migración, con el destino creado y las fichas de los Pokémon almacenados"
@@ -239,7 +239,7 @@
         "type": "Experimento de migración de bases de datos asistida por IA",
         "media": {
           "badge": "Repositorio público · Ejecución local",
-          "caption": "Interfaz experimental local; no hay una demostración pública de la aplicación."
+          "caption": "Interfaz local con tema Pokédex y resultados reales guardados en los tres motores. No hay una demostración pública de la aplicación."
         },
         "shortDescription": "Migración asistida por IA de un conjunto de prueba Pokémon en SQLite a PostgreSQL, MariaDB y MongoDB.",
         "summary": "Proyecto de aprendizaje que separa el JSON generado por IA de la validación determinista, la persistencia y la verificación mediante relectura en Python. No es un agente autónomo de migración universal.",
@@ -247,11 +247,12 @@
         "solution": "El modelo genera JSON en el navegador a partir del conjunto de prueba SQLite. Python lo valida frente al origen, guarda los datos aceptados en destinos aislados y los vuelve a leer para verificar el resultado almacenado.",
         "decisions": [
           "Separar generación, validación y escritura; MongoDB utiliza recuperación individual con IA y límites explícitos para los registros rechazados",
-          "Futuro, no implementado: cargar archivos de bases de datos compatibles, inspeccionar esquemas y diseñar el mapeo de tipos y la migración; mejorar la UI"
+          "Futuro, no implementado: cargar archivos o exportaciones compatibles de una base de origen, inspeccionar su estructura, revisar el mapeo y migrar a otro motor con validación; extender la UI para ese recorrido"
         ],
         "architecture": [
           "Llama 3.2 · 3B q4f32 se ejecuta en el navegador mediante WebLLM 0.2.87 y WebGPU",
-          "Python valida, persiste y relee los datos en PostgreSQL, MariaDB y MongoDB; SQLite es el conjunto de origen controlado"
+          "Python valida, persiste y relee los datos en PostgreSQL, MariaDB y MongoDB; SQLite es el conjunto de origen controlado",
+          "React presenta el espacio de trabajo con tema Pokédex y Three.js dibuja una Poké Ball decorativa; el 3D se pausa para ceder recursos a la IA"
         ],
         "quality": [
           "Cambio de Qwen a Llama tras observar alteraciones de los valores de origen",
